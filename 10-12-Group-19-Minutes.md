@@ -80,3 +80,4 @@ Make sure that we are answering questions in class! They are worth points, so do
 - Xi-Kai 
 - Huang 
 - Reny
+- Justin
