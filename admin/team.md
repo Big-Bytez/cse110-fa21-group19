@@ -37,3 +37,7 @@ Hi, I'm Peder! I'm exchanging from Norway🎅 where I'm a fouth year Cybernetics
 
 Hello, my name is Justin Chanthabandith. I am a 4th year Mathematics-Computer Science major. I like to learn many new things, go to gym, and hanging out with people. Also, you can find more about me in [GitHub](https://github.com/thejustinrock)!
 
+**Nico Vanny*
+
+Hello, I'm Nico! I am a 3rd year CS major. In my free time I like to watch sports such as NBA, NFL, Premier League and I also like playing basketball and ping pong.  Checkout [GitHub](https://github.com/nvanny) here
+
