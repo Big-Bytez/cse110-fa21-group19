@@ -3,6 +3,7 @@
 # 🍔 Big Bytez 🍔
 
 ![Image of Logo]( )
+
 [//]: # (Brand)
 
 [//]: # (Values you think are important)
@@ -17,4 +18,4 @@ my latest work [here!](https://github.com/nhieubrian)
 
 **Reny Carr**
 
-Hi, I'm Reny. I'm a fourth year Computer Science major 💻. In my free time, I volunteer help to bring Computer Science education to K-12 students! 🏫 Find me on github [here!](https://github.com/renaissancejlc)
+Hi, I'm Reny. I'm a fourth year Computer Science major 💻. In my free time, I volunteer to help bring Computer Science education to K-12 students! 🏫 Find me on github [here!](https://github.com/renaissancejlc)
