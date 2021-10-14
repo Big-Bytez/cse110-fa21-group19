@@ -46,5 +46,6 @@ Hello, my name is Justin Chanthabandith. I am a 4th year Mathematics-Computer Sc
 Hello, I'm Nico! I am a 3rd year CS major. In my free time I like to watch sports such as NBA, NFL, Premier League and I also like playing basketball and ping pong.  Checkout [GitHub](https://github.com/nvanny) here
 
 **Elizaveta Pertseva** 
-Hi! My name is Elizaveta but I got by Liza! ( much shorter!) I am a 3rd year Math-CS major at UCSD. I spend a lot of my free time sailing, reading and missing my dog. Check out my [GitHub](https://github.com/limpa105) for more!
+
+Hi! My name is Elizaveta but I got by Liza! ( much shorter!) I am a 3rd year Math-CS major at UCSD. I spend a lot of my free time sailing, reading and missing my dog! Check out my [GitHub](https://github.com/limpa105) for more!
 
