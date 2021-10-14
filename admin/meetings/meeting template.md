@@ -10,7 +10,7 @@
 
 ## Minutes ##
 
-### Agenda Item:     ###
+### Agenda Item: ###
 
 **Discussion:**  
 
@@ -19,7 +19,7 @@
 
 -------
 
-### Agenda Item:  Different Meetings ###
+### Agenda Item: ###
 
 **Discussion:**  
 
@@ -27,7 +27,7 @@
 
 -------
 
-### Agenda Item: Upcoming Assignments ###
+### Agenda Item: ###
 
 **Discussion:**  
 
@@ -49,6 +49,11 @@
 ||Designer|
 ||Developer|
 ||Tester|
+||...|
+
+1. What have you finished?
+2. What's still in progress?
+3. what are you trying to do next?
 
 ## Other Information ##
 
