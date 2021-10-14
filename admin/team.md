@@ -23,3 +23,7 @@ Hi, I'm Reny. I'm a fourth year Computer Science major 💻. In my free time, I 
 **Nicholas Pham**
 
 Yo! My name is Nicholas, but my family calls me Nicky or Nick. I am a fourth year Math-CS major who enjoys hydroponic gardening 🌱 and baking cheesecake 🎂. For more, you can go check out my [GitHub](https://github.com/nlpham) !
+
+**Zhuoyu Tan**
+
+Hey! My name is Zhuoyu, I also go by George. I am a senior CS major. I play PC game 🎮and go to gym 🏋️in my free time. For more, you can go check out my [GitHub](georgetanUCSD) !
