@@ -2,7 +2,7 @@
 [//]: # (Team Name)
 # 🍔 Big Bytez 🍔
 
-![Image of Logo](https://user-images.githubusercontent.com/59597109/137267516-a847c465-35ea-46d4-8288-6b7453c10bcb.png)
+![Image of Logo](![colored-burger](https://user-images.githubusercontent.com/59597109/137267516-a847c465-35ea-46d4-8288-6b7453c10bcb.png)
 
 
 [//]: # (Brand)
@@ -32,4 +32,8 @@ Hey! My name is Zhuoyu, I also go by George. I am a senior CS major. I play PC g
 **Peder Ditlev-Simonsen**
 
 Hi, I'm Peder! I'm exchanging from Norway🎅 where I'm a fouth year Cybernetics and Robotics major. In my spare time I love to be in activity; backcountry skiing, golf, tennis, windsurfing - I love it all. For more, you can go check out my [GitHub](https://github.com/PederDDS/This-is-me/blob/newBranch/index.md) !
+
+**Justin Chanthabandith**
+
+Hello, my name is Justin Chanthabandith. I am a 4th year Mathematics-Computer Science major. I like to learn many new things, go to gym, and hanging out with people. Also, you can find more about me in [GitHub](https://github.com/thejustinrock)!
 
