@@ -19,3 +19,7 @@ my latest work [here!](https://github.com/nhieubrian)
 **Reny Carr**
 
 Hi, I'm Reny. I'm a fourth year Computer Science major 💻. In my free time, I volunteer to help bring Computer Science education to K-12 students! 🏫 Find me on github [here!](https://github.com/renaissancejlc)
+
+**Nicholas Pham**
+
+Yo! My name is Nicholas, but my family calls me Nicky or Nick. I am a fourth year Math-CS major who enjoys hydroponic gardening 🌱 and baking cheesecake 🎂. For more, you can go check out my [GitHub](https://github.com/nlpham) !
