@@ -30,5 +30,5 @@ Hey! My name is Zhuoyu, I also go by George. I am a senior CS major. I play PC g
 
 **Peder Ditlev-Simonsen**
 
-Hi, I'm Peder! I'm exchanging from Norway🎅 where I'm a fouth year Cybernetics and Robotics major. In my spare time I'love to be in activity; backcountry skiing golf, tennis, windsurfing - I love it all. For more, you can go check out my [GitHub](https://github.com/PederDDS/This-is-me/blob/newBranch/index.md) !
+Hi, I'm Peder! I'm exchanging from Norway🎅 where I'm a fouth year Cybernetics and Robotics major. In my spare time I love to be in activity; backcountry skiing golf, tennis, windsurfing - I love it all. For more, you can go check out my [GitHub](https://github.com/PederDDS/This-is-me/blob/newBranch/index.md) !
 
