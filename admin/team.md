@@ -49,3 +49,6 @@ Hello, I'm Nico! I am a 3rd year CS major. In my free time I like to watch sport
 
 Hi! My name is Elizaveta but I got by Liza! ( much shorter!) I am a 3rd year Math-CS major at UCSD. I spend a lot of my free time sailing, reading and missing my dog! Check out my [GitHub](https://github.com/limpa105) for more!
 
+**Huang Yu** 
+
+Hi! My name is Huang Yu but it is better to call me Klein the K of Calvin Klein. I am a senior Math-CS major at UCSD. I really like snow-boarding and I play leagae for most of my free time. Check out my [GitHub](https://github.com/KKlein99) for more!
