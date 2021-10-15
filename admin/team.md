@@ -2,7 +2,8 @@
 [//]: # (Team Name)
 # 🍔 Big Bytez 🍔
 
-![Image of Logo](https://user-images.githubusercontent.com/59597109/137267516-a847c465-35ea-46d4-8288-6b7453c10bcb.png)
+![Image of Logo](https://user-images.githubusercontent.com/59597109/137429983-a2631d73-4d88-4641-91b4-4eddcb8d11bf.png)
+
 
 
 [//]: # (Brand)
