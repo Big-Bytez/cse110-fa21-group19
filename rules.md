@@ -53,7 +53,7 @@ Creation 10/14/2021
 
 ## 7) Expectations of Faculty and TA’s ## 
 
-1. Assign homeworks and other assignment with proper instructions and deadline.
+1. Assign homeworks and other assignment with proper instructions and deadlines.
 2. Give neccessary assitance to students during working hours.
 3. Help solving students' confliction with objective advices.
 
