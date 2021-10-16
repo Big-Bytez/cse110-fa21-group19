@@ -53,7 +53,7 @@ Created: 10/14/2021
 Renaissance (Reny) Carr
 Xi-Kai (Kai) Wu
 Nicholas Vanny
-Zhuoyu Tan
+Zhuoyu (George)Tan
 
 
 
