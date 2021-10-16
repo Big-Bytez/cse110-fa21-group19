@@ -20,7 +20,7 @@ Created: 10/14/2021
 |Justin Chanthabandith|jchantha@ucsd.edu|[GitHub](https://github.com/thejustinrock)|
 |Nico Vanny|nvanny@ucsd.edu|[GitHub](https://github.com/nvanny)|
 |Elizaveta Pertseva|epertsev@ucsd.edu|[GitHub](https://github.com/limpa105)|
-|Reny Carr|epertsev@ucsd.edu|[GitHub](https://github.com/renaissancejlc)|
+|Reny Carr|rjcarr@ucsd.edu|[GitHub](https://github.com/renaissancejlc)|
 |Huang Yu|hyu@ucsd.edu|[GitHub](https://github.com/KKlein99)|
 ### 2) Primary Means of Communication and Expectations ###
 1. Slack is the primary means of communication for this project. 
