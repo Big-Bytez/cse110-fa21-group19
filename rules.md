@@ -34,7 +34,10 @@ Creation 10/14/2021
 * Meeting with TA:  Monday 10:00am - 11:00am  
 * Team meeting:  Thursday 6:30pm - 7:30pm 
 
-**Agreed upon means of scheduling meetings.(To be done)**
+**Agreed upon means of scheduling meetings.**
+  * All team numbers are recommended to attend both meeting.
+  * Team leads are mandatory to attend both meeting Unless they have an emergency that prevents them from participating.
+  * Team numbers who can not attend meeting need to inform others 24 hours(2 hours if emergence occur).
 
 ## 4) General Responsibilities for All Team Members ##
 
