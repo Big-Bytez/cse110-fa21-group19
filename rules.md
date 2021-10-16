@@ -25,9 +25,9 @@ Creation 10/14/2021
 
 
 ## 2) Primary Means of Communication and Expectations ##
-1. Slack is the primary means communcation for this project. 
-2. Team members are expected to make an effort to be respond and react as soon as posible.
-3. Allways react to messages in the #Announcments channel.
+1. Slack is the primary means communication for this project. 
+2. Team members are expected to make an effort to be respond and react as soon as possible.
+3. Always react to messages in #Announcments.
 
 ## 3) Scheduling Meetings ##
 
@@ -39,38 +39,23 @@ Creation 10/14/2021
   * Team leads are mandatory to attend both meeting Unless they have an emergency that prevents them from participating.
   * Team numbers who can not attend meeting need to inform others 24 hours(2 hours if emergence occur).
 
+
 ## 4) General Responsibilities for All Team Members ##
 
-1. Take responsability and work towards creating a postive and inclusive team environment.
-2. Listen to team members.
-3. Communicate - ask for help if you need it.
+1. All team members have equal responsibility for creating a **positive** and **inclusive** work environment.
+2. **Listen** to and **respect** all team members.
+3. **Communicate** 
 
-5. Let people know if you are not comming to a meeting. Get up to speed by read the Meeting Minutes for the meeting ASAP. 
-8. 
+## 5) Work & Admin related responsibilities for All Team Members ## 
+1. Let people know if you are not coming to a meeting. Get up to speed by reading the Meeting Minutes ASAP.
+2. Inform relevant team members if you are not able to meet a deadline - and do this as soon as you find out that this is the case.
+3. Ask for help if you need it!
 
-**(To be done)**
-## 5) Specific Team Member Responsibilities/Deadlines ##
-What do you expect from the teamleader:
--Make sure no one falls behind
--Set deadlines
+## 6) Conflict Resolution Guidelines ##
 
-Justin:
--Keep track of deadlines in Canvas
--Booking rooms for meetings
+* All team members are responsible for resolving potential conflicts in the team.
 
-Nick & George:
--Cordinate and plan rooms future meetings.
-
-Liza: 
--Proposing agenda for meeting
-
-Note-taker for meetings: 
--
-Reasercher - 
-
-## 6) Conflict Resolution ##
-7. If you have a problem whith someone try solving it on the lowest level posible, ie talking directly to the person. If this doestn work try to talking with the team-leader
-
+* Try solving conflicts as early and at the "lowest level" possible, in other words try discussing the problem with the team member(s) in question. If unsuccessful try talking to team leader, TA and, if the conflict has still not been resolved, the Professor.
 
 ## 7) Expectations of Faculty and TA’s ## 
 1. Assign homeworks and other assignment with proper instructions and deadline.
