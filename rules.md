@@ -69,8 +69,10 @@ Reasercher -
 7. If you have a problem whith someone try solving it on the lowest level posible, ie talking directly to the person. If this doestn work try to talking with the team-leader
 
 
-## 7) Expectations of Faculty and GTA’s ## 
-
+## 7) Expectations of Faculty and TA’s ## 
+1. Assign homeworks and other assignment with proper instructions and deadline.
+2. Give neccessary assitance to students during working hours.
+3. Help solving students' confliction with objective advices.
 
 ## 8) Team Signatures ##
 **(To be done)**
