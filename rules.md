@@ -1,4 +1,3 @@
-[reference page](https://ohiostate.pressbooks.pub/feptechcomm/chapter/7-project-communications/)
 
 # Team Working Agreement #
 Creation 10/14/2021
