@@ -45,6 +45,7 @@ Created: 10/14/2021
 2. Give neccessary assitance to students during working hours.
 3. Support and contribute to solving team conflicts.
 ### 8) Team Signatures ###
+Nicholas Vanny
 
 
 
