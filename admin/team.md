@@ -28,7 +28,7 @@ Yo! My name is Nicholas, but my family calls me Nicky or Nick. I am a fourth yea
 
 **Zhuoyu Tan**
 
-Hey! My name is Zhuoyu, I also go by George. I am a senior CS major. I play PC game 🎮and go to gym 🏋️in my free time. For more, you can go check out my [GitHub](georgetanUCSD) !
+Hey! My name is Zhuoyu, I also go by George. I am a senior CS major. I play PC game 🎮and go to gym 🏋️in my free time. For more, you can go check out my [GitHub](https://github.com/georgetanUCSD) !
 
 **Xi-Kai Wu**
 
