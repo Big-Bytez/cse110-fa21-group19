@@ -60,7 +60,7 @@ We plan to meet  on Tuesdays and possibly Thursdays at 6:20 pm until 8pm.
 **Discussion:**  
 - Main Idea: Big Bytez: Combines Food and Tech
 - Mascot Bitten Hamburger named Bibi
-- Nico came up with an icon
+- Nick came up with an icon
 - Reny found fonts link here 
 #### Discussed values 
 - We prioritize quality in our finished product
