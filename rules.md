@@ -46,7 +46,7 @@ Created: 10/14/2021
 3. Support and contribute to solving team conflicts.
 ### 8) Team Signatures ###
 Nicholas Vanny
-
+Zhuoyu Tan
 
 
 
