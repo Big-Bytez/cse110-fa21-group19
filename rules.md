@@ -50,6 +50,8 @@ Created: 10/14/2021
 2. Give neccessary assitance to students during working hours.
 3. Support and contribute to solving team conflicts.
 ### 8) Team Signatures ###
+Renaissance (Reny) Carr
+Xi-Kai (Kai) Wu
 Nicholas Vanny
 Zhuoyu Tan
 
