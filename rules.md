@@ -1,7 +1,7 @@
 
 ## Team Working Agreement ## 
 Created: 10/14/2021
-<br>
+<hr>
 
 ### 1) Group Identification ###
 - Class: CSE 110 Fall 2021
