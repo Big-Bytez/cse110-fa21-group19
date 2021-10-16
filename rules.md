@@ -25,12 +25,9 @@ Creation 10/14/2021
 
 
 ## 2) Primary Means of Communication and Expectations ##
-1. Slack
-2. 
-3. Allways react when someone says something on slack. Especially if its in the announcment chanel. 
-
-
-
+1. Slack is the primary means communcation for this project. 
+2. Team members are expected to make an effort to be respond and react as soon as posible.
+3. Allways react to messages in the #Announcments channel.
 
 ## 3) Scheduling Meetings ##
 
@@ -41,10 +38,12 @@ Creation 10/14/2021
 
 ## 4) General Responsibilities for All Team Members ##
 
-4. Let people know if you are not comming to a meeting.
-5. Ask for help!
-6. Talk to the team leader
-7. If you dont atendt the meeting you have to read the meeting minutes shortly after the meeting. 
+1. Take responsability and work towards creating a postive and inclusive team environment.
+2. Listen to team members.
+3. Communicate - ask for help if you need it.
+
+5. Let people know if you are not comming to a meeting. Get up to speed by read the Meeting Minutes for the meeting ASAP. 
+8. 
 
 **(To be done)**
 ## 5) Specific Team Member Responsibilities/Deadlines ##
@@ -66,14 +65,13 @@ Note-taker for meetings:
 -
 Reasercher - 
 
-**(To be done)**
 ## 6) Conflict Resolution ##
 7. If you have a problem whith someone try solving it on the lowest level posible, ie talking directly to the person. If this doestn work try to talking with the team-leader
 
 
-**(To be done)**
 ## 7) Expectations of Faculty and GTA’s ## 
-**(To be done)**
+
+
 ## 8) Team Signatures ##
 **(To be done)**
 
