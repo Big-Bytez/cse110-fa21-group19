@@ -43,7 +43,7 @@ Creation 10/14/2021
 ## 5) Work & Admin related responsibilities for All Team Members ## 
 
 1. Let people know if you are unable to participate at a team meeting. Get up to speed by reading the Meeting Minutes ASAP.
-2. Inform relevant team members if you are not able to meet a deadline - and do this as they realize th
+2. Inform relevant team members if you are not able to meet a deadline - and do this as soon as you realize the delay.
 3. Ask for help if you need it!
 
 ## 6) Conflict Resolution Guidelines ##
