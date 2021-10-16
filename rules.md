@@ -1,7 +1,6 @@
 
-# Team Working Agreement #
-Creation 10/14/2021
-<br>
+# Team Working Agreement #         Creation 10/14/2021
+
 ## 1) Group Identification ##
 - Class: CSE 110 Fall 2021
 - Group: Team 19
@@ -22,37 +21,30 @@ Creation 10/14/2021
 |Reny Carr|epertsev@ucsd.edu|[GitHub](https://github.com/renaissancejlc)|
 |Huang Yu|hyu@ucsd.edu|[GitHub](https://github.com/KKlein99)|
 
-
 ## 2) Primary Means of Communication and Expectations ##
 1. Slack is the primary means of communication for this project. 
 2. Team members are expected to make an effort to be respond and react as soon as possible.
 3. Always react to messages in #Announcments.
 
 ## 3) Scheduling Meetings ##
-
 * Meeting with TA:  Monday 10:00am - 11:00am  
 * Team meeting:  Thursday 6:30pm - 7:30pm 
 
-
 ## 4) General Responsibilities for All Team Members ##
-
 1. All team members have equal responsibility for creating a **positive** and **inclusive** work environment.
 2. **Listen** to and **respect** all team members.
 3. **Communicate** 
 
 ## 5) Work & Admin related responsibilities for All Team Members ## 
-
 1. Let people know if you are unable to participate at a team meeting. Get up to speed by reading the Meeting Minutes ASAP.
 2. Inform relevant team members if you are not able to meet a deadline - and do this as soon as you realize the delay.
 3. Ask for help if you need it!
 
 ## 6) Conflict Resolution Guidelines ##
-
 * All team members are responsible for resolving potential conflicts in the team.
 * Try solving conflicts as early and at the "lowest level" possible. In other words, try discussing the problem with the team member(s) in question. If unsuccessful try talking to team leader, TA and, if the conflict has still not been resolved, the Professor.
 
 ## 7) Expectations of Faculty and TA’s ## 
-
 1. Assign homeworks and other assignment with proper instructions and deadlines.
 2. Give neccessary assitance to students during working hours.
 3. Support and contribute to solving team conflicts.
