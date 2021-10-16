@@ -12,15 +12,16 @@ Creation 10/14/2021
 **Team member info:**
 | NAME        | EMAIL       |Github page|
 | ----------- | ----------- |-----------|
-|Zhuoyu Tan|        |         |
-|Nicholas Pham|        ||
-|Brian Nhieu|        |
-|Xi-Kai Wu|        |
-|Peder Ditlev-Simonsen|        |
-|Justin Chanthabandith|        |
-|Nico Vanny|        |
-|Elizaveta Pertseva|        |
-|Reny Carr|        |
+|Zhuoyu Tan|zhtan@ucsd.edu|[GitHub](https://github.com/Big-Bytez/cse110-fa21-group19/blob/main/admin/georgetanUCSD)|
+|Nicholas Pham|nlpham@ucsd.edu|[GitHub](https://github.com/nlpham)|
+|Brian Nhieu|bnhieu@ucsd.edu|[GitHub](https://github.com/nhieubrian)|
+|Xi-Kai Wu|xiw069@ucsd.edu|[GitHub](https://github.com/skaiwu)|
+|Peder Ditlev-Simonsen|pederdd@stud.ntnu.no|[GitHub](https://github.com/PederDDS/This-is-me/blob/newBranch/index.md)|
+|Justin Chanthabandith|jchantha@ucsd.edu|[GitHub](https://github.com/thejustinrock)|
+|Nico Vanny|nvanny@ucsd.edu|[GitHub](https://github.com/nvanny)|
+|Elizaveta Pertseva|epertsev@ucsd.edu|[GitHub](https://github.com/limpa105)|
+|Reny Carr|epertsev@ucsd.edu|[GitHub](https://github.com/renaissancejlc)|
+|Huang Yu|hyu@ucsd.edu|[GitHub](https://github.com/KKlein99)|
 
 
 ## 2) Primary Means of Communication and Expectations ##
