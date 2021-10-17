@@ -10,6 +10,17 @@
 
 [//]: # (Values you think are important)
 [//]: # (roster- this should provide a bried overview of each memeber and a link to their personal github page.)
+## Brand
+Our Brand is approaching the creation of software from a culinary perspective. We seek to ensure our software is similar to a home cooked meal: it fufills our customers needs and brings them joy. We are the perfect curators of the food/tech you want 
+
+
+## Our Values 
+- We prioritize quality in our finished product 
+- We priortitize simplicity and efficency: similar to a recipe all features must be easy to use
+- We seek to inovate your kicthen and our softwate 
+- We bake/code with love
+- We prioritize family and family recpies 
+
 
 ## Roster:
 
