@@ -19,8 +19,10 @@ What can we do better:
 -start early
 -keep track of assignments and due dates
 
-**Conclusions:**
-Maybe assign someone to keep track of assignments and keep the team on track
+**Conclusion: **
+
+Maybe eassign someone to keep track of assignments nd keep the team on track
+
 -------
 
 ### Agenda Item: Project Summary ###
@@ -34,14 +36,15 @@ Maybe assign someone to keep track of assignments and keep the team on track
 -Sprint Run Summary\
     Each sprint will be for 1-2 weeks\
     - design pase sprint\
-    - minimal code- get code finished by week 7\
-- Additional Features\
+    - minimal code- get code finished by week 7
+- Additional Features
 - Week 7-10: Testing \
 Q: What is the extent of the open-endedness of the project?\
 A: It  should be a recipe project that is a CRUD app that has good domain-specific features\
 Q: Can Hema type out a generic timeline for the project\
 A: Yes, in chat\
-Project Layout: \
+Project Layout: 
+--------------------------
 - W4,5 -> design phase
 - W5,6,7 -> Sprint 1 / MVP
 - W8,9,10 -> Sprint 2 / Additional Features
@@ -71,45 +74,57 @@ A: Yes, Hema will give feedback
 ### Agenda Item: Beginning Brainstorming ###
 
 **Discussion:**  
-It should be UCD, user-driven. Consider potential users, target users, and what they want to see in the app
-Identify users first!
-Comparing with existing apps in very important
-Brainstorming phase is also very important as it will lay out the future of the app
-Everyone should do brainstorming before next meetup-come up with unique features, and flawed features from other apps
-Think about the 5 W's and H. Answer them to help with brainstorming
+- It should be UCD, user-driven. Consider potential users, target users, and what they want to see in the app
+- Identify users first!
+- Comparing with existing apps in very important
+- Brainstorming phase is also very important as it will lay out the future of the app
+- Everyone should do brainstorming before next meetup-come up with unique features, and flawed features from other apps
+- Think about the 5 W's and H. Answer them to help with brainstorming
+
+
 -It will take place in the kitchen,so:
-    should be easy to read
-    low touch app
-    maybe read out the instructions - text to speech
-Who do we WANT to target?
-    -meal prepperes?
-    -home-style cooks who just want a nice meal
--Next step after designing features is categorizing features
-    sprint 1: essential feats
-    sprint 2: low effort feats 
-    sprint 3: high effort feats
--How are we going to get all these recipes in the manager?
-    -get them from online sources (needed to have a wide variet of recipes)
-        -consider looking for API to easily input recipes, maybe a data scraper
-    -add recipe manually
--sorting recipes:
-    -difficulty
-    -time
-    -cuisine
-    -nutrition (high protein, low carb, etc)
--use tags for filtering 
--Look at non-recipe apps
+------------
+    - should be easy to read
+    - low touch app
+    - maybe read out the instructions - text to speech
+    
+    
+- Who do we WANT to target?
+-------------
+    - meal prepperes?
+    - home-style cooks who just want a nice meal
+    
+- Next step after designing features is categorizing features
+--------------------
+    - sprint 1: essential feats
+    - sprint 2: low effort feats 
+    - sprint 3: high effort feats
+    
+- How are we going to get all these recipes in the manager?
+    - get them from online sources (needed to have a wide variet of recipes)
+    - consider looking for API to easily input recipes, maybe a data scraper
+    - add recipe manually
+
+- sorting recipes:
+----------
+    - difficulty
+    - time
+    - cuisine
+    - nutrition (high protein, low carb, etc)
+- use tags for filtering 
+- Look at non-recipe apps
 ie) google maps has text-to-speech
 iie) netflix/tinder have swipe right feats
 
 How will our app be different than googling a recipe?
+----------------
 (Remember Google is our competitor)
--we will have a favorites feature 
--we can cater to a specific audience - drawback: loses market share, narrows audience
--more advanced filtering options
--Google is more read-only, we will be more CRUD!
--recipe modifications!!! (update!)
--google has all different formats, we should have all uniform formats
+- we will have a favorites feature 
+- we can cater to a specific audience - drawback: loses market share, narrows audience
+- more advanced filtering options
+- Google is more read-only, we will be more CRUD!
+- recipe modifications!!! (update!)
+- google has all different formats, we should have all uniform formats
 **Conclusions:**
 
 Brainstorming assignment due next monday: 
