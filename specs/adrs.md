@@ -79,7 +79,6 @@ We found that many recipe sites are too focused on showing tens of different rec
 that a normal user could make. Not only that, their website UI was confusing! The best accessible one that interested us was epicurious, and is what helped influence our design.
 
 ## Links 
-![Epicurious Site]()
-![Rough Sketch]()
+![Epicurious Site](/admin/images/Epicurious-Example.png) ![Rough Sketch](/admin/images/Home-Page-Rough.png)
 
 --------------------------------------------
