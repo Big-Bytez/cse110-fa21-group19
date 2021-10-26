@@ -77,8 +77,9 @@ search bar, we allow for users to search for specific recipes that they are inte
 
 We found that many recipe sites are too focused on showing tens of different recipes on their main page. It got very confusing and frightening to try to find a recipe 
 that a normal user could make. Not only that, their website UI was confusing! The best accessible one that interested us was epicurious, and is what helped influence our design.
+(Pending Search Bar below)
 
-## Links 
-![Epicurious Site](/admin/images/Epicurious-Example.png) ![Rough Sketch](/admin/images/Home-Page-Rough.png)
+## Examples 
+<img src="/admin/images/Epicurious-Example.png" width="450" height="280">  <img src="/admin/images/Home-Page-Rough.png" width="450" height="280">
 
 --------------------------------------------
