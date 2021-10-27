@@ -5,7 +5,7 @@
 
 ### **Meeting called by: Group** ###
 
-### **Type of meeting: Brainstorm** ###
+### **Type of meeting: Starting Pitch Assign Tasks** ###
 --------------------------------------
 
 ## Minutes ##
