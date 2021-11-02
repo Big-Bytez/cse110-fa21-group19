@@ -54,8 +54,7 @@ We need to fix wireframe and ensure all features we intend to keep are in and al
 - George(Lead) 
 - Nico 
 - Liza 
-- Peder 
-- Brian 
 - Xi-Kai 
-- Huang 
-- Reny
+- Justin
+
+
