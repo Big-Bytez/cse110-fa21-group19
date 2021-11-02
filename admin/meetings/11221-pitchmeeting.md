@@ -41,6 +41,28 @@ We thought that we needed to make an application.
 We just need to make sure the css on the website transfers to mobile well.
 
 -------
+### Agenda Item: Pair Programming ###
+
+**Discussion:**  
+Pair programming keeps us more accountable and is easier 
+
+
+**Conclusions:**
+We need to assign features to pairs and start pair programming. 
+Github Projects board is a great way to keep track of progress.
+
+-------
+### Agenda Item: API ###
+
+**Discussion:**  
+If spoonacular doesn't fulfill all our needs we should look into other APIs.
+If using more than 1 API we must consider how difficult implementing them together is.
+
+
+**Conclusions:**
+Research more APIs / ensure spoonacular is sufficient.
+
+-------
 
 -----------------------------------
 
