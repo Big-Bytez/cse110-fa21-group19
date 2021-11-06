@@ -32,7 +32,7 @@
    searchbar {
    margin-top: 0%;
    justify-content: center;
-   align-self: center;
+   align-self: right;
    justify-items: center;
 
    display: inline-block;
@@ -48,7 +48,7 @@
    padding: 8px;  
    margin-top: 10px;  
    margin-left: 10px;  
-   background: orange;  
+   background: red;  
    font-size: 20px;  
    border: none;  
    cursor: pointer;   
@@ -82,20 +82,24 @@
    border: none;
    color: white;
    background: #b90c0c;
-   padding: 4px;
-   width: 100px;
-   height: 100px;
+   padding: 25px;
+   width: 5em;
+   height: 5em;
    margin-left: 1.1em;
    text-align: center;
    align-self: center;
    text-decoration: none;
    cursor: pointer;
    display: inline-block;
-   font-size: 1.2rem;
+   font-size: 2.5rem;
    box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.15);
  }
+.time-buttons{
+    justify-self: center;
+   display: inline-block;
+}
 
-.button5,.button20,.button60 {border-radius: 50%;}
+.button10,.button30,.button60 {border-radius: 50%;}
 .button:hover {
        background: #b85454;
        cursor: pointer;
@@ -106,19 +110,21 @@
 }
  h2 {
    font-size: 2.3rem;
+   margin-left: 11%;
+
  }
  
  body>header {
-   justify-content: center;
+   justify-content: left;
    align-self: center;
-   justify-items: center;
+   justify-items: left;
 
    display: inline-block;
    height: 5em;
-   width: 50em;
+   width: 70em;
    position: absolute;
    top: 25vh;
-   left: 30%;
+   margin-left: 27%;
  }
  
  sideBar {
@@ -132,16 +138,38 @@
    left:0vw;
    
  }
- .logo {
+ .logoImg {
    position:fixed;
    height: 10em;
    width: 20em;
    justify-items: begin;
    padding-left: .2em;
-   top: 1em;
+   top: 1.2em;
    width: 10%;
    left: 0vw ;
  }
+ .logoText {
+    position:absolute;
+    height: 10em;
+    width: 20em;
+    justify-items: begin;
+    padding-left: 1.3em;
+    top: 0em;
+    padding-top: 0%;
+    left: 0vw ;
+    font-style: oblique;
+  }
+ .shuffle{
+  position: fixed;
+  height:5em;
+  width: 4em;
+  justify-self: right;
+  margin-top: 2.5vh;
+  margin-right: 8vw;
+  padding-left: .2em;
+  top: 2vh;
+  background-color:none;
+}
  .user-portal{
    position: fixed;
    height: 4em;
@@ -179,7 +207,7 @@
  body>header a:hover {
    border-bottom: 2px solid transparent;
  }
- main>section {
+ header>section {
    display: grid;
    max-width: 400px;
    row-gap: 2em;
