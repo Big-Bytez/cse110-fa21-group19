@@ -142,6 +142,17 @@
    width: 10%;
    left: 0vw ;
  }
+ .shuffle{
+  position: fixed;
+  height:5em;
+  width: 4em;
+  justify-self: right;
+  margin-top: 1vh;
+  margin-right: 8vw;
+  padding-left: .2em;
+  top: 2vh;
+  background-color:none;
+}
  .user-portal{
    position: fixed;
    height: 4em;
