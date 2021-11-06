@@ -15,6 +15,10 @@
   <!-- Main Stylesheet & Scripts -->
   <link rel="stylesheet" href="styles\style.css" />
   <script src="" type="module"></script>
+
+    <!-- Recipe Card -->
+
+  <script src="" type="module"></script>
 </head>
 
 <body>
@@ -29,18 +33,25 @@
   </searchbar>
 
   <header>
-<br><br><br><br>
+
     <h2>How much time do you have?</h2>
-    <div id="time-buttons">
-      <!--why are these buttons not active????-->
-    <button class= "button button5">5 min</button>
-    <button class= "button button20">20 min</button>
+    <div class="time-buttons">
+    <button class= "button button10">10 min</button>
+    <button class= "button button30">30 min</button>
     <button class= "button button60">60 min</button>
   </div>
 </header>
 <div class = logo>
-  <a href="#top">
+  <a class = logoImg href="#top">
     <img src="images\logo.png" alt="logo" width=60 height =60 title= "QuickBytes"></img>
+  </a>
+  <div class = logoText>
+    <h2>Quick Bytes</h2>
+  </div>
+</div>
+<div class = shuffle>
+  <a href="">
+    <img src="images\shuffle.png" alt="shuffle-button" width=40 height=40 title="Random-Recipe">
   </a>
 </div>
 <div class = shuffle>
@@ -73,9 +84,17 @@
       <a href="" title="Sides">Sides</a>
     </nav>
   </sideBar>
+
+  <br>
+  <section id="browse"><h3>Browse for recipes below</h3> </section>
   <main>
-    <section id="browse"><h3>Browse for recipes</h3> </section>
+      <!-- Add recipe browsing here-->
   </main>
+  <div id="button-wrapper">
+    <img src="/assets/images/icons/arrow-down.png" alt="Arrow down" />
+    <button>Show more</button>
+  </div>
+  <div id="button-horizontal-line"></div>
 </body>
 
 </html>
