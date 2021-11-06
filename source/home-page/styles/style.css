@@ -57,7 +57,7 @@
    background: red;  
    }  
    form {
-       background-color: #ffc400b2;
+       background-color: #e42c2cb2;
        width: 33vw;
        height: 44px;
        border-radius: 5px;
@@ -188,7 +188,7 @@
    margin-left: .2em;
    margin-right: .2em;
    align-self: center;
-   background: rgba(233, 85, 16, 0.801);  
+   background: rgba(156, 5, 5, 0.801);  
    font-size: 1rem;  
    color: rgb(255, 255, 255);
    border: none;  
