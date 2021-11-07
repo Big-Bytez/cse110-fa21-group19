@@ -38,7 +38,7 @@
    display: inline-block;
    height: 10em;
    width: 10em;
-   position: fixed;
+   position: absolute;
    top: 1.5em;
    left: 33%;
    }
