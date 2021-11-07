@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <title>Quick Bytes</title>
+
+
+  <!-- Main Stylesheet & Scripts -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="./scripts/upload.js" type="module"></script>
+  <script src="" type="module"></script>
+</head>
+
+<body>
+  <searchbar id= "search-bar">
+    <form id="form" role="search">
+      <input type="search" id="query" name="q"
+      placeholder="No limit? Search here"
+      aria-label="Search through site content">
+      <button><svg viewBox="0 0 1024 1024"><path class="path1" src=""></path></svg></button>
+      <button class = "sort">Sort</button>
+    </form>
+  </searchbar>
+<br><br><br><br><br>
+<div class="recipe-box">
+    <h3>Favorite Cuisine: 
+      <br>Most Common Cook Time: 
+    </h3>
+  <div class="recipes">
+    <div class="favor-recipes",id=first>
+      <a href="" title="frecipes1">Recipes</a> 
+    </div>
+    <div class="favor-recipes",id=second>
+      <a href="" title="frecipes2">Recipes</a> 
+    </div>
+    <div class="favor-recipes",id=third>
+      <a href="" title="frecipes3">Recipes</a> 
+    </div>
+    <div class="favor-recipes",id=fourth>
+      <a href="" title="frecipes4">Recipes</a> 
+    </div>
+    <div class="favor-recipes",id=fifth>
+      <a href="" title="frecipes5">Recipes</a> 
+    </div>
+    <div class="favor-recipes",id=sixth>
+      <a href="" title="frecipes6">Recipes</a> 
+    </div>
+  </div>
+</div> 
+<div class = logo>
+  <a href="#top">
+    <img src="images\logo.png" alt="logo" width=60 height =60 title= "QuickBytes"></img>
+  </a>
+</div>
+<div class = user-portal>
+  <img src="images\user-image.png" id="user" alt="user" width=80 height =80 title= "User-Portal"></img>
+</div>
+<div class = user-portal-upload>
+  <input type="file" id="upload" name="filename" accept="image/*" onchange="document.getElementById('user').src = window.URL.createObjectURL(this.files[0])">
+</div>
+<sideBar class="vert-navigation">
+  <nav class = "sideNav">
+    <a href="" title="Breakfast">Breakfast</a> 
+  </nav>
+  <nav  class = "sideNav">
+      <a href="" title="Lunch">Lunch</a> 
+  </nav>
+  <nav  class = "sideNav">
+      <a href="" title="Dinner">Dinner</a>
+    </nav>
+    <nav  class = "sideNav">
+      <a href="" title="Dessert">Dessert</a>
+    </nav>
+    <nav  class = "sideNav">
+      <a href="" title="Healthy">Healthy</a>
+    </nav>
+    <nav  class = "sideNav">
+      <a href="" title="Sides">Sides</a>
+    </nav>
+  </sideBar>
+</body>
+
+</html>
