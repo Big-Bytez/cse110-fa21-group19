@@ -63,14 +63,15 @@
 </div> 
 <div class = logo>
   <a class=logoImg href="#top">
-    <img src="images\logo.png" alt="logo" width=60 height =60 title= "QuickBytes"></img>
+    <img src="images/logo.png" alt="logo" width=60 height =60 title= "QuickBytes"></img>
   </a>
 </div>
 <div class = user-portal>
-  <img src="images\user-image.png" id="user" alt="user" width=80 height =80 title= "User-Portal"></img>
-</div>
-<div class = user-portal-upload>
-  <input type="file" id="upload" name="filename" accept="image/*" onchange="document.getElementById('user').src = window.URL.createObjectURL(this.files[0])">
+  <img src="images/user-image.png" id="user" alt="user" width=80 height =80 title= "User-Portal"></img>
+  <div class = user-portal-upload>
+    <input type="file" id="upload" name="filename" accept="image/png, image/img" style="color:black">
+    <input type="submit" id="submit" style="margin-top: 5%; margin-left: 5%">
+  </div>
 </div>
 <sideBar class="vert-navigation">
   <nav class = "sideNav">
