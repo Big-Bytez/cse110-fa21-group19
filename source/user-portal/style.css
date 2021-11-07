@@ -28,21 +28,21 @@
   searchbar {
    margin-top: 0%;
    justify-content: center;
-   align-self: center;
+   align-self: right;
    justify-items: center;
 
    display: inline-block;
    height: 10em;
-   width: 50em;
+   width: 10em;
    position: absolute;
    top: 1.5em;
-   left: 65%;
+   left: 33%;
    }
   .searchbox button {     
    padding: 8px;  
    margin-top: 10px;  
    margin-left: 10px;  
-   background: orange;  
+   background: red;  
    font-size: 20px;  
    border: none;  
    cursor: pointer;   
@@ -51,8 +51,8 @@
    background: red;  
    }  
    form {
-       background-color: #ff000065;
-       width: 300px;
+       background-color: #e42c2cb2;
+       width: 33vw;
        height: 44px;
        border-radius: 5px;
        display: flex;
@@ -62,7 +62,7 @@
      input {
        all: unset;
        font: 16px system-ui;
-       color: #fff;
+       color: rgb(255, 255, 255);
        height: 100%;
        width: 100%;
        padding: 6px 10px;
@@ -76,28 +76,19 @@
    border: none;
    color: white;
    background: #b90c0c;
-   padding: 4px;
-   width: 100px;
-   height: 100px;
+   padding: 25px;
+   width: 5em;
+   height: 5em;
    margin-left: 1.1em;
    text-align: center;
    align-self: center;
    text-decoration: none;
    cursor: pointer;
    display: inline-block;
-   font-size: 1.2rem;
+   font-size: 5rem;
    box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.15);
  }
 
-.button5,.button20,.button60 {border-radius: 50%;}
-.button:hover {
-       background: #b85454;
-       cursor: pointer;
-   }
-.button:active{
-   color: red;
-   cursor: pointer;
-}
  h2 {
    font-size: 2.3rem;
  }
@@ -120,8 +111,9 @@
    justify-items: begin;
    padding-left: .2em;
    position: fixed;
-   top: 7em;
-   width: 100%;
+   top: 5.5em;
+   width: 10vw;
+   left: 0vw;
  }
  .logo {
    position: fixed;
@@ -131,6 +123,7 @@
    padding-left: .2em;
    top: 1em;
    width: 100%;
+   left: 0vw;
  }
  .user-portal{
    position: fixed;
@@ -158,19 +151,22 @@
  width: 3em;
 }
  .vert-navigation{
+   background: #b90c0c;
    position: fixed;
+   width: 100px;
+   height: 50%;
  }
  body>sideBar a {
    border-bottom: .1em solid rgb(155, 155, 155);
    border-top: .1em solid rgb(155, 155, 155);
-   color: rgb(255, 0, 0);
+   color: rgb(255, 255, 255);
    font-size: 1.3rem;
    padding-bottom:2.5px;
  }
  body>header a:hover {
    border-bottom: 2px solid transparent;
  }
- main>section {
+ header>section {
    display: grid;
    max-width: 300px;
    row-gap: 2em;
