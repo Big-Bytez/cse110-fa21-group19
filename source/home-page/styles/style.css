@@ -202,6 +202,7 @@
    border: none;  
    cursor: pointer; 
  width: 4em;
+     height: 34px;
 }
  .vert-navigation{
     background: #b90c0c;
