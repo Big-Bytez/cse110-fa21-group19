@@ -59,7 +59,7 @@
        flex-direction: row;
        align-items: center;
      }
-     input {
+     input[type=search]{
        all: unset;
        font: 16px system-ui;
        color: rgb(255, 255, 255);
@@ -169,10 +169,9 @@
  .user-portal-upload {
   position: fixed;
   width: 10em;
+  height: 1em;
   justify-self: right;
-  margin-right: .4em;
-  padding-left: .2em;
-  top: 5.7em;
+  margin-right: 15%;
   background-color: transparent;
  }
  div.favor-recipes{
@@ -200,3 +199,8 @@
  .recipe-box > h3 {
    padding-left: 3.5em;
  }
+
+ input[type='file'] {
+  color: transparent;
+ }
+ 
