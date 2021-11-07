@@ -15,11 +15,60 @@
    justify-items: center;
    background-color: #eee4e4; /*white background*/ /*yellow option:#e9e2cc pink option: #eee4e4 */
  }
- 
  body, html {
    height: 150%;
    width: 100%;
  }
+ body>sideBar a {
+  border-bottom: .1em solid rgb(155, 155, 155);
+  border-top: .1em solid rgb(155, 155, 155);
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  padding-bottom:2.5px;
+}
+ body>header {
+  justify-content: left;
+  align-self: center;
+  justify-items: left;
+
+  display: inline-block;
+  height: 5em;
+  width: 130em;
+  position: absolute;
+  top: 15vh;
+  margin-left: 40em;
+}
+body>header a:hover {
+  border-bottom: 2px solid transparent;
+}
+header>section {
+  display: grid;
+  max-width: 400px;
+  row-gap: 2em;
+  width: 100%;
+}
+ h2 {
+  font-size: 5rem;
+  margin-left: 1em;
+
+}
+h4{
+   font-size: 2.3rem;
+   margin-left: 1em;
+   top: 0em;
+   margin-top: 9%;
+   padding-top: 0%;
+}
+sideBar {
+  display: grid;
+  height: 20em;
+  justify-items: begin;
+  padding-left: .2em;
+  position: fixed;
+  top: 5.5em;
+  width: 10vw;
+  left:0vw;
+}
  .searchbox {  
    float: left;
    }  
@@ -42,9 +91,7 @@
    top: 1.5em;
    left: 33%;
    }
-   
-   .searchbox button {  
-     
+   .searchbox button {   
    padding: 8px;  
    margin-top: 10px;  
    margin-left: 10px;  
@@ -98,7 +145,6 @@
     justify-self: center;
    display: inline-block;
 }
-
 .button10,.button30,.button60 {border-radius: 50%;}
 .button:hover {
        background: #b85454;
@@ -108,43 +154,6 @@
    color: red;
    cursor: pointer;
 }
- h2 {
-   font-size: 5rem;
-   margin-left: 1em;
-
- }
- h4{
-    font-size: 2.3rem;
-    margin-left: 1em;
-    top: 0em;
-    margin-top: 9%;
-    padding-top: 0%;
- }
- 
- body>header {
-   justify-content: left;
-   align-self: center;
-   justify-items: left;
-
-   display: inline-block;
-   height: 5em;
-   width: 130em;
-   position: absolute;
-   top: 15vh;
-   margin-left: 40em;
- }
- 
- sideBar {
-   display: grid;
-   height: 20em;
-   justify-items: begin;
-   padding-left: .2em;
-   position: fixed;
-   top: 5.5em;
-   width: 10vw;
-   left:0vw;
-   
- }
  .logoImg {
    position:fixed;
    height: 10em;
@@ -195,6 +204,7 @@
    margin-top: .2em;  
    margin-left: .2em;
    margin-right: .2em;
+   margin-bottom: .2em;  
    align-self: center;
    background: rgba(156, 5, 5, 0.801);  
    font-size: 1rem;  
@@ -202,7 +212,7 @@
    border: none;  
    cursor: pointer; 
  width: 4em;
-     height: 34px;
+ height: 34px;
 }
  .vert-navigation{
     background: #b90c0c;
@@ -214,23 +224,6 @@
     background-color: #ff141479;
     width: 100%;
     height: 30px;
-    
- }
- body>sideBar a {
-   border-bottom: .1em solid rgb(155, 155, 155);
-   border-top: .1em solid rgb(155, 155, 155);
-   color: rgb(255, 255, 255);
-   font-size: 1.3rem;
-   padding-bottom:2.5px;
- }
- body>header a:hover {
-   border-bottom: 2px solid transparent;
- }
- header>section {
-   display: grid;
-   max-width: 400px;
-   row-gap: 2em;
-   width: 100%;
  }
  .hidden {
    display: none;
