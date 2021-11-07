@@ -91,7 +91,7 @@
    text-decoration: none;
    cursor: pointer;
    display: inline-block;
-   font-size: 2.5rem;
+   font-size: 5rem;
    box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.15);
  }
 .time-buttons{
@@ -109,9 +109,16 @@
    cursor: pointer;
 }
  h2 {
-   font-size: 2.3rem;
-   margin-left: 11%;
+   font-size: 5rem;
+   margin-left: 1em;
 
+ }
+ h4{
+    font-size: 2.3rem;
+    margin-left: 1em;
+    top: 0em;
+    margin-top: 9%;
+    padding-top: 0%;
  }
  
  body>header {
@@ -121,10 +128,10 @@
 
    display: inline-block;
    height: 5em;
-   width: 70em;
+   width: 130em;
    position: absolute;
-   top: 25vh;
-   margin-left: 27%;
+   top: 15vh;
+   margin-left: 40em;
  }
  
  sideBar {
@@ -155,6 +162,7 @@
     justify-items: begin;
     padding-left: 1.3em;
     top: 0em;
+    margin-top: 0%;
     padding-top: 0%;
     left: 0vw ;
     font-style: oblique;
@@ -167,7 +175,7 @@
   margin-top: 2.5vh;
   margin-right: 8vw;
   padding-left: .2em;
-  top: 2vh;
+  top: .2em;
   background-color:none;
 }
  .user-portal{
@@ -193,7 +201,7 @@
    color: rgb(255, 255, 255);
    border: none;  
    cursor: pointer; 
- width: 3em;
+ width: 4em;
 }
  .vert-navigation{
     background: #b90c0c;
