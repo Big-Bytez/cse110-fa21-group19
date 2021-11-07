@@ -13,7 +13,7 @@
 
 
   <!-- Main Stylesheet & Scripts -->
-  <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="styles\style.css" />
   <script src="" type="module"></script>
 
     <!-- Recipe Card -->
@@ -25,16 +25,22 @@
   <searchbar id= "search-bar">
     <form id="form" role="search">
     <input type="search" id="query" name="q"
-     placeholder="No limit? Search here"
+     placeholder="No limit? Search for recipes here"
      aria-label="Search through site content">
     <button type = "submit"><svg viewBox="0 0 1024 1024"><path class="path1" src=""></path></svg></button>
-    <button class = "sort">Sort</button>
+    <select class="sort">
+        <option value="">Sort</option>
+        <option value="time">time (low to high)</option>
+        <option value="time">time (high to low)</option>
+        <option value="hamster">alphabetical (a-z)</option>
+        <option value="parrot"># ingredients(low to high)</option>
+    </select>
     </form>
   </searchbar>
 
   <header>
 
-    <h2>How much time do you have?</h2>
+    <h2>How much cooking time do you have?</h2>
     <div class="time-buttons">
     <button class= "button button10">10 min</button>
     <button class= "button button30">30 min</button>
@@ -46,8 +52,13 @@
     <img src="images\logo.png" alt="logo" width=60 height =60 title= "QuickBytes"></img>
   </a>
   <div class = logoText>
-    <h2>Quick Bytes</h2>
+    <h4>Quick Bytes</h4>
   </div>
+</div>
+<div class = shuffle>
+  <a href="">
+    <img src="images\shuffle.png" alt="shuffle-button" width=40 height=40 title="Random-Recipe">
+  </a>
 </div>
 <div class = shuffle>
   <a href="">
