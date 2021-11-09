@@ -11,3 +11,4 @@ View here: https://big-bytez.github.io/home-page/
 - Fill in href for user-portal, should navigate to user page. lilne 74
 - Fill in href for side bar buttons, these should navigate to filtered feeds according to category pressed. line 80
 - Add recipe browsing here. line 102
+- Create navigation for side bar categories
