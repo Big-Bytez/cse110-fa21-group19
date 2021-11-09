@@ -2,7 +2,6 @@
 View here: https://big-bytez.github.io/home-page/
 --------
 ## Front End Issues: ##
--Font family is not set on h2 ("How much time...?)
 - Need to complete browsing feed
 --------
 ## Back End/Javascript to do: ##
