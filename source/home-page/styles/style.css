@@ -157,9 +157,9 @@ sideBar {
        background: #b85454;
        cursor: pointer;
    }
-   .vert-navigation:hover{
+ /*  .vert-navigation:hover{
     background: #b85454;
-  }
+  }*/
 .button:active{
    color: red;
    cursor: pointer;
@@ -294,6 +294,19 @@ sideBar {
  padding-left:2.5vw;
  padding-right: 2.5vw;
 }
+.sliderImg:hover{
+  opacity: 0.5;
+}
+.logoImg:hover{
+  opacity: 0.8;
+}
+.user-portal:hover{
+  opacity: 0.8;
+}
+.shuffle:hover{
+  opacity: 0.8;
+}
+
 .allHome{
  display:flex;
  flex-direction: column;
