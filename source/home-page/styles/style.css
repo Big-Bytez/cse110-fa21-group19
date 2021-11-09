@@ -13,9 +13,6 @@
    src: url("https://fonts.google.com/");
    
 }
- .title{
-  font-family: 'Abril Fatface', cursive;
- }
  body {
    align-items: center;
    display: grid;
@@ -67,7 +64,7 @@ header>section {
    width: 80%;
    padding-left: 10%;
    padding-right: 10%;
-  font-size: 8.6vh;
+  font-size: 8.1vh;
   align-self: center;
 }
 sideBar {
