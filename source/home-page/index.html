@@ -8,8 +8,10 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-  <title>Quick Bytes Recipes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gugi&family=Nosifer&family=VT323&family=Varela+Round&display=swap&family=Abril+Fatface&display=swap" rel="stylesheet">
+  <title>Quick Bytes: Recipe Manager</title>
   <link rel="shortcut icon" href="images\logo.png">
 
 
@@ -18,7 +20,6 @@
   <script src="" type="module"></script>
 
     <!-- Recipe Card -->
-
   <script src="" type="module"></script>
 </head>
 
@@ -28,49 +29,55 @@
     <input type="search" id="query" name="q"
      placeholder="No limit? Search for recipes here"
      aria-label="Search through site content">
+         <!--JS TO DO: Implement function to read input and navigate to filtered feed-->
     <button type = "submit"><?xml version="1.0"?><svg fill="#fa314a" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"/></svg></button>
-    <select class="sort">
+    <!--<select class="sort">
         <option value="">Sort</option>
         <option value="time">time (low to high)</option>
         <option value="time">time (high to low)</option>
         <option value="hamster">alphabetical (a-z)</option>
         <option value="parrot"># ingredients(low to high)</option>
-    </select>
+    </select>-->
     </form>
   </searchbar>
 
   <header>
 
-    <h2>How much cooking time do you have?</h2>
+    <div class="title" style = "font-family: 'Abril Fatface', cursive;"><h2><center>How much cooking time do you have?</center></h2></div>
     <div class="time-buttons">
-    <button class= "button button10">10 min</button>
+          <!--JS TO DO: Fill in href for time buttons
+           should filtered feed based on time interval-->
+    <center><button class= "button button10">10 min</button>
     <button class= "button button30">30 min</button>
     <button class= "button button60">60 min</button>
+  </center>
   </div>
+<br>
+    <h5><center>Browse for recipes below</center></h5>
 </header>
+<div class= "top-nav" style="display:flex; flex-direction: row; width: 100%;">
 <div class = logo>
   <a class = logoImg href="#top">
-    <img src="images\logo.png" alt="logo" width=60 height =60 title= "QuickBytes"></img>
+    <img src="images\logo.png" alt="logo" width=60vw height =60vh title= "QuickBytes"></img>
   </a>
   <div class = logoText>
     <h4>Quick Bytes</h4>
   </div>
 </div>
 <div class = shuffle>
+    <!--JS TO DO: Fill in href for shuffle, should navigate to random recipe page-->
   <a href="">
-    <img src="images\shuffle.png" alt="shuffle-button" width=40 height=40 title="Random-Recipe">
-  </a>
-</div>
-<div class = shuffle>
-  <a href="">
-    <img src="images\shuffle.png" alt="shuffle-button" width=40 height=40 title="Random-Recipe">
+    <img src="images\shuffle.png" alt="shuffle-button" width=45vw height=45vh title="Random-Recipe">
   </a>
 </div>
 <div class = user-portal>
+  <!--JS TO DO: Fill in href for user-portal, should navigate to user page-->
   <a href="">
-    <img src="images\user-image.png" alt="user" width=60 height =60 title= "User-Portal"></img>
+    <img src="images\user-image.png" alt="user" width=60vw height =60vh title= "User-Portal"></img>
 </a>
 </div>
+</div>
+<!--JS TO DO: Fill in href for side bar buttons, these should navigate to filtered feeds according to category pressed-->
 <sideBar class="vert-navigation">
   <nav class = "sideNav">
     <a href="" title="Breakfast">Breakfast</a> 
@@ -91,17 +98,9 @@
       <a href="" title="Sides">Sides</a>
     </nav>
   </sideBar>
-
-  <br>
-  <section id="browse"><h3>Browse for recipes below</h3> </section>
   <main>
-      <!-- Add recipe browsing here-->
+      <!-- JS TO DO: Add recipe browsing here-->
   </main>
-  <div id="button-wrapper">
-    <img src="/assets/images/icons/arrow-down.png" alt="Arrow down" />
-    <button>Show more</button>
-  </div>
-  <div id="button-horizontal-line"></div>
 </body>
 
 </html>
