@@ -1,0 +1,71 @@
+.individual-container {
+    position: absolute;
+    margin-top: calc(0rem);
+    height: auto;
+}
+
+.image-box {
+    width: calc(100vw);
+    /* left: calc(25vw); */
+    /* margin-left: -15px; */
+    /* height: calc(50vh);  */
+    text-align: center;
+    position: relative;
+    float: top;
+    /* top: calc(3rem); */
+    margin-top: calc(0rem);
+}
+
+.image-box h1 {
+    font-size: calc(2.75vw);
+}
+
+.image-box p{
+    font-size: calc(1.4vmax);
+}
+
+.grid-layout {
+    background-color: white;
+    /**position: absolute;*/
+    position: absolute;
+    /*margin-top: 8px;*/
+    margin-top: calc(1.25rem);
+    display: grid;
+}
+
+.general-layout {
+    background-color: white;
+    width: calc(20.5vw);
+    box-shadow: 5px 0 5px -2px #888;
+    padding-top: calc(5vmin);
+    /**
+    border-top-style: solid;
+    border-top-color: #FFD700;
+    border-top-width: 5px;
+    */
+    text-align: center;
+}
+
+.general-layout h1 {
+    text-align: center;
+    font-size: calc(1.5rem);
+}
+
+.application-type {
+    position: absolute;
+    text-align: left;
+    top: calc(41rem);
+    left: calc(79vw);
+    font-size: calc(1.25vw);
+    width: calc(18.5vw);
+    height: 15vw;
+}
+
+.essay-text {
+    position: relative;
+    float: bottom;
+    text-align: center;
+    left: 0;
+    top: 0;
+    font-size: calc(1.25vw);
+}
