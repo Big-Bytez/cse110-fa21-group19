@@ -5,15 +5,16 @@
 }
 
 .image-box {
-    width: calc(100vw);
+    width: calc(60vw);
     /* left: calc(25vw); */
     /* margin-left: -15px; */
     /* height: calc(50vh);  */
     text-align: center;
-    position: relative;
-    float: top;
+    /* position: relative;
+    float: top; */
     /* top: calc(3rem); */
     margin-top: calc(0rem);
+    margin-left: calc(17.5vw);
 }
 
 .image-box h1 {
@@ -31,18 +32,18 @@
     /*margin-top: 8px;*/
     margin-top: calc(1.25rem);
     display: grid;
+    height: 100%;
 }
 
 .general-layout {
     background-color: white;
-    width: calc(20.5vw);
-    box-shadow: 5px 0 5px -2px #888;
+    width: calc(15vw);
+    /* box-shadow: 5px 0 5px -2px #888; */
     padding-top: calc(5vmin);
-    /**
-    border-top-style: solid;
-    border-top-color: #FFD700;
-    border-top-width: 5px;
-    */
+    border-style: solid;
+    border-color: #FFD700;
+    border-width: 5px;
+   
     text-align: center;
 }
 
@@ -53,19 +54,25 @@
 
 .application-type {
     position: absolute;
-    text-align: left;
-    top: calc(41rem);
-    left: calc(79vw);
+    /* float: bottom; */
+    left: calc(77.5vw);
+    /* text-align: left; */
+    /* top: calc(41rem);
+    left: calc(79vw); */
     font-size: calc(1.25vw);
-    width: calc(18.5vw);
-    height: 15vw;
+    width: calc(20vw);
+    /* height: 15vw; */
+}
+
+.application-type img {
+    width: 100%;
 }
 
 .essay-text {
-    position: relative;
-    float: bottom;
-    text-align: center;
-    left: 0;
+    /* position: relative;
+    float: bottom; */
+    text-align: left;
+    /* left: 20vw; */
     top: 0;
     font-size: calc(1.25vw);
 }
