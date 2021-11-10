@@ -17,8 +17,9 @@ function init() {
             //console output: 638549
             id = data['results'][0]['id'];           
         })
+
     // get recipe by id   
-    fetch('https://api.spoonacular.com/recipes/638549/information?apiKey='+apiKey)
+    fetch('https://api.spoonacular.com/recipes/644387/information?apiKey='+apiKey)
         .then(response => response.json())
         .then(data =>{           
             console.log(data);
@@ -44,8 +45,25 @@ function init() {
 
         })
 
+    // More Additions 
+    // Can now Select recipies directly by minutes!!!
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=20')
+    .then(response => response.json())
+    .then(data => {           
+    console.log(data);           
+    })
+
+    // Can also Combine attributes! 
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=20&query=chicken')
+    .then(response => response.json())
+    .then(data => {           
+    console.log(data);           
+    })
+
+         
 
 }
+
 
 
 
