@@ -1,16 +1,16 @@
 .tile {
-    width: 10vw;
+    width: 11vw;
     margin-left: 1.5vw;
     margin-right: 1.5vw;
     height: 17.5vw;
     background-color: white;
     border-style: solid;
-    border-color: darkred;
+    border-color:rgba(223, 11, 11, 0.945);
     border-radius: 2.5vh;
     border-width: .3vh;
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
+    align-content: flex-start;;
 }
 
 .row{
@@ -20,13 +20,69 @@
 }
 
 .image{
-    width: 19vh;
-    height: 19vh;
+    width: 14vh;
+    height: 14vh;
     display: block;
     margin-left: auto;
+    margin-top: -1.5vh;
     margin-right: auto;
 }
 
 .title{
-    font-size: large;
+    display: -webkit-box;
+    font-size: 16px;
+    height: 36px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: center ;
+    font-family:  "Bubblegum Sans";
+    color: rgba(223, 11, 11, 0.945);
+    font-style: bold;
+    -webkit-text-stroke: .25px black
+
+}
+
+#circle {
+    width: 3vw;
+    height: 3vw;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background:rgba(202, 8, 8, 0.945);
+    border: .25px solid black;
+    text-align: center;
+    margin-left: 8vw;
+    display: flex; /* or inline-flex */
+    align-items: center; 
+    justify-content: center;
+    color: white;
+    font-size: small;
+    font-style: bold;
+    font-family:  "Bubblegum Sans";
+    margin-top: -3.5vh;
+    filter: drop-shadow();
+  }
+
+  #ingredients{
+      font-size: smaller;
+      text-align: center;
+      margin-left: .5vw;
+      margin-right: .5vw;
+      height: 30px;
+      overflow: hidden;
+  }
+  #rating{
+    font-size: smaller;
+    text-align: left;
+    margin-left: .5vh;
+    margin-right: .5vh;
+}
+
+#stars{
+    width: 8vh;
+    height: 2vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1vh;
 }
