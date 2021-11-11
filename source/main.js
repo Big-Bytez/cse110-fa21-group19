@@ -376,7 +376,7 @@ console.log(recipe.extendedIngredients)
 for (var i = 0; i < Math.min(recipe.extendedIngredients.length, 3); i++ ){
     ingredients = ingredients  + recipe.extendedIngredients[i].name + ", "
 }
-elementIngredients.textContent=  ingredients + "...";
+elementIngredients.textContent= "Ingredients:" + ingredients + "...";
 
 //fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&query=pasta&addRecipeInformation=True')
     //.then(response => response.json())

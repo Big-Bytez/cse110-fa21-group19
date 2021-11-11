@@ -66,10 +66,11 @@
   #ingredients{
       font-size: smaller;
       text-align: center;
-      margin-left: .5vw;
-      margin-right: .5vw;
-      height: 30px;
+      margin-left: .1vw;
+      margin-right: .1vw;
+      height: 45px;
       overflow: hidden;
+      margin-bottom: -1vh;
   }
   #rating{
     font-size: smaller;
