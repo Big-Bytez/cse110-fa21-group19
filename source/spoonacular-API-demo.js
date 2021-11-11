@@ -3,12 +3,12 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
     // Search recipe with key word
     
-    let apiKey='1a75396eadf347a5ad84f4c37723d29f';
+    let apiKey='03722052291e4f84bce1021acd82624f';
     let id;
 
     // apiKey: unique, link to your spoonacular id
     // query: where you put your key words
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&query=chicken')
+    /*fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&query=chicken')
         .then(response => response.json())
         .then(data =>{           
             console.log(data);
@@ -43,22 +43,22 @@ function init() {
             //time 
             console.log(data['readyInMinutes']);
 
-        })
+        })*/
 
     // More Additions 
     // Can now Select recipies directly by minutes!!!
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=20')
+    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&titleMatch=Garlicky Kale')
     .then(response => response.json())
     .then(data => {           
     console.log(data);           
     })
 
     // Can also Combine attributes! 
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=20&query=chicken')
+    /*fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=20&query=chicken')
     .then(response => response.json())
     .then(data => {           
     console.log(data);           
-    })
+    })*/
 
          
 

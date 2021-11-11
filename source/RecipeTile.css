@@ -1,0 +1,32 @@
+.tile {
+    width: 10vw;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    height: 17.5vw;
+    background-color: white;
+    border-style: solid;
+    border-color: darkred;
+    border-radius: 2.5vh;
+    border-width: .3vh;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.row{
+    display:flex;
+    flex-direction: row;
+    margin-top: 3vh;
+}
+
+.image{
+    width: 19vh;
+    height: 19vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title{
+    font-size: large;
+}
