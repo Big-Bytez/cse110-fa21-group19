@@ -1,15 +1,9 @@
-
 async function fetchRecipes() {
-    let recipes = []
-    fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&titleMatch=Garlicky Kale')
+    return fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&titleMatch=Garlicky Kale')
     .then(response => response.json())
-    .then(data => {   
-        for(let i = 0; i < data.results.length; i++){
-            recipes[i] = data.results[i];
-        }
-    })
-    return recipes;
 }
+let vals = await fetchRecipes();
+console.log(vals.results)
 let recipe = {
     "id": 716429,
     "title": "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs",
