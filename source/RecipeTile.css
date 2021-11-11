@@ -29,7 +29,11 @@
 }
 
 .title{
-    font-size: large;
+    display: -webkit-box;
+    font-size: 16px;
+    height: 36px;
+    line-height: 20px;
+    overflow: hidden;
     text-align: center ;
     font-family:  "Bubblegum Sans";
     color: rgba(223, 11, 11, 0.945);
@@ -64,6 +68,8 @@
       text-align: center;
       margin-left: .5vw;
       margin-right: .5vw;
+      height: 30px;
+      overflow: hidden;
   }
   #rating{
     font-size: smaller;
