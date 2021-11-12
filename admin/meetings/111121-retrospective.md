@@ -32,6 +32,7 @@ Glad:
 - Everyone doing their part
 - Designated tasks pretty well.
 - People willing to take on tasks.
+![MadSadGlad](https://user-images.githubusercontent.com/59597109/141407137-179a27d9-457f-447f-b16b-80066f50e3cc.PNG)
 **Conclusions:**
 
 -------
