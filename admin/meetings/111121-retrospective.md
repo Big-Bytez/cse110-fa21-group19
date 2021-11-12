@@ -12,7 +12,9 @@
 
 ### Agenda Item: Radar  ###
 
-**Discussion: Every section was pretty mildly spread out, everyone has average engagement and **  
+**Discussion: **
+ Every section was pretty mildly spread out, everyone has average engagement in project.
+![Radar](https://user-images.githubusercontent.com/59597109/141407371-fcb0a36e-8073-4eb2-84f8-eee717c195b6.PNG)
 
 
 **Conclusions:**
