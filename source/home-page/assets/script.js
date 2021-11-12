@@ -1,3 +1,39 @@
+//Slider Functions
+
+ //Modulo to cycle
+ function modulo(number, mod) {
+    let result = number % mod;
+    if (result < 0) {
+      result += mod;
+    }
+    return result;
+  }
+  function setUpslider(slider) {
+    function handleNext() {
+      currentSlide = modulo((currentSlide + 1), numSlides);
+      changeSlide(currentSlide);
+    }
+    function handlePrevious() {
+      currentSlide = modulo(currentSlide - 1, numSlides);
+      changeSlide(currentSlide);
+    }
+    function changeSlide(slideNumber) {
+      slider.style.setProperty('--current-slide', slideNumber);
+    }
+    // get elements
+    const buttonPrevious = slider.querySelector('[data-slider-button-previous]');
+    const buttonNext = slider.querySelector('[data-slider-button-next]');
+    const slidesContainer = slider.querySelector('[data-slider-slides-container]');
+    // slider state we need to remember
+    let currentSlide = 0;
+    const numSlides = slidesContainer.children.length;
+    // set up events
+    buttonPrevious.addEventListener('click', handlePrevious);
+    buttonNext.addEventListener('click', handleNext);
+  }
+  const sliders = document.querySelectorAll('[data-slider]');
+  sliders.forEach(setUpslider);
+
 images = {
     "1" : "images/pho.jfif",
     "2" : "images/pho.jfif",
@@ -36,3 +72,4 @@ images = {
          $('body').animate({scrollLeft: -1000}, 800);
      }
  });
+ 
