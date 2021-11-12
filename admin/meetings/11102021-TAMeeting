@@ -1,0 +1,81 @@
+# Group 19 Meeting Minutes #
+## Date:  ##
+## Location:  ##
+     Note Taker: Reny
+
+### **Meeting called by:** ###
+Hema
+### **Type of meeting:**  ###
+--------------------------------------
+
+## Minutes ##
+
+### Agenda Item: ###
+
+**Discussion:**  
+
+
+**Conclusions:**
+
+-------
+
+### Agenda Item: ###
+
+**Discussion:**  
+
+**Conclusions:**
+
+-------
+
+### Agenda Item: ###
+ADR
+**Discussion:**  
+We should be updating ADR documents constantly
+**Conclusions:**
+the initial docs are due on Friday, but they should be updated even afterward
+-------
+### Agenda Item: ###
+CICD pipeline: continuous integration 
+**Discussion:**  
+-run test cases, tests for functionality, formatting, etc, these checks happen automatically through github actions, tests workflow
+Requires some effort: 2 ppl should be in charge of this
+
+**Conclusions:**
+Due Monday: This includes code quality checks: automatic and manual checks, only when they are fully satisfied is it added to web page
+
+-------
+### Agenda Item: ###
+Sprint Review Meeting
+**Discussion:**  
+See what has been done, what needs to be done, what could be done better 
+
+
+**Conclusions:**
+Sprint due Monday
+Sprint Retrospective due Monday
+-------
+### Agenda Item: ###
+CICD pipeline: continuous integration 
+**Discussion:**  
+-run test cases, tests for functionality, formatting, etc, these checks happen automatically through github actions, tests workflow
+Requires some effort: 2 ppl should be in charge of this
+
+**Conclusions:**
+Due Monday: This includes code quality checks: automatic and manual checks, only when they are fully satisfied is it added to web page
+
+## Other Information ##
+Next meeting: MVP demonstration
+Thursday: meet for coding
+
+## Attendees: ##
+
+- Hema (TA) 
+- Nicholas(Lead) 
+- George(Lead) 
+- Nico 
+- Liza 
+- Peder 
+- Brian 
+- Xi-Kai 
+- Huang 
+- Reny
