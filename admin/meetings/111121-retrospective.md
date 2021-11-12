@@ -66,6 +66,7 @@ Must add to repo by monday.
 - Need to get routing done for demo to Hema on tuesday.
 - Get feed to display actual recipes with our recipe cards and route to recipe.
 - Add tiles to homepage.
+- Turn into single page application after presenting MVP likely.
 
 
 **Conclusions:**
