@@ -93,7 +93,7 @@ sideBar {
 
    display: inline-block;
    height: 10em;
-   width: 10em;
+   width: 15em;
    position: absolute;
    top: 1.5em;
    left: 33%;
@@ -157,9 +157,6 @@ sideBar {
        background: #b85454;
        cursor: pointer;
    }
- /*  .vert-navigation:hover{
-    background: #b85454;
-  }*/
 .button:active{
    color: red;
    cursor: pointer;
@@ -174,7 +171,7 @@ sideBar {
   justify-self: right;
   margin-top: 3.7vh;
   margin-right: 0vw;
-  margin-left: 67%;
+  margin-left: 70vw;
   padding-left: 3vw;
   top: .2em;
   background-color:none;
@@ -183,7 +180,7 @@ sideBar {
    position: fixed;
    justify-self: right;
    margin-right: 0vw;
-   margin-left: 73%;
+   margin-left: 74vw;
    padding-left: 3em;
    top: 1em;
    background-color:none;
@@ -226,7 +223,7 @@ sideBar {
  }
  .slider-container{
   size:5em;
-  padding-top: 110%;
+  padding-top: 180vh;
   width: 100%;
 }
 .slider{
@@ -288,6 +285,7 @@ sideBar {
    margin: 1rem;
  }
 }
+
 .sliderImg{
  width:11vw;
  height:21vh;
@@ -338,6 +336,7 @@ sideBar {
 }*/
  .vert-navigation{
   font-family: 'Varela Round', sans-serif;
+  font-size: 3.2vh;
   background: #b90c0c;
    position: fixed;
    width: 5.5em;
@@ -357,7 +356,7 @@ sideBar {
     text-justify: center;
     bottom: 0;
  }
- @media only screen and (max-width: 640px)  {
+ @media only screen and (max-width: 200px)  {
    /*TO DO: 
    Turn off buttons, include a input box for filtered timing
    ensure no overlap
@@ -365,6 +364,90 @@ sideBar {
 .time-buttons{
   display:none;
 }
+}
+
+ @media only screen and (max-width: 971px)  {
+  .button10, .button30, .button60 {
+    font-size: 7vh;
+  }
+  h2{
+    font-size: 7vh;
+  }
+}
+@media only screen and (max-width: 821px)  {
+  .button10, .button30, .button60 {
+    font-size: 6vh;
+  }
+  h2{
+    font-size: 6vh;
+  }
+}
+@media only screen and (max-width: 705px)  {
+  .button10, .button30, .button60 {
+    font-size: 5vh;
+  }
+  h2{
+    font-size: 5vh;
+  }
+  h4{
+    margin-top: 13%;
+    font-size: 4vh;
+  }
+}
+@media only screen and (max-width: 611px)  {
+  .button10, .button30, .button60 {
+    font-size: 4vh;
+  }
+  h2{
+    font-size: 4vh;
+  }
+  h4{
+    margin-top: 13%;
+    font-size: 3vh;
+  }
+}
+
+@media only screen and (max-width: 521px)  {
+  .button10, .button30, .button60 {
+    font-size: 3vh;
+  }
+  h2{
+    font-size: 3vh;
+  }
+  h4{
+    margin-top: 13%;
+    font-size: 3vh;
+  }
+}
+@media only screen and (max-width: 473px)  {
+  .button10, .button30, .button60 {
+    font-size: 5vh;
+  }
+  h4{
+    display: none;
+  }
+}
+@media only screen and (max-width: 445px)  {
+  .button10, .button30, .button60 {
+    font-size: 4.1vh;
+  }
+}
+@media only screen and (max-width: 445px)  {
+  .button10, .button30, .button60 {
+    font-size: 4.1vh;
+  }
+  h2{
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 391px)  {
+  .button10, .button30, .button60 {
+    font-size: 3.8vh;
+  }
+  .sideNav{
+    font-size:1vh;
+
+  }
 }
  .hidden {
    display: none;
