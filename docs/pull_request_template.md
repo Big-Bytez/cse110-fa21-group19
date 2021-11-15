@@ -1,14 +1,14 @@
-#Pull Request Process
+# Pull Request Process
 1. Ensure that your branch is as up-to-date with main as possible 
 2. Fill out this template
 3. Add at least 2 other people to get PR approvals (could just add everybody on team)
 4. Create PR
 
-#Changes
-##What changes did you make?
+# Changes
+## What changes did you make?
 
-#Verification
-##How did you ensure that your changes work?
+# Verification
+## How did you ensure that your changes work?
 
-#Screenshots
-##Please post screenshots of your changes workign if possible
+# Screenshots
+## Please post screenshots of your changes workign if possible
