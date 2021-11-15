@@ -11,4 +11,4 @@
 ## How did you ensure that your changes work?
 
 # Screenshots
-## Please post screenshots of your changes workign if possible
+## Please post screenshots of your changes working if possible
