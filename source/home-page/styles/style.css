@@ -236,7 +236,9 @@ sideBar {
  display: flex;
  text-align: center;
  flex-direction: row;
- width:66vw
+ width:66vw;
+ height: 40vh
+ 
 }
 .slider-button {
  position: absolute;
