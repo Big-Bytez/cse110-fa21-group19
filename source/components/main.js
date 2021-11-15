@@ -4,7 +4,7 @@ async function fetchRecipes() {
 }
 
 async function searchFetchRecipes(searchBar) {
-    let searchString = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&titleMatch=' + searchBar;
+    let searchString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&titleMatch=" + searchBar;
     return fetch(searchString)
     .then((response) => response.json())
 }
@@ -12,22 +12,22 @@ async function searchFetchRecipes(searchBar) {
 let vals = await fetchRecipes();
 console.log(vals.results[0])
 for (let i = 0; i<9; i++ ){
-    let element = document.createElement('article');
-    element.id = 'tile'
+    let element = document.createElement("article");
+    element.id = "tile"
     let recipe = vals.results[i]
     console.log(recipe)
-    let title = document.createElement('h1')
-    title.id = 'title'
+    let title = document.createElement("h1")
+    title.id = "title"
     title.textContent = recipe.title
     element.appendChild(title)
-    let image = document.createElement('img')
+    let image = document.createElement("img")
     image.src = recipe.image;
     element.appendChild(image)
-    let circle = document.createElement('div')
-    circle.id = 'circle'
+    let circle = document.createElement("div")
+    circle.id = "circle"
     circle.textContent = "<" + recipe.readyInMinutes + "min";
     element.appendChild(circle)
-    let ElemIngredient  = document.createElement('div')
+    let ElemIngredient  = document.createElement("div")
     ElemIngredient.id = "ingredients"
     let ingredients = ""
     /*
@@ -56,7 +56,7 @@ for (var i = 0; i < Math.min(recipe.extendedIngredients.length, 3); i++ ){
 }
 elementIngredients.textContent= "Ingredients:" + ingredients + "...";
 
-//fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&query=pasta&addRecipeInformation=True')
+//fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&query=pasta&addRecipeInformation=True")
     //.then(response => response.json())
     //.then(data => { console.log(data) })
 //
