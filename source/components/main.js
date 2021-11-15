@@ -1,6 +1,6 @@
 
 async function fetchRecipes() {
-    return fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&query=pasta&addRecipeInformation=True").then((response) => response.json())
+    return fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&maxReadyTime=10&addRecipeInformation=True").then((response) => response.json())
 }
 
 async function searchFetchRecipes(searchBar) {
@@ -8,9 +8,8 @@ async function searchFetchRecipes(searchBar) {
     return fetch(searchString)
     .then((response) => response.json())
 }
-
-let vals = await fetchRecipes();
-console.log(vals.results[0])
+  /*
+let vals = await fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&maxReadyTime=10&addRecipeInformation=True").then((response) => response.json());
 for (let i = 0; i<9; i++ ){
     let element = document.createElement("article");
     element.id = "tile"
@@ -36,9 +35,9 @@ for (let i = 0; i<9; i++ ){
     }
     ElemIngredient.textContent= "Diets:" + ingredients + "...";
     element.appendChild(ElemIngredient)
-    */
     document.getElementById("row").appendChild(element);
 }
+
 
 /*
 

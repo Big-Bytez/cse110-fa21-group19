@@ -34,7 +34,7 @@
   const sliders = document.querySelectorAll('[data-slider]');
   sliders.forEach(setUpslider);
 
-images = {
+let images = {
     "1" : "images/pho.jfif",
     "2" : "images/pho.jfif",
     "3" : "images/pho.jfif",
@@ -47,9 +47,55 @@ images = {
     "10" : "img/10.png"
  }
  
+ /*
  Object.keys(images).forEach(function(path) {
      $('#hold_images').append("<img class='my_img' width=200 height=400 src=" + images[path] + ">"); 
  });
+ */
+
+async function makeThumbnails(request){
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=7e76c41b05734b4ab2265cebeb26cd12&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
+  for (let i = 0; i<15; i++ ){
+      let element = document.createElement("article");
+      element.id = "tile"
+      let recipe = vals.results[i]
+      console.log(recipe)
+      let title = document.createElement("h1")
+      title.id = "title"
+      title.textContent = recipe.title
+      element.appendChild(title)
+      let image = document.createElement("img")
+      image.src = recipe.image;
+      element.appendChild(image)
+      let circle = document.createElement("div")
+      circle.id = "circle"
+      circle.textContent = "<" + recipe.readyInMinutes + "min";
+      element.appendChild(circle)
+      let ElemIngredient  = document.createElement("div")
+      ElemIngredient.id = "ingredients"
+      console.log( document.getElementsByClassName("slider")[0])
+      let place = 0; 
+      if (request == '30'){
+        place = 1
+      }
+      if (request == '60'){
+        place = 2
+      }
+      document.getElementsByClassName("slider")[place].appendChild(element);
+    }
+  }
+
+makeThumbnails(20);
+makeThumbnails(30);
+makeThumbnails(60);
+
+
+
+
+
+
+
+
  
  $('body').append("<i id='icon_right'></i>");
  $('body').append("<i id='icon_left'></i>"); 
