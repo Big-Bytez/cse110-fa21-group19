@@ -73,7 +73,7 @@ async function makeThumbnails(request){
       element.appendChild(circle)
       let ElemIngredient  = document.createElement("div")
       ElemIngredient.id = "ingredients"
-      console.log( document.getElementsByClassName("slider")[0])
+      console.log( document.getElementsByClassName("slide")[0])
       let place = 0; 
       if (request == '30'){
         place = 1
@@ -81,7 +81,7 @@ async function makeThumbnails(request){
       if (request == '60'){
         place = 2
       }
-      document.getElementsByClassName("slider")[place].appendChild(element);
+      document.getElementsByClassName("slide")[place].appendChild(element);
     }
   }
 
