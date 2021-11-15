@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Nosifer&family=VT323&family=Varela+Round&display=swap&family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images\logo.png">
+  
+  
+    <!-- Main Stylesheet & Scripts -->
+    <script src="assets\script.js" type="module"></script>
+  <title>Quick Bytes: Search Results</title>
+  <link rel="icon" type = image/png href="/images/logo.png?"> 
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="assets/searchRecipe.js" type="module"></script>
+  <script src="assets/script.js?" type="text/javascript"></script>
+
+</head>
+
+<body>
+    
+  <searchbar id= "search-bar">
+    <form id="form" role="search">
+    <input type="search" id="query" name="q"
+     placeholder="Search for recipes here"
+     aria-label="Search through site content">
+    <button type = "submit"><?xml version="1.0"?><svg fill="#fa314a" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"/></svg></button>
+    <select class="sort">
+        <option value="">Sort</option>
+        <option value="time">time (low to high)</option>
+        <option value="time">time (high to low)</option>
+        <option value="hamster">alphabetical (a-z)</option>
+        <option value="parrot"># ingredients(low to high)</option>
+    </select>
+    </form>
+  </searchbar>
+  <div class= "top-nav" style="display:flex; flex-direction: row; width: 100%;">
+    <div class = logo>
+      <a class = logoImg href="home-page\index.html">
+        <img src="images\logo.png" alt="logo" width=60vw height =60vh title= "QuickBytes"></img>
+      </a>
+      <div class = logoText>
+        <h4>Quick Bytes</h4>
+      </div>
+    </div>
+    <div class = shuffle>
+        <!--JS TO DO: Fill in href for shuffle, should navigate to random recipe page-->
+      <a href="">
+        <img src="images\shuffle.png" alt="shuffle-button" width=45vw height=45vh title="Random-Recipe">
+      </a>
+    </div>
+    <div class = user-portal>
+      <!--JS TO DO: Fill in href for user-portal, should navigate to user page-->
+      <a href="user-portal/index.html">
+        <img src="images\user-image.png" alt="user" width=60vw height =60vh title= "User-Portal"></img>
+    </a>
+    </div>
+    </div>
+  <sideBar class="vert-navigation">
+    <nav class = "sideNav">
+      <a href="" title="Breakfast">Breakfast</a> 
+    </nav>
+    <nav  class = "sideNav">
+        <a href="" title="Lunch">Lunch</a> 
+    </nav>
+    <nav  class = "sideNav">
+        <a href="" title="Dinner">Dinner</a>
+      </nav>
+      <nav  class = "sideNav">
+        <a href="" title="Dessert">Dessert</a>
+      </nav>
+      <nav  class = "sideNav">
+        <a href="" title="Healthy">Healthy</a>
+      </nav>
+      <nav  class = "sideNav">
+        <a href="" title="Sides">Sides</a>
+      </nav>
+    </sideBar>
+    <br><br><br><br>
+    <h2><center>Showing # recipes of #</center></h2>
+    <main class="search-recipes">
+      <!-- Recipes  -->
+    </main>
+    <br>
+    <h2><center>Page{1...}</h2>
+
+</body>
+</html>
