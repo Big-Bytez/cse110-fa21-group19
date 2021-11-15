@@ -1,0 +1,17 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [add-superlinter]
+  pull_request:
+    branches: [add-superlinter]
+
+jobs:
+  superlinter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v3
