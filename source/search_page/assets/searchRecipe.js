@@ -1,9 +1,7 @@
 class SearchRecipe extends HTMLElement {
     constructor() {
-
       super();
       let shadow = this.attachShadow({mode: 'open'});
-  
     }
   
     set data(data) {
@@ -61,53 +59,41 @@ class SearchRecipe extends HTMLElement {
           margin-left:12px;
           text-align: center;
         }
-        
-        
-        
-        
-        
-        
-        
-        
         `;
         
 
         styleElem.innerHTML = styles;
 
         const recipe = document.createElement('article');
-        recipe.setAttribute('href',"")
+        recipe.setAttribute('href',"");
 
-        const recipe_title = document.createElement('p');
-        recipe_title.setAttribute('href',"")
-        recipe_title.setAttribute('class','headline')
+        const recipeTitle = document.createElement('p');
+        recipeTitle.setAttribute('href',"");
+        recipeTitle.setAttribute('class','headline');
 
-        const recipe_img = document.createElement('img');
-        const time_circle = document.createElement('div');
-        time_circle.setAttribute('class', 'circle')
-
-
-        const time_numb = document.createElement('p')
-        time_numb.setAttribute('class', 'recipe-time')
-
-        time_numb.innerHTML = "14";
+        const recipeImg = document.createElement('img');
+        const timeCircle = document.createElement('div');
+        timeCircle.setAttribute('class', 'circle');
 
 
-        recipe_img.setAttribute('src','images/pasta.jpeg')
+        const timeNumb = document.createElement('p')
+        timeNumb.setAttribute('class', 'recipe-time');
 
-        recipe_title.innerHTML = data;
+        timeNumb.innerHTML = "14";
+
+
+        recipeImg.setAttribute('src','images/pasta.jpeg');
+
+        recipeTitle.innerHTML = data;
 
         
-        recipe.appendChild(recipe_title);
-        recipe.appendChild(recipe_img);
-        time_circle.appendChild(time_numb)
-        recipe.appendChild(time_circle);
+        recipe.appendChild(recipeTitle);
+        recipe.appendChild(recipeImg);
+        timeCircle.appendChild(timeNumb);
+        recipe.appendChild(timeCircle);
 
         this.shadowRoot.appendChild(styleElem); 
         this.shadowRoot.appendChild(recipe);
-      
-  
- 
-  
         }
   }
   
