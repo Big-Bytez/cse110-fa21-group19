@@ -30,20 +30,21 @@
     /**position: absolute;*/
     position: absolute;
     /*margin-top: 8px;*/
-    margin-top: calc(1.25rem);
+    /* margin-top: calc(1.25rem); */
     display: grid;
     height: 100%;
 }
 
 .general-layout {
-    background-color: white;
+    background-color: rgb(235, 103, 94);
     width: calc(15vw);
     /* box-shadow: 5px 0 5px -2px #888; */
     padding-top: calc(5vmin);
     border-style: solid;
-    border-color: #FFD700;
+    border-color: red;
     border-width: 5px;
-   
+    /* color: red; */
+    height: max(100vh, 100%);
     text-align: center;
 }
 
@@ -75,4 +76,41 @@
     /* left: 20vw; */
     top: 0;
     font-size: calc(1.25vw);
+    background-color: rgb(242, 236, 119);
+    padding: 1px;
+    /* color: red; */
+}
+
+.essay-text h2 {
+    text-align: center;
+}
+
+.directions-text {
+    /* position: relative;
+    float: bottom; */
+    text-align: left;
+    /* left: 20vw; */
+    top: 0;
+    font-size: calc(1.25vw);
+    /* color: red; */
+}
+
+.directions-text h2 {
+    text-align: center;
+}
+
+.ratings-box {
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    flex-direction: row;
+}
+
+.ratings-box > div {
+    flex:  auto;
+    text-align: center;
+}
+
+.stars {
+    width: 20%;
 }
