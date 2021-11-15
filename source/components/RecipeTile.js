@@ -3,7 +3,7 @@ class RecipeCard extends HTMLElement {
       // Part 1 Expose - TODO
       super();
       // You'll want to attach the shadow DOM here
-      var shadow = this.attachShadow({mode: 'open'});
+      var shadow = this.attachShadow({mode: "open"});
     }
   
     set data(data) {
@@ -181,7 +181,7 @@ class RecipeCard extends HTMLElement {
     // Remove the 'PT'
     time = time.slice(2);
   
-    let timeArr = time.split('');
+    let timeArr = time.split("");
     if (time.includes('H')) {
       for (let i = 0; i < timeArr.length; i++) {
         if (timeArr[i] == 'H') return `${timeStr} hr`;
@@ -231,5 +231,5 @@ class RecipeCard extends HTMLElement {
   
   // Define the Class so you can use it as a custom element.
   // This is critical, leave this here and don't touch it
-  customElements.define('recipe-card', RecipeCard);
+  customElements.define("recipe-card", RecipeCard);
   
