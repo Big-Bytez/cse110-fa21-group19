@@ -5,7 +5,7 @@ document.getElementById("save").addEventListener('click', function() {
 var data = {"ingredients" : document.getElementById("ing").value, 
 "time" : document.getElementById("time").value}
 localStorage.setItem(document.getElementById("name").value, JSON.stringify(data))
-console.log(localStorage)})
+console.log(localStorage);})
 
 // code for displaying items in local storage
 document.getElementById("load").addEventListener('click', displayLocalStorage)
