@@ -8,7 +8,7 @@ localStorage.setItem(document.getElementById("name").value, JSON.stringify(data)
 console.log(localStorage);})
 
 // code for displaying items in local storage
-document.getElementById("load").addEventListener('click', displayLocalStorage)
+document.getElementById("load").addEventListener("click", displayLocalStorage)
 
 function displayLocalStorage(){
     console.log(localStorage)
