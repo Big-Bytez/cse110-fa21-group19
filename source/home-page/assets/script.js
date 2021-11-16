@@ -61,7 +61,7 @@ let images = {
 async function makeThumbnails(request){
   let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=b52c376255a144f789aa106c0c100c38&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
   for (let i = 0; i<15; i++ ){
-      let slideDiv = document.createElement('div');
+      let slideDiv = document.createElement("div");
       /*slideDiv.setAttribute('class','slide');*/
       let element = document.createElement("article");
       element.id = "tile"
@@ -80,7 +80,7 @@ async function makeThumbnails(request){
       element.appendChild(circle)
       let ElemIngredient  = document.createElement("div")
       ElemIngredient.id = "ingredients"
-      console.log( document.getElementsByClassName("slider")[0])
+      console.log( document.getElementsByClassName("container")[0]);
       let place = 0; 
       if (request == '30'){
         place = 1
@@ -89,7 +89,7 @@ async function makeThumbnails(request){
         place = 2
       }
       slideDiv.append(element);
-      document.getElementsByClassName("slider")[place].appendChild(slideDiv);
+      document.getElementsByClassName("container")[place].appendChild(slideDiv);
     }
   }
 makeThumbnails(20);

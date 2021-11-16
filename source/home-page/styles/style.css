@@ -1,17 +1,15 @@
 /* style.css */
-
-
 * {
   font-family: 'Varela Round', sans-serif;
  
 }
 @font-face {
-font-family: 'Abril Fatface', cursive;
- font-family: 'Varela Round', sans-serif;
- font-family: 'Gugi', cursive;
-font-family: 'Nosifer', cursive;
-font-family: 'VT323', monospace;
- src: url("https://fonts.google.com/");
+  font-family: 'Abril Fatface', cursive;
+  font-family: 'Varela Round', sans-serif;
+  font-family: 'Gugi', cursive;
+  font-family: 'Nosifer', cursive;
+  font-family: 'VT323', monospace;
+  src: url("https://fonts.google.com/");
  
 }
 body {
@@ -25,127 +23,127 @@ body, html {
  width: 100%;
 }
 body>sideBar a {
-font-family: 'Varela Round', sans-serif;
-color: rgb(255, 255, 255);
-font-size: 3vh;
-margin-top: 3vh;
-margin-bottom: 3vh;
+  font-family: 'Varela Round', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 3vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 sideBar {
-display: grid;
-justify-items: begin;
-padding-left: .2em;
-position: fixed;
-overflow-x: hidden;
-transition: 0.5s;
-width: 5em;
-left:0vw;
+  display: grid;
+  justify-items: begin;
+  padding-left: .2em;
+  position: fixed;
+  overflow-x: hidden;
+  transition: 0.5s;
+  width: 5em;
+  left:0vw;
 }
 .vert-navigation{
-font-family: 'Varela Round', sans-serif;
-border-radius: 10px;
-background: #b90c0c;
- position: fixed;
- width: 5.5em;
- height: 95%;
- padding-top: 0%;
- top: 5.5em; /*keeps side bar from reaching logo*/
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 10px;
+  background: #b90c0c;
+  position: fixed;
+  width: 5.5em;
+  height: 95%;
+  padding-top: 0%;
+  top: 5.5em; /*keeps side bar from reaching logo*/
 }
 header {
-justify-content: center;
-align-self: center;
-justify-items: center;
-justify-self: center;
-align-content: center;
-display: inline-block;
-padding-left: 7.5%;
-height: 20%;
-position: absolute;
-top: 15vh;
-margin-left: 4%;
-width: 100%;
+  justify-content: center;
+  align-self: center;
+  justify-items: center;
+  justify-self: center;
+  align-content: center;
+  display: inline-block;
+  padding-left: 7.5%;
+  height: 20%;
+  position: absolute;
+  top: 15vh;
+  margin-left: 4%;
+  width: 100%;
 }
 body{
-justify-content: center;
-align-self: center;
-justify-items: center;
-justify-self: center;
-align-content: center;
+  justify-content: center;
+  align-self: center;
+  justify-items: center;
+  justify-self: center;
+  align-content: center;
 }
 body>header a:hover {
-border-bottom: 2px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 header>section {
-display: grid;
-max-width: 400px;
-row-gap: 2em;
-width: 100%;
+  display: grid;
+  max-width: 400px;
+  row-gap: 2em;
+  width: 100%;
 }
 h2 {
-font-family: 'Abril Fatface', cursive; /*issue: this does not change the font!*/
- width: 80%;
- padding-left: 10%;
- padding-right: 10%;
-font-size: 8.1vh;
-align-self: center;
+  font-family: 'Abril Fatface', cursive; /*issue: this does not change the font!*/
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 8.1vh;
+  align-self: center;
 }
 .searchbox {  
- float: left;
+  float: left;
+}  
+input[type=text] {  
+  padding: 6px;  
+  margin-top: 10px;  
+  font-size: 17px;  
+  border: none;  
  }  
- input[type=text] {  
- padding: 6px;  
- margin-top: 10px;  
- font-size: 17px;  
- border: none;  
- }  
- searchbar {
- margin-top: 0%;
- justify-content: center;
- align-self: right;
- justify-items: center;
+searchbar {
+  margin-top: 0%;
+  justify-content: center;
+  align-self: right;
+  justify-items: center;
 
- display: inline-block;
- height: 10em;
- width: 10em;
- position: absolute;
- top: 1.5em;
- left: 33%;
+  display: inline-block;
+  height: 10em;
+  width: 10em;
+  position: absolute;
+  top: 1.5em;
+  left: 33%;
  }
  .searchbox button {   
- padding: 8px;  
- margin-top: 10px;  
- margin-left: 10px;  
- background: red;  
- font-size: 20px;  
- border: none;  
- cursor: pointer;   
+  padding: 8px;  
+  margin-top: 10px;  
+  margin-left: 10px;  
+  background: red;  
+  font-size: 20px;  
+  border: none;  
+  cursor: pointer;   
  }  
  .searchbox button:hover {  
- background: red;  
+  background: red;  
  }  
- form {
-     background-color: #ff141479;
-     width: 33vw;
-     height: 44px;
-     border-radius: 5px;
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-   }
-   input {
-     all: unset;
-     font: 16px system-ui;
-     color: rgb(255, 255, 255);
-     height: 100%;
-     width: 100%;
-     padding: 6px 10px;
-   }
-   ::placeholder {
-     color: #fff;
-     opacity: 0.7; 
+form {
+  background-color: #ff141479;
+  width: 33vw;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+input {
+  all: unset;
+  font: 16px system-ui;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+::placeholder {
+  color: #fff;
+  opacity: 0.7; 
     
-   }
-   .button {
+}
+.button {
     background-color: #ff0000;
     border: none;
     color: white;
@@ -162,13 +160,13 @@ align-self: center;
   }
 
 .button10,.button30,.button60 {border-radius: 50%;
-font-family: 'Abril Fatface', cursive;
-margin-left: .8em;
+  font-family: 'Abril Fatface', cursive;
+  margin-left: .8em;
   margin-right: .8em;
 }
 .button:hover {
-     background: #b85454;
-     cursor: pointer;
+  background: #b85454;
+  cursor: pointer;
  }
 /*  .vert-navigation:hover{
   background: #b85454;
@@ -238,7 +236,7 @@ font-family: 'Abril Fatface', cursive;
 width: 8vw;
 justify-self: left;
 }
- .slider-container{
+ /*.slider-container{
   margin: 10vh;
   size:5em;
   padding-top: 180vh;
@@ -258,6 +256,7 @@ justify-self: left;
  height: 40vh
  
 }
+/*Slider Css may use later.
 .slider-button {
  position: absolute;
  top: 50%;
@@ -293,12 +292,9 @@ justify-self: left;
  transition: transform 0.5s;
  transform: translateX(calc(-100% * var(--current-slide)));
  padding-left: 2vw;
-}
+}*/
 
-.slide {
- flex: 0 0 100%;
- padding-left:2vw ;
-}
+
 @media screen and (min-width: 768px) {
  .slider-button {
    font-size: 2rem;
@@ -332,8 +328,8 @@ justify-self: left;
 .slider-heading{
   font-family: 'Abril Fatface', cursive;
   color: rgb(44, 43, 43);
- left:0vw;
- padding-bottom: 4vh;
+  left:0vw;
+  padding-bottom: 4vh;
 }
 
 /* We no longer need this portion for home page, it is needed for filtered feed.
@@ -482,52 +478,52 @@ justify-self: left;
   flex-direction: column;
 }
 .slider {
- position: relative;
- overflow: hidden;
- display: flex;
- text-align: center;
- flex-direction: row;
- width:66vw
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  width:66vw
 }
 .slider-button {
- position: absolute;
- top: 50%;
- transform: translateY(-50%);
- z-index: 1;
- padding: 0;
- margin: 0.5rem;
- border-radius: 50%;
- background-color: transparent;
- border: none;
- font-size: 1.5rem;
- cursor: pointer;
- transition: color 0.1s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  padding: 0;
+  margin: 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.1s;
 }
 .slider-button:hover {
- color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 .slider-button_previous{
- height:2em;
- width:2em;
- left:0;
- margin-left: auto;
- margin-right: auto;
- display:block;
+  height:2em;
+  width:2em;
+  left:0;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
 }
 .slider-button_next {
- right: 0;
- height:2em;
- width:2em
+  right: 0;
+  height:2em;
+  width:2em
 }
 .slides {
- display: flex;
- transition: transform 0.5s;
- transform: translateX(calc(-100% * var(--current-slide)));
- padding-left: 0vw;
+  display: flex;
+  transition: transform 0.5s;
+  transform: translateX(calc(-100% * var(--current-slide)));
+  padding-left: 0vw;
 }
 .slide {
- flex: 0 0 100%;
- padding-left:2vw ;
+  flex: 0 0 100%;
+  padding-left:2vw ;
 }
 @media screen and (min-width: 768px) {
  .slider-button {
@@ -536,16 +532,16 @@ justify-self: left;
  }
 }
 .pho{
- width:10vw;
- height:20vh;
+  width:10vw;
+  height:20vh;
 }
 .allHome{
- display:flex;
- flex-direction: column;
+  display:flex;
+  flex-direction: column;
 }
 .slider-heading{
- left:0vw;
- padding-bottom: 4vh;
+  left:0vw;
+  padding-bottom: 4vh;
 }
 /* Position and style the close button (top right corner) */
 .vert-navigation .closebtn {
@@ -572,3 +568,20 @@ justify-self: left;
 .openbtn:hover {
   background-color: #444 !important;
 }
+main{
+  padding-top: 100vh;
+  display: block;
+  padding-left: 2vw;
+  left: 0;
+  
+}
+.container{
+  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.slide {
+  flex: 0 0 20%;
+  padding: 0 0 0 ;
+ }
