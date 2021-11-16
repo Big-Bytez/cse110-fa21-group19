@@ -64,7 +64,7 @@ document.getElementById("delete_button").addEventListener('click', function() {
       }
     };
     return myList.sort(callbackFunc);
-    };
+    }
 
 document.getElementById("sort").addEventListener('click', function() { 
     var sortedList = makeSortedList()
