@@ -571,17 +571,18 @@ h3{
   background-color: #444 ;
 }
 main{
-  padding-top: 100vh;
-  display: block;
-  padding-left: 2vw;
-  left: 0;
+  padding-top: 250vh;
+  padding-left: 40vw;
+  margin-right: 40vw;
   
 }
 .container{
-  
-  display: flex;
-  flex-wrap: wrap;
+  display:flex;
   flex-direction: row;
+  padding-right: 20vh;
+  margin-left: 20vh;
+  height: 20vw;
+  text-align: center;
 }
 .slide {
   flex: 0 0 20%;

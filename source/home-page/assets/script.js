@@ -61,8 +61,10 @@ let images = {
 
 
 async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=b52c376255a144f789aa106c0c100c38&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
-  for (let i = 0; i<15; i++ ){
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
+  for (let i = 0; i<6; i++ ){
+      let link = document.createElement("a");
+      link.href = "../recipe-individual/index.html"
       let slideDiv = document.createElement("div");
       /*slideDiv.setAttribute('class','slide');*/
       let element = document.createElement("article");
@@ -74,6 +76,7 @@ async function makeThumbnails(request){
       title.textContent = recipe.title
       element.appendChild(title)
       let image = document.createElement("img")
+      image.id = "image"
       image.src = recipe.image;
       element.appendChild(image)
       let circle = document.createElement("div")
@@ -91,7 +94,8 @@ async function makeThumbnails(request){
         place = 2
       }
       slideDiv.append(element);
-      document.getElementsByClassName("container")[place].appendChild(slideDiv);
+      link.appendChild(slideDiv)
+      document.getElementsByClassName("container")[place].appendChild(link);
     }
   }
 makeThumbnails(20);
