@@ -1,7 +1,7 @@
 
 displayLocalStorage()
 // code for storing items to local
-document.getElementById("save").addEventListener('click', function() { 
+document.getElementById("save").addEventListener("click", function() { 
 var data = {"ingredients" : document.getElementById("ing").value, 
 "time" : document.getElementById("time").value}
 localStorage.setItem(document.getElementById("name").value, JSON.stringify(data))
