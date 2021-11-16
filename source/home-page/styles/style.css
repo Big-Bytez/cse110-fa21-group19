@@ -144,19 +144,19 @@ input {
     
 }
 .button {
-    background-color: #ff0000;
-    border: none;
-    color: white;
-    background: #b90c0c;
-    width: 5em;
-    height: 5em;
-    text-align: center;
-    align-self: center;
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 8.8vh;
-    box-shadow: 0 .5em .2em rgba(0, 0, 0, 0.2);
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  background: #b90c0c;
+  width: 5em;
+  height: 5em;
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 8.8vh;
+  box-shadow: 0 .5em .2em rgba(0, 0, 0, 0.2);
   }
 
 .button10,.button30,.button60 {border-radius: 50%;
@@ -168,36 +168,37 @@ input {
   background: #b85454;
   cursor: pointer;
  }
+
 /*  .vert-navigation:hover{
   background: #b85454;
 }*/
 .button:active{
- color: red;
- cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 .top-nav{
-width: 100%;
-display:flex; 
-flex-direction: row;
+  width: 100%;
+  display:flex; 
+  flex-direction: row;
 }
 .shuffle{
-position: fixed;
-justify-self: right;
-margin-top: 3.7vh;
-margin-right: 0vw;
-margin-left: 67%;
-padding-left: 3vw;
-top: .2em;
-background-color:none;
+  position: fixed;
+  justify-self: right;
+  margin-top: 3.7vh;
+  margin-right: 0vw;
+  margin-left: 67%;
+  padding-left: 3vw;
+  top: .2em;
+  background-color:none;
 }
 .user-portal{
- position: fixed;
- justify-self: right;
- margin-right: 0vw;
- margin-left: 73%;
- padding-left: 3em;
- top: 1em;
- background-color:none;
+  position: fixed;
+  justify-self: right;
+  margin-right: 0vw;
+  margin-left: 73%;
+  padding-left: 3em;
+  top: 1em;
+  background-color:none;
 }
 .logoImg {
  position:fixed;
@@ -223,7 +224,7 @@ background-color:none;
 }
 h4{
   font-family: 'Abril Fatface', cursive;
- font-size: 5vh;
+  font-size: 5vh;
   text-decoration: wavy;
   color: black;
   margin-left: 8%;
@@ -232,9 +233,9 @@ h4{
   padding-top: 0%;
 }
 h3{
-font-family: 'Abril Fatface', cursive;
-width: 8vw;
-justify-self: left;
+  font-family: 'Abril Fatface', cursive;
+  width: 8vw;
+  justify-self: left;
 }
  /*.slider-container{
   margin: 10vh;
@@ -351,16 +352,16 @@ justify-self: left;
  height: 34px;
 }*/
  .vert-navigation{
-  font-family: 'Varela Round', sans-serif;
-  font-size: 3.2vh;
-  background: #b90c0c;
-   position: fixed;
-   width: 5.5em;
-   height: 95%;
-   padding-top: 0%;
-   overflow-x: hidden;
-   transition: 0.5s;
-   top: 5.5em; /*keeps side bar from reaching logo*/
+    font-family: 'Varela Round', sans-serif;
+    font-size: 3.2vh;
+    background: #b90c0c;
+    position: fixed;
+    width: 5.5em;
+    height: 95%;
+    padding-top: 0%;
+    overflow-x: hidden;
+    transition: 0.5s;
+    top: 5.5em; /*keeps side bar from reaching logo*/
  }
  h5{
     background-color: #ff141479;
@@ -543,6 +544,7 @@ justify-self: left;
   left:0vw;
   padding-bottom: 4vh;
 }
+
 /* Position and style the close button (top right corner) */
 .vert-navigation .closebtn {
   position: absolute;
@@ -557,16 +559,16 @@ justify-self: left;
   position: fixed;
   top: 12vh;
   left: 0vw;
-  font-size: 20px !important;
-  cursor: pointer !important;
-  background-color: #111 !important;
-  color: white !important;
-  padding: 10px 15px !important;
-  border: none !important;
+  font-size: 20px ;
+  cursor: pointer ;
+  background-color: #111 ;
+  color: white ;
+  padding: 10px 15px ;
+  border: none ;
 }
 
 .openbtn:hover {
-  background-color: #444 !important;
+  background-color: #444 ;
 }
 main{
   padding-top: 100vh;

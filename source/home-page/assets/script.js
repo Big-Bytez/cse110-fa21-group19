@@ -21,14 +21,16 @@
     function changeSlide(slideNumber) {
       slider.style.setProperty('--current-slide', slideNumber);
     }
+    
     // get elements
     const buttonPrevious = slider.querySelector('[data-slider-button-previous]');
     const buttonNext = slider.querySelector('[data-slider-button-next]');
     const slidesContainer = slider.querySelector('[data-slider-slides-container]');
+   
     // slider state we need to remember
     let currentSlide = 0;
     const numSlides = 15 /*slidesContainer.children.length*/;
-    console.log(numSlides);
+  
     // set up events
     buttonPrevious.addEventListener('click', handlePrevious);
     buttonNext.addEventListener('click', handleNext);
@@ -80,7 +82,7 @@ async function makeThumbnails(request){
       element.appendChild(circle)
       let ElemIngredient  = document.createElement("div")
       ElemIngredient.id = "ingredients"
-      console.log( document.getElementsByClassName("container")[0]);
+      console.log(document.getElementsByClassName("container")[0]);
       let place = 0; 
       if (request == '30'){
         place = 1
