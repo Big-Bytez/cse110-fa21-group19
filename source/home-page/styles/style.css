@@ -1,227 +1,245 @@
 /* style.css */
 
+
 * {
-    font-family: 'Varela Round', sans-serif;
-   
- }
- @font-face {
-  font-family: 'Abril Fatface', cursive;
-   font-family: 'Varela Round', sans-serif;
-   font-family: 'Gugi', cursive;
-  font-family: 'Nosifer', cursive;
-  font-family: 'VT323', monospace;
-   src: url("https://fonts.google.com/");
-   
-}
- body {
-   align-items: center;
-   display: grid;
-   justify-items: center;
-   background-color: #ffffff; /*white background*/ /*yellow option:#e9e2cc pink option: #eee4e4 */
- }
- body, html {
-   height: 150%; /*allows for space to scroll into short feed*/
-   width: 100%;
- }
- body>sideBar a {
   font-family: 'Varela Round', sans-serif;
-  color: rgb(255, 255, 255);
-  font-size: 3vh;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+ 
 }
-header {
-  justify-content: center;
-  align-self: center;
-  justify-items: center;
-  justify-self: center;
-  align-content: center;
-  display: inline-block;
-  padding-left: 7.5%;
-  height: 20%;
-  position: absolute;
-  top: 15vh;
-  margin-left: 4%;
-  width: 100%;
+@font-face {
+font-family: 'Abril Fatface', cursive;
+ font-family: 'Varela Round', sans-serif;
+ font-family: 'Gugi', cursive;
+font-family: 'Nosifer', cursive;
+font-family: 'VT323', monospace;
+ src: url("https://fonts.google.com/");
+ 
 }
-body{
-  justify-content: center;
-  align-self: center;
-  justify-items: center;
-  justify-self: center;
-  align-content: center;
+body {
+ align-items: center;
+ display: grid;
+ justify-items: center;
+ background-color: #ffffff; /*white background*/ /*yellow option:#e9e2cc pink option: #eee4e4 */
 }
-body>header a:hover {
-  border-bottom: 2px solid transparent;
+body, html {
+ height: 150%; /*allows for space to scroll into short feed*/
+ width: 100%;
 }
-header>section {
-  display: grid;
-  max-width: 400px;
-  row-gap: 2em;
-  width: 100%;
-}
- h2 {
-  font-family: 'Abril Fatface', cursive; /*issue: this does not change the font!*/
-   width: 80%;
-   padding-left: 10%;
-   padding-right: 10%;
-  font-size: 8.1vh;
-  align-self: center;
+body>sideBar a {
+font-family: 'Varela Round', sans-serif;
+color: rgb(255, 255, 255);
+font-size: 3vh;
+margin-top: 3vh;
+margin-bottom: 3vh;
 }
 sideBar {
-  display: grid;
-  justify-items: begin;
-  padding-left: .2em;
-  position: fixed;
-  width: 6em;
-  left:0vw;
+display: grid;
+justify-items: begin;
+padding-left: .2em;
+position: fixed;
+overflow-x: hidden;
+transition: 0.5s;
+width: 5em;
+left:0vw;
 }
- .searchbox {  
-   float: left;
-   }  
-   input[type=text] {  
-   padding: 6px;  
-   margin-top: 10px;  
-   font-size: 17px;  
-   border: none;  
-   }  
-   searchbar {
-   margin-top: 0%;
-   justify-content: center;
-   align-self: right;
-   justify-items: center;
+.vert-navigation{
+font-family: 'Varela Round', sans-serif;
+border-radius: 10px;
+background: #b90c0c;
+ position: fixed;
+ width: 5.5em;
+ height: 95%;
+ padding-top: 0%;
+ top: 5.5em; /*keeps side bar from reaching logo*/
+}
+header {
+justify-content: center;
+align-self: center;
+justify-items: center;
+justify-self: center;
+align-content: center;
+display: inline-block;
+padding-left: 7.5%;
+height: 20%;
+position: absolute;
+top: 15vh;
+margin-left: 4%;
+width: 100%;
+}
+body{
+justify-content: center;
+align-self: center;
+justify-items: center;
+justify-self: center;
+align-content: center;
+}
+body>header a:hover {
+border-bottom: 2px solid transparent;
+}
+header>section {
+display: grid;
+max-width: 400px;
+row-gap: 2em;
+width: 100%;
+}
+h2 {
+font-family: 'Abril Fatface', cursive; /*issue: this does not change the font!*/
+ width: 80%;
+ padding-left: 10%;
+ padding-right: 10%;
+font-size: 8.1vh;
+align-self: center;
+}
+.searchbox {  
+ float: left;
+ }  
+ input[type=text] {  
+ padding: 6px;  
+ margin-top: 10px;  
+ font-size: 17px;  
+ border: none;  
+ }  
+ searchbar {
+ margin-top: 0%;
+ justify-content: center;
+ align-self: right;
+ justify-items: center;
 
-   display: inline-block;
-   height: 10em;
-   width: 15em;
-   position: absolute;
-   top: 1.5em;
-   left: 33%;
+ display: inline-block;
+ height: 10em;
+ width: 10em;
+ position: absolute;
+ top: 1.5em;
+ left: 33%;
+ }
+ .searchbox button {   
+ padding: 8px;  
+ margin-top: 10px;  
+ margin-left: 10px;  
+ background: red;  
+ font-size: 20px;  
+ border: none;  
+ cursor: pointer;   
+ }  
+ .searchbox button:hover {  
+ background: red;  
+ }  
+ form {
+     background-color: #ff141479;
+     width: 33vw;
+     height: 44px;
+     border-radius: 5px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
    }
-   .searchbox button {   
-   padding: 8px;  
-   margin-top: 10px;  
-   margin-left: 10px;  
-   background: red;  
-   font-size: 20px;  
-   border: none;  
-   cursor: pointer;   
-   }  
-   .searchbox button:hover {  
-   background: red;  
-   }  
-   form {
-       background-color: #ff141479;
-       width: 33vw;
-       height: 44px;
-       border-radius: 5px;
-       display: flex;
-       flex-direction: row;
-       align-items: center;
-     }
-     input {
-       all: unset;
-       font: 16px system-ui;
-       color: rgb(255, 255, 255);
-       height: 100%;
-       width: 100%;
-       padding: 6px 10px;
-     }
-     ::placeholder {
-       color: #fff;
-       opacity: 0.7; 
-      
-     }
-     .button {
-      background-color: #ff0000;
-      border: none;
-      color: white;
-      background: #b90c0c;
-      width: 5em;
-      height: 5em;
-      text-align: center;
-      align-self: center;
-      text-decoration: none;
-      cursor: pointer;
-      display: inline-block;
-      font-size: 8.8vh;
-      box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.15);
-    }
+   input {
+     all: unset;
+     font: 16px system-ui;
+     color: rgb(255, 255, 255);
+     height: 100%;
+     width: 100%;
+     padding: 6px 10px;
+   }
+   ::placeholder {
+     color: #fff;
+     opacity: 0.7; 
+    
+   }
+   .button {
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    background: #b90c0c;
+    width: 5em;
+    height: 5em;
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 8.8vh;
+    box-shadow: 0 .5em .2em rgba(0, 0, 0, 0.2);
+  }
 
 .button10,.button30,.button60 {border-radius: 50%;
-  font-family: 'Abril Fatface', cursive;
-  margin-left: .8em;
-    margin-right: .8em;
+font-family: 'Abril Fatface', cursive;
+margin-left: .8em;
+  margin-right: .8em;
 }
 .button:hover {
-       background: #b85454;
-       cursor: pointer;
-   }
+     background: #b85454;
+     cursor: pointer;
+ }
+/*  .vert-navigation:hover{
+  background: #b85454;
+}*/
 .button:active{
-   color: red;
-   cursor: pointer;
+ color: red;
+ cursor: pointer;
 }
 .top-nav{
-  width: 100%;
-  display:flex; 
-  flex-direction: row;
+width: 100%;
+display:flex; 
+flex-direction: row;
 }
 .shuffle{
-  position: fixed;
-  justify-self: right;
-  margin-top: 3.7vh;
-  margin-right: 0vw;
-  margin-left: 70vw;
-  padding-left: 3vw;
-  top: .2em;
-  background-color:none;
+position: fixed;
+justify-self: right;
+margin-top: 3.7vh;
+margin-right: 0vw;
+margin-left: 67%;
+padding-left: 3vw;
+top: .2em;
+background-color:none;
 }
- .user-portal{
-   position: fixed;
-   justify-self: right;
-   margin-right: 0vw;
-   margin-left: 74vw;
-   padding-left: 3em;
-   top: 1em;
-   background-color:none;
- }
- .logoImg {
-   position:fixed;
-   justify-items: end;
-   padding-left: .2em;
-   padding-right: 5em;
-   top: 1.2em;
-   width: 8%;
-   left: 0vw;
- }
- .logoText {
-    position:absolute;
-    height: 10em;
-    width: 15em;
-    justify-items: begin;
-    padding-left: 2.6em;
-    padding-right: 8em;
-    top: 0em;
-    margin-top: 0%;
-    padding-top: .2%;
-    left: 0vw ;
-    font-style: oblique;
-  }
-  h4{
-    font-family: 'Abril Fatface', cursive;
-   font-size: 5vh;
-    text-decoration: wavy;
-    color: black;
-    margin-left: 8%;
-    top: 0em;
-    margin-top: 9%;
-    padding-top: 0%;
- }
- h3{
+.user-portal{
+ position: fixed;
+ justify-self: right;
+ margin-right: 0vw;
+ margin-left: 73%;
+ padding-left: 3em;
+ top: 1em;
+ background-color:none;
+}
+.logoImg {
+ position:fixed;
+ justify-items: end;
+ padding-left: .2em;
+ padding-right: 5em;
+ top: 1.2em;
+ width: 8%;
+ left: 0vw;
+}
+.logoText {
+  position:absolute;
+  height: 10em;
+  width: 15em;
+  justify-items: begin;
+  padding-left: 2.6em;
+  padding-right: 8em;
+  top: 0em;
+  margin-top: 0%;
+  padding-top: .2%;
+  left: 0vw ;
+  font-style: oblique;
+}
+h4{
   font-family: 'Abril Fatface', cursive;
-  width: 8vw;
- }
+ font-size: 5vh;
+  text-decoration: wavy;
+  color: black;
+  margin-left: 8%;
+  top: 0em;
+  margin-top: 9%;
+  padding-top: 0%;
+}
+h3{
+font-family: 'Abril Fatface', cursive;
+width: 8vw;
+justify-self: left;
+}
  .slider-container{
+  margin: 10vh;
   size:5em;
   padding-top: 180vh;
   width: 100%;
@@ -344,6 +362,8 @@ sideBar {
    width: 5.5em;
    height: 95%;
    padding-top: 0%;
+   overflow-x: hidden;
+   transition: 0.5s;
    top: 5.5em; /*keeps side bar from reaching logo*/
  }
  h5{
@@ -527,5 +547,28 @@ sideBar {
  left:0vw;
  padding-bottom: 4vh;
 }
+/* Position and style the close button (top right corner) */
+.vert-navigation .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
- 
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  position: fixed;
+  top: 12vh;
+  left: 0vw;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  background-color: #111 !important;
+  color: white !important;
+  padding: 10px 15px !important;
+  border: none !important;
+}
+
+.openbtn:hover {
+  background-color: #444 !important;
+}

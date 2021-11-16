@@ -66,6 +66,7 @@
     <h4>Quick Bytes</h4>
   </div>
 </div>
+
 <div class = shuffle>
     <!--JS TO DO: Fill in href for shuffle, should navigate to random recipe page-->
   <a href="">
@@ -80,7 +81,11 @@
 </div>
 </div>
 <!--JS TO DO: Fill in href for side bar buttons, these should navigate to filtered feeds according to category pressed-->
-<sideBar class="vert-navigation">
+<sideBar id = "vert-nav" class="vert-navigation">
+  <nav class = 'sideNav'>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  </nav>
+    
   <nav class = "sideNav">
     <a href="" title="Breakfast">Breakfast</a> 
   </nav>
@@ -100,7 +105,26 @@
       <a href="" title="Sides">Sides</a>
     </nav>
   </sideBar>
-  <main>
+  
+  <script>
+    function openNav() {
+      document.getElementById("vert-nav").style.width = "5.5em";
+      document.getElementById("main").style.marginLeft= "7em";
+    }
+
+    /* Set the width of the sidebar to 0 (hide it) */
+    function closeNav() {
+      document.getElementById("vert-nav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      console.log('Close function initiated');
+    }
+  </script>
+  <div class="openbutton">
+    <button class="openbtn" onclick="openNav()">☰</button> 
+  </div>
+  
+  <main id='main'>
+    
     <browser class = "slide-browse">
       <div class='slider-container'>
       <div class="slider" data-slider>
@@ -121,7 +145,7 @@
           </button>
         </div>
         <div class="slides" data-slider-slides-container>
-          <div class="slide">
+          <!--<div class="slide">
             <a href= "" title = "slide">
             
           </a>
@@ -135,7 +159,8 @@
             <a href= "" title = "slide">
               
             </a>
-          </div>
+          </div>-->
+          
         </div>
         </div>
         <div class="slider" data-slider>
@@ -158,7 +183,7 @@
             </button>
           </div>
           <div class="slides" data-slider-slides-container>
-            <div class="slide">
+            <!--<div class="slide">
               <a href= "" title = "slide">
                 
               </a>
@@ -172,12 +197,12 @@
               <a href= "" title = "slide">
                 
               </a>
-            </div>
+            </div>-->
           </div>
           </div>
           <div class="slider" data-slider>
             <h3 class='slider-heading'>Under 60 Minutes</h3>
-        <br>
+            <br>
             <div class="slider-buttons">
               <button
                 class="slider-button slider-button_previous"
@@ -196,7 +221,7 @@
             </div>
             <div class="slides" data-slider-slides-container>
               <div class="slide">
-                <a href= "" title = "slide">
+                <!--<a href= "" title = "slide">
                   
                 </a>
               </div>
@@ -209,7 +234,8 @@
                 <a href= "" title = "slide">
                   
                 </a>
-              </div>
+              </div>-->
+            </div>
             </div>
             </div>
             <div class="slider" data-slider>
@@ -231,7 +257,7 @@
                 </button>
               </div>
               <div class="slides" data-slider-slides-container>
-                <div class="slide">
+                <!--<div class="slide">
                   <a href= "" title = "slide">
                     
                   </a>
@@ -245,7 +271,7 @@
                   <a href= "" title = "slide">
                     
                   </a>
-                </div>
+                </div>-->
               </div>
               </div>
               <div class="slider" data-slider>
@@ -268,7 +294,7 @@
                   </button>
                 </div>
                 <div class="slides" data-slider-slides-container>
-                  <div class="slide">
+                  <!--<div class="slide">
                     <a href= "" title = "slide">
                       
                     </a>
@@ -282,7 +308,7 @@
                     <a href= "" title = "slide">
                       
                     </a>
-                  </div>
+                  </div>-->
 
                 </div>
                 </div>

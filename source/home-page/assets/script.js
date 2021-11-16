@@ -1,3 +1,4 @@
+
 //Slider Functions
 
  //Modulo to cycle
@@ -26,13 +27,15 @@
     const slidesContainer = slider.querySelector('[data-slider-slides-container]');
     // slider state we need to remember
     let currentSlide = 0;
-    const numSlides = slidesContainer.children.length;
+    const numSlides = 15 /*slidesContainer.children.length*/;
+    console.log(numSlides);
     // set up events
     buttonPrevious.addEventListener('click', handlePrevious);
     buttonNext.addEventListener('click', handleNext);
   }
   const sliders = document.querySelectorAll('[data-slider]');
   sliders.forEach(setUpslider);
+ 
 
 let images = {
     "1" : "images/pho.jfif",
@@ -53,9 +56,13 @@ let images = {
  });
  */
 
+
+
 async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=7e76c41b05734b4ab2265cebeb26cd12&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=b52c376255a144f789aa106c0c100c38&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
   for (let i = 0; i<15; i++ ){
+      let slideDiv = document.createElement('div');
+      /*slideDiv.setAttribute('class','slide');*/
       let element = document.createElement("article");
       element.id = "tile"
       let recipe = vals.results[i]
@@ -73,7 +80,7 @@ async function makeThumbnails(request){
       element.appendChild(circle)
       let ElemIngredient  = document.createElement("div")
       ElemIngredient.id = "ingredients"
-      console.log( document.getElementsByClassName("slide")[0])
+      console.log( document.getElementsByClassName("slider")[0])
       let place = 0; 
       if (request == '30'){
         place = 1
@@ -81,10 +88,10 @@ async function makeThumbnails(request){
       if (request == '60'){
         place = 2
       }
-      document.getElementsByClassName("slide")[place].appendChild(element);
+      slideDiv.append(element);
+      document.getElementsByClassName("slider")[place].appendChild(slideDiv);
     }
   }
-
 makeThumbnails(20);
 makeThumbnails(30);
 makeThumbnails(60);
@@ -96,11 +103,12 @@ makeThumbnails(60);
 
 
 
+
  
- $('body').append("<i id='icon_right'></i>");
+ /*$('body').append("<i id='icon_right'></i>");
  $('body').append("<i id='icon_left'></i>"); 
  add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
- add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');
+ add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');*/
  
  $(document).ready(function(){
      $('.my_img').hover(function() {
