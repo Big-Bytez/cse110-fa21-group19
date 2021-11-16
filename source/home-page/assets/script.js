@@ -34,6 +34,18 @@
   const sliders = document.querySelectorAll('[data-slider]');
   sliders.forEach(setUpslider);
 
+  async function searchFetchRecipes() {
+    let searchBar = document.getElementById("query").value;
+    if (searchBar == ""){
+      return;
+    }
+      //let searchString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&titleMatch=" + searchBar;  
+   
+    return true;
+      //return fetch(searchString).then((response) => console.log(response.json()))
+  }
+
+
 let images = {
     "1" : "images/pho.jfif",
     "2" : "images/pho.jfif",
@@ -54,7 +66,7 @@ let images = {
  */
 
 async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=7e76c41b05734b4ab2265cebeb26cd12&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
   for (let i = 0; i<15; i++ ){
       let element = document.createElement("article");
       element.id = "tile"
@@ -93,6 +105,16 @@ makeThumbnails(60);
 
 
 
+window.onload = function(){
+  document.getElementById("form").addEventListener("submit", function(){
+    let bool = await searchFetchRecipes();
+    let bool = true;
+    if (bool){
+      window.location.href= "../search_page/";
+      console.log(window.location.href);
+    }
+  });
+};
 
 
 

@@ -17,7 +17,6 @@
 
   <!-- Main Stylesheet & Scripts -->
   <link rel="stylesheet" href="styles\style.css" />
-  hre
   <link rel="stylesheet" href="../components/RecipeTile.css">
   <script src="assets\script.js" type="module"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,12 +26,12 @@
 
 <body>
   <searchbar id= "search-bar">
-    <form id="form" role="search">
+    <form id="form" role="search" onsubmit="window.location.href= '../search_page/'; return false;">
     <input type="search" id="query" name="q"
      placeholder="No limit? Search for recipes here"
      aria-label="Search through site content">
          <!--JS TO DO: Implement function to read input and navigate to filtered feed-->
-    <button type = "submit"><?xml version="1.0"?><svg fill="#fa314a" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"/></svg></button>
+    <button type = "submit" id="submit" ><?xml version="1.0"?><svg fill="#fa314a" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"/></svg><a href="../search-page/index.html">  </a></button>
     <!--<select class="sort">
         <option value="">Sort</option>
         <option value="time">time (low to high)</option>
@@ -62,7 +61,7 @@
   <a class = logoImg href="#top">
     <img src="images\logo.png" alt="logo" width=60vw height =60vh title= "QuickBytes"></img>
   </a>
-  <div class = logoText>
+  <div class = logoText>  
     <h4>Quick Bytes</h4>
   </div>
 </div>
