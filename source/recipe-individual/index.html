@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Nosifer&family=VT323&family=Varela+Round&display=swap&family=Abril+Fatface&display=swap" rel="stylesheet">
   <title>Quick Bytes Recipe</title>
   <link rel="shortcut icon" href="images\logo.png">
 
@@ -20,9 +20,32 @@
 </head>
 
 <body>
+<div class= "top-nav" style="display:flex; flex-direction: row; width: 100%;">
+<div class = logo>
+  <a class = logoImg href="#top">
+    <img src="images\logo.png" alt="logo" width=60vw height =60vh title= "QuickBytes"></img>
+  </a>
+  <div class = logoText>  
+    <h4>Quick Bytes</h4>
+  </div>
+</div>
+
+<div class = shuffle>
+    <!--JS TO DO: Fill in href for shuffle, should navigate to random recipe page-->
+  <a href="">
+    <img src="images\shuffle.png" alt="shuffle-button" width=45vw height=45vh title="Random-Recipe">
+  </a>
+</div>
+<div class = user-portal>
+  <!--JS TO DO: Fill in href for user-portal, should navigate to user page-->
+  <a href="../user-portal/index.html">
+    <img src="images\user-image.png" alt="user" width=60vw height =60vh title= "User-Portal"></img>
+</a>
+</div>
+</div>
   <div class="individual-container">
     <!-- Left-Side Grid -->
-    <div class = "grid-layout" >
+    <!--<div class = "grid-layout" >
       <div class="general-layout" >
         <h1 class="general-text">
             Filters
@@ -37,12 +60,12 @@
           Category
         </p>
       </div>
-    </div>
+    </div>-->
     <!-- Right Side With Image, Ingredients-->
     <div class="application-type" >
       <img src="images/spooky-cookies.jpeg">
       <div class="essay-text">
-        <h2>Ingredients</h2>
+        <h2 style = "font-family: 'Abril Fatface', cursive;">Ingredients</h2>
         <ul>
           <li>3 cups all-purpose flour, plus more for surface</li>
           <li>1 tsp. baking powder
@@ -62,30 +85,27 @@
     </div>
     <!-- Middle Section With Title, Cook Time & Recipe Description -->
     <div class="image-box">
-      <h1>
+      <h1 style = "font-family: 'Abril Fatface', cursive; color:rgb(58, 3, 3)">
         Spooky Ghost Cookies
       </h1>
-      <h2>
+      <h2 style = "font-family: 'Abril Fatface', cursive; color:rgb(92, 4, 4)">
         2 Hr Total Time
       </h2>
-      <p class="description-text">
+      <p class="description-text" style = "font-family: 'Abril Fatface', cursive; color: rgb(129, 1, 1);">
         These Ghost Cookies will be the cutest and spookiest part of your Halloween spread.
       </p>
       <div class="ratings-box">
         <img class="stars" src="./images/5-star.svg" />
         <div>
-          <p>300 ratings</p>
+          <p style = "font-family: 'Abril Fatface', cursive;">300 ratings</p>
         </div>
-        <div>
-          <p>70 comments</p>
-        </div>
-        <div>
-          <p>20 photos</p>
-        </div>        
+        <div><a class = favorite href="">
+          <img src="images\favorite.png" alt="fave" width=100vw height =70vh title= "QuickBytes"></img>
+        </a></div>      
       </div>
       <!-- Portion Under Mid Title Section which contains the Directions, bulk of our text-->
       <div class="directions-text">
-        <h2>Directions</h2>
+        <h2 style = "font-family: 'Abril Fatface', cursive;">Directions</h2>
         <ul>
           <li>In a large bowl, whisk together flour, baking powder, and salt.  In another large bowl, beat butter and sugar together</li>
           <li>Add egg, milk, and vanilla and beat until combined, then add flour mixture gradually until just combined</li>
