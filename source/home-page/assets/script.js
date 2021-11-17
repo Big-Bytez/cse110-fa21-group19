@@ -39,7 +39,7 @@
   sliders.forEach(setUpslider);
  
 
-  async function searchFetchRecipes() {
+ function searchFetchRecipes() {
     let searchBar = document.getElementById("query").value;
     if (searchBar == ""){
       return;
@@ -74,7 +74,7 @@ let images = {
 
 async function makeThumbnails(request){
   let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
-  for (let i = 0; i<6; i++ ){
+  for (let i = 0; i<5; i++ ){
       let link = document.createElement("a");
       link.href = "../recipe-individual/index.html"
       let slideDiv = document.createElement("div");
@@ -110,6 +110,8 @@ async function makeThumbnails(request){
       document.getElementsByClassName("container")[place].appendChild(link);
     }
   }
+
+
 makeThumbnails(20);
 makeThumbnails(30);
 makeThumbnails(60);
@@ -120,7 +122,7 @@ makeThumbnails(60);
 
 window.onload = function(){
   document.getElementById("form").addEventListener("submit", function(){
-    let bool = await searchFetchRecipes();
+    //let bool = await searchFetchRecipes();
     let bool = true;
     if (bool){
       window.location.href= "../search_page/";

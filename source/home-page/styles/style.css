@@ -572,15 +572,15 @@ h3{
 }
 main{
   padding-top: 250vh;
-  padding-left: 40vw;
-  margin-right: 40vw;
+  padding-left: 100vw;
+  margin-right: 100vw;
   
 }
 .container{
   display:flex;
   flex-direction: row;
-  padding-right: 20vh;
-  margin-left: 20vh;
+  padding-right: 10vh;
+  padding-left: 25vh;
   height: 20vw;
   text-align: center;
 }
