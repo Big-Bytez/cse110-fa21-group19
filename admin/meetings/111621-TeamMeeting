@@ -1,0 +1,53 @@
+# Group 19 Meeting Minutes #
+## Date:11/16/21  ##
+## Location:CS 2217  ##
+     Note Taker: Nick
+
+### **Meeting called by: Everyone** ###
+
+### **Type of meeting: Major Decision Making**  ###
+--------------------------------------
+
+## Minutes ##
+
+### Agenda Item:Changes ###
+
+**Discussion:**
+Front end:
+-Need to make all pages uniform and no overlap.
+-Add Justin to html/css team to help with styling.
+-Remove side bar(Comment) . Later replace with filter. Have red div there maybe comment it out.
+-Beautify feed.
+-Make buttons smaller.
+-Images on buttons make site prettier.(Maybe change color scheme)
+-Focus attention on homepage.
+-Remove page numbers on search page.
+Nico:
+-Recipe tile to recipe page.
+-Remove filters on recipe page.
+Liza and Kai:
+-Make query redirect to search page with results filling recipe tiles.(Make recipe tiles show results instead of hardcoded recipes)
+-Home screen buttons to work.
+CI/CD:
+-Deploy to netlify.(High Priority)
+-Need to write tests.
+-Create diagram.
+
+
+
+
+## Other Information ##
+
+
+## Attendees: ##
+
+- Nicholas(Lead) 
+- George(Lead) 
+- Nico 
+- Liza 
+- Peder 
+- Brian 
+- Xi-Kai 
+- Huang 
+- Reny
+-Justin
