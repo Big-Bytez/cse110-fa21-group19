@@ -1,15 +1,15 @@
 #tile {
-    width: 11vw;
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
-    height: 17.5vw;
+    width: 11vw !important;
+    margin-left: 1.5vw !important;
+    margin-right: 1.5vw !important;
+    height: 17.5vw !important;
     background-color: white;
     border-style: solid;
     border-color:rgba(223, 11, 11, 0.945);
     border-radius: 2.5vh;
     border-width: .3vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     align-content: flex-start;
 }
 
@@ -20,12 +20,12 @@
 }
 
 #image{
-    width: 14vh;
-    height: 14vh;
-    display: block;
-    margin-left: auto;
-    margin-top: -1.5vh;
-    margin-right: auto;
+    width: 14vh !important;
+    height: 14vh !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-top: -1.5vh !important;
+    margin-right: auto !important;
 }
 
 #title{

@@ -1,3 +1,4 @@
+
 //Slider Functions
 
  //Modulo to cycle
@@ -20,19 +21,23 @@
     function changeSlide(slideNumber) {
       slider.style.setProperty('--current-slide', slideNumber);
     }
+    
     // get elements
     const buttonPrevious = slider.querySelector('[data-slider-button-previous]');
     const buttonNext = slider.querySelector('[data-slider-button-next]');
     const slidesContainer = slider.querySelector('[data-slider-slides-container]');
+   
     // slider state we need to remember
     let currentSlide = 0;
-    const numSlides = slidesContainer.children.length;
+    const numSlides = 15 /*slidesContainer.children.length*/;
+  
     // set up events
     buttonPrevious.addEventListener('click', handlePrevious);
     buttonNext.addEventListener('click', handleNext);
   }
   const sliders = document.querySelectorAll('[data-slider]');
   sliders.forEach(setUpslider);
+ 
 
   async function searchFetchRecipes() {
     let searchBar = document.getElementById("query").value;
@@ -65,9 +70,15 @@ let images = {
  });
  */
 
+
+
 async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
-  for (let i = 0; i<15; i++ ){
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
+  for (let i = 0; i<6; i++ ){
+      let link = document.createElement("a");
+      link.href = "../recipe-individual/index.html"
+      let slideDiv = document.createElement("div");
+      /*slideDiv.setAttribute('class','slide');*/
       let element = document.createElement("article");
       element.id = "tile"
       let recipe = vals.results[i]
@@ -77,6 +88,7 @@ async function makeThumbnails(request){
       title.textContent = recipe.title
       element.appendChild(title)
       let image = document.createElement("img")
+      image.id = "image"
       image.src = recipe.image;
       element.appendChild(image)
       let circle = document.createElement("div")
@@ -85,7 +97,7 @@ async function makeThumbnails(request){
       element.appendChild(circle)
       let ElemIngredient  = document.createElement("div")
       ElemIngredient.id = "ingredients"
-      console.log( document.getElementsByClassName("slide")[0])
+      console.log(document.getElementsByClassName("container")[0]);
       let place = 0; 
       if (request == '30'){
         place = 1
@@ -93,10 +105,11 @@ async function makeThumbnails(request){
       if (request == '60'){
         place = 2
       }
-      document.getElementsByClassName("slide")[place].appendChild(element);
+      slideDiv.append(element);
+      link.appendChild(slideDiv)
+      document.getElementsByClassName("container")[place].appendChild(link);
     }
   }
-
 makeThumbnails(20);
 makeThumbnails(30);
 makeThumbnails(60);
@@ -118,11 +131,12 @@ window.onload = function(){
 
 
 
+
  
- $('body').append("<i id='icon_right'></i>");
+ /*$('body').append("<i id='icon_right'></i>");
  $('body').append("<i id='icon_left'></i>"); 
  add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
- add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');
+ add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');*/
  
  $(document).ready(function(){
      $('.my_img').hover(function() {
