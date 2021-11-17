@@ -1,206 +1,276 @@
 /* style.css */
-
 * {
-    font-family: 'Varela Round', sans-serif;
-   
- }
- @font-face {
-   font-family: 'Varela Round', sans-serif;
-   src: url("https://fonts.google.com/");
+  font-family: 'Varela Round', sans-serif;
+ 
 }
+@font-face {
+font-family: 'Abril Fatface', cursive;
+ font-family: 'Varela Round', sans-serif;
+ font-family: 'Gugi', cursive;
+font-family: 'Nosifer', cursive;
+font-family: 'VT323', monospace;
+ src: url("https://fonts.google.com/");
  
- body {
-   align-items: center;
-   display: grid;
-   justify-items: center;
-   background-color: #ffffff; /*white background*/
- }
- 
- .searchbox {  
-   float: left;
-   }  
-   input[type=text] {  
-   padding: 6px;  
-   margin-top: 10px;  
-   font-size: 17px;  
-   border: none;  
-   }  
-  searchbar {
-   margin-top: 0%;
-   justify-content: center;
-   align-self: right;
-   justify-items: center;
+}
 
-   display: inline-block;
-   height: 10em;
-   width: 10em;
-   position: absolute;
-   top: 1.5em;
-   left: 33%;
+body {
+ align-items: center;
+ display: grid;
+ justify-items: center;
+ background-color: #ffffff; /*white background*/
+}
+body>sideBar a {
+  font-family: 'Varela Round', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 3vh;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+sideBar {
+  display: grid;
+  justify-items: begin;
+  padding-left: .2em;
+  position: fixed;
+  width: 5em;
+  left:0vw;
+}
+.vert-navigation{
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 10px;
+  background: #b90c0c;
+   position: fixed;
+   width: 5.5em;
+   height: 95%;
+   padding-top: 0%;
+   top: 5.5em; /*keeps side bar from reaching logo*/
+ }
+.searchbox {  
+ float: left;
+ }  
+ header {
+  justify-content: center;
+  align-self: center;
+  justify-items: center;
+  justify-self: center;
+  align-content: center;
+  display: inline-block;
+  padding-left: 7.5%;
+  height: 20%;
+  position: absolute;
+  top: 15vh;
+  margin-left: 4%;
+  width: 100%;
+}
+body>header a:hover {
+  border-bottom: 2px solid transparent;
+}
+header>section {
+  display: grid;
+  max-width: 400px;
+  row-gap: 2em;
+  width: 100%;
+}
+ input[type=text] {  
+ padding: 6px;  
+ margin-top: 10px;  
+ font-size: 17px;  
+ border: none;  
+ }  
+searchbar {
+ margin-top: 0%;
+ justify-content: center;
+ align-self: right;
+ justify-items: center;
+
+ display: inline-block;
+ height: 10em;
+ width: 10em;
+ position: absolute;
+ top: 1.5em;
+ left: 33%;
+ }
+.searchbox button {     
+ padding: 8px;  
+ margin-top: 10px;  
+ margin-left: 10px;  
+ background: red;  
+ font-size: 20px;  
+ border: none;  
+ cursor: pointer;   
+ }  
+ .searchbox button:hover {  
+ background: red;  
+ }  
+ form {
+     background-color: #e42c2cb2;
+     width: 33vw;
+     height: 44px;
+     border-radius: 5px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
    }
-  .searchbox button {     
-   padding: 8px;  
-   margin-top: 10px;  
-   margin-left: 10px;  
-   background: red;  
-   font-size: 20px;  
-   border: none;  
-   cursor: pointer;   
-   }  
-   .searchbox button:hover {  
-   background: red;  
-   }  
-   form {
-       background-color: #e42c2cb2;
-       width: 33vw;
-       height: 44px;
-       border-radius: 5px;
-       display: flex;
-       flex-direction: row;
-       align-items: center;
-     }
-     input[type=search]{
-       all: unset;
-       font: 16px system-ui;
-       color: rgb(255, 255, 255);
-       height: 100%;
-       width: 100%;
-       padding: 6px 10px;
-     }
-     ::placeholder {
-       color: #fff;
-       opacity: 0.7; 
-     }
+   input[type=search]{
+     all: unset;
+     font: 16px system-ui;
+     color: rgb(255, 255, 255);
+     height: 100%;
+     width: 100%;
+     padding: 6px 10px;
+   }
+   ::placeholder {
+     color: #fff;
+     opacity: 0.7; 
+   }
 .button {
-   background-color: #ff0000;
-   border: none;
-   color: white;
-   background: #b90c0c;
-   padding: 25px;
-   width: 5em;
-   height: 5em;
-   margin-left: 1.1em;
-   text-align: center;
-   align-self: center;
-   text-decoration: none;
-   cursor: pointer;
-   display: inline-block;
-   font-size: 5rem;
-   box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.15);
- }
+ background-color: #ff0000;
+ border: none;
+ color: white;
+ background: #b90c0c;
+ padding: 25px;
+ width: 5em;
+ height: 5em;
+ margin-left: 1.1em;
+ text-align: center;
+ align-self: center;
+ text-decoration: none;
+ cursor: pointer;
+ display: inline-block;
+ font-size: 5rem;
+ box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.15);
+}
 
- h2 {
-   font-size: 2.3rem;
- }
+h2 {
+ font-size: 2.3rem;
+}
+h3{
+  font-family: 'Abril Fatface', cursive;
+}
 
 .button:hover {
-  background: #b85454;
-  cursor: pointer;
+background: #b85454;
+cursor: pointer;
 }
 .button:active{
-  color: red;
-  cursor: pointer;
+color: red;
+cursor: pointer;
 }
 
- sideBar {
-   display: grid;
-   height: 20em;
-   justify-items: begin;
-   padding-left: .2em;
-   position: fixed;
-   top: 5.5em;
-   width: 10vw;
-   left: 0vw;
- }
+.top-nav{
+  width: 100%;
+  display:flex; 
+  flex-direction: row;
+}
  .logoImg {
-   position: fixed;
-   height: 10em;
-   width: 20em;
-   justify-items: begin;
+   position:fixed;
+   justify-items: end;
    padding-left: .2em;
+   padding-right: 5em;
    top: 1.2em;
-   width: 3%; /* Change this width based on size of logo */
+   width: 8%;
    left: 0vw;
  }
- .user-portal{
-   position: fixed;
-   height: 4em;
-   width: 4em;
-   justify-self: right;
-   margin-right: 5em;
-   padding-left: .2em;
-   top: 1em;
-   background-color:none;
- }
- 
-.sort{
-  display: inline-block;
-  position: relative;
-  padding: .3em;  
-  margin-top: .2em;  
-  margin-left: .2em;
-  margin-right: .2em;
-  align-self: center;
-  background: rgba(156, 5, 5, 0.801);  
-  font-size: 1rem;  
-  color: rgb(255, 255, 255);
-  border: none;  
-  cursor: pointer; 
-  width: 4em;
- }
- .vert-navigation{
-   background: #b90c0c;
-   position: fixed;
-   width: 100px;
-   height: 50%;
- }
- body>sideBar a {
-   border-bottom: .1em solid rgb(155, 155, 155);
-   border-top: .1em solid rgb(155, 155, 155);
-   color: rgb(255, 255, 255);
-   font-size: 1.3rem;
-   padding-bottom:2.5px;
- }
+ .logoText {
+    position:absolute;
+    height: 10em;
+    width: 15em;
+    justify-items: begin;
+    padding-left: 2.6em;
+    padding-right: 8em;
+    top: 0em;
+    margin-top: 0%;
+    padding-top: .2%;
+    left: 0vw ;
+    font-style: oblique;
+  }
+h4{
+  font-family: 'Abril Fatface', cursive;
+ font-size: 5vh;
+  text-decoration: wavy;
+  color: black;
+  margin-left: 8%;
+  top: 0em;
+  margin-top: 9%;
+  padding-top: 0%;
+}
 
- .hidden {
-   display: none;
- }
- 
- .user-portal-upload {
+.shuffle{
+  position: absolute;
+  justify-self: left;
+  margin-top: 3.7vh;
+  margin-right: 0vw;
+  margin-left: 80vw;
+  padding-left: 3vw;
+  top: .2em;
+  background-color:none;
+}
+
+.user-portal{
   position: fixed;
-  width: 10em;
-  height: 1em;
-  justify-self: right;
-  margin-right: 15%;
-  background-color: transparent;
- }
- div.favor-recipes{
-   background-color: #ff0000;
-   height: 18vw;
-   width: 18vw;
-   border:3px solid #000000;
-   float:left;
-   margin:1vw;
- }
- 
- .recipes {
-  align-items: center;
-  display: grid;
-  grid-template-columns: 25vw 25vw 25vw;
-  grid-template-rows: auto;
-  justify-items: center;
-  background-color: #ffffff; /*white background*/
- }
- 
- .recipe-box {
-   border: 3px solid black;
- }
+  justify-self: left;
+  margin-right: 0vw;
+  margin-left: 87vw;
+  padding-left: 3vw;
+  top: 1em;
+  background-color: none;
+}
+.logoImg:hover{
+  opacity: 0.8;
+}
+.user-portal:hover{
+  opacity: 0.8;
+}
+.shuffle:hover{
+  opacity: 0.8;
+}
+.sort{
+display: inline-block;
+position: relative;
+padding: .3em;  
+margin-top: .2em;  
+margin-left: .2em;
+margin-right: .2em;
+align-self: center;
+background: rgba(156, 5, 5, 0.801);  
+font-size: 1rem;  
+color: rgb(255, 255, 255);
+border: none;  
+cursor: pointer; 
+width: 4em;
+}
 
- .recipe-box > h3 {
-   padding-left: 3.5em;
- }
+.hidden {
+ display: none;
+}
+div.favor-recipes{
+ background-color: white;
+ height: 18vw;
+ width: 18vw;
+ border:3px solid #000000;
+ float:left;
+ margin:1vw;
+}
 
- input[type='file'] {
-  color: transparent;
- }
- 
+.recipes {
+align-items: center;
+display: grid;
+grid-template-columns: 25vw 25vw 25vw;
+grid-template-rows: auto;
+justify-items: center;
+background-color: #b90c0c; /*white background*/
+}
+
+.recipe-box {
+  background-color: #b90c0c;
+ border: 3px solid black;
+ border-radius: 10px;
+
+}
+
+.recipe-box > h3 {
+ padding-left: 3.5em;
+}
+
+input[type='file'] {
+color: transparent;
+}
