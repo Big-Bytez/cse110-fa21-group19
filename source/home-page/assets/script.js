@@ -39,6 +39,18 @@
   sliders.forEach(setUpslider);
  
 
+  async function searchFetchRecipes() {
+    let searchBar = document.getElementById("query").value;
+    if (searchBar == ""){
+      return;
+    }
+      //let searchString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&titleMatch=" + searchBar;  
+   
+    return true;
+      //return fetch(searchString).then((response) => console.log(response.json()))
+  }
+
+
 let images = {
     "1" : "images/pho.jfif",
     "2" : "images/pho.jfif",
@@ -106,6 +118,16 @@ makeThumbnails(60);
 
 
 
+window.onload = function(){
+  document.getElementById("form").addEventListener("submit", function(){
+    let bool = await searchFetchRecipes();
+    let bool = true;
+    if (bool){
+      window.location.href= "../search_page/";
+      console.log(window.location.href);
+    }
+  });
+};
 
 
 
