@@ -81,7 +81,7 @@ class SearchRecipe extends HTMLElement {
 
         const link = document.createElement('a')
         link.setAttribute('href', `../recipe-individual/index.html?${data.id}` )
-        link.setAttribute('class', 'link');
+        link.setAttribute("class", 'link');
         
 
         const recipeImg = document.createElement('img');
