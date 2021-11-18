@@ -35,7 +35,7 @@ async function fetchRecipes() {
                 }
             })
             .catch((error) => {
-                console.error('Error fetching: ', error);
+                console.error("Error fetching: ", error);
                 reject(false);
             })
         }
