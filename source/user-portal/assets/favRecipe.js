@@ -85,7 +85,7 @@ class FavRecipe extends HTMLElement {
         timeCircle.setAttribute('class', 'time');
 
         const timeNumb = document.createElement('p')
-        timeNumb.setAttribute('class', 'recipe-time');
+        timeNumb.setAttribute("class", 'recipe-time');
 
         timeNumb.innerHTML = "0";
 
