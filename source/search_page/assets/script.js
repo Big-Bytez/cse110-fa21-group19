@@ -1,9 +1,7 @@
 window.addEventListener('DOMContentLoaded', init);
-
 async function init() {
-    createRecipeCards();
   }
-
+/*
 function createRecipeCards() {
 
   
@@ -23,9 +21,11 @@ function createRecipeCards() {
     
   
 }
+*/
 
 async function searchFetchRecipes(searchBar) {
-  let searchString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&" + searchBar;  
+  let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&${searchBar}&addRecipeInformation=True`;
+  console.log(searchString)  
   return fetch(searchString)
     .then((response) => response.json())
 }
@@ -36,9 +36,17 @@ window.onload = async function(){
     return;
   }
   let querystring = window.location.href.substring(questionLocation + 1);
+  console.log(querystring)
   let resultArray = await searchFetchRecipes(querystring).then((response) => {
     return response.results;
   })
   console.log(resultArray);
+  for(let i=0; i< resultArray.length; i++){
+    let ele = document.createElement('search-recipe');
+    ele.data = resultArray[i];
+    console.log(ele)
+    document.querySelector('main').append(ele)
+
+  }
 }
   

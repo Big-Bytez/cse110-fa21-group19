@@ -79,12 +79,12 @@ class SearchRecipe extends HTMLElement {
         const timeNumb = document.createElement('p')
         timeNumb.setAttribute('class', 'recipe-time');
 
-        timeNumb.innerHTML = "14";
+        timeNumb.innerHTML = data.readyInMinutes;
 
 
-        recipeImg.setAttribute('src','images/pasta.jpeg');
+        recipeImg.setAttribute('src',data.image);
 
-        recipeTitle.innerHTML = data;
+        recipeTitle.innerHTML = data.title;
 
         
         recipe.appendChild(recipeTitle);
