@@ -20,18 +20,19 @@ class SearchRecipe extends HTMLElement {
             border-radius: 10px;
             text-align: center;
             margin-left: 10;
-            text-decoration: none !important; 
 
         }
         p {
           font-family: 'Varela Round', sans-serif;
           font-size: 2.5vh;
+          color: black !important;
           margin-top: 20
           margin-left: 15px;
           margin-right: 15px;
-          text-decoration: none; 
         }
-        
+        a:link{
+          text-decoration: none !important;
+        }
         img {
             object-fit: cover;
             width: 220px;
@@ -54,7 +55,7 @@ class SearchRecipe extends HTMLElement {
           border-style: solid;
           border-width: 2px;
           border-color: black;
-          text-decoration: none; 
+          text-decoration: none !important; 
         }
 
         .recipe-time {
@@ -63,9 +64,9 @@ class SearchRecipe extends HTMLElement {
           margin-top: -0.00005px
           text-align: center;
           margin-bottom: 25px;
-          text-decoration: none; 
+          text-decoration: none !important; 
           background-color: none;
-
+          color: white !important;
         }
         }
         `;
