@@ -51,6 +51,6 @@ function createRecipeCards(){
         
         card.data = "Favorite more recipes!";
 
-        document.querySelector('recipes').appendChild(card);
+        document.querySelector("recipes").appendChild(card);
     }
 }
