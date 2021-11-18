@@ -12,10 +12,12 @@
   <title>Quick Bytes User Portal</title>
   <link rel="shortcut icon" href="images\logo.png">
 
+  <!-- Script for Recipe CSS-->
+  <script src="assets/favRecipe.js" type="module"></script>
 
   <!-- Main Stylesheet & Scripts -->
   <link rel="stylesheet" href="styles/style.css" />
-  <script src="./scripts/upload.js" type="module"></script>
+  <script src="assets/script.js" type="module"></script>
   <script src="" type="module"></script>
 </head>
 
@@ -23,43 +25,23 @@
   <searchbar id= "search-bar">
     <form id="form" role="search">
     <input type="search" id="query" name="q"
-     placeholder="Search your favorite recipes here"
+     placeholder="Search for recipes here"
      aria-label="Search through site content">
     <button type = "submit"><?xml version="1.0"?><svg fill="#fa314a" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"/></svg></button>
     <select class="sort">
-        <option value="">Sort</option>
-        <option value="timeLH">time (low to high)</option>
-        <option value="timeHL">time (high to low)</option>
-        <option value="alphaAZ">alphabetical (a-z)</option>
-        <option value="numIngredients"># ingredients(low to high)</option>
+      <option value="">Sort</option>
+      <option value="timeLH">time (low to high)</option>
+      <option value="timeHL">time (high to low)</option>
+      <option value="alphaAZ">alphabetical (a-z)</option>
+      <option value="numIngredients"># ingredients(low to high)</option>
     </select>
     </form>
   </searchbar>
 <br><br><br><br><br>
 <div class="recipe-box">
-    <h3>Favorite Cuisine: 
-      <br>Most Common Cook Time: 
-    </h3>
-  <div class="recipes">
-    <div class="favor-recipes",id=first>
-      <a href="" title="frecipes1">Recipes</a> 
-    </div>
-    <div class="favor-recipes",id=second>
-      <a href="" title="frecipes2">Recipes</a> 
-    </div>
-    <div class="favor-recipes",id=third>
-      <a href="" title="frecipes3">Recipes</a> 
-    </div>
-    <div class="favor-recipes",id=fourth>
-      <a href="" title="recipes4">Recipes</a> 
-    </div>
-    <div class="favor-recipes",id=fifth>
-      <a href="" title="frecipes5">Recipes</a> 
-    </div>
-    <div class="favor-recipes",id=sixth>
-      <a href="" title="frecipes6">Recipes</a> 
-    </div>
-  </div>
+  <h2>6 Favorited Recipes:</h2>
+  <recipes>
+  </recipes>
 </div> 
 <div class = logo>
   <a class=logoImg href="../home-page/index.html">
@@ -77,9 +59,24 @@
 </div>
 <div class = "user-portal">
   <a href="#top">
-    <img src="images/user-image.png" id="user" alt="user" width=60vw height =60vh title= "User-Portal"></img>
+    <img src="images\user-image.png" id="user" alt="user" width=60vw height =60vh title= "User-Portal"></img>
   </a>
 </div>
+<sideBar class="vert-navigation">
+  <nav class = "sideNav">
+  </nav>
+  <nav class = "sideNav">
+  </nav>
+  <nav class = "sideNav">
+  </nav>
+  <nav class = "sideNav">
+  </nav>
+  <nav class = "sideNav">
+  </nav>
+  <nav class = "sideNav">
+  </nav>
+</sideBar>
+<!--
 <sideBar class="vert-navigation">
   <nav class = "sideNav">
     <a href="" title="Breakfast">Breakfast</a> 
@@ -100,6 +97,7 @@
       <a href="" title="Sides">Sides</a>
     </nav>
   </sideBar>
+-->
 </body>
 
 </html>
