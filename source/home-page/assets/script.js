@@ -64,7 +64,7 @@ async function makeThumbnails(request){
   let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
   for (let i = 0; i<5; i++ ){
       let link = document.createElement("a");
-      link.href = "../recipe-individual/index.html"
+      link.href = "../recipe-individual/index.html?" + data
       let slideDiv = document.createElement("div");
       /*slideDiv.setAttribute('class','slide');*/
       let element = document.createElement("article");
