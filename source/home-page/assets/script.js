@@ -53,35 +53,24 @@ let images = {
  });
  */
 
-async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=7e76c41b05734b4ab2265cebeb26cd12&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
-  for (let i = 0; i<15; i++ ){
-      let element = document.createElement("article");
-      element.id = "tile"
-      let recipe = vals.results[i]
-      console.log(recipe)
-      let title = document.createElement("h1")
-      title.id = "title"
-      title.textContent = recipe.title
-      element.appendChild(title)
-      let image = document.createElement("img")
-      image.src = recipe.image;
-      element.appendChild(image)
-      let circle = document.createElement("div")
-      circle.id = "circle"
-      circle.textContent = "<" + recipe.readyInMinutes + "min";
-      element.appendChild(circle)
-      let ElemIngredient  = document.createElement("div")
-      ElemIngredient.id = "ingredients"
-      console.log( document.getElementsByClassName("slide")[0])
-      let place = 0; 
-      if (request == '30'){
-        place = 1
+
+  async function makeThumbnails(request){
+    let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=7e76c41b05734b4ab2265cebeb26cd12&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
+    for (let i = 0; i<15; i++ ){
+      let recipeTile = document.createElement('search-recipe');
+      recipeTile.data = vals.results[i]
+
+      switch(request){
+        case 20:
+          document.getElementsByClassName("slide")[0].appendChild(recipeTile);
+          break; 
+        case 30:
+          document.getElementsByClassName("slide")[1].appendChild(recipeTile);
+          break;
+        case 60: 
+          document.getElementsByClassName("slide")[2].appendChild(recipeTile);
+          break;
       }
-      if (request == '60'){
-        place = 2
-      }
-      document.getElementsByClassName("slide")[place].appendChild(element);
     }
   }
 

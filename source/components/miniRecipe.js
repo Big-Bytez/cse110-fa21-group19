@@ -56,10 +56,13 @@ class SearchRecipe extends HTMLElement {
 
         .recipe-time {
           color: white;
-          margin-left:12px;
+          margin-left:4px;
           text-align: center;
         }
         `;
+
+        
+        //circle.textContent = "<" + recipe.readyInMinutes + "min";
         
 
         styleElem.innerHTML = styles;
@@ -79,12 +82,14 @@ class SearchRecipe extends HTMLElement {
         const timeNumb = document.createElement('p')
         timeNumb.setAttribute('class', 'recipe-time');
 
-        timeNumb.innerHTML = "14";
+        timeNumb.innerHTML = "<" + data.readyInMinutes + "min";
+        console.log(data.readyInMinute);
 
+        recipeImg.setAttribute('src',data.image);
 
-        recipeImg.setAttribute('src','images/pasta.jpeg');
+        
 
-        recipeTitle.innerHTML = data;
+        recipeTitle.innerHTML = data.title;
 
         
         recipe.appendChild(recipeTitle);
