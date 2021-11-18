@@ -25,6 +25,7 @@
 </head>
 
 <body>
+  
   <searchbar id= "search-bar">
     <form id="form" role="search" onsubmit="window.location.href= '../search_page/'; return false;">
     <input type="search" id="query" name="q"
@@ -65,22 +66,14 @@
     <h4>Quick Bytes</h4>
   </div>
 </div>
-
-<div class = shuffle>
-    <!--JS TO DO: Fill in href for shuffle, should navigate to random recipe page-->
-  <a href="">
+  <a class = shuffle href="">
     <img src="images\shuffle.png" alt="shuffle-button" width=45vw height=45vh title="Random-Recipe">
   </a>
-</div>
-<div class = user-portal>
-  <!--JS TO DO: Fill in href for user-portal, should navigate to user page-->
-  <a href="../user-portal/index.html">
+  <a class = user-portal  href="../user-portal/index.html">
     <img src="images\user-image.png" alt="user" width=60vw height =60vh title= "User-Portal"></img>
 </a>
 </div>
-</div>
-<!--JS TO DO: Fill in href for side bar buttons, these should navigate to filtered feeds according to category pressed-->
-<sideBar id = "vert-nav" class="vert-navigation">
+<!--<sideBar id = "vert-nav" class="vert-navigation">
   <nav class = 'sideNav'>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   </nav>
@@ -120,9 +113,9 @@
   </script>
   <div class="openbutton">
     <button class="openbtn" onclick="openNav()">☰</button> 
-  </div>
-  <main id="main">
-    <div class='container' > Under 10 Minutes
+  </div>-->
+  <center><main id="main">
+    <center><div class='container' > Under 10 Minutes
       <!--Ten min and under here-->
     </div>
     <div class='container'> Under 30 Minutes
@@ -131,7 +124,9 @@
     <div class='container'> Under 60 Minutes 
     <!--60 min and under here-->  
     </div>
+  </center>
   </main>
+</center>
 </body>
   
   <!--Slider Function, may polish later
