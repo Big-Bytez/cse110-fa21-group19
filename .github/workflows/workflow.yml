@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Run linter on HTML/CSS/JS
 
 on:
   push:
