@@ -17,7 +17,7 @@ async function init() {
     if(!fetched){
         console.error('Failed fetch');
         return;
-    };
+    }
 
     createRecipeCards();
 }
