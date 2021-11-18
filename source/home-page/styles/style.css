@@ -16,10 +16,13 @@ body {
  align-items: center;
  display: grid;
  justify-items: center;
- background-color: #ffffff; /*white background*/ /*yellow option:#e9e2cc pink option: #eee4e4 */
+ background-image: url('https://miro.medium.com/max/1400/1*KkWvz2b7ncEI5k-vi2ZEjw.jpeg');
+ background-size: 100% 40.5%;
+ background-repeat: no-repeat;
+ background-color: rgba(248, 240, 126, 0.418); /*white background*/ /*yellow option:#e9e2cc pink option: #eee4e4 */
 }
 body, html {
- height: 150%; /*allows for space to scroll into short feed*/
+ height: 140%; /*allows for space to scroll into short feed*/
  width: 100%;
 }
 body>sideBar a {
@@ -29,7 +32,7 @@ body>sideBar a {
   margin-top: 3vh;
   margin-bottom: 3vh;
 }
-sideBar {
+/*sideBar {
   display: grid;
   justify-items: begin;
   padding-left: .2em;
@@ -47,8 +50,8 @@ sideBar {
   width: 5.5em;
   height: 95%;
   padding-top: 0%;
-  top: 5.5em; /*keeps side bar from reaching logo*/
-}
+  top: 5.5em; 
+}*/
 header {
   justify-content: center;
   align-self: center;
@@ -56,12 +59,11 @@ header {
   justify-self: center;
   align-content: center;
   display: inline-block;
-  padding-left: 7.5%;
   height: 20%;
   position: absolute;
-  top: 15vh;
-  margin-left: 4%;
+  top: 6vh;
   width: 100%;
+  bottom: 0vh;
 }
 body{
   justify-content: center;
@@ -75,17 +77,20 @@ body>header a:hover {
 }
 header>section {
   display: grid;
-  max-width: 400px;
   row-gap: 2em;
   width: 100%;
 }
 h2 {
   font-family: 'Abril Fatface', cursive; /*issue: this does not change the font!*/
+  color: rgb(116, 0, 0);
+  outline: white;
   width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-  font-size: 8.1vh;
+  font-size: 7vh;
   align-self: center;
+}
+.container{
+  font-family: 'Abril Fatface', cursive; /*issue: this does not change the font!*/
+
 }
 .searchbox {  
   float: left;
@@ -104,7 +109,7 @@ searchbar {
 
   display: inline-block;
   height: 10em;
-  width: 10em;
+  width: 20em;
   position: absolute;
   top: 1.5em;
   left: 33%;
@@ -133,6 +138,7 @@ form {
 input {
   all: unset;
   font: 16px system-ui;
+  
   color: rgb(255, 255, 255);
   height: 100%;
   width: 100%;
@@ -155,14 +161,18 @@ input {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
-  font-size: 8.8vh;
+  font-size: 4vh;
+  margin-top: 0em;
+  top: 0em;
   box-shadow: 0 .5em .2em rgba(0, 0, 0, 0.2);
   }
 
 .button10,.button30,.button60 {border-radius: 50%;
   font-family: 'Abril Fatface', cursive;
-  margin-left: .8em;
-  margin-right: .8em;
+  margin-top: 0em;
+  top: 0em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 .button:hover {
   background: #b85454;
@@ -183,19 +193,17 @@ input {
 }
 .shuffle{
   position: fixed;
-  justify-self: right;
   margin-top: 3.7vh;
   margin-right: 0vw;
-  margin-left: 67%;
+  margin-left: 143vw;
   padding-left: 3vw;
   top: .2em;
   background-color:none;
 }
 .user-portal{
   position: fixed;
-  justify-self: right;
   margin-right: 0vw;
-  margin-left: 73%;
+  margin-left: 148vw;
   padding-left: 3em;
   top: 1em;
   background-color:none;
@@ -226,7 +234,7 @@ h4{
   font-family: 'Abril Fatface', cursive;
   font-size: 5vh;
   text-decoration: wavy;
-  color: black;
+  color: rgb(116, 0, 0);
   margin-left: 8%;
   top: 0em;
   margin-top: 9%;
@@ -366,8 +374,8 @@ h3{
  h5{
     background-color: #ff141479;
     color: white;
-    padding-top: .6em;
-    padding-bottom: .6em;
+    padding-top: 0.1em;
+    padding-bottom: .1em;
     font-size: medium;
     justify-content: center;
     align-self: center;
@@ -546,7 +554,7 @@ h3{
 }
 
 /* Position and style the close button (top right corner) */
-.vert-navigation .closebtn {
+/*.vert-navigation .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -555,7 +563,7 @@ h3{
 }
 
 /* Style the button that is used to open the sidepanel */
-.openbtn {
+/*.openbtn {
   position: fixed;
   top: 12vh;
   left: 0vw;
@@ -569,9 +577,9 @@ h3{
 
 .openbtn:hover {
   background-color: #444 ;
-}
+}*/
 main{
-  padding-top: 250vh;
+  padding-top: 63vh;
   padding-left: 100vw;
   margin-right: 100vw;
   
