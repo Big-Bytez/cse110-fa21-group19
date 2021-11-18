@@ -26,7 +26,13 @@
 
 <body>
   <searchbar id= "search-bar">
-    <form id="form" role="search" onsubmit="window.location.href= '../search_page/'; return false;">
+    <form id="form" role="search" onsubmit="let query = document.getElementById('query').value;
+    if (query == ''){
+    return false;
+  }
+  window.location.href= '../search_page/?titleMatch=' + query;
+  return false;
+      ">
     <input type="search" id="query" name="q"
      placeholder="No limit? Search for recipes here"
      aria-label="Search through site content">

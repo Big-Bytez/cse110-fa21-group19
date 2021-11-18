@@ -23,4 +23,22 @@ function createRecipeCards() {
     
   
 }
+
+async function searchFetchRecipes(searchBar) {
+  let searchString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&" + searchBar;  
+  return fetch(searchString)
+    .then((response) => response.json())
+}
+
+window.onload = async function(){
+  let questionLocation = window.location.href.indexOf("?");
+  if (questionLocation < 0 ){
+    return;
+  }
+  let querystring = window.location.href.substring(questionLocation + 1);
+  let resultArray = await searchFetchRecipes(querystring).then((response) => {
+    return response.results;
+  })
+  console.log(resultArray);
+}
   
