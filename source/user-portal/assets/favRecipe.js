@@ -105,4 +105,4 @@ class FavRecipe extends HTMLElement {
     }
 }
   
-customElements.define('fav-recipe', FavRecipe);
+customElements.define("fav-recipe", FavRecipe);
