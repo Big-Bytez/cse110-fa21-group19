@@ -89,7 +89,7 @@ class FavRecipe extends HTMLElement {
 
         timeNumb.innerHTML = "0";
 
-        recipeImg.setAttribute('src','images/sadburger.gif');
+        recipeImg.setAttribute("src",'images/sadburger.gif');
 
         recipeTitle.innerHTML = data;
 
