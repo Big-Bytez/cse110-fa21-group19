@@ -76,7 +76,7 @@ class FavRecipe extends HTMLElement {
 
         const recipe = document.createElement("article");
 
-        const recipeTitle = document.createElement('a');
+        const recipeTitle = document.createElement("a");
         recipeTitle.setAttribute('href',"");
         recipeTitle.setAttribute("class",'title');
 
