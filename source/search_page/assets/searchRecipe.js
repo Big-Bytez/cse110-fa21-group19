@@ -20,6 +20,7 @@ class SearchRecipe extends HTMLElement {
             border-radius: 10px;
             text-align: center;
             margin-left: 10;
+            text-decoration: none !important; 
 
         }
         p {
@@ -28,6 +29,7 @@ class SearchRecipe extends HTMLElement {
           margin-top: 20
           margin-left: 15px;
           margin-right: 15px;
+          text-decoration: none; 
         }
         
         img {
@@ -52,12 +54,19 @@ class SearchRecipe extends HTMLElement {
           border-style: solid;
           border-width: 2px;
           border-color: black;
+          text-decoration: none; 
         }
 
         .recipe-time {
           color: white;
           margin-left:12px;
+          margin-top: -0.00005px
           text-align: center;
+          margin-bottom: 25px;
+          text-decoration: none; 
+          background-color: none;
+
+        }
         }
         `;
         
@@ -65,11 +74,15 @@ class SearchRecipe extends HTMLElement {
         styleElem.innerHTML = styles;
 
         const recipe = document.createElement('article');
-        recipe.setAttribute('href',"");
 
         const recipeTitle = document.createElement('p');
-        recipeTitle.setAttribute('href',"");
+        //recipeTitle.setAttribute('href', `../recipe-individual/inex.html?${data.id}`);
         recipeTitle.setAttribute('class','headline');
+
+        const link = document.createElement('a')
+        link.setAttribute('href', `../recipe-individual/index.html?${data.id}` )
+        link.setAttribute('class', 'link');
+        
 
         const recipeImg = document.createElement('img');
         const timeCircle = document.createElement('div');
@@ -79,21 +92,21 @@ class SearchRecipe extends HTMLElement {
         const timeNumb = document.createElement('p')
         timeNumb.setAttribute('class', 'recipe-time');
 
-        timeNumb.innerHTML = data.readyInMinutes;
+        timeNumb.innerHTML = data.readyInMinutes + "\n min";
 
 
         recipeImg.setAttribute('src',data.image);
 
         recipeTitle.innerHTML = data.title;
 
-        
         recipe.appendChild(recipeTitle);
         recipe.appendChild(recipeImg);
         timeCircle.appendChild(timeNumb);
         recipe.appendChild(timeCircle);
+        link.appendChild(recipe)
 
         this.shadowRoot.appendChild(styleElem); 
-        this.shadowRoot.appendChild(recipe);
+        this.shadowRoot.appendChild(link);
         }
   }
   
