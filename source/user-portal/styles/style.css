@@ -4,20 +4,19 @@
  
 }
 @font-face {
-font-family: 'Abril Fatface', cursive;
- font-family: 'Varela Round', sans-serif;
- font-family: 'Gugi', cursive;
-font-family: 'Nosifer', cursive;
-font-family: 'VT323', monospace;
- src: url("https://fonts.google.com/");
- 
+  font-family: 'Abril Fatface', cursive;
+  font-family: 'Varela Round', sans-serif;
+  font-family: 'Gugi', cursive;
+  font-family: 'Nosifer', cursive;
+  font-family: 'VT323', monospace;
+  src: url("https://fonts.google.com/");
 }
 
 body {
- align-items: center;
- display: grid;
- justify-items: center;
- background-color: #ffffff; /*white background*/
+  align-items: center;
+  display: grid;
+  justify-items: center;
+  background-color: #ffffff; /*white background*/
 }
 body>sideBar a {
   font-family: 'Varela Round', sans-serif;
@@ -36,18 +35,21 @@ sideBar {
 }
 .vert-navigation{
   font-family: 'Varela Round', sans-serif;
-  border-radius: 10px;
+  font-size: 3.2vh;
   background: #b90c0c;
-   position: fixed;
-   width: 5.5em;
-   height: 95%;
-   padding-top: 0%;
-   top: 5.5em; /*keeps side bar from reaching logo*/
- }
-.searchbox {  
- float: left;
- }  
- header {
+  position: absolute;
+  width: 5.5em;
+  height: 100vh;
+  padding-top: 0%;
+  top: 3.7em; /*keeps side bar from reaching logo*/
+  border-radius: 10px;
+}
+
+.searchbox {
+  float: left;
+}  
+
+header {
   justify-content: center;
   align-self: center;
   justify-items: center;
@@ -64,128 +66,131 @@ sideBar {
 body>header a:hover {
   border-bottom: 2px solid transparent;
 }
+
 header>section {
   display: grid;
   max-width: 400px;
   row-gap: 2em;
   width: 100%;
 }
- input[type=text] {  
- padding: 6px;  
- margin-top: 10px;  
- font-size: 17px;  
- border: none;  
- }  
+
+input[type=text] {  
+  padding: 6px;  
+  margin-top: 10px;  
+  font-size: 17px;  
+  border: none;  
+}
+
 searchbar {
- margin-top: 0%;
- justify-content: center;
- align-self: right;
- justify-items: center;
+  margin-top: 0%;
+  justify-content: center;
+  align-self: right;
+  justify-items: center;
 
- display: inline-block;
- height: 10em;
- width: 10em;
- position: absolute;
- top: 1.5em;
- left: 33%;
- }
+  display: inline-block;
+  height: 10em;
+  width: 10em;
+  position: absolute;
+  top: 1.5em;
+  left: 33%;
+}
+
 .searchbox button {     
- padding: 8px;  
- margin-top: 10px;  
- margin-left: 10px;  
- background: red;  
- font-size: 20px;  
- border: none;  
- cursor: pointer;   
- }  
- .searchbox button:hover {  
- background: red;  
- }  
- form {
-     background-color: #e42c2cb2;
-     width: 33vw;
-     height: 44px;
-     border-radius: 5px;
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-   }
-   input[type=search]{
-     all: unset;
-     font: 16px system-ui;
-     color: rgb(255, 255, 255);
-     height: 100%;
-     width: 100%;
-     padding: 6px 10px;
-   }
-   ::placeholder {
-     color: #fff;
-     opacity: 0.7; 
-   }
-.button {
- background-color: #ff0000;
- border: none;
- color: white;
- background: #b90c0c;
- padding: 25px;
- width: 5em;
- height: 5em;
- margin-left: 1.1em;
- text-align: center;
- align-self: center;
- text-decoration: none;
- cursor: pointer;
- display: inline-block;
- font-size: 5rem;
- box-shadow: 0 .1em .2em rgba(0, 0, 0, 0.15);
+  padding: 8px;  
+  margin-top: 10px;  
+  margin-left: 10px;  
+  background: red;  
+  font-size: 20px;  
+  border: none;  
+  cursor: pointer;   
 }
 
-h2 {
- font-size: 2.3rem;
+.searchbox button:hover {  
+  background: red;  
+}  
+form {
+  background-color: #ff141479;
+  width: 33vw;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+
+input[type=search]{
+  all: unset;
+  font: 16px system-ui;
+  color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+::placeholder {
+  color: #fff;
+  opacity: 0.7; 
+}
+.button {
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  background: #b90c0c;
+  width: 5em;
+  height: 5em;
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 8.8vh;
+  box-shadow: 0 .5em .2em rgba(0, 0, 0, 0.2);
+}
+
 h3{
   font-family: 'Abril Fatface', cursive;
 }
 
 .button:hover {
-background: #b85454;
-cursor: pointer;
+  background: #b85454;
+  cursor: pointer;
 }
 .button:active{
-color: red;
-cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
 .top-nav{
   width: 100%;
-  display:flex; 
+  display: flex; 
   flex-direction: row;
 }
- .logoImg {
-   position:fixed;
-   justify-items: end;
-   padding-left: .2em;
-   padding-right: 5em;
-   top: 1.2em;
-   width: 8%;
-   left: 0vw;
- }
- .logoText {
-    position:absolute;
-    height: 10em;
-    width: 15em;
-    justify-items: begin;
-    padding-left: 2.6em;
-    padding-right: 8em;
-    top: 0em;
-    margin-top: 0%;
-    padding-top: .2%;
-    left: 0vw ;
-    font-style: oblique;
-  }
+.logoImg {
+  position: absolute;
+  justify-items: end;
+  padding-left: .2em;
+  padding-right: 5em;
+  top: 1.2em;
+  width: 8%;
+  left: 0vw;
+}
+
+.logoText {
+  position:absolute;
+  height: 10em;
+  width: 15em;
+  justify-items: begin;
+  padding-left: 2.6em;
+  padding-right: 8em;
+  top: -1.5em;
+  margin-top: 0%;
+  padding-top: .2%;
+  left: 0vw ;
+  font-style: oblique;
+}
+
 h4{
   font-family: 'Abril Fatface', cursive;
- font-size: 5vh;
+  font-size: 5vh;
   text-decoration: wavy;
   color: black;
   margin-left: 8%;
@@ -197,19 +202,19 @@ h4{
 .shuffle{
   position: absolute;
   justify-self: left;
-  margin-top: 3.7vh;
+  margin-top: 2vh;
   margin-right: 0vw;
-  margin-left: 80vw;
+  margin-left: 65%;
   padding-left: 3vw;
   top: .2em;
   background-color:none;
 }
 
 .user-portal{
-  position: fixed;
+  position: absolute;
   justify-self: left;
   margin-right: 0vw;
-  margin-left: 87vw;
+  margin-left: 88.5vw;
   padding-left: 3vw;
   top: 1em;
   background-color: none;
@@ -224,53 +229,65 @@ h4{
   opacity: 0.8;
 }
 .sort{
-display: inline-block;
-position: relative;
-padding: .3em;  
-margin-top: .2em;  
-margin-left: .2em;
-margin-right: .2em;
-align-self: center;
-background: rgba(156, 5, 5, 0.801);  
-font-size: 1rem;  
-color: rgb(255, 255, 255);
-border: none;  
-cursor: pointer; 
-width: 4em;
+  display: inline-block;
+  position: relative;
+  padding: .3em;  
+  margin-top: .2em;  
+  margin-left: .2em;
+  margin-right: .2em;
+  align-self: center;
+  background: rgba(156, 5, 5, 0.801);  
+  font-size: 1rem;  
+  color: rgb(255, 255, 255);
+  border: none;  
+  cursor: pointer; 
+  width: 4em;
 }
 
 .hidden {
- display: none;
+  display: none;
 }
 div.favor-recipes{
- background-color: white;
- height: 18vw;
- width: 18vw;
- border:3px solid #000000;
- float:left;
- margin:1vw;
+  background-color: white;
+  height: 18vw;
+  width: 18vw;
+  border: 3px solid #000000;
+  float: left;
+  margin: 1vw;
 }
 
-.recipes {
-align-items: center;
-display: grid;
-grid-template-columns: 25vw 25vw 25vw;
-grid-template-rows: auto;
-justify-items: center;
-background-color: #b90c0c; /*white background*/
+recipes {
+  padding-bottom: 20px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw;
+  grid-template-rows: 25vw;
+  justify-items: center;
+  background-color: #b90c0c; /*white background*/
 }
 
 .recipe-box {
   background-color: #b90c0c;
- border: 3px solid black;
- border-radius: 10px;
-
+  border: 3px solid black;
+  border-radius: 10px;
 }
 
 .recipe-box > h3 {
- padding-left: 3.5em;
+  padding-left: 3.5em;
 }
 
 input[type='file'] {
-color: transparent;
+  color: transparent;
+}
+
+div > h4 {
+  position: absolute;
+
+}
+
+div > h2 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 4vh;
+  text-decoration: wavy;
+  padding-left: 38%;
 }
