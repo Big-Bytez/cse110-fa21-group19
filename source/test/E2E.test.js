@@ -79,7 +79,7 @@ describe('Basic web functionality check', () => {
 
         let checkMark = true;
 
-        const thumnail = await page.$('.user-portal > a');
+        const thumnail = await page.$(".user-portal > a");
         await thumnail.click();
 
         await page.waitForSelector('.recipe-box');
