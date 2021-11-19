@@ -13,7 +13,7 @@ describe('Basic web functionality check', () => {
         
         let checkMark = true;
         //wait until the thumnails are generated 
-        await page.waitForSelector('#tile');
+        await page.waitForSelector("#tile");
 
         //1. check if we have thumnails
         const numContainer = await page.$$eval('.container', (prodItems) => {
