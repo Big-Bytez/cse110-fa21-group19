@@ -42,7 +42,7 @@ window.onload = async function(){
   for(let i=0; i< resultArray.length; i++){
     let ele = document.createElement('search-recipe');
     ele.data = resultArray[i];
-    document.querySelector('main').append(ele);
+    document.querySelector("main").append(ele);
 
   };
 }
