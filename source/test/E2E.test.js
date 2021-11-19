@@ -54,7 +54,7 @@ describe('Basic web functionality check', () => {
         const thumnail = await page.$(".container > a");
         await thumnail.click();
 
-        await page.waitForSelector('h1');
+        await page.waitForSelector("h1");
         const title =  await page.$('h1');
         let innertext = await title.getProperty('innerText');
 
