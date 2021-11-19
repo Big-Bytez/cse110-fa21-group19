@@ -183,19 +183,17 @@ input {
 }
 .shuffle{
   position: fixed;
-  justify-self: right;
   margin-top: 3.7vh;
   margin-right: 0vw;
-  margin-left: 67%;
+  margin-left: 143vw;
   padding-left: 3vw;
   top: .2em;
   background-color:none;
 }
 .user-portal{
   position: fixed;
-  justify-self: right;
   margin-right: 0vw;
-  margin-left: 73%;
+  margin-left: 148vw;
   padding-left: 3em;
   top: 1em;
   background-color:none;
