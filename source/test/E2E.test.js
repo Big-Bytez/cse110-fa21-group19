@@ -41,7 +41,7 @@ describe('Basic web functionality check', () => {
 
       });
 
-    it('Check recipes page routing', async () => {
+    it("Check recipes page routing", async () => {
 
         const puppeteer = require('puppeteer');
         const browser = await puppeteer.launch();
