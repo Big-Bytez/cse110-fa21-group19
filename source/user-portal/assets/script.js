@@ -1,7 +1,7 @@
 // Script for adding recipe card
 
 const recipes = [
-    'https://introweb.tech/assets/json/birthdayCake.json'
+    "https://introweb.tech/assets/json/birthdayCake.json"
 ];
 
 const recipeData = {};
