@@ -9,7 +9,7 @@ describe('Basic web functionality check', () => {
         const puppeteer = require("puppeteer");
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
-        await page.goto('https://quickbtyes.netlify.app/source/home-page/');
+        await page.goto("https://quickbtyes.netlify.app/source/home-page/");
         
         let checkMark = true;
         //wait until the thumnails are generated 
