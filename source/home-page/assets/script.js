@@ -64,37 +64,36 @@ async function makeThumbnails(request){
   let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
   for (let i = 0; i<5; i++ ){
       let link = document.createElement("a");
-      link.href = "../recipe-individual/index.html?" + data
+      link.href = "../recipe-individual/index.html?" + data;
       let slideDiv = document.createElement("div");
       /*slideDiv.setAttribute('class','slide');*/
       let element = document.createElement("article");
-      element.id = "tile"
-      let recipe = vals.results[i]
-      console.log(recipe)
-      let title = document.createElement("h1")
-      title.id = "title"
-      title.textContent = recipe.title
-      element.appendChild(title)
-      let image = document.createElement("img")
-      image.id = "image"
+      element.id = "tile";
+      let recipe = vals.results[i];
+      let title = document.createElement("h1");
+      title.id = "title";
+      title.textContent = recipe.title;
+      element.appendChild(title);
+      let image = document.createElement("img");
+      image.id = "image";
       image.src = recipe.image;
-      element.appendChild(image)
-      let circle = document.createElement("div")
-      circle.id = "circle"
+      element.appendChild(image);
+      let circle = document.createElement("div");
+      circle.id = "circle";
       circle.textContent = "<" + recipe.readyInMinutes + "min";
-      element.appendChild(circle)
-      let ElemIngredient  = document.createElement("div")
-      ElemIngredient.id = "ingredients"
+      element.appendChild(circle);
+      let ElemIngredient  = document.createElement("div");
+      ElemIngredient.id = "ingredients";
       console.log(document.getElementsByClassName("container")[0]);
       let place = 0; 
       if (request == '30'){
-        place = 1
+        place = 1;
       }
       if (request == '60'){
-        place = 2
+        place = 2;
       }
       slideDiv.append(element);
-      link.appendChild(slideDiv)
+      link.appendChild(slideDiv);
       document.getElementsByClassName("container")[place].appendChild(link);
     }
   }
