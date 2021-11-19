@@ -107,7 +107,7 @@ class FavRecipe extends HTMLElement {
             recipeTitle.appendChild(text);
 
             // Adding Img
-            let value = searchForKey(json, 'thumbnailUrl');
+            let value = searchForKey(json, "thumbnailUrl");
             recipeImg.setAttribute("src", value);
 
             // Adding Time
