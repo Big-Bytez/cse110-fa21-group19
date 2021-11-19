@@ -51,7 +51,7 @@ describe('Basic web functionality check', () => {
 
         let checkMark = true;
 
-        const thumnail = await page.$('.container > a');
+        const thumnail = await page.$(".container > a");
         await thumnail.click();
 
         await page.waitForSelector('h1');
