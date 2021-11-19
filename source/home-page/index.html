@@ -26,7 +26,13 @@
 
 <body>
   <searchbar id= "search-bar">
-    <form id="form" role="search" onsubmit="window.location.href= '../search_page/'; return false;">
+    <form id="form" role="search" onsubmit="let query = document.getElementById('query').value;
+    if (query == ''){
+    return false;
+  }
+  window.location.href= '../search_page/?titleMatch=' + query;
+  return false;
+      ">
     <input type="search" id="query" name="q"
      placeholder="No limit? Search for recipes here"
      aria-label="Search through site content">
@@ -48,9 +54,9 @@
     <div class="time-buttons">
           <!--JS TO DO: Fill in href for time buttons
            should filtered feed based on time interval-->
-    <center><button class= "button button10">10 min</button>
-    <button class= "button button30">30 min</button>
-    <button class= "button button60">60 min</button>
+    <center><button class= "button button10" onclick="location.href='../search_page/index.html?maxReadyTime=10'">10 min</button>
+    <button class= "button button30" onclick="location.href='../search_page/index.html?maxReadyTime=30'">30 min</button>
+    <button class= "button button60" onclick="location.href='../search_page/index.html?maxReadyTime=60'">60 min</button>
   </center>
   </div>
 <br>
