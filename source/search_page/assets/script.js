@@ -44,6 +44,6 @@ window.onload = async function(){
     ele.data = resultArray[i];
     document.querySelector("main").append(ele);
 
-  };
+  }
 }
   
