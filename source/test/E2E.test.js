@@ -6,7 +6,7 @@ describe('Basic web functionality check', () => {
 
 
     it('Check thumnails on home page',async () => {
-        const puppeteer = require('puppeteer');
+        const puppeteer = require("puppeteer");
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
         await page.goto('https://quickbtyes.netlify.app/source/home-page/');
