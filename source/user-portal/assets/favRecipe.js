@@ -111,7 +111,7 @@ class FavRecipe extends HTMLElement {
             recipeImg.setAttribute("src", value);
 
             // Adding Time
-            value = searchForKey(json, 'totalTime');
+            value = searchForKey(json, "totalTime");
             timeNumb.innerHTML = value;
         }
        
