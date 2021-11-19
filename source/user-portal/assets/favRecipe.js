@@ -86,8 +86,9 @@ class FavRecipe extends HTMLElement {
 
         let timeNumb = document.createElement("p");
         timeNumb.setAttribute("class", "recipe-time");
+        let timeText = document.createTextNode("");
 
-        if(data == "Favorite more recipes!"){
+        if(data === "Favorite more recipes!"){
             // Adding Title
             const text = document.createTextNode("Please favorite more recipes!");
             recipeTitle.appendChild(text);
@@ -96,7 +97,8 @@ class FavRecipe extends HTMLElement {
             recipeImg.setAttribute("src", 'images/sadburger.gif');
 
             // Adding Time
-            timeNumb.innerHTML = "0";
+            timeText.nodeValue = "0";
+            timeNumb.appendChild(timeText);
         }
         else{
 
@@ -112,7 +114,8 @@ class FavRecipe extends HTMLElement {
 
             // Adding Time
             value = searchForKey(json, "totalTime");
-            timeNumb.innerHTML = value;
+            timeText.nodeValue = value;
+            timeNumb.appendChild(timeText);
         }
        
         recipe.appendChild(recipeTitle);
@@ -125,7 +128,6 @@ class FavRecipe extends HTMLElement {
 
     }
 }
-
 /**
  * CREDITS to Lab 6 Starter Code.
  * 
@@ -134,19 +136,19 @@ class FavRecipe extends HTMLElement {
  * @param {String} key the key that you are looking for in the object
  * @returns {*} the value of the found key
  */
- function searchForKey(object, key) {
+function searchForKey(object, key) {
     var value;
     Object.keys(object).some(function (k) {
-      if (k === key) {
-        value = object[k];
-        return true;
-      }
-      if (object[k] && typeof object[k] === "object") {
-        value = searchForKey(object[k], key);
-        return value !== undefined;
-      }
+        if (k === key) {
+            value = object[k];
+            return true;
+        }
+        if (object[k] && typeof object[k] === "object") {
+            value = searchForKey(object[k], key);
+            return value !== undefined;
+        }
     });
     return value;
-  }
-  
-  customElements.define("fav-recipe", FavRecipe);
+}
+
+customElements.define("fav-recipe", FavRecipe);
