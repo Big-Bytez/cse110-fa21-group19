@@ -56,7 +56,7 @@ describe('Basic web functionality check', () => {
 
         await page.waitForSelector("h1");
         const title =  await page.$("h1");
-        let innertext = await title.getProperty('innerText');
+        let innertext = await title.getProperty("innerText");
 
         if (innertext['_remoteObject'].value == ""){
             checkMark = false;
