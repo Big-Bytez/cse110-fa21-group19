@@ -80,7 +80,7 @@ class SearchRecipe extends HTMLElement {
         //recipeTitle.setAttribute('href', `../recipe-individual/inex.html?${data.id}`);
         recipeTitle.setAttribute('class','headline');
 
-        const link = document.createElement('a')
+        const link = document.createElement("a")
         link.setAttribute("href", `../recipe-individual/index.html?${data.id}` )
         link.setAttribute("class", 'link');
         
