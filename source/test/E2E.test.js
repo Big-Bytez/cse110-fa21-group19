@@ -16,7 +16,7 @@ describe('Basic web functionality check', () => {
         await page.waitForSelector("#tile");
 
         //1. check if we have thumnails
-        const numContainer = await page.$$eval('.container', (prodItems) => {
+        const numContainer = await page.$$eval(".container", (prodItems) => {
             return prodItems.length;
           });
         const numThumbnails = await page.$$eval('#tile', (prodItems) => {
