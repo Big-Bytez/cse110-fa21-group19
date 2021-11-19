@@ -1,7 +1,6 @@
 /* style.css */
 * {
   font-family: 'Varela Round', sans-serif;
-
 }
 
 @font-face {
@@ -51,7 +50,7 @@ sideBar {
 
 .searchbox {
   float: left;
-}  
+}
 
 header {
   justify-content: center;
@@ -138,10 +137,10 @@ input[type=search] {
 }
 
 .button {
-  background-color: #ff0000;
+  background-color: #f00;
   border: none;
   color: white;
-  background: #b90c0c;
+  background-color: #b90c0c;
   width: 5em;
   height: 5em;
   text-align: center;
@@ -150,7 +149,7 @@ input[type=search] {
   cursor: pointer;
   display: inline-block;
   font-size: 8.8vh;
-  box-shadow: 0 .5em .2em rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5em 0.2em rgba(0, 0, 0, 0.2);
 }
 
 h3 {
@@ -169,7 +168,7 @@ h3 {
 
 .top-nav {
   width: 100%;
-  display: flex; 
+  display: flex;
   flex-direction: row;
 }
 
@@ -216,7 +215,7 @@ h4 {
   margin-left: 65%;
   padding-left: calc(3vw);
   top: 0.2em;
-  background-color:none;
+  background-color: none;
 }
 
 .user-portal {
@@ -228,15 +227,19 @@ h4 {
   top: 1em;
   background-color: none;
 }
+
 .logoImg:hover {
   opacity: 0.8;
 }
+
 .user-portal:hover {
   opacity: 0.8;
 }
+
 .shuffle:hover {
   opacity: 0.8;
 }
+
 .sort {
   display: inline-block;
   position: relative;
@@ -256,6 +259,7 @@ h4 {
 .hidden {
   display: none;
 }
+
 div.favor-recipes {
   background-color: white;
   height: calc(18vw);
