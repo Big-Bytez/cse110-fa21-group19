@@ -31,7 +31,7 @@ async function fetchRecipes() {
         for(let i = 0; i < recipes.length; i++){
             fetch(recipes[i])
             .then((response) => response.json())
-                .then(data =>{           
+                .then(data => {           
                     localStorage.setItem("Birthday", JSON.stringify(data));
                     recipeData[i] = "Birthday";
                     if(i+1 == recipes.length){
