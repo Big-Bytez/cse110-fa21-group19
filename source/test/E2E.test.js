@@ -1,7 +1,7 @@
 
 describe('Basic web functionality check', () => {
 
-    jest.setTimeout(5000);
+    
 
 
 
@@ -12,7 +12,8 @@ describe('Basic web functionality check', () => {
         await page.goto("https://quickbtyes.netlify.app/source/home-page/");
         
         let checkMark = true;
-        //wait until the thumnails are generated 
+        //wait until the thumnails are generated
+        setTimeout(async() => {await browser.close();},5000);
         await page.waitForSelector("#tile");
 
         //1. check if we have thumnails
@@ -39,7 +40,7 @@ describe('Basic web functionality check', () => {
     
     
 
-      });
+      },5000);
 
     it("Check recipes page routing", async () => {
 
@@ -50,7 +51,7 @@ describe('Basic web functionality check', () => {
         await page.waitForSelector('#tile');
 
         let checkMark = true;
-
+        setTimeout(async() => {await browser.close();},5000);
         const thumnail = await page.$(".container > a");
         await thumnail.click();
 
@@ -66,7 +67,7 @@ describe('Basic web functionality check', () => {
         expect(true).toBe(true);
 
 
-    });
+    },5000);
 
 
     it('Check user page routing', async () => {
@@ -78,7 +79,7 @@ describe('Basic web functionality check', () => {
         await page.waitForSelector('#tile');
 
         let checkMark = true;
-
+        setTimeout(async() => {await browser.close();},5000);
         const thumnail = await page.$(".user-portal > a");
         await thumnail.click();
 
@@ -92,7 +93,7 @@ describe('Basic web functionality check', () => {
         await browser.close();
         expect(true).toBe(true);
 
-    });
+    },5000);
 
 
 });
