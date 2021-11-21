@@ -61,7 +61,7 @@ let images = {
 
 
 async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&cuisine=${request}&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=0cf33288977545ceb0cc5281675845df&cuisine=${request}&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
   for (let i = 0; i<5; i++ ) {
       let recipe = vals.results[i];
       let ele = document.createElement("search-recipe");
@@ -78,9 +78,9 @@ async function makeThumbnails(request){
   }
 
 
-//makeThumbnails("Mexican");
-//makeThumbnails("Greek");
-//makeThumbnails("Indian");
+makeThumbnails("Mexican");
+makeThumbnails("Greek");
+makeThumbnails("Indian");
 
 
 
@@ -90,6 +90,7 @@ async function makeThumbnails(request){
  add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
  add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');*/
  
+ /*
  $(document).ready(function(){
      $('.my_img').hover(function() {
          $(this).addClass('transition');
@@ -106,4 +107,5 @@ async function makeThumbnails(request){
          $('body').animate({scrollLeft: -1000}, 800);
      }
  });
+ */
  
