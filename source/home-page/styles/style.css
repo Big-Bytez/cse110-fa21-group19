@@ -595,3 +595,7 @@ main{
    background-image: url("images/kitchen.jpg");
    background-color: crimson;
  }
+
+.copyright {
+  padding-top: 100px;
+}
