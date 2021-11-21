@@ -217,7 +217,7 @@ class IndividualCustom extends HTMLElement {
         const thumbnail = document.createElement("img");
         thumbnail.setAttribute("src",data.image);
         const ingredientsContainer = document.createElement('div');
-        ingredientsContainer.setAttribute("class", 'essay-text');
+        ingredientsContainer.setAttribute("class", "essay-text");
         const ingredientsHeadline = document.createElement('h2');
         ingredientsHeadline.innerHTML = "Ingredients";
         const ingredientsText = document.createElement("ul");
