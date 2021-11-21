@@ -11,33 +11,33 @@ class FavRecipe extends HTMLElement {
             article{
                 display: grid;
                 align-items: center;
-                width: 20vw;
-                grid-template-rows: 110px 240px;
-                height: 20vw;
-                row-gap: 5px;
+                width: calc(20vw);
+                grid-template-rows: calc(10vh) calc(26vh);
+                height: calc(40vh);
+                row-gap: calc(.7vh);
                 border: 3px solid black;
                 background-color: white;
                 border-radius: 10px;
             }
 
-            a {
+            article > p {
                 font-family: 'Varelia Round', sans-serif;
-                font-size: 2.5vh;
+                font-size: calc(2.5vh);
                 align-items: center;
                 margin-top: 20px;
                 margin-left: 15px;
                 margin-right: 15px;
-                max-width: 20vw;
+                max-width: calc(20vw);
                 overflow: hidden;
             }
           
-            p {
+            div > p {
                 font-family: 'Varela Round', sans-serif;
-                font-size: 2.5vh;
+                font-size: calc(2.5vh);
                 align-items: center;
-                margin-top: 20px;
-                margin-left: 15px;
-                margin-right: 15px;
+                margin-top: calc(2vh);
+                margin-left: calc(2vw);
+                margin-right: calc(0.8vw);
             }
         
             img {
@@ -52,17 +52,18 @@ class FavRecipe extends HTMLElement {
             }
 
             div {
-                width: 60px;
-                height: 60px;
+                width: calc(3.2vw);
+                height: calc(3.2vw);
                 background: #b90c0c;
                 border-radius: 50%;
                 position: relative; 
                 visibility: visible; 
-                left: 300px; 
-                bottom: 60px;
+                left: calc(15vw); 
+                bottom: calc(6.5vh);
                 border-style: solid;
                 border-width: 2px;
                 border-color: black;
+                
             }
 
             .recipe-time {
@@ -76,24 +77,47 @@ class FavRecipe extends HTMLElement {
 
         const recipe = document.createElement("article");
 
-        const recipeTitle = document.createElement("a");
-        recipeTitle.setAttribute('href',"");
-        recipeTitle.setAttribute("class",'title');
+        let recipeTitle = document.createElement("p");
 
-        const recipeImg = document.createElement('img');
-        const timeCircle = document.createElement('div');
-        timeCircle.setAttribute("class", 'time');
+        let recipeImg = document.createElement("img");
 
-        const timeNumb = document.createElement('p')
-        timeNumb.setAttribute("class", 'recipe-time');
+        let timeCircle = document.createElement("div");
+        timeCircle.setAttribute("class", "time");
 
-        timeNumb.innerHTML = "0";
+        let timeNumb = document.createElement("p");
+        timeNumb.setAttribute("class", "recipe-time");
+        let timeText = document.createTextNode("");
 
-        recipeImg.setAttribute("src",'images/sadburger.gif');
+        if(data === "Favorite more recipes!"){
+            // Adding Title
+            const text = document.createTextNode("Please favorite more recipes!");
+            recipeTitle.appendChild(text);
 
-        recipeTitle.innerHTML = data;
+            // Adding Img
+            recipeImg.setAttribute("src", 'images/sadburger.gif');
 
-        
+            // Adding Time
+            timeText.nodeValue = "0";
+            timeNumb.appendChild(timeText);
+        }
+        else{
+
+            let json = JSON.parse(localStorage.getItem(data));
+
+            // Adding Title
+            const text = document.createTextNode(data);
+            recipeTitle.appendChild(text);
+
+            // Adding Img
+            let value = searchForKey(json, "thumbnailUrl");
+            recipeImg.setAttribute("src", value);
+
+            // Adding Time
+            value = searchForKey(json, "totalTime");
+            timeText.nodeValue = value;
+            timeNumb.appendChild(timeText);
+        }
+       
         recipe.appendChild(recipeTitle);
         recipe.appendChild(recipeImg);
         timeCircle.appendChild(timeNumb);
@@ -104,5 +128,27 @@ class FavRecipe extends HTMLElement {
 
     }
 }
-  
+/**
+ * CREDITS to Lab 6 Starter Code.
+ * 
+ * Recursively search for a key nested somewhere inside an object
+ * @param {Object} object the object with which you'd like to search
+ * @param {String} key the key that you are looking for in the object
+ * @returns {*} the value of the found key
+ */
+function searchForKey(object, key) {
+    var value;
+    Object.keys(object).some(function (k) {
+        if (k === key) {
+            value = object[k];
+            return true;
+        }
+        if (object[k] && typeof object[k] === "object") {
+            value = searchForKey(object[k], key);
+            return value !== undefined;
+        }
+    });
+    return value;
+}
+
 customElements.define("fav-recipe", FavRecipe);
