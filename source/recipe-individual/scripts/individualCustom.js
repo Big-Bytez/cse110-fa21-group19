@@ -250,9 +250,15 @@ class IndividualCustom extends HTMLElement {
         const ratings = document.createElement('p');
         ratings.innerHTML = data.aggregateLikes + " Likes";
         ratingsDiv.appendChild(ratings);
-        const favorite = document.createElement('a');
+        const favorite = document.createElement('button');
         favorite.setAttribute('class', 'favorite');
-        favorite.setAttribute("href", '');
+        favorite.setAttribute('id', 'favorite');
+        favorite.addEventListener("click", function() {
+            var thumbnail = {"totalTime" : data.readyInMinutes, 
+            "title" : data.title, "id": data.id, "thumbnailUrl": data.image}
+            localStorage.setItem(data.title, JSON.stringify(thumbnail))
+            console.log(localStorage);
+            });
         const favImage = document.createElement("img");
         favImage.setAttribute('src', 'images/favorite.png');
         favImage.setAttribute('height', '70vh');

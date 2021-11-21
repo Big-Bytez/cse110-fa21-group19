@@ -61,7 +61,7 @@ let images = {
 
 
 async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=0cf33288977545ceb0cc5281675845df&cuisine=${request}&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&cuisine=${request}&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
   for (let i = 0; i<5; i++ ) {
       let recipe = vals.results[i];
       let ele = document.createElement("search-recipe");
