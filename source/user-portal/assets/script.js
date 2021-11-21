@@ -59,14 +59,6 @@ function createRecipeCards(){
 
 async function init() {
 
-/*   
-    let fetched = await fetchRecipes();
-
-    if(!fetched){
-        console.error('Failed fetch');
-        return;
-    }
-*/
     collectStorage();
 
     createRecipeCards();
