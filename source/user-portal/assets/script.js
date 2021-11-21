@@ -1,13 +1,15 @@
 // Script for adding recipe card
 
+/*
 const recipes = [
     "https://introweb.tech/assets/json/birthdayCake.json"
-];
+]; */
 
 const recipeData = {};
 
 window.addEventListener('DOMContentLoaded', init);
 
+/*
 // Function here if I need to fetch the recipe... 
 // fetch(`https://api.spoonacular.com/recipes/${recipes[i]}/information?apiKey=`+apiKey)
 async function fetchRecipes() {
@@ -30,7 +32,7 @@ async function fetchRecipes() {
             resolve(true);
         }
     })
-}
+} */
 
 function collectStorage(){
 
@@ -57,14 +59,14 @@ function createRecipeCards(){
 
 async function init() {
 
-    
+/*   
     let fetched = await fetchRecipes();
 
     if(!fetched){
         console.error('Failed fetch');
         return;
     }
-
+*/
     collectStorage();
 
     createRecipeCards();
