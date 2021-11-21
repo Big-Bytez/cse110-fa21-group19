@@ -67,7 +67,7 @@ async function makeThumbnails(request){
       let ele = document.createElement('search-recipe');
       ele.data = vals.results[i];
       let place = 0
-      if (request == 'Greek'){
+      if (request == "Greek"){
         place = 1
       }
       if (request == "Indian"){
