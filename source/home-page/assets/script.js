@@ -61,47 +61,26 @@ let images = {
 
 
 async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
-  for (let i = 0; i<5; i++ ){
-      let link = document.createElement("a");
-      link.href = "../recipe-individual/index.html?" + data;
-      let slideDiv = document.createElement("div");
-      /*slideDiv.setAttribute('class','slide');*/
-      let element = document.createElement("article");
-      element.id = "tile";
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&cuisine=${request}&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
+  for (let i = 0; i<5; i++ ) {
       let recipe = vals.results[i];
-      let title = document.createElement("h1");
-      title.id = "title";
-      title.textContent = recipe.title;
-      element.appendChild(title);
-      let image = document.createElement("img");
-      image.id = "image";
-      image.src = recipe.image;
-      element.appendChild(image);
-      let circle = document.createElement("div");
-      circle.id = "circle";
-      circle.textContent = "<" + recipe.readyInMinutes + "min";
-      element.appendChild(circle);
-      let ElemIngredient  = document.createElement("div");
-      ElemIngredient.id = "ingredients";
-      console.log(document.getElementsByClassName("container")[0]);
-      let place = 0; 
-      if (request == '30'){
-        place = 1;
+      let ele = document.createElement("search-recipe");
+      ele.data = vals.results[i];
+      let place = 0
+      if (request == "Greek"){
+        place = 1
       }
-      if (request == '60'){
+      if (request == "Indian"){
         place = 2;
       }
-      slideDiv.append(element);
-      link.appendChild(slideDiv);
-      document.getElementsByClassName("container")[place].appendChild(link);
+      document.getElementsByClassName("container")[place].append(ele);
     }
   }
 
 
-makeThumbnails(20);
-makeThumbnails(30);
-makeThumbnails(60);
+//makeThumbnails("Mexican");
+//makeThumbnails("Greek");
+//makeThumbnails("Indian");
 
 
 

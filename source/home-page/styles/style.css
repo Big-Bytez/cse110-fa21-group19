@@ -565,6 +565,7 @@ h3{
   border: none ;
 }
 
+
 .openbtn:hover {
   background-color: #444 ;
 }
@@ -579,7 +580,6 @@ main{
   flex-direction: row;
   padding-right: 10vh;
   padding-left: 25vh;
-  height: 20vw;
   text-align: center;
 }
 .slide {
