@@ -31,7 +31,8 @@ body>sideBar a {
   margin-bottom: 3vh;
 }
 sideBar {
-  display: grid;
+  display:none;
+  /*display:grid;*/
   justify-items: begin;
   padding-left: .2em;
   position: fixed;
