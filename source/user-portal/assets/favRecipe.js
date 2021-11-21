@@ -29,6 +29,8 @@ class FavRecipe extends HTMLElement {
                 margin-right: 15px;
                 max-width: calc(20vw);
                 overflow: hidden;
+                text-decoration: none !important;
+                color: black !important
             }
           
             div > p {
@@ -70,6 +72,8 @@ class FavRecipe extends HTMLElement {
                 color: white;
                 margin-left:12px;
                 text-align: center;
+                text-decoration: none !important;
+                color: black !important
             }
         `;
         
@@ -87,6 +91,8 @@ class FavRecipe extends HTMLElement {
         let timeNumb = document.createElement("p");
         timeNumb.setAttribute("class", "recipe-time");
         let timeText = document.createTextNode("");
+        var link;
+
 
         if(data === "Favorite more recipes!"){
             // Adding Title
@@ -116,15 +122,25 @@ class FavRecipe extends HTMLElement {
             value = searchForKey(json, "totalTime");
             timeText.nodeValue = value;
             timeNumb.appendChild(timeText);
+
+            link = document.createElement("a")
+            link.setAttribute("href",  `../recipe-individual/index.html?${json.id}`)
+            link.setAttribute("class", 'link');
         }
        
         recipe.appendChild(recipeTitle);
         recipe.appendChild(recipeImg);
         timeCircle.appendChild(timeNumb);
         recipe.appendChild(timeCircle);
-
         this.shadowRoot.appendChild(styleElem); 
-        this.shadowRoot.appendChild(recipe);
+
+        if (link){
+            link.appendChild(recipe)
+            this.shadowRoot.appendChild(link);
+        } else {
+            this.shadowRoot.appendChild(recipe);
+
+        }
 
     }
 }
