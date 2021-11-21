@@ -18,8 +18,9 @@ body {
  justify-items: center;
  background-color: #ffffff; /*white background*/ /*yellow option:#e9e2cc pink option: #eee4e4 */
 }
+
 body, html {
- height: 150%; /*allows for space to scroll into short feed*/
+ height: 120%; /*allows for space to scroll into short feed*/
  width: 100%;
 }
 body>sideBar a {
@@ -30,7 +31,8 @@ body>sideBar a {
   margin-bottom: 3vh;
 }
 sideBar {
-  display: grid;
+  display:none;
+  /*display:grid;*/
   justify-items: begin;
   padding-left: .2em;
   position: fixed;
@@ -62,6 +64,7 @@ header {
   top: 15vh;
   margin-left: 4%;
   width: 100%;
+  right:0 ;
 }
 body{
   justify-content: center;
@@ -84,7 +87,7 @@ h2 {
   width: 80%;
   padding-left: 10%;
   padding-right: 10%;
-  font-size: 8.1vh;
+  font-size: 7vh;
   align-self: center;
 }
 .searchbox {  
@@ -159,7 +162,8 @@ input {
   box-shadow: 0 .5em .2em rgba(0, 0, 0, 0.2);
   }
 
-.button10,.button30,.button60 {border-radius: 50%;
+.button10,.button30,.button60 {border-radius: 70%;
+  font-size: 7vh;
   font-family: 'Abril Fatface', cursive;
   margin-left: .8em;
   margin-right: .8em;
@@ -182,7 +186,7 @@ input {
   flex-direction: row;
 }
 .shuffle{
-  position: fixed;
+  position: absolute;
   margin-top: 3.7vh;
   margin-right: 0vw;
   margin-left: 143vw;
@@ -191,7 +195,7 @@ input {
   background-color:none;
 }
 .user-portal{
-  position: fixed;
+  position: absolute;
   margin-right: 0vw;
   margin-left: 148vw;
   padding-left: 3em;
@@ -199,7 +203,7 @@ input {
   background-color:none;
 }
 .logoImg {
- position:fixed;
+ position:absolute;
  justify-items: end;
  padding-left: .2em;
  padding-right: 5em;
@@ -565,11 +569,12 @@ h3{
   border: none ;
 }
 
+
 .openbtn:hover {
   background-color: #444 ;
 }
 main{
-  padding-top: 250vh;
+  padding-top: 200vh;
   padding-left: 100vw;
   margin-right: 100vw;
   
@@ -579,7 +584,6 @@ main{
   flex-direction: row;
   padding-right: 10vh;
   padding-left: 25vh;
-  height: 20vw;
   text-align: center;
 }
 .slide {
