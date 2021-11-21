@@ -64,7 +64,7 @@ async function makeThumbnails(request){
   let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&cuisine=${request}&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
   for (let i = 0; i<5; i++ ) {
       let recipe = vals.results[i];
-      let ele = document.createElement('search-recipe');
+      let ele = document.createElement("search-recipe");
       ele.data = vals.results[i];
       let place = 0
       if (request == "Greek"){
