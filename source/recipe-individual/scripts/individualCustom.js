@@ -210,19 +210,19 @@ class IndividualCustom extends HTMLElement {
 
         styleElem.innerHTML = styles;
         
-        const container = document.createElement('div');
+        const container = document.createElement("div");
 
         const rightContainer = document.createElement('div');
         rightContainer.setAttribute('class', 'application-type');
-        const thumbnail = document.createElement('img');
+        const thumbnail = document.createElement("img");
         thumbnail.setAttribute("src",data.image);
         const ingredientsContainer = document.createElement('div');
-        ingredientsContainer.setAttribute('class', 'essay-text');
+        ingredientsContainer.setAttribute("class", 'essay-text');
         const ingredientsHeadline = document.createElement('h2');
-        ingredientsHeadline.innerHTML = 'Ingredients';
+        ingredientsHeadline.innerHTML = "Ingredients";
         const ingredientsText = document.createElement('ul');
         for(var i = 0; i < data.extendedIngredients.length; i++) {
-            const single = document.createElement('li');
+            const single = document.createElement("li");
             single.innerHTML = data.extendedIngredients[i].original;
             ingredientsText.appendChild(single);
         }
@@ -232,33 +232,33 @@ class IndividualCustom extends HTMLElement {
         rightContainer.appendChild(ingredientsContainer);
 
         const topMiddleContainer = document.createElement('div');
-        topMiddleContainer.setAttribute('class', 'image-box');
+        topMiddleContainer.setAttribute("class", 'image-box');
         const recipeTitle = document.createElement('h1');
         recipeTitle.innerHTML = data.title;
         const cookTime = document.createElement('h2');
         cookTime.innerHTML = data.readyInMinutes + "min";
         // const description = document.createElement('p');
         // description.innerHTML = data.
-        const ratingBox = document.createElement('div');
-        ratingBox.setAttribute('class', 'ratings-box');
+        const ratingBox = document.createElement("div");
+        ratingBox.setAttribute("class", 'ratings-box');
         const starsDiv = document.createElement('div');
-        const stars = document.createElement('img');
+        const stars = document.createElement("img");
         stars.setAttribute('src', './images/5-star.svg');
         stars.setAttribute('class', 'stars');
         starsDiv.appendChild(stars);
-        const ratingsDiv = document.createElement('div');
+        const ratingsDiv = document.createElement("div");
         const ratings = document.createElement('p');
         ratings.innerHTML = data.aggregateLikes + " Likes";
         ratingsDiv.appendChild(ratings);
         const favorite = document.createElement('a');
         favorite.setAttribute('class', 'favorite');
-        favorite.setAttribute('href', '');
-        const favImage = document.createElement('img');
+        favorite.setAttribute("href", '');
+        const favImage = document.createElement("img");
         favImage.setAttribute('src', 'images/favorite.png');
         favImage.setAttribute('height', '70vh');
         favImage.setAttribute('widht', '100vw');
         favorite.appendChild(favImage);
-        const favoriteDiv = document.createElement('div');
+        const favoriteDiv = document.createElement("div");
         favoriteDiv.appendChild(favorite);
         topMiddleContainer.appendChild(recipeTitle);
         topMiddleContainer.appendChild(cookTime);
@@ -271,7 +271,7 @@ class IndividualCustom extends HTMLElement {
         bottomMidContainer.setAttribute('class', 'directions-text');
         const instructionsHeader = document.createElement('h2');
         instructionsHeader.innerHTML = 'Instructions';
-        const instructions = document.createElement('ul');
+        const instructions = document.createElement("ul");
         const betterInstructions = data.instructions.split('<p>');
         const instructionsArray = betterInstructions[1].split('.');
         for(var i = 0; i < instructionsArray.length-1; i++) {

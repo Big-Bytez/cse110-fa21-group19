@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', init);
+window.addEventListener("DOMContentLoaded", init);
 async function init() {
 }
 
