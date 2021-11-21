@@ -1,7 +1,7 @@
 class IndividualCustom extends HTMLElement {
     constructor() {
         super();
-        let shadow = this.attachShadow({mode: 'open'});
+        let shadow = this.attachShadow({mode: "open"});
     }
 
     set data(data) {
@@ -220,7 +220,7 @@ class IndividualCustom extends HTMLElement {
         ingredientsContainer.setAttribute("class", 'essay-text');
         const ingredientsHeadline = document.createElement('h2');
         ingredientsHeadline.innerHTML = "Ingredients";
-        const ingredientsText = document.createElement('ul');
+        const ingredientsText = document.createElement("ul");
         for(var i = 0; i < data.extendedIngredients.length; i++) {
             const single = document.createElement("li");
             single.innerHTML = data.extendedIngredients[i].original;
@@ -232,10 +232,10 @@ class IndividualCustom extends HTMLElement {
         rightContainer.appendChild(ingredientsContainer);
 
         const topMiddleContainer = document.createElement('div');
-        topMiddleContainer.setAttribute("class", 'image-box');
-        const recipeTitle = document.createElement('h1');
+        topMiddleContainer.setAttribute("class", "image-box");
+        const recipeTitle = document.createElement("h1");
         recipeTitle.innerHTML = data.title;
-        const cookTime = document.createElement('h2');
+        const cookTime = document.createElement("h2");
         cookTime.innerHTML = data.readyInMinutes + "min";
         // const description = document.createElement('p');
         // description.innerHTML = data.
@@ -250,9 +250,9 @@ class IndividualCustom extends HTMLElement {
         const ratings = document.createElement('p');
         ratings.innerHTML = data.aggregateLikes + " Likes";
         ratingsDiv.appendChild(ratings);
-        const favorite = document.createElement('button');
-        favorite.setAttribute('class', 'favorite');
-        favorite.setAttribute('id', 'favorite');
+        const favorite = document.createElement("button");
+        favorite.setAttribute("class", 'favorite');
+        favorite.setAttribute("id", 'favorite');
         favorite.addEventListener("click", function() {
             var thumbnail = {"totalTime" : data.readyInMinutes, 
             "title" : data.title, "id": data.id, "thumbnailUrl": data.image}
@@ -260,9 +260,9 @@ class IndividualCustom extends HTMLElement {
             console.log(localStorage);
             });
         const favImage = document.createElement("img");
-        favImage.setAttribute('src', 'images/favorite.png');
+        favImage.setAttribute("src", 'images/favorite.png');
         favImage.setAttribute('height', '70vh');
-        favImage.setAttribute('widht', '100vw');
+        favImage.setAttribute("widht", '100vw');
         favorite.appendChild(favImage);
         const favoriteDiv = document.createElement("div");
         favoriteDiv.appendChild(favorite);
@@ -275,10 +275,10 @@ class IndividualCustom extends HTMLElement {
 
         const bottomMidContainer = document.createElement('div');
         bottomMidContainer.setAttribute('class', 'directions-text');
-        const instructionsHeader = document.createElement('h2');
-        instructionsHeader.innerHTML = 'Instructions';
+        const instructionsHeader = document.createElement("h2");
+        instructionsHeader.innerHTML = "Instructions";
         const instructions = document.createElement("ul");
-        const betterInstructions = data.instructions.split('<p>');
+        const betterInstructions = data.instructions.split("<p>");
         const instructionsArray = betterInstructions[1].split('.');
         for(var i = 0; i < instructionsArray.length-1; i++) {
             console.log(instructionsArray[i]);
