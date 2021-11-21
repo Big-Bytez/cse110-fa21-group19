@@ -4,7 +4,7 @@ async function init() {
 
 
 async function fetchIndividualRecipe(id) {
-  let searchString = `https://api.spoonacular.com/recipes/${id}/information?apiKey=03722052291e4f84bce1021acd82624f&includeNutrition=true`;
+  let searchString = `https://api.spoonacular.com/recipes/${id}/information?apiKey=5c1a7624041d448eaed407e4ceda64d0&includeNutrition=true`;
   console.log(searchString);  
   return fetch(searchString)
     .then((response) => response.json());
