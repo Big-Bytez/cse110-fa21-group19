@@ -79,8 +79,14 @@ Must add to repo by monday.
 
 
 
-**Conclusions:**
+**Specific Actions:**
 
+- Be more clear about upcoming dedalines by looking ahead and checking every Tuesday
+- Ex: MVP Video due Monday Novermber 22nd
+- Communicate more by making channels on slack, using github actions & requesting reviews on github
+- Clearly assign roles at each meeting 
+- Try to get all pull requests merged before each meeting so we can see our
+website in its entirity 
 -------
 
 -----------------------------------

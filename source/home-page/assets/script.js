@@ -39,18 +39,6 @@
   sliders.forEach(setUpslider);
  
 
- function searchFetchRecipes() {
-    let searchBar = document.getElementById("query").value;
-    if (searchBar == ""){
-      return;
-    }
-      //let searchString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&titleMatch=" + searchBar;  
-   
-    return true;
-      //return fetch(searchString).then((response) => console.log(response.json()))
-  }
-
-
 let images = {
     "1" : "images/pho.jfif",
     "2" : "images/pho.jfif",
@@ -73,64 +61,26 @@ let images = {
 
 
 async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&maxReadyTime=${request}&addRecipeInformation=True`).then((response) => response.json());
-  for (let i = 0; i<5; i++ ){
-      let link = document.createElement("a");
-      link.href = "../recipe-individual/index.html"
-      let slideDiv = document.createElement("div");
-      /*slideDiv.setAttribute('class','slide');*/
-      let element = document.createElement("article");
-      element.id = "tile"
-      let recipe = vals.results[i]
-      console.log(recipe)
-      let title = document.createElement("h1")
-      title.id = "title"
-      title.textContent = recipe.title
-      element.appendChild(title)
-      let image = document.createElement("img")
-      image.id = "image"
-      image.src = recipe.image;
-      element.appendChild(image)
-      let circle = document.createElement("div")
-      circle.id = "circle"
-      circle.textContent = "<" + recipe.readyInMinutes + "min";
-      element.appendChild(circle)
-      let ElemIngredient  = document.createElement("div")
-      ElemIngredient.id = "ingredients"
-      console.log(document.getElementsByClassName("container")[0]);
-      let place = 0; 
-      if (request == '30'){
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=0cf33288977545ceb0cc5281675845df&cuisine=${request}&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
+  for (let i = 0; i<5; i++ ) {
+      let recipe = vals.results[i];
+      let ele = document.createElement("search-recipe");
+      ele.data = vals.results[i];
+      let place = 0
+      if (request == "Greek"){
         place = 1
       }
-      if (request == '60'){
-        place = 2
+      if (request == "Indian"){
+        place = 2;
       }
-      slideDiv.append(element);
-      link.appendChild(slideDiv)
-      document.getElementsByClassName("container")[place].appendChild(link);
+      document.getElementsByClassName("container")[place].append(ele);
     }
   }
 
 
-makeThumbnails(20);
-makeThumbnails(30);
-makeThumbnails(60);
-
-
-
-
-
-window.onload = function(){
-  document.getElementById("form").addEventListener("submit", function(){
-    //let bool = await searchFetchRecipes();
-    let bool = true;
-    if (bool){
-      window.location.href= "../search_page/";
-      console.log(window.location.href);
-    }
-  });
-};
-
+makeThumbnails("Mexican");
+makeThumbnails("Greek");
+makeThumbnails("Indian");
 
 
 
@@ -140,6 +90,7 @@ window.onload = function(){
  add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
  add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');*/
  
+ /*
  $(document).ready(function(){
      $('.my_img').hover(function() {
          $(this).addClass('transition');
@@ -156,4 +107,5 @@ window.onload = function(){
          $('body').animate({scrollLeft: -1000}, 800);
      }
  });
+ */
  
