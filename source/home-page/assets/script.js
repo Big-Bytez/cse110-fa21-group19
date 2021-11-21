@@ -70,7 +70,7 @@ async function makeThumbnails(request){
       if (request == 'Greek'){
         place = 1
       }
-      if (request == 'Indian'){
+      if (request == "Indian"){
         place = 2;
       }
       document.getElementsByClassName("container")[place].append(ele);
