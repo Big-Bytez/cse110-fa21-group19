@@ -53,4 +53,20 @@ describe('Basic user flow for Website', () => {
     expect(TimeButtonP).toBe(true);
     
   }, 2500);
+  it('Make sure <product-item> elements are populated', async () => {
+    console.log('Checking to make sure <product-item> elements are populated...');
+    let SearchPage = true;
+    let data, plainValue;
+    const article = await page.$$('search-recipe');
+    console.log(`Checking product item 1/${article.length}`);
+    // Grab the .data property of <article> to grab all of the json data stored inside
+    for(let i=0;i<article.length;i++){
+    data = await article[i].getProperty('article');
+    // Make sure the h1, circle, and image are populated in the JSON
+    if (data.img.length == 0) { SearchPage = false; }
+    if (data.p.length == 0) { SearchPage = false; }
+    // Expect allArePopulated to still be true
+    }
+    expect(SearchPage).toBe(true);
+  }, 2500);
 });
