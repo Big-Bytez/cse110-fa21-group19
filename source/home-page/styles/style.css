@@ -195,6 +195,7 @@ input {
   background-color:none;
 }
 .user-portal{
+  right:0;
   position: absolute;
   margin-right: 0vw;
   margin-left: 148vw;
@@ -592,7 +593,7 @@ main{
  }
 
  .background-image {
-   background-image: url("images/kitchen.jpg");
+   background-image: url("../images/kitchen.jpg");
    background-color: crimson;
  }
 
