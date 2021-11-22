@@ -1,98 +1,82 @@
 
-describe('Basic web functionality check', () => {
 
-    jest.setTimeout(5000);
-
-
-
-    it('Check thumnails on home page',async () => {
-        const puppeteer = require("puppeteer");
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        await page.goto("https://quickbtyes.netlify.app/source/home-page/");
-        
-        let checkMark = true;
-        //wait until the thumnails are generated 
-        await page.waitForSelector("#tile");
-
-        //1. check if we have thumnails
-        const numContainer = await page.$$eval(".container", (prodItems) => {
-            return prodItems.length;
-          });
-        const numThumbnails = await page.$$eval('#tile', (prodItems) => {
-
-        return prodItems.length;
-        });
-        console.log(numContainer,",", numThumbnails);
-
-        // total number of thumbnails should be equal to 5 * total number of container 
-        if (numContainer != numThumbnails *5){
-            checkMark = false;
-        }
-
-
-        
-
-        await browser.close();
-        expect(true).toBe(true);
-          
-    
     
 
+
+
+test('Check thumnails on home page',async () => {
+    const puppeteer = require("puppeteer");
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto("https://big-bytez.github.io/cse110-fa21-group19/source/home-page/",{
+        waitUntil: 'networkidle0',
       });
+    
+    //wait until the thumnails are generated
+    const numContainer = await page.$$eval(".container", (prodItems) => {
+        return prodItems.length;
+    });
+    const numThumbnails = await page.$$eval('search-recipe', (prodItems) => {
+        return prodItems.length;
+    });
 
-    it("Check recipes page routing", async () => {
 
-        const puppeteer = require('puppeteer');
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        await page.goto('http://127.0.0.1:5500/source/home-page/index.html');
-        await page.waitForSelector('#tile');
+    await browser.close();
 
-        let checkMark = true;
+    expect(numThumbnails).toBe(15);
 
-        const thumnail = await page.$(".container > a");
-        await thumnail.click();
+},10000);
 
-        await page.waitForSelector("h1");
-        const title =  await page.$("h1");
-        let innertext = await title.getProperty("innerText");
+    // it("Check recipes page routing", async () => {
 
-        if (innertext['_remoteObject'].value == ""){
-            checkMark = false;
-        }
+    //     const puppeteer = require('puppeteer');
+    //     const browser = await puppeteer.launch();
+    //     const page = await browser.newPage();
+    //     await page.goto('http://127.0.0.1:5500/source/home-page/index.html');
+    //     await page.waitForSelector('#tile');
+
+    //     let checkMark = true;
+    //     setTimeout(async() => {await browser.close();},5000);
+    //     const thumnail = await page.$(".container > a");
+    //     await thumnail.click();
+
+    //     await page.waitForSelector("h1");
+    //     const title =  await page.$("h1");
+    //     let innertext = await title.getProperty("innerText");
+
+    //     if (innertext['_remoteObject'].value == ""){
+    //         checkMark = false;
+    //     }
         
-        await browser.close();
-        expect(true).toBe(true);
+    //     await browser.close();
+    //     expect(true).toBe(true);
 
 
-    });
+    // },5000);
 
 
-    it('Check user page routing', async () => {
+    // it('Check user page routing', async () => {
 
-        const puppeteer = require('puppeteer');
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        await page.goto('http://127.0.0.1:5500/source/home-page/index.html');
-        await page.waitForSelector('#tile');
+    //     const puppeteer = require('puppeteer');
+    //     const browser = await puppeteer.launch();
+    //     const page = await browser.newPage();
+    //     await page.goto('http://127.0.0.1:5500/source/home-page/index.html');
+    //     await page.waitForSelector('#tile');
 
-        let checkMark = true;
+    //     let checkMark = true;
+    //     setTimeout(async() => {await browser.close();},5000);
+    //     const thumnail = await page.$(".user-portal > a");
+    //     await thumnail.click();
 
-        const thumnail = await page.$(".user-portal > a");
-        await thumnail.click();
+    //     await page.waitForSelector('.recipe-box');
+    //     const text =  await page.$('.recipe-box h3');
+    //     let innertext = await text.getProperty('innerText');
 
-        await page.waitForSelector('.recipe-box');
-        const text =  await page.$('.recipe-box h3');
-        let innertext = await text.getProperty('innerText');
+    //     if (innertext['_remoteObject'].value == ""){
+    //         checkMark = false;
+    //     }
+    //     await browser.close();
+    //     expect(true).toBe(true);
 
-        if (innertext['_remoteObject'].value == ""){
-            checkMark = false;
-        }
-        await browser.close();
-        expect(true).toBe(true);
+    // },5000);
 
-    });
-
-
-});
