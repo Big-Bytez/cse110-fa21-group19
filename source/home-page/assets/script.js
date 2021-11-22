@@ -78,9 +78,9 @@ async function makeThumbnails(request){
   }
 
 
-// makeThumbnails("Mexican");
-// makeThumbnails("Greek");
-// makeThumbnails("Indian");
+makeThumbnails("Mexican");
+makeThumbnails("Greek");
+makeThumbnails("Indian");
 
 
 
