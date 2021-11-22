@@ -5,7 +5,7 @@ class IndividualCustom extends HTMLElement {
     }
 
     set data(data) {
-        const styleElem = document.createElement('style');
+        const styleElem = document.createElement("style");
         const styles = `
         .individual-container {
             position: absolute;
@@ -28,12 +28,12 @@ class IndividualCustom extends HTMLElement {
         
         .image-box h1 {
             font-size: calc(2.75vw);
-            font-family: 'Abril Fatface', cursive;
+            font-family: "Abril Fatface", cursive;
             color: color:rgb(58, 3, 3);
         }
 
         .image-box h2 {
-            font-family: 'Abril Fatface', cursive;
+            font-family: "Abril Fatface", cursive;
             color:rgb(92, 4, 4);
         }
         
@@ -100,7 +100,7 @@ class IndividualCustom extends HTMLElement {
         
         .essay-text h2 {
             text-align: center;
-            font-family: 'Abril Fatface', cursive;
+            font-family: "Abril Fatface", cursive;
         }
         
         .directions-text {
@@ -181,7 +181,7 @@ class IndividualCustom extends HTMLElement {
             font-style: oblique;
           }
           h4{
-            font-family: 'Abril Fatface', cursive;
+            font-family: "Abril Fatface", cursive;
             font-size: 5vh;
             text-decoration: wavy;
             color: black;
@@ -191,20 +191,20 @@ class IndividualCustom extends HTMLElement {
             padding-top: 0%;
           }
           h3{
-            font-family: 'Abril Fatface', cursive;
+            font-family: "Abril Fatface", cursive;
             width: 8vw;
             justify-self: left;
           }
           p {
-            font-family: 'Abril Fatface', cursive;
+            font-family: "Abril Fatface", cursive;
           }
 
           li {
-              font-family: 'Abril Fatface', cursive;
+              font-family: "Abril Fatface", cursive;
           }
 
           h2 {
-            font-family: 'Abril Fatface', cursive;
+            font-family: "Abril Fatface", cursive;
           }
         `;
 
@@ -212,13 +212,13 @@ class IndividualCustom extends HTMLElement {
         
         const container = document.createElement("div");
 
-        const rightContainer = document.createElement('div');
-        rightContainer.setAttribute('class', 'application-type');
+        const rightContainer = document.createElement("div");
+        rightContainer.setAttribute("class", "application-type");
         const thumbnail = document.createElement("img");
         thumbnail.setAttribute("src",data.image);
-        const ingredientsContainer = document.createElement('div');
+        const ingredientsContainer = document.createElement("div");
         ingredientsContainer.setAttribute("class", "essay-text");
-        const ingredientsHeadline = document.createElement('h2');
+        const ingredientsHeadline = document.createElement("h2");
         ingredientsHeadline.innerHTML = "Ingredients";
         const ingredientsText = document.createElement("ul");
         for(var i = 0; i < data.extendedIngredients.length; i++) {
@@ -231,23 +231,23 @@ class IndividualCustom extends HTMLElement {
         ingredientsContainer.appendChild(ingredientsText);
         rightContainer.appendChild(ingredientsContainer);
 
-        const topMiddleContainer = document.createElement('div');
+        const topMiddleContainer = document.createElement("div");
         topMiddleContainer.setAttribute("class", "image-box");
         const recipeTitle = document.createElement("h1");
         recipeTitle.innerHTML = data.title;
         const cookTime = document.createElement("h2");
         cookTime.innerHTML = data.readyInMinutes + "min";
-        // const description = document.createElement('p');
-        // description.innerHTML = data.
+        const description = document.createElement("p");
+        description.innerHTML = data.summary;
         const ratingBox = document.createElement("div");
-        ratingBox.setAttribute("class", 'ratings-box');
-        const starsDiv = document.createElement('div');
+        ratingBox.setAttribute("class", "ratings-box");
+        const starsDiv = document.createElement("div");
         const stars = document.createElement("img");
-        stars.setAttribute('src', './images/5-star.svg');
-        stars.setAttribute('class', 'stars');
+        stars.setAttribute("src", "./images/5-star.svg");
+        stars.setAttribute("class", "stars");
         starsDiv.appendChild(stars);
         const ratingsDiv = document.createElement("div");
-        const ratings = document.createElement('p');
+        const ratings = document.createElement("p");
         ratings.innerHTML = data.aggregateLikes + " Likes";
         ratingsDiv.appendChild(ratings);
         const favorite = document.createElement("button");
@@ -258,32 +258,33 @@ class IndividualCustom extends HTMLElement {
             "title" : data.title, "id": data.id, "thumbnailUrl": data.image}
             localStorage.setItem(data.title, JSON.stringify(thumbnail))
             console.log(localStorage);
-            });
+        });
         const favImage = document.createElement("img");
-        favImage.setAttribute("src", 'images/favorite.png');
-        favImage.setAttribute('height', '70vh');
-        favImage.setAttribute("widht", '100vw');
+        favImage.setAttribute("src", "images/favorite.png");
+        favImage.setAttribute("height", "70vh");
+        favImage.setAttribute("widht", "100vw");
         favorite.appendChild(favImage);
         const favoriteDiv = document.createElement("div");
         favoriteDiv.appendChild(favorite);
         topMiddleContainer.appendChild(recipeTitle);
         topMiddleContainer.appendChild(cookTime);
+        topMiddleContainer.appendChild(description);
         ratingBox.appendChild(starsDiv);
         ratingBox.appendChild(ratingsDiv);
         ratingBox.appendChild(favoriteDiv);
         topMiddleContainer.appendChild(ratingBox);
 
-        const bottomMidContainer = document.createElement('div');
-        bottomMidContainer.setAttribute('class', 'directions-text');
+        const bottomMidContainer = document.createElement("div");
+        bottomMidContainer.setAttribute("class", "directions-text");
         const instructionsHeader = document.createElement("h2");
         instructionsHeader.innerHTML = "Instructions";
         const instructions = document.createElement("ul");
-        const betterInstructions = data.instructions.split("<p>");
-        const instructionsArray = betterInstructions[1].split('.');
-        for(var i = 0; i < instructionsArray.length-1; i++) {
+        const instructionsArray = data.analyzedInstructions[0].steps;
+        // const instructionsArray = betterInstructions[1].split(".");
+        for(var i = 0; i < instructionsArray.length; i++) {
             console.log(instructionsArray[i]);
-            const single = document.createElement('li');
-            single.innerHTML = instructionsArray[i];
+            const single = document.createElement("li");
+            single.innerHTML = instructionsArray[i].step;
             instructions.appendChild(single);
         }
         bottomMidContainer.appendChild(instructionsHeader);
@@ -298,4 +299,4 @@ class IndividualCustom extends HTMLElement {
     }
 }
 
-customElements.define('recipe-individual', IndividualCustom);
+customElements.define("recipe-individual", IndividualCustom);

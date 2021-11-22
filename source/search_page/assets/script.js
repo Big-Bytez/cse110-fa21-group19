@@ -24,7 +24,7 @@ function createRecipeCards() {
 */
 
 async function searchFetchRecipes(searchBar) {
-  let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=e7a6a292af7149028268e50d67ddae49&${searchBar}&addRecipeInformation=True`;
+  let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=5c1a7624041d448eaed407e4ceda64d0&${searchBar}&addRecipeInformation=True`;
   console.log(searchString);  
   return fetch(searchString)
     .then((response) => response.json());
