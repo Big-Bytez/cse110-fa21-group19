@@ -8,7 +8,7 @@ test('Check thumnails on home page',async () => {
     const puppeteer = require("puppeteer");
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto("http://127.0.0.1:5500/source/home-page/index.html",{
+    await page.goto("https://big-bytez.github.io/cse110-fa21-group19/source/home-page/",{
         waitUntil: 'networkidle0',
       });
     
