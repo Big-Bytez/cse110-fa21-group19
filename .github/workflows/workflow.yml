@@ -1,4 +1,4 @@
-name: Run linter on HTML/CSS/JS
+name: linting test on HTML/CSS/JS
 
 on:
   push:
