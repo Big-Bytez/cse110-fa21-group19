@@ -195,6 +195,7 @@ input {
   background-color:none;
 }
 .user-portal{
+  right:0;
   position: absolute;
   margin-right: 0vw;
   margin-left: 148vw;
@@ -575,7 +576,7 @@ h3{
 }
 main{
   padding-top: 200vh;
-  padding-left: 100vw;
+  margin-left: 100vw;
   margin-right: 100vw;
   
 }
@@ -590,3 +591,12 @@ main{
   flex: 0 0 20%;
   padding: 0 0 0 ;
  }
+
+ .background-image {
+   background-image: url("../images/kitchen.jpg");
+   background-color: crimson;
+ }
+
+.copyright {
+  padding-top: 100px;
+}
