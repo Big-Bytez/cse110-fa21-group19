@@ -6,7 +6,7 @@ describe("Basic user flow for Website", () => {
     await page.goto("https://big-bytez.github.io/home-page/");
   });
 
-  it('Make sure <product-item> elements are populated', async () => {
+  it("Make sure <product-item> elements are populated", async () => {
     console.log('Checking to make sure <product-item> elements are populated...');
     let allArePopulated = true;
     let data, plainValue;
