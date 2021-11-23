@@ -3,7 +3,7 @@ const { PRIORITY_BELOW_NORMAL } = require("constants");
 
 describe('Basic user flow for Website', () => {
   beforeAll(async () => {
-    await page.goto('https://big-bytez.github.io/home-page/');
+    await page.goto("https://big-bytez.github.io/home-page/");
   });
 
   it('Make sure <product-item> elements are populated', async () => {
