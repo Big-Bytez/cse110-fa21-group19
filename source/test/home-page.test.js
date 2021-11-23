@@ -37,7 +37,7 @@ describe('Basic user flow for Website', () => {
     let button=await shadowRoot.$('button');
     // Once you have the button, you can click it and check the innerText property of the button.
     await button.click();
-    let innerText=await button.getProperty('innerText');
+    let innerText=await button.getProperty("innerText");
     // Once you have the innerText property, use innerText['_remoteObject'].value to get the text value of it
     let text=await innerText['_remoteObject'].value;  
     if(text=="10"&&place!=0){
