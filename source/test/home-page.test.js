@@ -1,7 +1,7 @@
 const { count } = require("console");
 const { PRIORITY_BELOW_NORMAL } = require("constants");
 
-describe('Basic user flow for Website', () => {
+describe("Basic user flow for Website", () => {
   beforeAll(async () => {
     await page.goto("https://big-bytez.github.io/home-page/");
   });
