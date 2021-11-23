@@ -32,7 +32,7 @@ describe('Basic user flow for Website', () => {
     const container=await page.$$('container');
     const timeButtons=await page.$$("time-buttons")
     // Grab the shadowRoot of that element (it's a property), then query a button from that shadowRoot.
-    let shadowRoot=await timeButtons.getProperty('shadowRoot');
+    let shadowRoot=await timeButtons.getProperty("shadowRoot");
     let place=await container.getProperty('place');
     let button=await shadowRoot.$('button');
     // Once you have the button, you can click it and check the innerText property of the button.
