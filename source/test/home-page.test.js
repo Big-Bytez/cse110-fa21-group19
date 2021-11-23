@@ -10,7 +10,7 @@ describe('Basic user flow for Website', () => {
     console.log('Checking to make sure <product-item> elements are populated...');
     let allArePopulated = true;
     let data, plainValue;
-    const article = await page.$$('article');
+    const article = await page.$$("article");
     console.log(`Checking product item 1/${article.length}`);
     // Grab the .data property of <article> to grab all of the json data stored inside
     for(let i=0;i<article.length;i++){
