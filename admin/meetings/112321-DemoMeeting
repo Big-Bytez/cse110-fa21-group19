@@ -38,6 +38,45 @@
 - Sharing button.
 - Domain Specific Function to get that A+!
 
+**Priority:**
+- Mobile & Format Recipe Page (fonts + pictReny,Justin)
+- User Page:
+     - Store more favorites
+     - Remove favorites.
+     - Make user portal button more indicative of function.
+     - Filters
+     
+- Recipe Page:
+     - Also be able to remove from favorites here
+     - Favorite Button tells user that they favorited successfully.
+     - Picture and ingredient list to be fixed.
+     - Links on recipe page dont work so maybe remove or if we have time fix.
+     - Fix ingredient list so that ingredient pops up first followed by quantity.(Maybe Table Format)
+     - Make Font on recipe page more diverse, not all bold.
+     - Fix overlap with Quick Bytes and recipe details.
+     
+- Search Page:
+     - Refresh recipes(give a new set of recipes if user doesn't like)
+     - More recipes to show
+     - Filters 
+     - Sort Function
+     - Convert mins to hours when recipe exceeds 60 mins.
+     - Recipe Card reformat 
+
+
+- Domain Specific Feature:
+     - Shuffle
+     - Timer
+     - Food Joke???
+
+-List of Filters to include:
+     - Cuisine
+     - Time
+     - Diet(GF,Keto,Vegan,...)
+     - Protein
+- CI/CD Pipeline:
+
+
 
 
 **Conclusions:**
@@ -77,14 +116,12 @@
 
 
 ## Attendees: ##
-
-- Hema (TA) 
+ 
 - Nicholas(Lead) 
 - George(Lead) 
 - Nico 
 - Liza 
 - Peder 
 - Brian 
-- Xi-Kai 
 - Huang 
-- Reny
+
