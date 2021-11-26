@@ -46,4 +46,11 @@ window.onload = async function(){
 
   }
 }
-  
+
+document.getElementById('vert-navigation').onclick = function() {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+  for (var checkbox of checkboxes) {
+     console.log(checkbox.id);
+  }
+}
+ 
