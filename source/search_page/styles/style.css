@@ -223,7 +223,7 @@ sideBar {
 
 .vert-navigation{
   font-family: 'Varela Round', sans-serif;
-  display: none, 
+  display: none;
   background: #b90c0c;
    position: fixed;
    width: 5.5em;
