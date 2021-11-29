@@ -36,7 +36,6 @@ function createRecipeCards() {
 
 async function searchFetchRecipes(searchBar) {
   let searchString = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?${searchBar}&addRecipeInformation=True` 
-  console.log(searchString);  
   return fetch(searchString 
   ,{ "method": "GET",
     "headers": {

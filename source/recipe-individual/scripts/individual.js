@@ -5,7 +5,6 @@ async function init() {
 
 async function fetchIndividualRecipe(id) {
   let searchString = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${id}/information?&includeNutrition=true` 
-  console.log(searchString);  
   return fetch(searchString 
   ,{ "method": "GET",
     "headers": {
