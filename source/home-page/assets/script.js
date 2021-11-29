@@ -109,3 +109,8 @@ makeThumbnails("Indian");
  });
  */
  
+ document.getElementsByClassName("shuffle")[0].addEventListener('click', function(){
+  document.getElementsByClassName("shuffle")[0].querySelector('a').href = `../recipe-individual/index.html?1`
+
+ });
+ 
