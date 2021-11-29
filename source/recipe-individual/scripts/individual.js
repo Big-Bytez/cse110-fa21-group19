@@ -2,7 +2,11 @@ window.addEventListener("DOMContentLoaded", init);
 async function init() {
 }
 
-
+/**
+ * fetch individual page with given recipe's id 
+ * @param {number} id - recipe's unique id 
+ * 
+ */
 async function fetchIndividualRecipe(id) {
   let searchString = `https://api.spoonacular.com/recipes/${id}/information?apiKey=b52c376255a144f789aa106c0c100c38&includeNutrition=true`;
   console.log(searchString);  

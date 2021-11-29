@@ -1,3 +1,8 @@
+
+/**
+ * custom SearchRecipe html element used on SearchRecipe page
+ * @extends HTMLElement
+ */
 class SearchRecipe extends HTMLElement {
     constructor() {
       super();

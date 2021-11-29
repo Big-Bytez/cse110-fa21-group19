@@ -59,7 +59,10 @@ let images = {
  */
 
 
-
+/**
+ * Make thumbnails on home page
+ * @param {string} request -type of cuisine
+ */
 async function makeThumbnails(request){
   let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=b52c376255a144f789aa106c0c100c38&cuisine=${request}&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
   for (let i = 0; i<5; i++ ) {
@@ -77,9 +80,17 @@ async function makeThumbnails(request){
     }
   }
 
-
+/**
+ * fetch home page with Mexican cuisine
+ */
 makeThumbnails("Mexican");
+/**
+ * fetch home page with Greek cuisine
+ */
 makeThumbnails("Greek");
+/**
+ * fetch home page with Indian cuisine
+ */
 makeThumbnails("Indian");
 
 

@@ -1,3 +1,8 @@
+
+/**
+ * custom element used to display individual page
+ * @extends HTMLElement 
+ */
 class IndividualCustom extends HTMLElement {
     constructor() {
         super();

@@ -23,6 +23,10 @@ function createRecipeCards() {
 }
 */
 
+/**
+ * Get info from spoonacular and fetch search page with thumbnails
+ * @param {string} searchBar - key word for searching entered by user 
+ */
 async function searchFetchRecipes(searchBar) {
   let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=b52c376255a144f789aa106c0c100c38&${searchBar}&addRecipeInformation=True`;
   console.log(searchString);  
