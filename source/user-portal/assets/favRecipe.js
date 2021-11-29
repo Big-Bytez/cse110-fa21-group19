@@ -1,3 +1,9 @@
+
+/**
+ * Custom FavRecipe html element: 
+ * Used on user portal page for storing user's farvorite recipes
+ * @extends HTMLElement
+ */
 class FavRecipe extends HTMLElement {
     constructor() {
       super();
