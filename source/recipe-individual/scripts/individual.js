@@ -4,9 +4,15 @@ async function init() {
 
 
 async function fetchIndividualRecipe(id) {
-  let searchString = `https://api.spoonacular.com/recipes/${id}/information?apiKey=ccab52fa7d3d4fcaa65789f8574214c1&includeNutrition=true`;
+  let searchString = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${id}/information?&includeNutrition=true` 
   console.log(searchString);  
-  return fetch(searchString)
+  return fetch(searchString 
+  ,{ "method": "GET",
+    "headers": {
+    "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+		"x-rapidapi-key": "b99bc80573mshf2530a05219b844p140ef0jsn891357db5296"
+    }
+  })
     .then((response) => response.json());
 }
 

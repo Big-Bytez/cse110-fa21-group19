@@ -23,10 +23,27 @@ function createRecipeCards() {
 }
 */
 
+/*
+"https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=burger&instructionsRequired=true&diet=vegetarian&excludeIngredients=coconut&intolerances=egg%2C%20gluten&number=10&offset=0&type=main%20course", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+		"x-rapidapi-key": "b99bc80573mshf2530a05219b844p140ef0jsn891357db5296"
+	}
+}
+
+*/
+
 async function searchFetchRecipes(searchBar) {
-  let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=ccab52fa7d3d4fcaa65789f8574214c1&${searchBar}&addRecipeInformation=True`;
+  let searchString = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?${searchBar}&addRecipeInformation=True` 
   console.log(searchString);  
-  return fetch(searchString)
+  return fetch(searchString 
+  ,{ "method": "GET",
+    "headers": {
+    "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+		"x-rapidapi-key": "b99bc80573mshf2530a05219b844p140ef0jsn891357db5296"
+    }
+  })
     .then((response) => response.json());
 }
 
@@ -39,10 +56,12 @@ window.onload = async function(){
   let resultArray = await searchFetchRecipes(querystring).then((response) => {
     return response.results;
   });
+  console.log(resultArray);
   for(let i=0; i< resultArray.length; i++){
     let ele = document.createElement('search-recipe');
     ele.data = resultArray[i];
     document.querySelector("main").append(ele);
+    
 
   }
 }
