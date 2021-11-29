@@ -43,7 +43,7 @@ function collectStorage(){
 
 function createRecipeCards(){
 
-    for(let i = 0; i < 6; i++){
+    for(let i = 0; i < localStorage.length+1; i++){
         let card = document.createElement('fav-recipe');
         
         if(i >= localStorage.length){
@@ -55,7 +55,6 @@ function createRecipeCards(){
         document.querySelector("recipes").appendChild(card);
     }
 }
-
 
 async function init() {
 

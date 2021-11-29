@@ -8,6 +8,77 @@ class FavRecipe extends HTMLElement {
         const styleElem = document.createElement("style");
         const styles = `
         
+            article {
+                display: grid;
+                width: 240px;
+            
+                grid-template-rows: 100px 140px 20px 25px;
+                row-gap: 0;
+                border-style: solid;
+                border-width: 2px;
+                border-color: #b90c0c;
+                border-radius: 10px;
+                text-align: center;
+                margin-left: 10;
+
+            }
+            p {
+                font-family: 'Varela Round', sans-serif;
+                font-size: 2.5vh;
+                color: black !important;
+                margin-top: 20
+                margin-left: 15px;
+                margin-right: 15px;
+                overflow: hidden;
+            }
+
+            a:link{
+                text-decoration: none !important;
+            }
+
+            img {
+                object-fit: cover;
+                width: 220px;
+                max-height: 100%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 90%;
+            }
+
+            .time {
+                width: 60px;
+                height: 60px;
+                background: #b90c0c;
+                border-radius: 50%;
+                position: relative; 
+                visibility: visible; 
+                left: 170px; 
+                bottom: 60px;
+                border-style: solid;
+                border-width: 2px;
+                border-color: black;
+                text-decoration: none !important; 
+            }
+
+            .recipe-time {
+                color: white;
+                margin-left:12px;
+                margin-top: -0.00005px
+                text-align: center;
+                margin-bottom: 25px;
+                text-decoration: none !important; 
+                background-color: none;
+                color: white !important;
+            }
+
+            button {
+                width: 100px;
+                margin-left: 65px;
+                margin-bottom: .3vh;
+            }
+        `;
+        /*
             article{
                 display: grid;
                 align-items: center;
@@ -76,6 +147,7 @@ class FavRecipe extends HTMLElement {
                 color: black !important
             }
         `;
+        */
         
         styleElem.innerHTML = styles;
 
@@ -127,11 +199,15 @@ class FavRecipe extends HTMLElement {
             link.setAttribute("href",  `../recipe-individual/index.html?${json.id}`)
             link.setAttribute("class", 'link');
         }
+
+        let removeBut = document.createElement("button");
+        removeBut.innerHTML = "Remove";
        
         recipe.appendChild(recipeTitle);
         recipe.appendChild(recipeImg);
         timeCircle.appendChild(timeNumb);
         recipe.appendChild(timeCircle);
+        recipe.appendChild(removeBut);
         this.shadowRoot.appendChild(styleElem); 
 
         if (link){
