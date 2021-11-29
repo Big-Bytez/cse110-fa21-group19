@@ -22,12 +22,19 @@ function createRecipeCards() {
   
 }
 */
-
+let reverse = false;
 async function searchFetchRecipes(searchBar) {
-  let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=b52c376255a144f789aa106c0c100c38&${searchBar}&addRecipeInformation=True`;
-  console.log(searchString);  
-  return fetch(searchString)
-    .then((response) => response.json());
+  if(searchBar.includes('sort=timel')){
+    searchBar = searchBar.replace("sort=timel", "sort=time");
+    let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&${searchBar}&addRecipeInformation=True`;
+    reverse = true;
+    return fetch(searchString)
+      .then((response) => response.json());
+  }else{
+    let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&${searchBar}&addRecipeInformation=True`;
+    return fetch(searchString)
+      .then((response) => response.json());
+  }
 }
 
 window.onload = async function(){
@@ -39,18 +46,62 @@ window.onload = async function(){
   let resultArray = await searchFetchRecipes(querystring).then((response) => {
     return response.results;
   });
-  for(let i=0; i< resultArray.length; i++){
-    let ele = document.createElement('search-recipe');
-    ele.data = resultArray[i];
-    document.querySelector("main").append(ele);
-
+  if(reverse){
+    for(let i=resultArray.length - 1; i >= 0; i--){
+      let ele = document.createElement('search-recipe');
+      ele.data = resultArray[i];
+      document.querySelector("main").append(ele);
+    }  
+  }else{
+    for(let i=0; i< resultArray.length; i++){
+      let ele = document.createElement('search-recipe');
+      ele.data = resultArray[i];
+      document.querySelector("main").append(ele);
   }
 }
+}
 
-document.getElementById('vert-navigation').onclick = function() {
+function sorting(parameter){
+  if(!window.location.href.includes("&sort")){
+    window.location.href += "&sort=" + parameter;
+    return;
+  }
+  string1 = window.location.href.substring(0, window.location.href.indexOf("sort="));
+  string2 = window.location.href.substring(window.location.href.indexOf("sort="));
+  if(!string2.includes('&')){
+    window.location.href = string1 + "sort=" + parameter;
+    return;
+  }
+  string3 = string2.substring(string2.indexOf("&"));
+  window.location.href = string1 + "sort=" + parameter + string3;
+}
+
+function filterButton(){
+  let queryString = {}
   var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
   for (var checkbox of checkboxes) {
-     console.log(checkbox.id);
+    if(queryString.hasOwnProperty(checkbox.parentNode.id)){
+      queryString[checkbox.parentNode.id].push(checkbox.id);
+    }else{
+      queryString[checkbox.parentNode.id] = [];
+      queryString[checkbox.parentNode.id].push(checkbox.id);
+    }
   }
+  console.log(queryString);
+  let stringQuery = "";
+  for(filters in queryString){
+    if(filters == 'maxReadyTime'){
+      let greatest = Math.max.apply(Math, queryString[filters]);
+      stringQuery += "&maxReadyTime=" + greatest;
+    }else{
+      let indiv = "&" + filters + "=";
+      for(vals in queryString[filters]){
+        indiv += queryString[filters][vals] + ",";
+      }
+      indiv = indiv.substring(0, indiv.length - 1);
+      stringQuery += indiv;
+    }
+  }
+  window.location.href = window.location.href + stringQuery;
 }
  

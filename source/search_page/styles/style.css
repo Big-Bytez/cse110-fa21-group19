@@ -264,6 +264,18 @@ p{
   color: black !important;
 }
 
+.filter-button{
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  
+}
+
+.filter-button:hover{
+  cursor:pointer;
+}
 /* Dropdown Button */
 .dropbtn {
   background-color: transparent;
