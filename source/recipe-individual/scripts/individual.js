@@ -2,7 +2,11 @@ window.addEventListener("DOMContentLoaded", init);
 async function init() {
 }
 
-
+/**
+ * fetch individual page with given recipe's id 
+ * @param {number} id - recipe's unique id 
+ * 
+ */
 async function fetchIndividualRecipe(id) {
   let searchString = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${id}/information?&includeNutrition=true` 
   return fetch(searchString 

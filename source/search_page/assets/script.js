@@ -23,6 +23,12 @@ function createRecipeCards() {
 }
 */
 
+<<<<<<< HEAD
+/**
+ * Get info from spoonacular and fetch search page with thumbnails
+ * @param {string} searchBar - key word for searching entered by user 
+ */
+=======
 /*
 "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=burger&instructionsRequired=true&diet=vegetarian&excludeIngredients=coconut&intolerances=egg%2C%20gluten&number=10&offset=0&type=main%20course", {
 	"method": "GET",
@@ -34,6 +40,7 @@ function createRecipeCards() {
 
 */
 
+>>>>>>> af868f6bed8d7faa1a0a0b75dd3b7b3cc89b6bab
 async function searchFetchRecipes(searchBar) {
   let searchString = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?${searchBar}&addRecipeInformation=True` 
   return fetch(searchString 

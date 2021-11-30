@@ -33,14 +33,18 @@ async function fetchRecipes() {
         }
     })
 } */
-
+/**
+ * Get users favorite recipes from local storage.
+ */
 function collectStorage(){
 
     for(let i = 0; i < localStorage.length; i++){
         recipeData[i] = localStorage.key(i);
     }
 }
-
+/**
+ * Create RecipeCards based on user's farvorite recipes
+ */
 function createRecipeCards(){
 
     for(let i = 0; i < 6; i++){
