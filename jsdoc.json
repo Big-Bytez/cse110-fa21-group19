@@ -3,13 +3,12 @@
     "recurseDepth": 10,
     "source": {
         "includePattern": ".js$",
-        "excludePattern": "(^|\\/|\\\\)_",
         "include":["source"]
     },
     "sourceType": "module",
     "tags": {
         "allowUnknownTags": true,
-        "dictionaries": ["jsdoc","closure"]
+        "dictionarnpm ies": ["jsdoc","closure"]
     },
     "templates": {
         "cleverLinks": false,

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: user-portal/assets/favRecipe.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: user-portal/assets/favRecipe.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+/**
+ * Custom FavRecipe html element: 
+ * Used on user portal page for storing user's farvorite recipes
+ * @extends HTMLElement
+ */
+class FavRecipe extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({mode: "open"});
+    }
+  
+    set data(data) {
+        const styleElem = document.createElement("style");
+        const styles = `
+        
+            article{
+                display: grid;
+                align-items: center;
+                width: calc(20vw);
+                grid-template-rows: calc(10vh) calc(26vh);
+                height: calc(40vh);
+                row-gap: calc(.7vh);
+                border: 3px solid black;
+                background-color: white;
+                border-radius: 10px;
+            }
+
+            article > p {
+                font-family: 'Varelia Round', sans-serif;
+                font-size: calc(2.5vh);
+                align-items: center;
+                margin-top: 20px;
+                margin-left: 15px;
+                margin-right: 15px;
+                max-width: calc(20vw);
+                overflow: hidden;
+                text-decoration: none !important;
+                color: black !important
+            }
+          
+            div > p {
+                font-family: 'Varela Round', sans-serif;
+                font-size: calc(2.5vh);
+                align-items: center;
+                margin-top: calc(2vh);
+                margin-left: calc(2vw);
+                margin-right: calc(0.8vw);
+            }
+        
+            img {
+                display: flex;
+                object-fit: cover;
+                max-height: 240px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0%;
+                width: 90%;
+            }
+
+            div {
+                width: calc(3.2vw);
+                height: calc(3.2vw);
+                background: #b90c0c;
+                border-radius: 50%;
+                position: relative; 
+                visibility: visible; 
+                left: calc(15vw); 
+                bottom: calc(6.5vh);
+                border-style: solid;
+                border-width: 2px;
+                border-color: black;
+                
+            }
+
+            .recipe-time {
+                color: white;
+                margin-left:12px;
+                text-align: center;
+                text-decoration: none !important;
+                color: black !important
+            }
+        `;
+        
+        styleElem.innerHTML = styles;
+
+        const recipe = document.createElement("article");
+
+        let recipeTitle = document.createElement("p");
+
+        let recipeImg = document.createElement("img");
+
+        let timeCircle = document.createElement("div");
+        timeCircle.setAttribute("class", "time");
+
+        let timeNumb = document.createElement("p");
+        timeNumb.setAttribute("class", "recipe-time");
+        let timeText = document.createTextNode("");
+        var link;
+
+
+        if(data === "Favorite more recipes!"){
+            // Adding Title
+            const text = document.createTextNode("Please favorite more recipes!");
+            recipeTitle.appendChild(text);
+
+            // Adding Img
+            recipeImg.setAttribute("src", 'images/sadburger.gif');
+
+            // Adding Time
+            timeText.nodeValue = "0";
+            timeNumb.appendChild(timeText);
+        }
+        else{
+
+            let json = JSON.parse(localStorage.getItem(data));
+
+            // Adding Title
+            const text = document.createTextNode(data);
+            recipeTitle.appendChild(text);
+
+            // Adding Img
+            let value = searchForKey(json, "thumbnailUrl");
+            recipeImg.setAttribute("src", value);
+
+            // Adding Time
+            value = searchForKey(json, "totalTime");
+            timeText.nodeValue = value;
+            timeNumb.appendChild(timeText);
+
+            link = document.createElement("a")
+            link.setAttribute("href",  `../recipe-individual/index.html?${json.id}`)
+            link.setAttribute("class", 'link');
+        }
+       
+        recipe.appendChild(recipeTitle);
+        recipe.appendChild(recipeImg);
+        timeCircle.appendChild(timeNumb);
+        recipe.appendChild(timeCircle);
+        this.shadowRoot.appendChild(styleElem); 
+
+        if (link){
+            link.appendChild(recipe)
+            this.shadowRoot.appendChild(link);
+        } else {
+            this.shadowRoot.appendChild(recipe);
+
+        }
+
+    }
+}
+/**
+ * CREDITS to Lab 6 Starter Code.
+ * 
+ * Recursively search for a key nested somewhere inside an object
+ * @param {Object} object the object with which you'd like to search
+ * @param {String} key the key that you are looking for in the object
+ * @returns {*} the value of the found key
+ */
+function searchForKey(object, key) {
+    var value;
+    Object.keys(object).some(function (k) {
+        if (k === key) {
+            value = object[k];
+            return true;
+        }
+        if (object[k] &amp;&amp; typeof object[k] === "object") {
+            value = searchForKey(object[k], key);
+            return value !== undefined;
+        }
+    });
+    return value;
+}
+
+customElements.define("fav-recipe", FavRecipe);</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="FavRecipe.html">FavRecipe</a></li><li><a href="IndividualCustom.html">IndividualCustom</a></li><li><a href="SearchRecipe.html">SearchRecipe</a></li></ul><h3>Global</h3><ul><li><a href="global.html#collectStorage">collectStorage</a></li><li><a href="global.html#createRecipeCards">createRecipeCards</a></li><li><a href="global.html#fetchIndividualRecipe">fetchIndividualRecipe</a></li><li><a href="global.html#makeThumbnails">makeThumbnails</a></li><li><a href="global.html#searchFetchRecipes">searchFetchRecipes</a></li><li><a href="global.html#searchForKey">searchForKey</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Mon Nov 29 2021 16:04:43 GMT-0800 (Pacific Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
