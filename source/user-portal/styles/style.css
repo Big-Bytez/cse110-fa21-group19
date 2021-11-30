@@ -289,7 +289,7 @@ recipes {
 .recipe-box > h3 {
   padding-left: 3.5em;
 }
-.remove1 {
+button1 {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -301,7 +301,7 @@ recipes {
   margin: 1vw 10vw;
   cursor: pointer;
 }
-.remove2 {
+button2 {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -313,7 +313,7 @@ recipes {
   margin: 1vw 11vw;
   cursor: pointer;
 }
-.remove3 {
+button3 {
   background-color: #4CAF50;
   border: none;
   color: white;

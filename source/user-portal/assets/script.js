@@ -66,7 +66,7 @@ function removeRecipe(k){//remove Recipe by index number
         element.removeChild(element.firstChild);
     }
     // all recipes should be deleted and want to create again
-    console.log('removed all element from recipes');
+    /*console.log('removed all element from recipes');
     for(let i = 0; i < 6; i++){
         let card = document.createElement('fav-recipe');
         console.log(1);
@@ -78,7 +78,9 @@ function removeRecipe(k){//remove Recipe by index number
             card.data = recipeData[i];
         }
         document.querySelector("recipes").appendChild(card);
+        console.log(1);
     }
+    */
     console.log('removeEnd');
     createRecipeCards();
 }
