@@ -279,6 +279,7 @@ recipes {
   background-color: #b90c0c; /* white background */
 }
 
+
 .recipe-box {
   background-color: #b90c0c;
   border: 3px solid black;
@@ -287,6 +288,42 @@ recipes {
 
 .recipe-box > h3 {
   padding-left: 3.5em;
+}
+.remove1 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1vw 10vw;
+  cursor: pointer;
+}
+.remove2 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1vw 11vw;
+  cursor: pointer;
+}
+.remove3 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1vw 10vw;
+  cursor: pointer;
 }
 
 input[type='file'] {
