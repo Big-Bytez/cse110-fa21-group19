@@ -61,7 +61,8 @@ let images = {
 
 
 async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=b52c376255a144f789aa106c0c100c38&cuisine=${request}&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=b52c376255a144f789aa106c0c100c38&cuisine=${request}&number=5&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
+  console.log(vals.results.length)
   for (let i = 0; i<5; i++ ) {
       let recipe = vals.results[i];
       let ele = document.createElement("search-recipe");
@@ -109,8 +110,13 @@ makeThumbnails("Indian");
  });
  */
  
- document.getElementsByClassName("shuffle")[0].addEventListener('click', function(){
-  document.getElementsByClassName("shuffle")[0].querySelector('a').href = `../recipe-individual/index.html?1`
-
- });
+ document.getElementsByClassName("shuffle")[0].addEventListener('click', getRandom());
+ 
+ 
+ async function getRandom(){
+  let randomRecipe = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=b52c376255a144f789aa106c0c100c38&number=1&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
+  console.log(randomRecipe.recipes.length)
+  console.log(randomRecipe.recipes[0].id)
+  document.getElementsByClassName("shuffle")[0].querySelector('a').href = `../recipe-individual/index.html?${randomRecipe.recipes[0].id}`;
+ }
  
