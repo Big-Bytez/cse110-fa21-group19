@@ -24,9 +24,14 @@ function createRecipeCards() {
 */
 
 async function searchFetchRecipes(searchBar) {
-  let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=b52c376255a144f789aa106c0c100c38&${searchBar}&addRecipeInformation=True`;
-  console.log(searchString);  
-  return fetch(searchString)
+  let searchString = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?${searchBar}&addRecipeInformation=True` 
+  return fetch(searchString 
+  ,{ "method": "GET",
+    "headers": {
+    "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+		"x-rapidapi-key": "b99bc80573mshf2530a05219b844p140ef0jsn891357db5296"
+    }
+  })
     .then((response) => response.json());
 }
 
@@ -39,10 +44,12 @@ window.onload = async function(){
   let resultArray = await searchFetchRecipes(querystring).then((response) => {
     return response.results;
   });
+  console.log(resultArray);
   for(let i=0; i< resultArray.length; i++){
     let ele = document.createElement('search-recipe');
     ele.data = resultArray[i];
     document.querySelector("main").append(ele);
+    
 
   }
 }

@@ -8,3 +8,5 @@ Project Description: We are working on creating a recipes website on which users
 Our [working demo webiste](https://big-bytez.github.io/cse110-fa21-group19/source/home-page/) Click to check it out!
 
 Site deployed on netlify: [netlify demo webiste](https://quickbtyes.netlify.app/source/home-page/)
+
+JSdoc page: [JSdoc page](https://big-bytez.github.io/cse110-fa21-group19/docs/index.html)

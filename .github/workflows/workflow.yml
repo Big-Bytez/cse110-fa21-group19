@@ -1,10 +1,10 @@
-name: Run linter on HTML/CSS/JS
+name: linting test on HTML/CSS/JS
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main,test-patch1 ]
   pull_request:
-    branches: [ main ]
+    branches: [ main,test-patch1 ]
 
 jobs:
   superlinter:
