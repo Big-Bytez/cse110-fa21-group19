@@ -208,6 +208,7 @@ class FavRecipe extends HTMLElement {
         timeCircle.appendChild(timeNumb);
         recipe.appendChild(timeCircle);
         recipe.appendChild(removeBut);
+        removeBut.click(removeRecipe(data));
         this.shadowRoot.appendChild(styleElem); 
 
         if (link){
@@ -244,3 +245,6 @@ function searchForKey(object, key) {
 }
 
 customElements.define("fav-recipe", FavRecipe);
+function removeRecipe(node){
+    localStorage.removeItem(node);
+}
