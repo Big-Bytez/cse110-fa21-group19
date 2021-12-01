@@ -244,7 +244,8 @@ function searchForKey(object, key) {
     return value;
 }
 
-customElements.define("fav-recipe", FavRecipe);
 function removeRecipe(node){
     localStorage.removeItem(node);
 }
+
+customElements.define("fav-recipe", FavRecipe);
