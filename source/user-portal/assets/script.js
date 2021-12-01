@@ -47,7 +47,7 @@ function collectStorage(){
  */
 function createRecipeCards(){
 
-    for(let i = 0; i < 6; i++){
+    for(let i = 0; i < localStorage.length+1; i++){
         let card = document.createElement('fav-recipe');
         
         if(i >= localStorage.length){
@@ -84,7 +84,6 @@ function removeRecipe(k){//remove Recipe by index number
     console.log('removeEnd');
     createRecipeCards();
 }
-
 
 async function init() {
 

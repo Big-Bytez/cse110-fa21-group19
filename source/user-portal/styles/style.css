@@ -272,13 +272,15 @@ div.favor-recipes {
 recipes {
   padding-bottom: calc(2vh);
   align-items: center;
-  display: grid;
-  grid-template-columns: calc(25vw) calc(25vw) calc(25vw);
-  grid-template-rows: calc(25vw);
+  display: flex;
+  flex-wrap: wrap;
   justify-items: center;
-  background-color: #b90c0c; /* white background */
-}
 
+  row-gap: 3vh;
+  column-gap: 2vw;
+  max-width: 75vw;
+  background-color: white; /* white background */
+}
 
 .recipe-box {
   background-color: #b90c0c;
@@ -286,8 +288,9 @@ recipes {
   border-radius: 10px;
 }
 
-.recipe-box > h3 {
-  padding-left: 3.5em;
+.recipe-box > h2 {
+  align-items: center;
+  padding-bottom: 2vh;
 }
 button1 {
   background-color: #4CAF50;
@@ -338,7 +341,6 @@ div > h2 {
   font-family: 'Abril Fatface', cursive;
   font-size: 4vh;
   text-decoration: wavy;
-  padding-left: calc(28vw);
   margin: 0;
   margin-top: calc(1vh);
 }
