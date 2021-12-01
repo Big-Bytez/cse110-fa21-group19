@@ -98,7 +98,7 @@ class IndividualCustom extends HTMLElement {
             /* left: 20vw; */
             top: 0;
             font-size: calc(1.25vw);
-            background-color: rgb(242, 236, 119);
+            background-color: rgb(235, 103, 94);
             padding: 1px;
             /* color: red; */
         }
