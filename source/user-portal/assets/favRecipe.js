@@ -81,6 +81,11 @@ class FavRecipe extends HTMLElement {
                 text-decoration: none !important;
                 color: black !important
             }
+            button {
+                width: 100px;
+                margin-left: 65px;
+                margin-bottom: .3vh;
+            }
         `;
         
         styleElem.innerHTML = styles;
@@ -133,12 +138,17 @@ class FavRecipe extends HTMLElement {
             link.setAttribute("href",  `../recipe-individual/index.html?${json.id}`)
             link.setAttribute("class", 'link');
         }
+        let removeBut = document.createElement("button");
+        removeBut.innerHTML = "Remove";
+        removeBut.click(removeRecipe(data));
        
         recipe.appendChild(recipeTitle);
         recipe.appendChild(recipeImg);
+        recipe.appendChild(removeBut);
         timeCircle.appendChild(timeNumb);
         recipe.appendChild(timeCircle);
         this.shadowRoot.appendChild(styleElem); 
+
 
         if (link){
             link.appendChild(recipe)
@@ -174,3 +184,6 @@ function searchForKey(object, key) {
 }
 
 customElements.define("fav-recipe", FavRecipe);
+function removeRecipe(node){
+    localStorage.removeItem(node);
+}
