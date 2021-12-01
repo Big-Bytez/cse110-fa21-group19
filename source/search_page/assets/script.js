@@ -26,12 +26,12 @@ let reverse = false;
 async function searchFetchRecipes(searchBar) {
   if(searchBar.includes('sort=timel')){
     searchBar = searchBar.replace("sort=timel", "sort=time");
-    let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&${searchBar}&addRecipeInformation=True`;
+    let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&${searchBar}&addRecipeInformation=True&number=100`;
     reverse = true;
     return fetch(searchString)
       .then((response) => response.json());
   }else{
-    let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&${searchBar}&addRecipeInformation=True`;
+    let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&${searchBar}&addRecipeInformation=True&number=100`;
     return fetch(searchString)
       .then((response) => response.json());
   }
@@ -105,3 +105,6 @@ function filterButton(){
   window.location.href = window.location.href + stringQuery;
 }
  
+function removeFilterButton(){
+  window.location.href = window.location.href.substring(0, window.location.href.indexOf('&'));
+}

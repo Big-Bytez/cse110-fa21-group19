@@ -17,7 +17,6 @@
 }
 
 #user_img {
-  position: fixed;
   top: 0;
   right: 0;
   width: 6vw;
@@ -199,7 +198,6 @@
 }
 
 .user-portal{
-  position: fixed;
   justify-self: right;
   margin-right: 0vw;
   margin-left: 87%;
@@ -223,9 +221,14 @@ sideBar {
 
 .vert-navigation{
   font-family: 'Varela Round', sans-serif;
-  background: #b90c0c;
-   width: 7em;
-   height: 97%;
+  background: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 1vw;
+   width: 9em;
+   height: 97vh;
    padding-top: 0%;
    margin-top: 4%;
    top: 5.5em; /*keeps side bar from reaching logo*/
@@ -265,12 +268,16 @@ p{
 }
 
 .filter-button{
-  background-color: transparent;
-  color: white;
+  border-color: white;
+  border-top: solid;
+  border-bottom: solid;
+  margin-top: 2vh;
+  margin-left: -2.75vh;
+  color: rgb(210, 210, 210);
   padding: 16px;
-  font-size: 16px;
-  border: none;
-  
+  font-size: 24px;
+  font-weight: bolder;
+ background: #b90c0c;
 }
 
 .filter-button:hover{
@@ -279,9 +286,10 @@ p{
 /* Dropdown Button */
 .dropbtn {
   background-color: transparent;
-  color: white;
+  color: rgb(210, 210, 210);
   padding: 16px;
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: bolder;
   border: none;
 }
 
@@ -323,15 +331,18 @@ text-align: center;}
 
 input[type=checkbox]
 {
+  margin-left: 1em;
   -webkit-appearance:checkbox;
   text-align: center;
 }
 label {
+  margin-left: 1em; 
   display: block;
   padding-left: 15px;
   text-indent: -15px;
 }
 input[type=checkbox] {
+  margin-left: 1em; 
   width: 13px;
   height: 13px;
   padding: 0;
@@ -340,9 +351,16 @@ input[type=checkbox] {
   position: relative;
   top: -.5vh;
   *overflow: hidden;
+  cursor: pointer;
 }
 
 label span{
   position: relative;
   margin-left: 10px;
+}
+
+.sideNav{
+   width: 10em;
+   margin-left: -1em;
+  background: #b90c0c;
 }

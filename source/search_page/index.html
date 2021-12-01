@@ -70,9 +70,7 @@
 
   <sideBar class="vert-navigation" id="vert-navigation">
     <nav class = "sideNav">
-      <div class="dropdown">
         <button class="dropbtn"> Time </button>
-        <div class="dropdown-content">
         <div class="checkbox">
           <label id="maxReadyTime">
               <input type="checkbox" id="5"> <span> &lt 5 Minutes 
@@ -101,13 +99,9 @@
           <input type="checkbox" id="90"> <span> &lt 90 Minutes 
         </span>
       </label>
-    </div> 
-    </div>
     </nav>
     <nav class = "sideNav">
-      <div class="dropdown">
         <button class="dropbtn"> Cusine </button>
-        <div class="dropdown-content">
         <div class="checkbox">
           <label id="cuisine">
               <input type="checkbox" id="mexican"> <span> Mexican
@@ -136,13 +130,9 @@
           <input type="checkbox" id="greek"> <span> Greek 
         </span>
       </label>
-    </div> 
-    </div>
     </nav>
     <nav class = "sideNav">
-      <div class="dropdown">
         <button class="dropbtn"> Diet </button>
-        <div class="dropdown-content">
         <div class="checkbox">
           <label id="diet">
               <input type="checkbox" id="Keto"> <span> Keto 
@@ -171,13 +161,9 @@
           <input type="checkbox" id="Vegan"> <span> Vegan
         </span>
       </label>
-    </div> 
-    </div>
     </nav>
     <nav class = "sideNav">
-      <div class="dropdown">
         <button class="dropbtn"> Protein </button>
-        <div class="dropdown-content">
         <div class="checkbox">
           <label id="includeIngredients">
               <input type="checkbox" id="Chicken"> <span> Chicken 
@@ -206,11 +192,12 @@
           <input type="checkbox" id="Tofu"> <span> Tofu 
         </span>
       </label>
-    </div> 
-    </div>
     </nav>
     <button class="filter-button" onclick="filterButton()">
       Add Filters
+    </button>
+    <button class="filter-button" onclick="removeFilterButton()">
+      Remove Filters
     </button>
     </sideBar>
     <br><br><br><br>
