@@ -164,7 +164,7 @@ class IndividualCustom extends HTMLElement {
             background-color:none;
           }
           .logoImg {
-           position:fixed;
+           position: absolute;
            justify-items: end;
            padding-left: .2em;
            padding-right: 5em;
@@ -173,7 +173,7 @@ class IndividualCustom extends HTMLElement {
            left: 0vw;
           }
           .logoText {
-            position:absolute;
+            position: absolute;
             height: 10em;
             width: 15em;
             justify-items: begin;
