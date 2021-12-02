@@ -22,6 +22,7 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: Big-Bytez/CICD
+          publish_branch: main
           publish_dir: ./docs
-          publish_branch: cicd
