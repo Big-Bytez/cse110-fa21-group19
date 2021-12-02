@@ -187,6 +187,7 @@ function searchForKey(object, key) {
 
 function removeRecipe(node){
     localStorage.removeItem(node);
+    location.reload();
 }
 
 customElements.define("fav-recipe", FavRecipe);
