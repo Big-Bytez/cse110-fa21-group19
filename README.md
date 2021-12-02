@@ -9,4 +9,4 @@ Our [working demo webiste](https://big-bytez.github.io/cse110-fa21-group19/sourc
 
 Site deployed on netlify: [netlify demo webiste](https://quickbtyes.netlify.app/source/home-page/)
 
-JSdoc page: [JSdoc page](https://big-bytez.github.io/cse110-fa21-group19/docs/index.html)
+JSdoc page: [JSdoc page](https://big-bytez.github.io/CICD/)
