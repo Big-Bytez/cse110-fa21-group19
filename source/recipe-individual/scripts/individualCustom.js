@@ -211,6 +211,11 @@ class IndividualCustom extends HTMLElement {
           h2 {
             font-family: "Abril Fatface", cursive;
           }
+
+          a, 
+          a label {
+            cursor: pointer;
+          }
         `;
 
         styleElem.innerHTML = styles;
@@ -255,17 +260,30 @@ class IndividualCustom extends HTMLElement {
         const ratings = document.createElement("p");
         ratings.innerHTML = data.aggregateLikes + " Likes";
         ratingsDiv.appendChild(ratings);
-        const favorite = document.createElement("button");
+        const favorite = document.createElement("a");
         favorite.setAttribute("class", 'favorite');
         favorite.setAttribute("id", 'favorite');
         favorite.addEventListener("click", function() {
-            var thumbnail = {"totalTime" : data.readyInMinutes, 
-            "title" : data.title, "id": data.id, "thumbnailUrl": data.image}
-            localStorage.setItem(data.title, JSON.stringify(thumbnail))
-            console.log(localStorage);
+            if(localStorage.getItem(data.title) == null){
+                var thumbnail = {"totalTime" : data.readyInMinutes, 
+                "title" : data.title, "id": data.id, "thumbnailUrl": data.image}
+                localStorage.setItem(data.title, JSON.stringify(thumbnail))
+                console.log(localStorage);
+                favImage.setAttribute("src", "images/unfavorite.png");
+                alert("Recipe favorited!");
+            }else {
+                favImage.setAttribute("src", "images/favorite.png");
+                alert("Recipe unfavorited!");  
+                console.log(localStorage.getItem(data.title)); 
+                removeRecipe(data.title);
+            }
         });
         const favImage = document.createElement("img");
-        favImage.setAttribute("src", "images/favorite.png");
+        if(localStorage.getItem(data.title) == null){
+            favImage.setAttribute("src", "images/favorite.png");
+        }else{
+            favImage.setAttribute("src", "images/unfavorite.png");
+        }
         favImage.setAttribute("height", "70vh");
         favImage.setAttribute("widht", "100vw");
         favorite.appendChild(favImage);
@@ -305,3 +323,6 @@ class IndividualCustom extends HTMLElement {
 }
 
 customElements.define("recipe-individual", IndividualCustom);
+function removeRecipe(node){
+    localStorage.removeItem(node);
+}
