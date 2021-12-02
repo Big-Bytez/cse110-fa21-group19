@@ -18,3 +18,4 @@ jobs:
           source_dir: ./source
           output_dir: ./docs
           front_page: README.md
+          recurse: true
