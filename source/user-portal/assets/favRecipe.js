@@ -160,7 +160,6 @@ class FavRecipe extends HTMLElement {
         this.shadowRoot.appendChild(styleElem); 
         this.shadowRoot.appendChild(recipe);
 
-
     }
 }
 /**
