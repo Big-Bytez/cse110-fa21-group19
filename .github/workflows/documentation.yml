@@ -3,6 +3,8 @@ name: Renew JSdoc
 on:
   push:
     branches:
+      - master
+      - main
       - cicd
 
 jobs:
