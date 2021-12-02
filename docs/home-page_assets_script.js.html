@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: home-page/assets/script.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: home-page/assets/script.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+//Slider Functions
+
+ //Modulo to cycle
+ function modulo(number, mod) {
+    let result = number % mod;
+    if (result &lt; 0) {
+      result += mod;
+    }
+    return result;
+  }
+  function setUpslider(slider) {
+    function handleNext() {
+      currentSlide = modulo((currentSlide + 1), numSlides);
+      changeSlide(currentSlide);
+    }
+    function handlePrevious() {
+      currentSlide = modulo(currentSlide - 1, numSlides);
+      changeSlide(currentSlide);
+    }
+    function changeSlide(slideNumber) {
+      slider.style.setProperty('--current-slide', slideNumber);
+    }
+    
+    // get elements
+    const buttonPrevious = slider.querySelector('[data-slider-button-previous]');
+    const buttonNext = slider.querySelector('[data-slider-button-next]');
+    const slidesContainer = slider.querySelector('[data-slider-slides-container]');
+   
+    // slider state we need to remember
+    let currentSlide = 0;
+    const numSlides = 15 /*slidesContainer.children.length*/;
+  
+    // set up events
+    buttonPrevious.addEventListener('click', handlePrevious);
+    buttonNext.addEventListener('click', handleNext);
+  }
+  const sliders = document.querySelectorAll('[data-slider]');
+  sliders.forEach(setUpslider);
+ 
+
+let images = {
+    "1" : "images/pho.jfif",
+    "2" : "images/pho.jfif",
+    "3" : "images/pho.jfif",
+    "4" : "images/pho.jfif",
+    "5" : "images/pho.jfif",
+    "6" : "images/pho.jfif",
+    "7" : "images/pho.jfif",
+    "8" : "images/pho.jfif",
+    "9" : "images/pho.jfif",
+    "10" : "img/10.png"
+ }
+ 
+ /*
+ Object.keys(images).forEach(function(path) {
+     $('#hold_images').append("&lt;img class='my_img' width=200 height=400 src=" + images[path] + ">"); 
+ });
+ */
+
+
+/**
+ * Make thumbnails on home page
+ * @param {string} request -type of cuisine
+ */
+async function makeThumbnails(request){
+  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=b52c376255a144f789aa106c0c100c38&amp;cuisine=${request}&amp;maxReadyTime=30&amp;addRecipeInformation=True`).then((response) => response.json());
+  for (let i = 0; i&lt;5; i++ ) {
+      let recipe = vals.results[i];
+      let ele = document.createElement("search-recipe");
+      ele.data = vals.results[i];
+      let place = 0
+      if (request == "Greek"){
+        place = 1
+      }
+      if (request == "Indian"){
+        place = 2;
+      }
+      document.getElementsByClassName("container")[place].append(ele);
+    }
+  }
+
+/**
+ * fetch home page with Mexican cuisine
+ */
+makeThumbnails("Mexican");
+/**
+ * fetch home page with Greek cuisine
+ */
+makeThumbnails("Greek");
+/**
+ * fetch home page with Indian cuisine
+ */
+makeThumbnails("Indian");
+
+
+
+ 
+ /*$('body').append("&lt;i id='icon_right'>&lt;/i>");
+ $('body').append("&lt;i id='icon_left'>&lt;/i>"); 
+ add_icon('#icon_right', 'fa fa-chevron-right', '40px', 'white');
+ add_icon('#icon_left', 'fa fa-chevron-left', '40px', 'white');*/
+ 
+ /*
+ $(document).ready(function(){
+     $('.my_img').hover(function() {
+         $(this).addClass('transition');
+     
+     }, function() {
+         $(this).removeClass('transition');
+     });
+ });
+ 
+ $(document).on('click', '#icon_right, #icon_left', function() {
+     if($(this).attr('id') == 'icon_right') {
+         $('body').animate({scrollLeft: 1000}, 800);
+         } else {
+         $('body').animate({scrollLeft: -1000}, 800);
+     }
+ });
+ */
+ 
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="FavRecipe.html">FavRecipe</a></li><li><a href="IndividualCustom.html">IndividualCustom</a></li><li><a href="SearchRecipe.html">SearchRecipe</a></li></ul><h3>Global</h3><ul><li><a href="global.html#collectStorage">collectStorage</a></li><li><a href="global.html#createRecipeCards">createRecipeCards</a></li><li><a href="global.html#fetchIndividualRecipe">fetchIndividualRecipe</a></li><li><a href="global.html#makeThumbnails">makeThumbnails</a></li><li><a href="global.html#searchFetchRecipes">searchFetchRecipes</a></li><li><a href="global.html#searchForKey">searchForKey</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Mon Nov 29 2021 16:04:43 GMT-0800 (Pacific Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

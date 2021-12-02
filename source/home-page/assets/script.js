@@ -59,28 +59,56 @@ let images = {
  */
 
 
-
+/**
+ * Make thumbnails on home page
+ * @param {string} request -type of cuisine
+ */
 async function makeThumbnails(request){
-  let vals = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=03722052291e4f84bce1021acd82624f&cuisine=${request}&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
+  let vals = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?${request}&maxReadyTime=30&addRecipeInformation=True`
+  ,{ "method": "GET",
+    "headers": {
+    "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+		"x-rapidapi-key": "b99bc80573mshf2530a05219b844p140ef0jsn891357db5296"
+    }
+  }).then((response) => response.json());
   for (let i = 0; i<5; i++ ) {
       let recipe = vals.results[i];
       let ele = document.createElement("search-recipe");
       ele.data = vals.results[i];
       let place = 0
-      if (request == "Greek"){
+      if (request == "&cuisine=Greek"){
         place = 1
       }
-      if (request == "Indian"){
+      if (request == "&cuisine=Indian"){
+        place = 2;
+      }
+      if (request == "&titleMatch=Pasta"){
+        place = 3;
+      }
+      if (request == "&titleMatch=Vegan"){
+        place = 1;
+      }
+      if (request == "&titleMatch=Steak"){
         place = 2;
       }
       document.getElementsByClassName("container")[place].append(ele);
     }
   }
 
+/**
+ * fetch home page with Mexican cuisine
+ */
+makeThumbnails("&cuisine=Mexican");
+/**
+ * fetch home page with Greek cuisine
+ */
 
-makeThumbnails("Mexican");
-makeThumbnails("Greek");
-makeThumbnails("Indian");
+//makeThumbnails("&titleMatch=Pasta")
+makeThumbnails("&titleMatch=Vegan");
+/**
+ * fetch home page with Indian cuisine
+ */
+makeThumbnails("&titleMatch=Steak");
 
 
 

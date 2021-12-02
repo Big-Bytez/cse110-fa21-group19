@@ -276,13 +276,16 @@ recipes {
   grid-template-columns: calc(25vw) calc(25vw) calc(25vw);
   grid-template-rows: calc(25vw);
   justify-items: center;
-  background-color: #b90c0c; /* white background */
+  row-gap: 3vh;
+  column-gap: 2vw;
+  max-width: 75vw;
+  background-color: white; /* white background */
+
 }
 
+
 .recipe-box {
-  background-color: #b90c0c;
-  border: 3px solid black;
-  border-radius: 10px;
+  background-color: white;
 }
 
 .recipe-box > h3 {
