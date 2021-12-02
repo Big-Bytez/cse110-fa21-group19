@@ -217,7 +217,9 @@ class IndividualCustom extends HTMLElement {
             cursor: pointer;
           }
         `;
-
+        function removeRecipe(node){
+            localStorage.removeItem(node);
+        }
         styleElem.innerHTML = styles;
         
         const container = document.createElement("div");
@@ -263,6 +265,15 @@ class IndividualCustom extends HTMLElement {
         const favorite = document.createElement("a");
         favorite.setAttribute("class", 'favorite');
         favorite.setAttribute("id", 'favorite');
+        const favImage = document.createElement("img");
+        if(localStorage.getItem(data.title) == null){
+            favImage.setAttribute("src", "images/favorite.png");
+        }else{
+            favImage.setAttribute("src", "images/unfavorite.png");
+        }
+        favImage.setAttribute("height", "70vh");
+        favImage.setAttribute("widht", "100vw");
+        favorite.appendChild(favImage);
         favorite.addEventListener("click", function() {
             if(localStorage.getItem(data.title) == null){
                 var thumbnail = {"totalTime" : data.readyInMinutes, 
@@ -274,19 +285,9 @@ class IndividualCustom extends HTMLElement {
             }else {
                 favImage.setAttribute("src", "images/favorite.png");
                 alert("Recipe unfavorited!");  
-                console.log(localStorage.getItem(data.title)); 
                 removeRecipe(data.title);
             }
         });
-        const favImage = document.createElement("img");
-        if(localStorage.getItem(data.title) == null){
-            favImage.setAttribute("src", "images/favorite.png");
-        }else{
-            favImage.setAttribute("src", "images/unfavorite.png");
-        }
-        favImage.setAttribute("height", "70vh");
-        favImage.setAttribute("widht", "100vw");
-        favorite.appendChild(favImage);
         const favoriteDiv = document.createElement("div");
         favoriteDiv.appendChild(favorite);
         topMiddleContainer.appendChild(recipeTitle);
@@ -323,6 +324,3 @@ class IndividualCustom extends HTMLElement {
 }
 
 customElements.define("recipe-individual", IndividualCustom);
-function removeRecipe(node){
-    localStorage.removeItem(node);
-}
