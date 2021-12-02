@@ -60,37 +60,11 @@ function createRecipeCards(){
     }
 }
 
-/*
-function removeRecipe(k){//remove Recipe by index number
-    console.log('removeStart');
-    var element = document.querySelector("recipes");
-    while (element.firstChild) {
-        element.removeChild(element.firstChild);
-    }
-    // all recipes should be deleted and want to create again
-    console.log('removed all element from recipes');
-    for(let i = 0; i < 6; i++){
-        let card = document.createElement('fav-recipe');
-        console.log(1);
-        if(i >= localStorage.length){
-            card.data = "Favorite more recipes!";
-        }
-        else{
-            if(k!=i)
-            card.data = recipeData[i];
-        }
-        document.querySelector("recipes").appendChild(card);
-        console.log(1);
-    }
-    
-    console.log('removeEnd');
-    createRecipeCards();
-}
-*/
-
 async function init() {
 
     collectStorage();
 
     createRecipeCards();
+
 }
+
