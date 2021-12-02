@@ -59,6 +59,8 @@ function createRecipeCards(){
         document.querySelector("recipes").appendChild(card);
     }
 }
+
+/*
 function removeRecipe(k){//remove Recipe by index number
     console.log('removeStart');
     var element = document.querySelector("recipes");
@@ -66,7 +68,7 @@ function removeRecipe(k){//remove Recipe by index number
         element.removeChild(element.firstChild);
     }
     // all recipes should be deleted and want to create again
-    /*console.log('removed all element from recipes');
+    console.log('removed all element from recipes');
     for(let i = 0; i < 6; i++){
         let card = document.createElement('fav-recipe');
         console.log(1);
@@ -80,10 +82,11 @@ function removeRecipe(k){//remove Recipe by index number
         document.querySelector("recipes").appendChild(card);
         console.log(1);
     }
-    */
+    
     console.log('removeEnd');
     createRecipeCards();
 }
+*/
 
 async function init() {
 
@@ -91,10 +94,3 @@ async function init() {
 
     createRecipeCards();
 }
-const button1=document.querySelector('button1');
-button1.addEventListener('click',removeRecipe(0));
-const button2=document.querySelector('button2');
-button2.addEventListener('click',removeRecipe(1));
-const button3=document.querySelector('button3');
-button3.addEventListener('click',removeRecipe(2));
-console.log('button create successfully');

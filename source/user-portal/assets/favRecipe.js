@@ -84,81 +84,6 @@ class FavRecipe extends HTMLElement {
                 margin-bottom: .3vh;
             }
         `;
-        /*
-            article{
-                display: grid;
-                align-items: center;
-                width: calc(20vw);
-                grid-template-rows: calc(10vh) calc(26vh);
-                height: calc(40vh);
-                row-gap: calc(.7vh);
-                border: 3px solid black;
-                background-color: white;
-                border-radius: 10px;
-            }
-
-            article > p {
-                font-family: 'Varelia Round', sans-serif;
-                font-size: calc(2.5vh);
-                align-items: center;
-                margin-top: 20px;
-                margin-left: 15px;
-                margin-right: 15px;
-                max-width: calc(20vw);
-                overflow: hidden;
-                text-decoration: none !important;
-                color: black !important
-            }
-          
-            div > p {
-                font-family: 'Varela Round', sans-serif;
-                font-size: calc(2.5vh);
-                align-items: center;
-                margin-top: calc(2vh);
-                margin-left: calc(2vw);
-                margin-right: calc(0.8vw);
-            }
-        
-            img {
-                display: flex;
-                object-fit: cover;
-                max-height: 240px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 0%;
-                width: 90%;
-            }
-
-            div {
-                width: calc(3.2vw);
-                height: calc(3.2vw);
-                background: #b90c0c;
-                border-radius: 50%;
-                position: relative; 
-                visibility: visible; 
-                left: calc(15vw); 
-                bottom: calc(6.5vh);
-                border-style: solid;
-                border-width: 2px;
-                border-color: black;
-                
-            }
-
-            .recipe-time {
-                color: white;
-                margin-left:12px;
-                text-align: center;
-                text-decoration: none !important;
-                color: black !important
-            }
-            button {
-                width: 100px;
-                margin-left: 65px;
-                margin-bottom: .3vh;
-            }
-        `;
-        */
         
         styleElem.innerHTML = styles;
 
@@ -175,7 +100,7 @@ class FavRecipe extends HTMLElement {
         timeNumb.setAttribute("class", "recipe-time");
         let timeText = document.createTextNode("");
         var link;
-
+        let removeBut 
 
         if(data === "Favorite more recipes!"){
             // Adding Title
@@ -209,27 +134,30 @@ class FavRecipe extends HTMLElement {
             link = document.createElement("a")
             link.setAttribute("href",  `../recipe-individual/index.html?${json.id}`)
             link.setAttribute("class", 'link');
+        
+            removeBut = document.createElement("BUTTON");
+            removeBut.innerHTML = "Remove";
         }
-
-        let removeBut = document.createElement("button");
-        removeBut.innerHTML = "Remove";
        
         recipe.appendChild(recipeTitle);
         recipe.appendChild(recipeImg);
-        recipe.appendChild(removeBut);
         timeCircle.appendChild(timeNumb);
         recipe.appendChild(timeCircle);
-        recipe.appendChild(removeBut);
-        removeBut.click(removeRecipe(data));
+
+        if(removeBut){
+            recipe.appendChild(removeBut);
+            removeBut.addEventListener("click", function(event) {
+                removeRecipe(data);
+            });
+        }
+        
         this.shadowRoot.appendChild(styleElem); 
 
-
         if (link){
-            link.appendChild(recipe)
+            link.appendChild(recipe);
             this.shadowRoot.appendChild(link);
         } else {
             this.shadowRoot.appendChild(recipe);
-
         }
 
     }
