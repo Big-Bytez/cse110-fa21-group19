@@ -139,7 +139,13 @@ class FavRecipe extends HTMLElement {
             removeBut.innerHTML = "Remove";
         }
        
-        recipe.appendChild(recipeTitle);
+        if(link) {
+            link.appendChild(recipeTitle);
+            recipe.appendChild(link);
+        }
+        else{
+            recipe.appendChild(recipeTitle);
+        }
         recipe.appendChild(recipeImg);
         timeCircle.appendChild(timeNumb);
         recipe.appendChild(timeCircle);
@@ -152,13 +158,8 @@ class FavRecipe extends HTMLElement {
         }
         
         this.shadowRoot.appendChild(styleElem); 
+        this.shadowRoot.appendChild(recipe);
 
-        if (link){
-            link.appendChild(recipe);
-            this.shadowRoot.appendChild(link);
-        } else {
-            this.shadowRoot.appendChild(recipe);
-        }
 
     }
 }
