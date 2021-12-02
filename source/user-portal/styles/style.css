@@ -276,54 +276,20 @@ recipes {
   grid-template-columns: calc(25vw) calc(25vw) calc(25vw);
   grid-template-rows: calc(25vw);
   justify-items: center;
-  background-color: #b90c0c; /* white background */
+  row-gap: 3vh;
+  column-gap: 2vw;
+  max-width: 75vw;
+  background-color: white; /* white background */
+
 }
 
 
 .recipe-box {
-  background-color: #b90c0c;
-  border: 3px solid black;
-  border-radius: 10px;
+  background-color: white;
 }
 
 .recipe-box > h3 {
   padding-left: 3.5em;
-}
-button1 {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 5px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 1vw 10vw;
-  cursor: pointer;
-}
-button2 {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 5px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 1vw 11vw;
-  cursor: pointer;
-}
-button3 {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 5px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 1vw 10vw;
-  cursor: pointer;
 }
 
 input[type='file'] {
