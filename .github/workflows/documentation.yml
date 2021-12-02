@@ -3,10 +3,8 @@ name: Renew JSdoc
 on:
   push:
     branches:
-      - master
       - main
       - cicd
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
