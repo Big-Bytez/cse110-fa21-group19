@@ -29,6 +29,7 @@ class IndividualCustom extends HTMLElement {
             /* top: calc(3rem); */
             margin-top: calc(4rem);
             margin-left: calc(7.5vw); /* revert back to 17.5vw once we put side bar back*/
+            background-color: rgb(235, 103, 94)
         }
         
         .image-box h1 {
@@ -118,6 +119,7 @@ class IndividualCustom extends HTMLElement {
             width: calc(60vw);
             margin-left: calc(10vw);
             /* color: red; */
+            background-color: rgb(235, 103, 94);
         }
         
         .directions-text h2 {
