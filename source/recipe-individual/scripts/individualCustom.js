@@ -1,3 +1,8 @@
+
+/**
+ * custom element used to display individual page
+ * @extends HTMLElement 
+ */
 class IndividualCustom extends HTMLElement {
     constructor() {
         super();
@@ -42,6 +47,7 @@ class IndividualCustom extends HTMLElement {
             /* top: calc(3rem); */
             margin-top: calc(4rem);
             margin-left: calc(7.5vw); /* revert back to 17.5vw once we put side bar back*/
+            background-color: rgb(235, 103, 94)
         }
         
         .image-box h1 {
@@ -111,7 +117,7 @@ class IndividualCustom extends HTMLElement {
             /* left: 20vw; */
             top: 0;
             font-size: calc(1.25vw);
-            background-color: rgb(242, 236, 119);
+            background-color: rgb(235, 103, 94);
             padding: 1px;
             /* color: red; */
         }
@@ -131,6 +137,7 @@ class IndividualCustom extends HTMLElement {
             width: calc(60vw);
             margin-left: calc(10vw);
             /* color: red; */
+            background-color: rgb(235, 103, 94);
         }
         
         .directions-text h2 {
@@ -177,7 +184,7 @@ class IndividualCustom extends HTMLElement {
             background-color:none;
           }
           .logoImg {
-           position:fixed;
+           position: absolute;
            justify-items: end;
            padding-left: .2em;
            padding-right: 5em;
@@ -186,7 +193,7 @@ class IndividualCustom extends HTMLElement {
            left: 0vw;
           }
           .logoText {
-            position:absolute;
+            position: absolute;
             height: 10em;
             width: 15em;
             justify-items: begin;
@@ -217,8 +224,15 @@ class IndividualCustom extends HTMLElement {
           h2 {
             font-family: "Abril Fatface", cursive;
           }
-        `;
 
+          a, 
+          a label {
+            cursor: pointer;
+          }
+        `;
+        function removeRecipe(node){
+            localStorage.removeItem(node);
+        }
         styleElem.innerHTML = styles;
         
         const container = document.createElement("div");
@@ -298,20 +312,32 @@ class IndividualCustom extends HTMLElement {
         const ratings = document.createElement("p");
         ratings.innerHTML = data.aggregateLikes + " Likes";
         ratingsDiv.appendChild(ratings);
-        const favorite = document.createElement("button");
+        const favorite = document.createElement("a");
         favorite.setAttribute("class", 'favorite');
         favorite.setAttribute("id", 'favorite');
-        favorite.addEventListener("click", function() {
-            var thumbnail = {"totalTime" : data.readyInMinutes, 
-            "title" : data.title, "id": data.id, "thumbnailUrl": data.image}
-            localStorage.setItem(data.title, JSON.stringify(thumbnail))
-            console.log(localStorage);
-        });
         const favImage = document.createElement("img");
-        favImage.setAttribute("src", "images/favorite.png");
+        if(localStorage.getItem(data.title) == null){
+            favImage.setAttribute("src", "images/favorite.png");
+        }else{
+            favImage.setAttribute("src", "images/unfavorite.png");
+        }
         favImage.setAttribute("height", "70vh");
         favImage.setAttribute("widht", "100vw");
         favorite.appendChild(favImage);
+        favorite.addEventListener("click", function() {
+            if(localStorage.getItem(data.title) == null){
+                var thumbnail = {"totalTime" : data.readyInMinutes, 
+                "title" : data.title, "id": data.id, "thumbnailUrl": data.image}
+                localStorage.setItem(data.title, JSON.stringify(thumbnail))
+                console.log(localStorage);
+                favImage.setAttribute("src", "images/unfavorite.png");
+                alert("Recipe favorited!");
+            }else {
+                favImage.setAttribute("src", "images/favorite.png");
+                alert("Recipe unfavorited!");  
+                removeRecipe(data.title);
+            }
+        });
         const favoriteDiv = document.createElement("div");
         favoriteDiv.appendChild(favorite);
         topMiddleContainer.appendChild(recipeTitle);

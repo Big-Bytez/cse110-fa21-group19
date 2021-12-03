@@ -1,3 +1,8 @@
+
+/**
+ * custom SearchRecipe html element used on SearchRecipe page
+ * @extends HTMLElement
+ */
 class SearchRecipe extends HTMLElement {
     constructor() {
       super();
@@ -96,7 +101,7 @@ class SearchRecipe extends HTMLElement {
         timeNumb.innerHTML = data.readyInMinutes + "\n min";
 
 
-        recipeImg.setAttribute("src",data.image);
+        recipeImg.setAttribute("src", data.image);
 
         recipeTitle.innerHTML = data.title;
 

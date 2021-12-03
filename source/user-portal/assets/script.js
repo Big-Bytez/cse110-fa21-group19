@@ -1,13 +1,15 @@
 // Script for adding recipe card
 
+/*
 const recipes = [
     "https://introweb.tech/assets/json/birthdayCake.json"
-];
+]; */
 
 const recipeData = {};
 
 window.addEventListener('DOMContentLoaded', init);
 
+/*
 // Function here if I need to fetch the recipe... 
 // fetch(`https://api.spoonacular.com/recipes/${recipes[i]}/information?apiKey=`+apiKey)
 async function fetchRecipes() {
@@ -30,18 +32,22 @@ async function fetchRecipes() {
             resolve(true);
         }
     })
-}
-
+} */
+/**
+ * Get users favorite recipes from local storage.
+ */
 function collectStorage(){
 
     for(let i = 0; i < localStorage.length; i++){
         recipeData[i] = localStorage.key(i);
     }
 }
-
+/**
+ * Create RecipeCards based on user's farvorite recipes
+ */
 function createRecipeCards(){
 
-    for(let i = 0; i < 6; i++){
+    for(let i = 0; i < localStorage.length+1; i++){
         let card = document.createElement('fav-recipe');
         
         if(i >= localStorage.length){
@@ -54,20 +60,11 @@ function createRecipeCards(){
     }
 }
 
-
 async function init() {
-
-    /*
-    let fetched = await fetchRecipes();
-
-    if(!fetched){
-        console.error('Failed fetch');
-        return;
-    }
-    */
-
 
     collectStorage();
 
     createRecipeCards();
+
 }
+

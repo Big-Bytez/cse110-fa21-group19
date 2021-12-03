@@ -5,9 +5,9 @@ name: Unit and E2E test
 
 on:
   push:
-    branches: [main]
+    branches: [main,test-patch1]
   pull_request:
-    branches: [main]
+    branches: [main,test-patch1]
 
 jobs:
   build:
