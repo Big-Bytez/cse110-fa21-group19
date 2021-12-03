@@ -11,7 +11,6 @@ async function fetchIndividualRecipe(id) {
 }
 
 window.onload = async function(){
-    console.log("here");
   let questionLocation = window.location.href.indexOf("?");
   if (questionLocation < 0 ){
     return;

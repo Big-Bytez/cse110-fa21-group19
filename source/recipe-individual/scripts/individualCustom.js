@@ -4,6 +4,24 @@ class IndividualCustom extends HTMLElement {
         let shadow = this.attachShadow({mode: "open"});
     }
 
+    startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
+    
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+            display.textContent = minutes + ":" + seconds;
+    
+            if (--timer < 0) {
+                timer = 0;
+                // timer = duration; // uncomment this line to reset timer automatically after reaching 0
+            }
+        }, 1000);
+    }
+
     set data(data) {
         const styleElem = document.createElement("style");
         const styles = `
@@ -195,13 +213,6 @@ class IndividualCustom extends HTMLElement {
             width: 8vw;
             justify-self: left;
           }
-          p {
-            font-family: "Abril Fatface", cursive;
-          }
-
-          li {
-              font-family: "Abril Fatface", cursive;
-          }
 
           h2 {
             font-family: "Abril Fatface", cursive;
@@ -237,8 +248,45 @@ class IndividualCustom extends HTMLElement {
         recipeTitle.innerHTML = data.title;
         const cookTime = document.createElement("h2");
         cookTime.innerHTML = data.readyInMinutes + "min";
+        let timer = document.createElement("button");
+        timer.setAttribute("id", "safeTimerDisplay");
+        timer.textContent = data.readyInMinutes + ":00";
+        let start = true;
+        let startTime = data.readyInMinutes*60;
+        timer.addEventListener("click", function() {
+            console.log(start);
+            if(start) {
+                start = false;
+                let timed = startTime, minutes, seconds;
+                setInterval(function () {
+                    minutes = parseInt(timed / 60, 10)
+                    seconds = parseInt(timed % 60, 10);
+            
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+            
+                    timer.textContent = minutes + ":" + seconds;
+            
+                    if (--timed < 0) {
+                        timed = 0;
+                        // timer = duration; // uncomment this line to reset timer automatically after reaching 0
+                    }
+                    startTime--;
+                }, 1000);
+            }
+        });
         const description = document.createElement("p");
         description.innerHTML = data.summary;
+        const summaryLinks = description.querySelectorAll("a");
+        summaryLinks.forEach(
+            element => {
+                const curr = element.href;
+                console.log(curr);
+                const lastDash = curr.lastIndexOf("-");
+                element.href = `index.html?${curr.substring(lastDash+1)}`;
+        });
+        console.log(summaryLinks);
+        console.log(description.innerHTML);
         const ratingBox = document.createElement("div");
         ratingBox.setAttribute("class", "ratings-box");
         const starsDiv = document.createElement("div");
@@ -268,6 +316,7 @@ class IndividualCustom extends HTMLElement {
         favoriteDiv.appendChild(favorite);
         topMiddleContainer.appendChild(recipeTitle);
         topMiddleContainer.appendChild(cookTime);
+        topMiddleContainer.appendChild(timer);
         topMiddleContainer.appendChild(description);
         ratingBox.appendChild(starsDiv);
         ratingBox.appendChild(ratingsDiv);
@@ -280,9 +329,8 @@ class IndividualCustom extends HTMLElement {
         instructionsHeader.innerHTML = "Instructions";
         const instructions = document.createElement("ul");
         const instructionsArray = data.analyzedInstructions[0].steps;
-        // const instructionsArray = betterInstructions[1].split(".");
         for(var i = 0; i < instructionsArray.length; i++) {
-            console.log(instructionsArray[i]);
+            console.log(instructionsArray[i].step);
             const single = document.createElement("li");
             single.innerHTML = instructionsArray[i].step;
             instructions.appendChild(single);
