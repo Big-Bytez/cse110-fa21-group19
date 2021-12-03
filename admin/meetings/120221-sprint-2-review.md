@@ -16,7 +16,9 @@
 - Made unfavorite option for recipe page.
 - Alerts everytime favorite/unfavorite recipe.
 - Changes icon when favorite/unfavorite.
+![FavoritedRecipe](https://user-images.githubusercontent.com/59597109/144543878-6000c138-72f4-4bda-884d-e15fbb1def64.PNG)
 
+![UnfavoritedRecipe](https://user-images.githubusercontent.com/59597109/144543887-a3b4156d-a821-4af9-b4a7-64cba5de26e1.PNG)
 
 **Conclusions:**
 Need to add snackbar notification instead of alert to make look cleaner.
@@ -30,6 +32,8 @@ Need to add snackbar notification instead of alert to make look cleaner.
 
 **Conclusions:**
 - Needs to fix merge conflict.
+![image](https://user-images.githubusercontent.com/59597109/144544068-eff2d43b-5e11-4dcc-8606-c298667b5776.png)
+
 
 -------
 
@@ -40,6 +44,7 @@ Need to add snackbar notification instead of alert to make look cleaner.
 - Added filter functionality.
 - Added more results on search page (100).
 
+<img width="1333" alt="Screen Shot 2021-12-02 at 7 13 50 PM" src="https://user-images.githubusercontent.com/59597109/144543939-6a49eb25-f7e1-45ca-bcba-cd49f516bffe.png">
 
 
 **Conclusions:**
@@ -85,6 +90,7 @@ Need to add snackbar notification instead of alert to make look cleaner.
 **Discussion:**  
 -Implemented Timer.
 -Changed font for recipe page.
+![image](https://user-images.githubusercontent.com/59597109/144543991-ba0ab2fa-511c-48d6-bc3f-856e01630955.png)
 
 
 
@@ -106,21 +112,6 @@ Need to add snackbar notification instead of alert to make look cleaner.
 
 **Conclusions:**
 - Pair program 12/3 to get mobile done .
-
--------
--------
-
-### Agenda Item: Search Page(Kai and Liza) ###
-
-**Discussion:**  
-- Added sort functionality.
-- Added filter functionality.
-- Added more results on search page (100).
-
-
-
-**Conclusions:**
-- Going to see if we can get the results to load faster.
 
 -------
 
