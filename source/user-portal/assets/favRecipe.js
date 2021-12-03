@@ -35,7 +35,6 @@ class FavRecipe extends HTMLElement {
                 margin-top: 20
                 margin-left: 15px;
                 margin-right: 15px;
-                overflow: hidden;
             }
 
             a:link{
@@ -187,6 +186,7 @@ function searchForKey(object, key) {
 
 function removeRecipe(node){
     localStorage.removeItem(node);
+    location.reload();
 }
 
 customElements.define("fav-recipe", FavRecipe);
