@@ -15,32 +15,31 @@ class SearchRecipe extends HTMLElement {
         
           article{
             display: grid;
-            width: 240px;
+            width: 23vw;
         
-            grid-template-rows: 100px 140px 20px;
+            grid-template-rows: 5em 10em 1em;
             row-gap: 0;
             border-style: solid;
             border-width: 2px;
             border-color: #b90c0c;
-            border-radius: 10px;
+            border-radius: 1em;
             text-align: center;
             margin-left: 10;
 
         }
         p {
           font-family: 'Varela Round', sans-serif;
-          font-size: 2.5vh;
+          font-size: 90%;
           color: black !important;
           margin-top: 20
-          margin-left: 15px;
-          margin-right: 15px;
+          margin-left: 1.5vw;
+          margin-right: 1.5vw;
         }
         a:link{
           text-decoration: none !important;
         }
         img {
             object-fit: cover;
-            width: 220px;
             max-height: 100%;
             display: block;
             margin-left: auto;
@@ -49,16 +48,16 @@ class SearchRecipe extends HTMLElement {
         }
 
         div {
-          width: 60px;
-          height: 60px;
+          width: 3.5em;
+          height: 3.5em;
           background: #b90c0c;
-          border-radius: 50%;
+          border-radius: 100%;
           position: relative; 
           visibility: visible; 
-          left: 170px; 
-          bottom: 60px;
+          left: 75%; 
+          bottom: 10vh;
           border-style: solid;
-          border-width: 2px;
+          border-width: .2em;
           border-color: black;
           text-decoration: none !important; 
         }

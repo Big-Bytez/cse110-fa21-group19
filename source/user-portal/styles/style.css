@@ -173,37 +173,36 @@ h3 {
 }
 
 .logoImg {
-  position: absolute;
+  position:absolute;
   justify-items: end;
-  padding-left: 0.2em;
+  padding-left: .2em;
   padding-right: 5em;
   top: 1.2em;
   width: 8%;
   left: 0vw;
-}
+ }
 
-.logoText {
-  position: absolute;
-  height: 7em;
-  width: 15em;
+ .logoText {
+  position:absolute;
+  height: 10em;
+  width: 10em;
   justify-items: begin;
   padding-left: 2.6em;
   padding-right: 8em;
-  top: -1.5em;
+  top: 0em;
   margin-top: 0%;
-  padding-top: 0.2%;
-  left: 0vw;
+  padding-top: .2%;
+  left: 0vw ;
   font-style: oblique;
 }
-
-h4 {
+h4{
   font-family: 'Abril Fatface', cursive;
-  font-size: calc(5vh);
+  font-size: 5vh;
   text-decoration: wavy;
   color: black;
   margin-left: 8%;
   top: 0em;
-  margin-top: 9%;
+  margin-top: 3%;
   padding-top: 0%;
 }
 
@@ -305,4 +304,15 @@ div > h2 {
   text-decoration: wavy;
   margin: 0;
   margin-top: calc(1vh);
+}
+@media only screen and (max-width: 656px)  {
+  h4{
+    margin-top: 5%;
+    font-size: 3vh;
+  }
+}
+@media only screen and (max-width: 473px)  {
+  h4{
+    display: none;
+  }
 }

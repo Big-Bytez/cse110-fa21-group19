@@ -575,10 +575,12 @@ h3{
   background-color: #444 ;
 }
 main{
-  padding-top: 200vh;
-  margin-left: 100vw;
-  margin-right: 100vw;
-  
+  padding-top: 110%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+body{
+  display: grid;
 }
 .container{
   display:flex;

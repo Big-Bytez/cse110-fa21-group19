@@ -30,7 +30,7 @@
 
 #title{
     display: -webkit-box;
-    font-size: larger;
+    font-size: 20%;
     line-height: 20px;
     overflow: hidden;
     text-align: center;
@@ -57,7 +57,7 @@
     align-items: center; 
     justify-content: center;
     color: white;
-    font-size: small;
+    font-size: 15%;
     font-style: bold;
     font-family:  "Bubblegum Sans";
     margin-top: -3.5vh;
