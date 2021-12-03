@@ -130,6 +130,12 @@ Need to add snackbar notification instead of alert to make look cleaner.
 - Make whentomeet for next week to get videos done.
 - Look through website make sure everything is functional and looks good.
 - Make sure tasks are done by the 6th.
+- Tasks:
+     -Liza & Kai : fix the rendering of cards on search page to make them show up faster
+     -Reny & Justin & Peder : Finish mobile 
+     -Brian & Huang & George  : Get the user to search through favorite 
+     -Nico & Nicholas : Get the timer button to work for one more steps
+
 
 
 ## Attendees: ##
