@@ -1,8 +1,8 @@
-#tile {
-    width: 11vw !important;
+/*#tile {
+    width: 110% !important;
     margin-left: 1.5vw !important;
     margin-right: 1.5vw !important;
-    height: 17.5vw !important;
+    height: 170% !important;
     background-color: white;
     border-style: solid;
     border-color:rgba(223, 11, 11, 0.945);
@@ -30,7 +30,7 @@
 
 #title{
     display: -webkit-box;
-    font-size: larger;
+    font-size: 20%;
     line-height: 20px;
     overflow: hidden;
     text-align: center;
@@ -40,24 +40,21 @@
     color: rgba(223, 11, 11, 0.945);
     font-style: bold;
     -webkit-text-stroke: .25px black
-
 }
 
 #circle {
-    width: 3vw;
-    height: 3vw;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
+    width: 12%;
+    height: 12%;
     border-radius: 25px;
     background:rgba(202, 8, 8, 0.945);
     border: .25px solid black;
     text-align: center;
     margin-left: 8vw;
     display: flex; /* or inline-flex */
-    align-items: center; 
+    /*align-items: center; 
     justify-content: center;
     color: white;
-    font-size: small;
+    font-size: 15%;
     font-style: bold;
     font-family:  "Bubblegum Sans";
     margin-top: -3.5vh;
@@ -87,4 +84,4 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: -1vh;
-}
+}*/

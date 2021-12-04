@@ -1,6 +1,6 @@
-.thumbnail {
-    width: 25vw;
-    height: 37.5vh;
+/*.thumbnail {
+    width: 150%;
+    height: 200%;
     border: 5px solid red;
   }
 
@@ -32,7 +32,7 @@ img {
     text-align: center;
     margin-left: 20vw;
     display: flex; /* or inline-flex */
-    align-items: center; 
+    /*align-items: center; 
     justify-content: center;
   }
-
+*/
