@@ -250,7 +250,8 @@ class IndividualCustom extends HTMLElement {
         const recipeTitle = document.createElement("h1");
         recipeTitle.innerHTML = data.title;
         const cookTime = document.createElement("h2");
-        cookTime.innerHTML = data.readyInMinutes + "min";
+        cookTime.innerHTML = data.readyInMinutes + " min";
+        cookTime.setAttribute("font-size", "7%");
         const description = document.createElement("p");
         description.innerHTML = data.summary;
         const ratingBox = document.createElement("div");
@@ -273,8 +274,8 @@ class IndividualCustom extends HTMLElement {
         }else{
             favImage.setAttribute("src", "images/unfavorite.png");
         }
-        favImage.setAttribute("height", "70vh");
-        favImage.setAttribute("widht", "100vw");
+        favImage.setAttribute("height", "7%");
+        favImage.setAttribute("width", "10%");
         favorite.appendChild(favImage);
         favorite.addEventListener("click", function() {
             if(localStorage.getItem(data.title) == null){

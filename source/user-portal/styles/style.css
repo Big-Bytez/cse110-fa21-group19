@@ -173,37 +173,36 @@ h3 {
 }
 
 .logoImg {
-  position: absolute;
+  position:absolute;
   justify-items: end;
-  padding-left: 0.2em;
+  padding-left: .2em;
   padding-right: 5em;
   top: 1.2em;
   width: 8%;
   left: 0vw;
-}
+ }
 
-.logoText {
-  position: absolute;
+ .logoText {
+  position:absolute;
   height: 10em;
-  width: 15em;
+  width: 10em;
   justify-items: begin;
   padding-left: 2.6em;
   padding-right: 8em;
-  top: -1.5em;
+  top: 0em;
   margin-top: 0%;
-  padding-top: 0.2%;
-  left: 0vw;
+  padding-top: .2%;
+  left: 0vw ;
   font-style: oblique;
 }
-
-h4 {
+h4{
   font-family: 'Abril Fatface', cursive;
-  font-size: calc(5vh);
+  font-size: 5vh;
   text-decoration: wavy;
   color: black;
   margin-left: 8%;
   top: 0em;
-  margin-top: 9%;
+  margin-top: 3%;
   padding-top: 0%;
 }
 
@@ -226,10 +225,6 @@ h4 {
   padding-left: calc(3vw);
   top: 1em;
   background-color: none;
-}
-
-.logoImg:hover {
-  opacity: 0.8;
 }
 
 .user-portal:hover {
@@ -272,15 +267,13 @@ div.favor-recipes {
 recipes {
   padding-bottom: calc(2vh);
   align-items: center;
-  display: grid;
-  grid-template-columns: calc(25vw) calc(25vw) calc(25vw);
-  grid-template-rows: calc(25vw);
+  display: flex;
+  flex-wrap: wrap;
   justify-items: center;
   row-gap: 3vh;
   column-gap: 2vw;
   max-width: 75vw;
   background-color: white; /* white background */
-
 }
 
 
@@ -288,8 +281,9 @@ recipes {
   background-color: white;
 }
 
-.recipe-box > h3 {
-  padding-left: 3.5em;
+.recipe-box > h2 {
+  align-items: center;
+  padding-bottom: 2vh;
 }
 
 input[type='file'] {
@@ -304,7 +298,17 @@ div > h2 {
   font-family: 'Abril Fatface', cursive;
   font-size: 4vh;
   text-decoration: wavy;
-  padding-left: calc(28vw);
   margin: 0;
   margin-top: calc(1vh);
+}
+@media only screen and (max-width: 656px)  {
+  h4{
+    margin-top: 5%;
+    font-size: 3vh;
+  }
+}
+@media only screen and (max-width: 473px)  {
+  h4{
+    display: none;
+  }
 }

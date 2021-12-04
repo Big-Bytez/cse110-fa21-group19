@@ -71,7 +71,7 @@ async function makeThumbnails(request){
 		"x-rapidapi-key": "b99bc80573mshf2530a05219b844p140ef0jsn891357db5296"
     }
   }).then((response) => response.json());
-  for (let i = 0; i<5; i++ ) {
+  for (let i = 0; i<4; i++ ) {
       let recipe = vals.results[i];
       let ele = document.createElement("search-recipe");
       ele.data = vals.results[i];
