@@ -29,7 +29,7 @@ class SearchRecipe extends HTMLElement {
         }
         p {
           font-family: 'Varela Round', sans-serif;
-          font-size: 90%;
+          font-size: 100%;
           color: black !important;
           margin-top: 20
           margin-left: 1.5vw;
@@ -47,7 +47,7 @@ class SearchRecipe extends HTMLElement {
             width: 90%;
         }
 
-        div {
+        div { 
           width: 3.5em;
           height: 3.5em;
           background: #b90c0c;
@@ -57,7 +57,7 @@ class SearchRecipe extends HTMLElement {
           left: 75%; 
           bottom: 10vh;
           border-style: solid;
-          border-width: .2em;
+          border-width: .1em;
           border-color: black;
           text-decoration: none !important; 
         }
@@ -114,5 +114,4 @@ class SearchRecipe extends HTMLElement {
         this.shadowRoot.appendChild(link);
         }
   }
-  
   customElements.define('search-recipe', SearchRecipe);

@@ -51,7 +51,7 @@ sideBar {
   padding-top: 0%;
   top: 5.5em; /*keeps side bar from reaching logo*/
 }
-header {
+.header {
   justify-content: center;
   align-self: center;
   justify-items: center;
@@ -59,7 +59,7 @@ header {
   align-content: center;
   display: inline-block;
   padding-left: 7.5%;
-  height: 20%;
+  height: 50%;
   position: absolute;
   top: 15vh;
   margin-left: 4%;
@@ -443,15 +443,10 @@ h3{
 }
 @media only screen and (max-width: 473px)  {
   .button10, .button30, .button60 {
-    font-size: 5vh;
+    font-size: 3vh;
   }
   h4{
     display: none;
-  }
-}
-@media only screen and (max-width: 445px)  {
-  .button10, .button30, .button60 {
-    font-size: 4.1vh;
   }
 }
 @media only screen and (max-width: 445px)  {
@@ -462,13 +457,14 @@ h3{
     width: 60%;
   }
 }
-@media only screen and (max-width: 391px)  {
+@media only screen and (max-width: 412px)  {
   .button10, .button30, .button60 {
-    font-size: 3.8vh;
+    font-size: 3vh;
   }
-  .sideNav{
-    font-size:1vh;
-
+}
+@media only screen and (max-width: 303px)  {
+  .button10, .button30, .button60 {
+    font-size: 2vh;
   }
 }
  .hidden {
@@ -574,8 +570,7 @@ h3{
 .openbtn:hover {
   background-color: #444 ;
 }
-main{
-  padding-top: 110%;
+.main{
   margin-left: 0%;
   margin-right: 0%;
 }
@@ -601,4 +596,6 @@ body{
 
 .copyright {
   padding-top: 100px;
+  padding-bottom: 50px;
+  text-align: center;
 }
