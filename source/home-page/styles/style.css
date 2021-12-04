@@ -573,6 +573,7 @@ h3{
 .main{
   margin-left: 0%;
   margin-right: 0%;
+  padding-bottom: 15vh;
 }
 body{
   display: grid;
@@ -580,8 +581,8 @@ body{
 .container{
   display:flex;
   flex-direction: row;
-  padding-right: 10vh;
-  padding-left: 25vh;
+  padding-right: 5vh;
+  padding-left: 5vh;
   text-align: center;
 }
 .slide {
@@ -595,7 +596,8 @@ body{
  }
 
 .copyright {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
+  background-color: #b90c0c;
 }
