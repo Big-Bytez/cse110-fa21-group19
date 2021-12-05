@@ -117,7 +117,7 @@ class IndividualCustom extends HTMLElement {
             top: 0;
             font-size: calc(1.25vw);
             width: calc(60vw);
-            margin-left: calc(10vw);
+            margin-left: calc(7.5vw);;
             /* color: red; */
             background-color: rgb(235, 103, 94);
         }
@@ -203,11 +203,11 @@ class IndividualCustom extends HTMLElement {
             justify-self: left;
           }
           p {
-            font-family: "'Varela Round', sans-serif;
+            font-family: 'Varela Round', sans-serif;
           }
 
           li {
-              font-family: 'Varela Round', sans-serif;
+            font-family: 'Varela Round', sans-serif;
           }
 
           h2 {
