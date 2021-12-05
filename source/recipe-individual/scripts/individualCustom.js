@@ -29,7 +29,7 @@ class IndividualCustom extends HTMLElement {
             /* top: calc(3rem); */
             margin-top: calc(4rem);
             margin-left: calc(7.5vw); /* revert back to 17.5vw once we put side bar back*/
-            background-color: #b90c0c
+            background-color: #b90c0c;
             color: white;
         }
         
