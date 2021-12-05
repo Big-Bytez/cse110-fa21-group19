@@ -265,7 +265,6 @@ class IndividualCustom extends HTMLElement {
         function showSnackbar(id) {
             // Get the snackbar DIV
             var snackbar = document.getElementById(id);
-            console.log(snackbar);
             // Add the "show" class to DIV
             snackbar.className = "show";
           
