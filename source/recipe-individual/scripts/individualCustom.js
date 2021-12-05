@@ -29,7 +29,8 @@ class IndividualCustom extends HTMLElement {
             /* top: calc(3rem); */
             margin-top: calc(4rem);
             margin-left: calc(7.5vw); /* revert back to 17.5vw once we put side bar back*/
-            background-color: rgb(235, 103, 94)
+            background-color: #b90c0c
+            color: white;
         }
         
         .image-box h1 {
@@ -118,8 +119,8 @@ class IndividualCustom extends HTMLElement {
             font-size: calc(1.25vw);
             width: calc(60vw);
             margin-left: calc(7.5vw);;
-            /* color: red; */
-            background-color: rgb(235, 103, 94);
+            color: white;
+            background-color: #b90c0c;
         }
         
         .directions-text h2 {
