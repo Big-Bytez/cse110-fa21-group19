@@ -34,9 +34,9 @@ class IndividualCustom extends HTMLElement {
         }
         
         .image-box h1 {
-            font-size: 2em;
+            font-size: calc(4vmax);
             font-family: 'Varela Round', sans-serif;
-            color: color:rgb(58, 3, 3);
+            color: rgb(210, 210, 210);
         }
 
         .image-box h2 {
@@ -108,6 +108,7 @@ class IndividualCustom extends HTMLElement {
         .essay-text h2 {
             text-align: center;
             font-family: 'Varela Round', sans-serif;
+            color: rgb(210, 210, 210);
         }
         
         .directions-text {
@@ -121,10 +122,12 @@ class IndividualCustom extends HTMLElement {
             margin-left: calc(7.5vw);;
             color: white;
             background-color: #b90c0c;
+            padding_bottom: 1px;
         }
         
         .directions-text h2 {
             text-align: center;
+            color: rgb(210, 210, 210);
         }
         
         .ratings-box {
