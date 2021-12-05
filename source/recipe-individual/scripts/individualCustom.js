@@ -34,12 +34,12 @@ class IndividualCustom extends HTMLElement {
         
         .image-box h1 {
             font-size: calc(2.75vw);
-            font-family: "Abril Fatface", cursive;
+            font-family: 'Varela Round', sans-serif;
             color: color:rgb(58, 3, 3);
         }
 
         .image-box h2 {
-            font-family: "Abril Fatface", cursive;
+            font-family: "'Varela Round', sans-serif;
             color:rgb(92, 4, 4);
         }
         
@@ -99,14 +99,14 @@ class IndividualCustom extends HTMLElement {
             /* left: 20vw; */
             top: 0;
             font-size: calc(1.25vw);
-            background-color: rgb(235, 103, 94);
+            background-color: #b90c0c;
             padding: 1px;
-            /* color: red; */
+            color: white; 
         }
         
         .essay-text h2 {
             text-align: center;
-            font-family: "Abril Fatface", cursive;
+            font-family: 'Varela Round', sans-serif;
         }
         
         .directions-text {
@@ -188,7 +188,7 @@ class IndividualCustom extends HTMLElement {
             font-style: oblique;
           }
           h4{
-            font-family: "Abril Fatface", cursive;
+            font-family: 'Varela Round', sans-serif;
             font-size: 5vh;
             text-decoration: wavy;
             color: black;
@@ -198,20 +198,20 @@ class IndividualCustom extends HTMLElement {
             padding-top: 0%;
           }
           h3{
-            font-family: "Abril Fatface", cursive;
+            font-family: 'Varela Round', sans-serif;
             width: 8vw;
             justify-self: left;
           }
           p {
-            font-family: "Abril Fatface", cursive;
+            font-family: "'Varela Round', sans-serif;
           }
 
           li {
-              font-family: "Abril Fatface", cursive;
+              font-family: 'Varela Round', sans-serif;
           }
 
           h2 {
-            font-family: "Abril Fatface", cursive;
+            font-family: 'Varela Round', sans-serif;
           }
 
           a, 
