@@ -122,7 +122,7 @@ class IndividualCustom extends HTMLElement {
             margin-left: calc(7.5vw);;
             color: white;
             background-color: #b90c0c;
-            padding_bottom: 1px;
+            padding-bottom: 1px;
         }
         
         .directions-text h2 {
