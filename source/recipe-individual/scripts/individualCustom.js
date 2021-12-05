@@ -34,7 +34,7 @@ class IndividualCustom extends HTMLElement {
         }
         
         .image-box h1 {
-            font-size: calc(2.75vw);
+            font-size: 2em;
             font-family: 'Varela Round', sans-serif;
             color: color:rgb(58, 3, 3);
         }
