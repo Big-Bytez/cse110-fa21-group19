@@ -164,7 +164,7 @@ class IndividualCustom extends HTMLElement {
             position: absolute;
             justify-self: right;
             margin-right: 0vw;
-            margin-left: 85vw;
+            margin-left: 82vw;
             top: 1em;
             background-color:none;
           }
