@@ -222,7 +222,62 @@ class IndividualCustom extends HTMLElement {
           a label {
             cursor: pointer;
           }
+          img:hover {
+            color: rgba(255, 255, 255, 1);
+            box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+          }
+          #unfavNotif {
+            visibility: hidden; /* Hidden by default. Visible on click */
+            min-width: 250px; /* Set a default minimum width */
+            margin-left: -125px; /* Divide value of min-width by 2 */
+            background-color: #333; /* Black background color */
+            color: #fff; /* White text color */
+            text-align: center; /* Centered text */
+            border-radius: 2px; /* Rounded borders */
+            padding: 16px; /* Padding */
+            position: fixed; /* Sit on top of the screen */
+            z-index: 1; /* Add a z-index if needed */
+            left: 50%; /* Center the snackbar */
+            bottom: 30px; /* 30px from the bottom */
+          }
+          #favNotif.show,
+          #unfavNotif.show {
+              visibility : visible;
+              -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+              animation: fadein 0.5s, fadeout 0.5s 2.5s;
+          }
+          @-webkit-keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+          }
+          
+          @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+          }
+          
+          @-webkit-keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+          }
+          
+          @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+          }
+
         `;
+        /*Adjusted W3Schools showSnackbar to show multiple different snackbars depending on id*/
+        function showSnackbar(id) {
+            // Get the snackbar DIV
+            var snackbar = document.getElementById(id);
+            // Add the "show" class to DIV
+            snackbar.className = "show";
+          
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+        } 
+
         function removeRecipe(node){
             localStorage.removeItem(node);
         }
@@ -273,6 +328,14 @@ class IndividualCustom extends HTMLElement {
         favorite.setAttribute("class", 'favorite');
         favorite.setAttribute("id", 'favorite');
         const favImage = document.createElement("img");
+        const snackbarFav = document.createElement("div");
+        document.body.appendChild(snackbarFav);
+        snackbarFav.setAttribute("id", "favNotif");
+        snackbarFav.innerHTML = "Recipe Favorited!";
+        const snackbarUnfav = document.createElement("div");
+        snackbarUnfav.setAttribute("id", "unfavNotif");
+        snackbarUnfav.innerHTML = "Recipe Unfavorited!";
+        document.body.appendChild(snackbarUnfav);
         if(localStorage.getItem(data.title) == null){
             favImage.setAttribute("src", "images/favorite.png");
         }else{
@@ -288,11 +351,11 @@ class IndividualCustom extends HTMLElement {
                 localStorage.setItem(data.title, JSON.stringify(thumbnail))
                 console.log(localStorage);
                 favImage.setAttribute("src", "images/unfavorite.png");
-                alert("Recipe favorited!");
+                showSnackbar("favNotif");
             }else {
                 favImage.setAttribute("src", "images/favorite.png");
-                alert("Recipe unfavorited!");  
                 removeRecipe(data.title);
+                showSnackbar("unfavNotif");
             }
         });
         const favoriteDiv = document.createElement("div");
