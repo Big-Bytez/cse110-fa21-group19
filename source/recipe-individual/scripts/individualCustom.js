@@ -47,17 +47,18 @@ class IndividualCustom extends HTMLElement {
             /* top: calc(3rem); */
             margin-top: calc(4rem);
             margin-left: calc(7.5vw); /* revert back to 17.5vw once we put side bar back*/
-            background-color: rgb(235, 103, 94)
+            background-color: #b90c0c;
+            color: white;
         }
         
         .image-box h1 {
-            font-size: calc(2.75vw);
-            font-family: "Abril Fatface", cursive;
-            color: color:rgb(58, 3, 3);
+            font-size: calc(4vmax);
+            font-family: 'Varela Round', sans-serif;
+            color: rgb(210, 210, 210);
         }
 
         .image-box h2 {
-            font-family: "Abril Fatface", cursive;
+            font-family: "'Varela Round', sans-serif;
             color:rgb(92, 4, 4);
         }
         
@@ -117,14 +118,15 @@ class IndividualCustom extends HTMLElement {
             /* left: 20vw; */
             top: 0;
             font-size: calc(1.25vw);
-            background-color: rgb(235, 103, 94);
+            background-color: #b90c0c;
             padding: 1px;
-            /* color: red; */
+            color: white; 
         }
         
         .essay-text h2 {
             text-align: center;
-            font-family: "Abril Fatface", cursive;
+            font-family: 'Varela Round', sans-serif;
+            color: rgb(210, 210, 210);
         }
         
         .directions-text {
@@ -135,13 +137,15 @@ class IndividualCustom extends HTMLElement {
             top: 0;
             font-size: calc(1.25vw);
             width: calc(60vw);
-            margin-left: calc(10vw);
-            /* color: red; */
-            background-color: rgb(235, 103, 94);
+            margin-left: calc(7.5vw);;
+            color: white;
+            background-color: #b90c0c;
+            padding-bottom: 1px;
         }
         
         .directions-text h2 {
             text-align: center;
+            color: rgb(210, 210, 210);
         }
         
         .ratings-box {
@@ -178,8 +182,8 @@ class IndividualCustom extends HTMLElement {
             position: absolute;
             justify-self: right;
             margin-right: 0vw;
-            margin-left: 88%;
-            padding-left: 3em;
+            margin-left: 82vw;
+            padding_left: 3em;
             top: 1em;
             background-color:none;
           }
@@ -206,7 +210,7 @@ class IndividualCustom extends HTMLElement {
             font-style: oblique;
           }
           h4{
-            font-family: "Abril Fatface", cursive;
+            font-family: 'Varela Round', sans-serif;
             font-size: 5vh;
             text-decoration: wavy;
             color: black;
@@ -216,13 +220,20 @@ class IndividualCustom extends HTMLElement {
             padding-top: 0%;
           }
           h3{
-            font-family: "Abril Fatface", cursive;
+            font-family: 'Varela Round', sans-serif;
             width: 8vw;
             justify-self: left;
           }
+          p {
+            font-family: 'Varela Round', sans-serif;
+          }
+
+          li {
+            font-family: 'Varela Round', sans-serif;
+          }
 
           h2 {
-            font-family: "Abril Fatface", cursive;
+            font-family: 'Varela Round', sans-serif;
           }
 
           a, 
