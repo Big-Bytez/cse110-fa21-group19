@@ -262,33 +262,42 @@ class IndividualCustom extends HTMLElement {
         recipeTitle.innerHTML = data.title;
         const cookTime = document.createElement("h2");
         cookTime.innerHTML = data.readyInMinutes + "min";
-        let timer = document.createElement("button");
-        timer.setAttribute("id", "safeTimerDisplay");
+        let timer = document.createElement("h2");
+        // timer.setAttribute("id", "safeTimerDisplay");
         timer.textContent = data.readyInMinutes + ":00";
-        let start = true;
+        let start = false;
         let startTime = data.readyInMinutes*60;
-        timer.addEventListener("click", function() {
-            console.log(start);
+        const startButton = document.createElement("button");
+        const pauseButton = document.createElement("button");
+        startButton.textContent = 'Start';
+        pauseButton.textContent = 'Pause';
+        let timed = startTime, minutes, seconds;
+        setInterval(function () {
             if(start) {
-                start = false;
-                let timed = startTime, minutes, seconds;
-                setInterval(function () {
-                    minutes = parseInt(timed / 60, 10)
-                    seconds = parseInt(timed % 60, 10);
-            
-                    minutes = minutes < 10 ? "0" + minutes : minutes;
-                    seconds = seconds < 10 ? "0" + seconds : seconds;
-            
-                    timer.textContent = minutes + ":" + seconds;
-            
-                    if (--timed < 0) {
-                        timed = 0;
-                        // timer = duration; // uncomment this line to reset timer automatically after reaching 0
-                    }
-                    startTime--;
-                }, 1000);
+                minutes = parseInt(timed / 60, 10)
+                seconds = parseInt(timed % 60, 10);
+        
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+        
+                timer.textContent = minutes + ":" + seconds;
+        
+                if (--timed < 0) {
+                    timed = 0;
+                    // timer = duration; // uncomment this line to reset timer automatically after reaching 0
+                }
+                startTime--;
             }
+        }, 1000);
+        startButton.addEventListener("click", function(e) {
+            e.preventDefault();
+            start = true;
         });
+        pauseButton.addEventListener("click", function(e) {
+            e.preventDefault();
+            start = false;
+        });
+        cookTime.setAttribute("font-size", "7%");
         const description = document.createElement("p");
         description.innerHTML = data.summary;
         const summaryLinks = description.querySelectorAll("a");
@@ -321,8 +330,8 @@ class IndividualCustom extends HTMLElement {
         }else{
             favImage.setAttribute("src", "images/unfavorite.png");
         }
-        favImage.setAttribute("height", "70vh");
-        favImage.setAttribute("widht", "100vw");
+        favImage.setAttribute("height", "7%");
+        favImage.setAttribute("width", "10%");
         favorite.appendChild(favImage);
         favorite.addEventListener("click", function() {
             if(localStorage.getItem(data.title) == null){
@@ -343,6 +352,8 @@ class IndividualCustom extends HTMLElement {
         topMiddleContainer.appendChild(recipeTitle);
         topMiddleContainer.appendChild(cookTime);
         topMiddleContainer.appendChild(timer);
+        topMiddleContainer.appendChild(startButton);
+        topMiddleContainer.appendChild(pauseButton);
         topMiddleContainer.appendChild(description);
         ratingBox.appendChild(starsDiv);
         ratingBox.appendChild(ratingsDiv);
@@ -356,10 +367,53 @@ class IndividualCustom extends HTMLElement {
         const instructions = document.createElement("ul");
         const instructionsArray = data.analyzedInstructions[0].steps;
         for(var i = 0; i < instructionsArray.length; i++) {
-            console.log(instructionsArray[i].step);
+            console.log(instructionsArray[i]);
             const single = document.createElement("li");
             single.innerHTML = instructionsArray[i].step;
-            instructions.appendChild(single);
+            if(instructionsArray[i].length) {
+                let timer1 = document.createElement("p");
+                timer1.textContent = instructionsArray[i].length.number + ":00";
+                let start1 = false;
+                let startTime1 = instructionsArray[i].length.number*60;
+                // timer.setAttribute("id", "safeTimerDisplay");
+                const startButton1 = document.createElement("button");
+                const pauseButton1 = document.createElement("button");
+                startButton1.textContent = 'Start';
+                pauseButton1.textContent = 'Pause';
+                let timed1 = startTime1, minutes1, seconds1;
+                setInterval(function () {
+                    if(start1) {
+                        minutes1 = parseInt(timed1 / 60, 10)
+                        seconds1 = parseInt(timed1 % 60, 10);
+                
+                        minutes1 = minutes1 < 10 ? "0" + minutes1 : minutes1;
+                        seconds1 = seconds1 < 10 ? "0" + seconds1 : seconds1;
+                
+                        timer1.textContent = minutes1 + ":" + seconds1;
+                
+                        if (--timed1 < 0) {
+                            timed1 = 0;
+                            // timer = duration; // uncomment this line to reset timer automatically after reaching 0
+                        }
+                        startTime1--;
+                    }
+                }, 1000);
+                startButton1.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    start1 = true;
+                });
+                pauseButton1.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    start1 = false;
+                });
+                instructions.appendChild(single);
+                instructions.appendChild(timer1);  
+                instructions.appendChild(startButton1);
+                instructions.appendChild(pauseButton1);    
+            }
+            else {
+                instructions.appendChild(single);
+            }
         }
         bottomMidContainer.appendChild(instructionsHeader);
         bottomMidContainer.appendChild(instructions);
