@@ -21,15 +21,18 @@ body {
 
 #timeSelectBox {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: baseline;
 }
 
 #timeSelection {
   display: flex;
-  background-color: red;
+  background-color: #b90c0c;
   width: auto;
   align-items: center;
+  padding: 0 1vw 0 1vw;
+  margin: 1vw 0 1vw 0;
 }
 
 h2 {
