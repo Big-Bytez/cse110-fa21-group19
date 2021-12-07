@@ -84,7 +84,7 @@ function createRecipeCards(){
     }
 }
 function renewRecipeByTime(){
-    let sidebar = document.querySelector("#timeSelectBox");
+    let sidebar = document.querySelector("#timeSelection");
     sidebar.addEventListener("change",function(e){
         let time = e.target.getAttribute("value");;
 

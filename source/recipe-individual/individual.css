@@ -144,12 +144,18 @@ h2{
   }
   .user-portal{
     position: absolute;
-    justify-self: right;
+    justify-self: end;
     margin-right: 0vw;
-    margin-left: 88%;
-    padding-left: 3em;
+    margin-left: 88.5vw;
     top: 1em;
-    background-color:none;
+    background-color: none;
+  }
+  #user {
+    padding-left: 2vw;
+  }
+  .cookbook {
+    font-size: 100%;
+    font-family: "Varela Round", sans-serif;
   }
   .logoImg {
    justify-items: end;
