@@ -231,19 +231,8 @@ class IndividualCustom extends HTMLElement {
             justify-self: left;
           }
           .timer{
-            order-radius: 70%;
-            border: none;
-            color: white;
-            background: #b90c0c;
-            width: 5em;
-            height: 5em;
-            text-align: center;
-            align-self: center;
-            text-decoration: none;
-            cursor: pointer;
-            display: inline-block;
-            font-size: 8.8vh;
-            box-shadow: 0 0.5em 0.2em rgb(0 0 0 / 20%);
+            font-size: 5vh;
+            font-family: 'Varela Round', sans-serif;
           }
           p {
             font-family: 'Varela Round', sans-serif;
