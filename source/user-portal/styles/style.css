@@ -106,6 +106,29 @@ form {
   align-items: center;
 }
 
+#searchRecipe {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  height: auto;
+  width: 40vw;
+}
+
+#searchRecipeInput {
+  color: black;
+  border: #000;
+  border-style: solid;
+  margin: 0;
+  width: 100%;
+}
+
+input[type="text"]#searchRecipeInput::-webkit-input-placeholder {
+  color: black;
+}
+
 input[type="search"] {
   all: unset;
   font: 16px system-ui;
