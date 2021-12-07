@@ -196,12 +196,20 @@
 }
 
 .user-portal{
-  justify-self: right;
+  position: absolute;
+  justify-self: end;
   margin-right: 0vw;
-  margin-left: 87%;
-  padding-left: 3em;
+  margin-left: 88.5vw;
   top: 1em;
   background-color: none;
+}
+
+#user {
+  padding-left: 2vw;
+}
+
+.cookbook {
+  font-size: 100%;
 }
 
 .shuffle:hover{
