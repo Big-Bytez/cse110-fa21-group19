@@ -47,14 +47,16 @@ class IndividualCustom extends HTMLElement {
             /* top: calc(3rem); */
             margin-top: calc(4rem);
             margin-left: calc(7.5vw); /* revert back to 17.5vw once we put side bar back*/
-            background-color: #b90c0c;
-            color: white;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #b90c0c;
+            border-radius: 1em;
         }
         
         .image-box h1 {
             font-size: calc(4vmax);
             font-family: 'Varela Round', sans-serif;
-            color: rgb(210, 210, 210);
+            color: #b90c0c;
         }
 
         .image-box h2 {
@@ -118,15 +120,17 @@ class IndividualCustom extends HTMLElement {
             /* left: 20vw; */
             top: 0;
             font-size: calc(1.25vw);
-            background-color: #b90c0c;
             padding: 1px;
-            color: white; 
+            border-style: solid;
+            border-width: 2px;
+            border-color: #b90c0c;
+            border-radius: 1em;
         }
         
         .essay-text h2 {
             text-align: center;
             font-family: 'Varela Round', sans-serif;
-            color: rgb(210, 210, 210);
+            color: #b90c0c;
         }
         
         .directions-text {
@@ -138,14 +142,16 @@ class IndividualCustom extends HTMLElement {
             font-size: calc(1.25vw);
             width: calc(60vw);
             margin-left: calc(7.5vw);;
-            color: white;
-            background-color: #b90c0c;
             padding-bottom: 1px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #b90c0c;
+            border-radius: 1em;
         }
         
         .directions-text h2 {
             text-align: center;
-            color: rgb(210, 210, 210);
+            color: #b90c0c;
         }
         
         .ratings-box {
