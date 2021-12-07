@@ -21,15 +21,18 @@ body {
 
 #timeSelectBox {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: baseline;
 }
 
 #timeSelection {
   display: flex;
-  background-color: red;
+  background-color: #b90c0c;
   width: auto;
   align-items: center;
+  padding: 0 1vw 0 1vw;
+  margin: 1vw 0 1vw 0;
 }
 
 h2 {
@@ -101,6 +104,29 @@ form {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+#searchRecipe {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  height: auto;
+  width: 40vw;
+}
+
+#searchRecipeInput {
+  color: black;
+  border: #000;
+  border-style: solid;
+  margin: 0;
+  width: 100%;
+}
+
+input[type="text"]#searchRecipeInput::-webkit-input-placeholder {
+  color: black;
 }
 
 input[type="search"] {
