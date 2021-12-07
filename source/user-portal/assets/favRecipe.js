@@ -30,7 +30,7 @@ class FavRecipe extends HTMLElement {
             }
             p {
                 font-family: 'Varela Round', sans-serif;
-                font-size: 2.5vh;
+                font-size: 100%;
                 color: black !important;
                 margin-top: 20
                 margin-left: 15px;
@@ -110,7 +110,7 @@ class FavRecipe extends HTMLElement {
             recipeImg.setAttribute("src", 'images/sadburger.gif');
 
             // Adding Time
-            timeText.nodeValue = "0";
+            timeText.nodeValue = "0 min";
             timeNumb.appendChild(timeText);
         }
         else{
@@ -127,7 +127,7 @@ class FavRecipe extends HTMLElement {
 
             // Adding Time
             value = searchForKey(json, "totalTime");
-            timeText.nodeValue = value;
+            timeText.nodeValue = value + " min";
             timeNumb.appendChild(timeText);
 
             link = document.createElement("a")

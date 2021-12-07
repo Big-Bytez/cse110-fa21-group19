@@ -132,6 +132,7 @@ function removeFilterButton(){
   window.location.href = window.location.href.substring(0, window.location.href.indexOf('&'));
 }
 
+
 function showMore(){
   let recipies = document.querySelector("main")
   let matches = recipies.querySelectorAll('search-recipe[style*="display: none"]');
@@ -144,7 +145,18 @@ function showMore(){
   }
   else{
     /*
-      setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+      if no more recipies do nothing;
     */
   }
   }
+
+document.getElementsByClassName("shuffle")[0].addEventListener('click', getRandom());
+
+
+async function getRandom(){
+ let randomRecipe = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=b52c376255a144f789aa106c0c100c38&number=1&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
+ console.log(randomRecipe.recipes.length)
+ console.log(randomRecipe.recipes[0].id)
+ document.getElementsByClassName("shuffle")[0].querySelector('a').href = `../recipe-individual/index.html?${randomRecipe.recipes[0].id}`;
+}
+

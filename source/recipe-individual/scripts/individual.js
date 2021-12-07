@@ -20,7 +20,6 @@ async function fetchIndividualRecipe(id) {
 }
 
 window.onload = async function(){
-    console.log("here");
   let questionLocation = window.location.href.indexOf("?");
   if (questionLocation < 0 ){
     return;
@@ -33,5 +32,15 @@ window.onload = async function(){
   let page =document.createElement("recipe-individual");
   page.data = result;
   document.querySelector("main").append(page);
+}
+
+document.getElementsByClassName("shuffle")[0].addEventListener('click', getRandom());
+
+
+async function getRandom(){
+ let randomRecipe = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=b52c376255a144f789aa106c0c100c38&number=1&maxReadyTime=30&addRecipeInformation=True`).then((response) => response.json());
+ console.log(randomRecipe.recipes.length)
+ console.log(randomRecipe.recipes[0].id)
+ document.getElementsByClassName("shuffle")[0].querySelector('a').href = `../recipe-individual/index.html?${randomRecipe.recipes[0].id}`;
 }
   

@@ -22,82 +22,78 @@
 </head>
 
 <body>
-  <searchbar id= "search-bar">
-    <form id="form" role="search" onsubmit="let query = document.getElementById('query').value;
-    if (query == ''){
+  <header>
+    <searchbar id= "search-bar">
+      <form id="form" role="search" onsubmit="let query = document.getElementById('query').value;
+      if (query == ''){
+        return false;
+      }
+      window.location.href= '../search_page/?titleMatch=' + query;
       return false;
-    }
-  window.location.href= '../search_page/?titleMatch=' + query;
-  return false;
-      ">
-    <input type="search" id="query" name="q"
-     placeholder="No limit? Search for recipes here"
-     aria-label="Search through site content">
-         <!--JS TO DO: Implement function to read input and navigate to filtered feed-->
-    <button type = "submit" id="submit" > <xml version="1.0"> <svg fill="#fa314a" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"/></svg><a href="../search-page/index.html">  </a></button>
-    </form>
-  </searchbar>
-<br><br><br><br><br>
+        ">
+      <input type="search" id="query" name="q"
+       placeholder="No limit? Search for recipes here"
+       aria-label="Search through site content">
+           <!--JS TO DO: Implement function to read input and navigate to filtered feed-->
+      <button type = "submit" id="submit" > <xml version="1.0"> <svg fill="#fa314a" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"/></svg><a href="../search-page/index.html">  </a></button>
+      </form>
+    </searchbar>
+    
+  
+    <div class = logo>
+      <a class=logoImg href="../home-page/index.html">
+        <img src="images/logo.png" alt="logo" width=60 height =60 title= "QuickBytes"></img>
+      <div class = logoText>
+        <h4>Quick Bytes</h4>
+      </div>
+    </a>
+    </div>
+    <!--<div class = shuffle>
+    <a href="">
+      <img src="images\shuffle.png" alt="shuffle-button" width=45vw height=45vh title="Random-Recipe">
+    </a>
+    </div>
+    -->
+    <div class = "user-portal">
+      <a href="#top">
+        <img src="images\user-image.png" id="user" alt="user" width=60vw height =60vh title= "User-Portal"></img>
+        <p class="cookbook">Favorited Recipes!</p>
+      </a>
+    </div>
+  </header>
+  
+<br>
 <div class="recipe-box">
-  <h2>Favorited Recipes:</h2>
-  <recipes>
+  <div id="timeSelectBox">
+    <h2>Favorited Recipes:</h2>
+    <div class="search-keyword">
+      <form>
+        <input type="search" placeholder="Search favorites by keyword">
+        <button type="submit" id="fav-submit"> <xml version="1.0"> <svg fill="#fa314a" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 9 2 C 5.1458514 2 2 5.1458514 2 9 C 2 12.854149 5.1458514 16 9 16 C 10.747998 16 12.345009 15.348024 13.574219 14.28125 L 14 14.707031 L 14 16 L 20 22 L 22 20 L 16 14 L 14.707031 14 L 14.28125 13.574219 C 15.348024 12.345009 16 10.747998 16 9 C 16 5.1458514 12.854149 2 9 2 z M 9 4 C 11.773268 4 14 6.2267316 14 9 C 14 11.773268 11.773268 14 9 14 C 6.2267316 14 4 11.773268 4 9 C 4 6.2267316 6.2267316 4 9 4 z"/></svg></button>
+      </form>
+    </div>
+      <form id="timeSelection">
+  
+        <input type="radio" id="10" name="time" value="10"><br>
+        <label for="10"> &lt10 mins</label><br>
+  
+        <input type="radio" id="30" name="time" value="30"><br>
+        <label for="30"> &lt30 mins</label><br>
+  
+        <input type="radio" id="60" name="time" value="60"><br>
+        <label for="60"> &lt60 mins</label><br>
+  
+        <input type="radio" id="90" name="time" value="90"><br>
+        <label for="90"> &lt90 mins</label><br>
+  
+      </form>
+
+  </div>
+  
+  <recipes> 
   </recipes>
 </div> 
-<div class = logo>
-  <a class=logoImg href="../home-page/index.html">
-    <img src="images/logo.png" alt="logo" width=60 height =60 title= "QuickBytes"></img>
-  <div class = logoText>
-    <h4>Quick Bytes</h4>
-  </div>
-</a>
-</div>
-<!--<div class = shuffle>
-<a href="">
-  <img src="images\shuffle.png" alt="shuffle-button" width=45vw height=45vh title="Random-Recipe">
-</a>
-</div>
--->
-<div class = "user-portal">
-  <a href="#top">
-    <img src="images\user-image.png" id="user" alt="user" width=60vw height =60vh title= "User-Portal"></img>
-  </a>
-</div>
-<!--<sideBar class="vert-navigation">
-  <nav class = "sideNav">
-  </nav>
-  <nav class = "sideNav">
-  </nav>
-  <nav class = "sideNav">
-  </nav>
-  <nav class = "sideNav">
-  </nav>
-  <nav class = "sideNav">
-  </nav>
-  <nav class = "sideNav">
-  </nav>
-</sideBar>
-<!--
-<sideBar class="vert-navigation">
-  <nav class = "sideNav">
-    <a href="" title="Breakfast">Breakfast</a> 
-  </nav>
-  <nav  class = "sideNav">
-      <a href="" title="Lunch">Lunch</a> 
-  </nav>
-  <nav  class = "sideNav">
-      <a href="" title="Dinner">Dinner</a>
-    </nav>
-    <nav  class = "sideNav">
-      <a href="" title="Dessert">Dessert</a>
-    </nav>
-    <nav  class = "sideNav">
-      <a href="" title="Healthy">Healthy</a>
-    </nav>
-    <nav  class = "sideNav">
-      <a href="" title="Sides">Sides</a>
-    </nav>
-  </sideBar>
--->
+
 </body>
 
 </html>

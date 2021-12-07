@@ -21,6 +21,13 @@ h2{
 
 .image-box h1 {
     font-size: calc(2.75vw);
+    font-family: "Abril Fatface", cursive;
+    color: rgb(58, 3, 3);
+}
+
+.image-box h2 {
+    font-family: "Abril Fatface", cursive;
+    color:rgb(92, 4, 4);
 }
 
 .image-box p{
@@ -86,6 +93,7 @@ h2{
 
 .essay-text h2 {
     text-align: center;
+    font-family: "Abril Fatface", cursive;
 }
 
 .directions-text {
@@ -95,6 +103,8 @@ h2{
     /* left: 20vw; */
     top: 0;
     font-size: calc(1.25vw);
+    width: calc(60vw);
+    margin-left: calc(10vw);
     /* color: red; */
 }
 
@@ -110,7 +120,7 @@ h2{
 }
 
 .ratings-box > div {
-    flex:  auto;
+    flex: auto;
     text-align: center;
 }
 
@@ -134,12 +144,18 @@ h2{
   }
   .user-portal{
     position: absolute;
-    justify-self: right;
+    justify-self: end;
     margin-right: 0vw;
-    margin-left: 88%;
-    padding-left: 3em;
+    margin-left: 88.5vw;
     top: 1em;
-    background-color:none;
+    background-color: none;
+  }
+  #user {
+    padding-left: 2vw;
+  }
+  .cookbook {
+    font-size: 100%;
+    font-family: "Varela Round", sans-serif;
   }
   .logoImg {
    justify-items: end;
@@ -163,7 +179,7 @@ h2{
     font-style: oblique;
   }
   h4{
-    font-family: 'Abril Fatface', cursive;
+    font-family: "Abril Fatface", cursive;
     font-size: 5vh;
     text-decoration: wavy;
     color: black;
@@ -173,9 +189,20 @@ h2{
     padding-top: 0%;
   }
   h3{
-    font-family: 'Abril Fatface', cursive;
+    font-family: "Abril Fatface", cursive;
     width: 8vw;
     justify-self: left;
+  }
+  p {
+    font-family: "Abril Fatface", cursive;
+  }
+
+  li {
+      font-family: "Abril Fatface", cursive;
+  }
+
+  h2 {
+    font-family: "Abril Fatface", cursive;
   }
 
 /* Credit to W3Schools for CSS for Snackbar Notification */
@@ -217,3 +244,4 @@ h2{
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
+
