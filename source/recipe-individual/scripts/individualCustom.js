@@ -230,6 +230,21 @@ class IndividualCustom extends HTMLElement {
             width: 8vw;
             justify-self: left;
           }
+          h5{
+            order-radius: 70%;
+            border: none;
+            color: white;
+            background: #b90c0c;
+            width: 5em;
+            height: 5em;
+            text-align: center;
+            align-self: center;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 8.8vh;
+            box-shadow: 0 0.5em 0.2em rgb(0 0 0 / 20%);
+          }
           p {
             font-family: 'Varela Round', sans-serif;
           }
@@ -334,7 +349,7 @@ class IndividualCustom extends HTMLElement {
         recipeTitle.innerHTML = data.title;
         const cookTime = document.createElement("h2");
         cookTime.innerHTML = data.readyInMinutes + "min";
-        let timer = document.createElement("h2");
+        let timer = document.createElement("h5");
         // timer.setAttribute("id", "safeTimerDisplay");
         timer.textContent = data.readyInMinutes + ":00";
         let start = false;
