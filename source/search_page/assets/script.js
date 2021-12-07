@@ -26,15 +26,9 @@ let reverse = false;
 async function searchFetchRecipes(searchBar) {
   if(searchBar.includes('sort=timel')){
     searchBar = searchBar.replace("sort=timel", "sort=time");
-    let searchString = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?${searchBar}&maxReadyTime=90&addRecipeInformation=True&number=100`;
+    let searchString = `https://api.spoonacular.com/recipes/complexSearch?apiKey=1a75396eadf347a5ad84f4c37723d29f&${searchBar}&maxReadyTime=90&addRecipeInformation=True&number=100`;
     reverse = true;
-    return fetch(searchString 
-  ,{ "method": "GET",
-    "headers": {
-    "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-		"x-rapidapi-key": "b99bc80573mshf2530a05219b844p140ef0jsn891357db5296"
-    }
-  })
+    return fetch(searchString )
     .then((response) => response.json());
   }else{
     let searchString = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?${searchBar}&maxReadyTime=90&addRecipeInformation=True&number=100`;
@@ -61,9 +55,15 @@ window.onload = async function(){
   document.getElementById("loading").style.display = "none";
   
   if(reverse){
-    for(let i=resultArray.length - 1; i >= 0; i--){
+    for(let i=resultArray.length-1; i>=0; i--){
       let ele = document.createElement('search-recipe');
       ele.data = resultArray[i];
+      if(i > ((resultArray.length - 1)-9)){
+        ele.style.display=""
+      }
+      else{
+        ele.style.display = "none"
+      }
       document.querySelector("main").append(ele);
     }  
   }else{
