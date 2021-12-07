@@ -230,7 +230,7 @@ class IndividualCustom extends HTMLElement {
             width: 8vw;
             justify-self: left;
           }
-          h5{
+          .timer{
             order-radius: 70%;
             border: none;
             color: white;
@@ -349,7 +349,8 @@ class IndividualCustom extends HTMLElement {
         recipeTitle.innerHTML = data.title;
         const cookTime = document.createElement("h2");
         cookTime.innerHTML = data.readyInMinutes + "min";
-        let timer = document.createElement("h5");
+        let timer = document.createElement("div");
+        timer.setAttribute("class", "timer");
         // timer.setAttribute("id", "safeTimerDisplay");
         timer.textContent = data.readyInMinutes + ":00";
         let start = false;
