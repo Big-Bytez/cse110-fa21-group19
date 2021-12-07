@@ -70,7 +70,8 @@ function collectStorage(){
  * Create RecipeCards based on user's farvorite recipes
  */
 function createRecipeCards(){
-
+    let recipes = document.querySelector("recipes");
+    recipes.innerHTML = "";
     for(let i = 0; i < localStorage.length+1; i++){
         let card = document.createElement('fav-recipe');
         
@@ -113,7 +114,41 @@ function renewRecipeByTime(){
         }
 });
 }
+function searchFavoriteRecipe() {
+    let searchFavoriteRecipeButton = document.querySelector("#fav-submit");
+    searchFavoriteRecipeButton.addEventListener("click",function(e){
+        e.preventDefault();
+        //clear out current recipes
+        let recipes = document.querySelector("recipes");
+        recipes.innerHTML = "";
+        // split input string into array
+        let keyWord = document.querySelector("#fav-keyword").value;
+        keyWord = keyWord.split(" ");
+        // iterate each key, check if they match recipes' title in localStorage
+        
+        for(let i = 0; i < localStorage.length; i++){
+            let matchAllKey = true;
+            keyWord.forEach(key =>{
+                if(recipeData[i].toLowerCase().indexOf(key.toLowerCase()) == -1){
+                    matchAllKey = false;
+                }
+            });
+            console.log(matchAllKey);
+            if(matchAllKey){
+                let card = document.createElement('fav-recipe');
+                card.data = recipeData[i];
+                document.querySelector("recipes").appendChild(card);
+            }
+        }
+    });
+    
+    let restoreFavoriteRecipeButton = document.querySelector("#restoreAllrecipes");
+    restoreFavoriteRecipeButton.addEventListener("click",function(e){
+        e.preventDefault();
 
+        createRecipeCards();
+    });
+}
 
 async function init() {
 
@@ -123,6 +158,7 @@ async function init() {
 
     renewRecipeByTime();
     
+    searchFavoriteRecipe();
 
 
 
