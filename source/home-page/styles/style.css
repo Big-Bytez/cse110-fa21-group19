@@ -185,7 +185,7 @@ input {
   display:flex; 
   flex-direction: row;
 }
-.shuffle{
+.shuffle {
   position: absolute;
   margin-top: 3.7vh;
   margin-right: 0vw;
@@ -194,15 +194,19 @@ input {
   top: .2em;
   background-color:none;
 }
-.user-portal{
-  right:0;
+.user-portal {
+  right: 4vw;
+  justify-self: end;
   position: absolute;
   margin-right: 0vw;
-  margin-left: 148vw;
-  padding-left: 3em;
+  padding-left: 0em;
   top: 1em;
   background-color:none;
 }
+#user {
+  padding-left: 2vw;
+}
+
 .logoImg {
  position:absolute;
  justify-items: end;
@@ -395,6 +399,9 @@ h3{
   h2{
     font-size: 7vh;
   }
+  #user {
+    padding-left: 3vw;
+  }
 }
 @media only screen and (max-width: 821px)  {
   .button10, .button30, .button60 {
@@ -402,6 +409,9 @@ h3{
   }
   h2{
     font-size: 6vh;
+  }
+  #user {
+    padding-left: 5vw;
   }
 }
 @media only screen and (max-width: 705px)  {
@@ -414,6 +424,9 @@ h3{
   h4{
     margin-top: 13%;
     font-size: 4vh;
+  }
+  .user-portal {
+    right: 1vw;
   }
 }
 @media only screen and (max-width: 611px)  {
@@ -439,6 +452,12 @@ h3{
   h4{
     margin-top: 13%;
     font-size: 3vh;
+  }
+  .user-portal {
+    right: 8vw;
+  }
+  .cookbook {
+    display: none;
   }
 }
 @media only screen and (max-width: 473px)  {
@@ -600,4 +619,8 @@ body{
   padding-bottom: 50px;
   text-align: center;
   background-color: #b90c0c;
+}
+
+.cookbook {
+  font-size: 100%;
 }
