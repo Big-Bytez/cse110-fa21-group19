@@ -188,18 +188,15 @@ input {
 .shuffle {
   position: absolute;
   margin-top: 3.7vh;
-  margin-right: 0vw;
-  margin-left: 143vw;
-  padding-left: 3vw;
+  padding-left: 32vw;
+  padding-right: 0;
   top: .2em;
   background-color:none;
 }
 .user-portal {
-  right: 4vw;
-  justify-self: end;
   position: absolute;
-  margin-right: 0vw;
-  padding-left: 0em;
+  padding-left: 37.5vw;
+  padding-right: 0;
   top: 1em;
   background-color:none;
 }
