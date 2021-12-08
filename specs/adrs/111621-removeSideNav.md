@@ -1,3 +1,6 @@
+**Update(11/23):** We decided to transition away from the cuisine filter to an actual filters bar. However, rather than adding it again on all of the pages, it is kept only
+on the search page. This way, we can have the option to filter the recipes, while also not cluttering the home, recipe and user page.
+
 # Removing side nav for MVP
 
 * Status: Accepted
@@ -26,8 +29,5 @@ all of our pages.
 
 We decided to comment out the side nav for the entire page. If we were to focus our full attention on the bar, we would be ignoring the functionality of other aspects
 in our site that needed to be worked out. They were more important!
-
-**Update(11/23):** We decided to transition away from the cuisine filter to an actual filters bar. However, rather than adding it again on all of the pages, it is kept only
-on the search page. This way, we can have the option to filter the recipes, while also not cluttering the home, recipe and user page.
 
 --------------------------------------------
