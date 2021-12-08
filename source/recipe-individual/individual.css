@@ -206,6 +206,7 @@ h2{
   }
 
 /* Credit to W3Schools for CSS for Snackbar Notification */
+#timesUp,
 #favNotif,
 #unfavNotif {
   visibility: hidden; /* Hidden by default. Visible on click */
@@ -221,7 +222,7 @@ h2{
   left: 50%; /* Center the snackbar */
   bottom: 30px; /* 30px from the bottom */
 }
-
+#timesUp.show,
 #favNotif.show,
 #unfavNotif.show {
   visibility : visible;
