@@ -173,9 +173,6 @@ input {
   cursor: pointer;
  }
 
-/*  .vert-navigation:hover{
-  background: #b85454;
-}*/
 .button:active{
   color: red;
   cursor: pointer;
@@ -228,7 +225,7 @@ input {
 }
 h4{
   font-family: 'Abril Fatface', cursive;
-  font-size: 5vh;
+  font-size: 200%;
   text-decoration: wavy;
   color: black;
   margin-left: 8%;
@@ -241,64 +238,7 @@ h3{
   width: 8vw;
   justify-self: left;
 }
- /*.slider-container{
-  margin: 10vh;
-  size:5em;
-  padding-top: 180vh;
-  width: 100%;
-}
-.slider{
-  display: flex;
-  flex-direction: column;
-}
-.slider {
- position: relative;
- overflow: hidden;
- display: flex;
- text-align: center;
- flex-direction: row;
- width:66vw;
- height: 40vh
  
-}
-/*Slider Css may use later.
-.slider-button {
- position: absolute;
- top: 50%;
- transform: translateY(-50%);
- z-index: 1;
- padding: 0;
- margin: 0.5rem;
- border-radius: 50%;
- background-color: transparent;
- border: none;
- font-size: 1.5rem;
- cursor: pointer;
- transition: color 0.1s;
-}
-.slider-button:hover {
- color: rgba(0, 0, 0, 0.5);
-}
-.slider-button_previous{
- height:2em;
- width:2em;
- left:0;
- margin-left: auto;
- margin-right: auto;
- display:block;
-}
-.slider-button_next {
- right: 0;
- height:2em;
- width:2em
-}
-.slides {
- display: flex;
- transition: transform 0.5s;
- transform: translateX(calc(-100% * var(--current-slide)));
- padding-left: 2vw;
-}*/
-
 
 @media screen and (min-width: 768px) {
  .slider-button {
@@ -337,24 +277,7 @@ h3{
   padding-bottom: 4vh;
 }
 
-/* We no longer need this portion for home page, it is needed for filtered feed.
-.sort{
- display: inline-block;
- position: relative;
- padding: .3em;  
-   margin-top: .2em;  
-   margin-left: .2em;
-   margin-right: .2em;
-   margin-bottom: .2em;  
-   align-self: center;
-   background: rgba(156, 5, 5, 0.801);  
-   font-size: 1rem;  
-   color: rgb(255, 255, 255);
-   border: none;  
-   cursor: pointer; 
- width: 4em;
- height: 34px;
-}*/
+
  .vert-navigation{
     font-family: 'Varela Round', sans-serif;
     font-size: 3.2vh;
@@ -379,15 +302,7 @@ h3{
     text-justify: center;
     bottom: 0;
  }
- @media only screen and (max-width: 200px)  {
-   /*TO DO: 
-   Turn off buttons, include a input box for filtered timing
-   ensure no overlap
-   */
-.time-buttons{
-  display:none;
-}
-}
+
 
  @media only screen and (max-width: 971px)  {
   .button10, .button30, .button60 {
@@ -411,6 +326,18 @@ h3{
     padding-left: 5vw;
   }
 }
+@media only screen and (max-width: 772px)  {
+  .button10, .button30, .button60 {
+    font-size: 5vh;
+  }
+  h4{
+    margin-top: 13%;
+    font-size: 3vh;
+  }
+  .shuffle{
+    display: none;
+  }
+}
 @media only screen and (max-width: 705px)  {
   .button10, .button30, .button60 {
     font-size: 5vh;
@@ -418,24 +345,20 @@ h3{
   h2{
     font-size: 5vh;
   }
-  h4{
-    margin-top: 13%;
-    font-size: 4vh;
-  }
   .user-portal {
     right: 1vw;
   }
 }
-@media only screen and (max-width: 611px)  {
+@media only screen and (max-width: 626px)  {
   .button10, .button30, .button60 {
-    font-size: 4vh;
-  }
-  h2{
     font-size: 4vh;
   }
   h4{
     margin-top: 13%;
-    font-size: 3vh;
+    font-size: 2vh;
+  }
+  .main{
+    display: none;
   }
 }
 
@@ -444,10 +367,6 @@ h3{
     font-size: 3vh;
   }
   h2{
-    font-size: 3vh;
-  }
-  h4{
-    margin-top: 13%;
     font-size: 3vh;
   }
   .user-portal {
@@ -464,6 +383,7 @@ h3{
   h4{
     display: none;
   }
+  
 }
 @media only screen and (max-width: 445px)  {
   .button10, .button30, .button60 {
@@ -486,106 +406,7 @@ h3{
  .hidden {
    display: none;
  }
-.slider-container{
-  size:5em;
-}
-.slider{
-  display: flex;
-  flex-direction: column;
-}
-.slider {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  text-align: center;
-  flex-direction: row;
-  width:66vw
-}
-.slider-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  padding: 0;
-  margin: 0.5rem;
-  border-radius: 50%;
-  background-color: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: color 0.1s;
-}
-.slider-button:hover {
-  color: rgba(0, 0, 0, 0.5);
-}
-.slider-button_previous{
-  height:2em;
-  width:2em;
-  left:0;
-  margin-left: auto;
-  margin-right: auto;
-  display:block;
-}
-.slider-button_next {
-  right: 0;
-  height:2em;
-  width:2em
-}
-.slides {
-  display: flex;
-  transition: transform 0.5s;
-  transform: translateX(calc(-100% * var(--current-slide)));
-  padding-left: 0vw;
-}
-.slide {
-  flex: 0 0 100%;
-  padding-left:2vw ;
-}
-@media screen and (min-width: 768px) {
- .slider-button {
-   font-size: 2rem;
-   margin: 1rem;
- }
-}
-.pho{
-  width:10vw;
-  height:20vh;
-}
-.allHome{
-  display:flex;
-  flex-direction: column;
-}
-.slider-heading{
-  left:0vw;
-  padding-bottom: 4vh;
-}
 
-/* Position and style the close button (top right corner) */
-.vert-navigation .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style the button that is used to open the sidepanel */
-.openbtn {
-  position: fixed;
-  top: 12vh;
-  left: 0vw;
-  font-size: 20px ;
-  cursor: pointer ;
-  background-color: #111 ;
-  color: white ;
-  padding: 10px 15px ;
-  border: none ;
-}
-
-
-.openbtn:hover {
-  background-color: #444 ;
-}
 .main{
   margin-left: 0%;
   margin-right: 0%;
