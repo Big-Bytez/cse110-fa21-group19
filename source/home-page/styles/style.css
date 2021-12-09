@@ -184,21 +184,16 @@ input {
 }
 .shuffle {
   position: absolute;
-  margin-top: 3.7vh;
-  padding-left: 32vw;
-  padding-right: 0;
-  top: .2em;
+  right: 12vw;
+  top: 1.4em;
+  z-index: 9999;
   background-color:none;
 }
 .user-portal {
   position: absolute;
-  padding-left: 37.5vw;
-  padding-right: 0;
+  right: 4vw;
   top: 1em;
   background-color:none;
-}
-#user {
-  padding-left: 2vw;
 }
 
 .logoImg {
@@ -311,9 +306,6 @@ h3{
   h2{
     font-size: 7vh;
   }
-  #user {
-    padding-left: 3vw;
-  }
 }
 @media only screen and (max-width: 821px)  {
   .button10, .button30, .button60 {
@@ -321,9 +313,6 @@ h3{
   }
   h2{
     font-size: 6vh;
-  }
-  #user {
-    padding-left: 5vw;
   }
 }
 @media only screen and (max-width: 772px)  {
@@ -344,9 +333,6 @@ h3{
   }
   h2{
     font-size: 5vh;
-  }
-  .user-portal {
-    right: 1vw;
   }
 }
 @media only screen and (max-width: 626px)  {
@@ -369,10 +355,7 @@ h3{
   h2{
     font-size: 3vh;
   }
-  .user-portal {
-    right: 8vw;
-  }
-  .cookbook {
+  .button-text {
     display: none;
   }
 }
@@ -439,6 +422,3 @@ body{
   background-color: #b90c0c;
 }
 
-.cookbook {
-  font-size: 100%;
-}

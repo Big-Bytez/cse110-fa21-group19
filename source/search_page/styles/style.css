@@ -184,32 +184,23 @@ h4{
   opacity: 0.8;
 }
 
-.shuffle{
+.shuffle {
   position: absolute;
-  justify-self: right;
-  margin-top: 1em;
-  margin-right: 0vw;
-  margin-left: 80%;
-  padding-left: 3vw;
-  top: .2em;
+  right: 12vw;
+  top: 1.4em;
+  z-index: 9999;
+  background-color:none;
+}
+.user-portal {
+  position: absolute;
+  right: 4vw;
+  top: 1em;
   background-color:none;
 }
 @media only screen and (max-width: 772px)  {
   .shuffle{
     display: none;
   }
-}
-.user-portal{
-  position: absolute;
-  justify-self: end;
-  margin-right: 0vw;
-  margin-left: 88.5vw;
-  top: 1em;
-  background-color: none;
-}
-
-#user {
-  padding-left: 2vw;
 }
 
 .cookbook {
