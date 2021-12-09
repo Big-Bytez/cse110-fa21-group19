@@ -1,14 +1,14 @@
 /* style.css */
 * {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
 }
 
 @font-face {
-  font-family: 'Abril Fatface', cursive;
-  font-family: 'Varela Round', sans-serif;
-  font-family: 'Gugi', cursive;
-  font-family: 'Nosifer', cursive;
-  font-family: 'VT323', monospace;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Varela Round", sans-serif;
+  font-family: "Gugi", cursive;
+  font-family: "Nosifer", cursive;
+  font-family: "VT323", monospace;
   src: url("https://fonts.google.com/");
 }
 
@@ -19,33 +19,24 @@ body {
   background-color: #fff; /* white background */
 }
 
-body > sideBar a {
-  font-family: 'Varela Round', sans-serif;
-  color: rgb(255, 255, 255);
+#timeSelectBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+#timeSelection {
+  display: flex;
+  background-color: #b90c0c;
+  width: auto;
+  align-items: center;
+  padding: 0 1vw 0 1vw;
+  margin: 1vw 0 1vw 0;
+}
+
+h2 {
   font-size: 3vh;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
-}
-
-sideBar {
-  display: grid;
-  justify-items: begin;
-  padding-left: 0.2em;
-  position: fixed;
-  width: 5em;
-  left: 0vw;
-}
-
-.vert-navigation {
-  font-family: 'Varela Round', sans-serif;
-  font-size: 3.2vh;
-  background: #b90c0c;
-  position: absolute;
-  width: calc(8.58vw);
-  height: calc(100vh);
-  padding-top: 0%;
-  top: calc(11.6vh); /* keeps side bar from reaching logo */
-  border-radius: 10px;
 }
 
 .searchbox {
@@ -53,18 +44,11 @@ sideBar {
 }
 
 header {
-  justify-content: center;
-  align-self: center;
-  justify-items: center;
-  justify-self: center;
-  align-content: center;
-  display: inline-block;
-  padding-left: 7.5%;
-  height: 20%;
-  position: absolute;
-  top: 15vh;
-  margin-left: 4%;
+  display: flex;
+  flex-direction: row;
   width: 100%;
+  height: 20vh;
+  align-items: center;
 }
 
 body > header a:hover {
@@ -78,7 +62,7 @@ header > section {
   width: 100%;
 }
 
-input[type=text] {
+input[type="text"] {
   padding: 6px;
   margin-top: 10px;
   font-size: 17px;
@@ -122,7 +106,30 @@ form {
   align-items: center;
 }
 
-input[type=search] {
+#searchRecipe {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  height: auto;
+  width: 40vw;
+}
+
+#searchRecipeInput {
+  color: black;
+  border: #000;
+  border-style: solid;
+  margin: 0;
+  width: 100%;
+}
+
+input[type="text"]#searchRecipeInput::-webkit-input-placeholder {
+  color: black;
+}
+
+input[type="search"] {
   all: unset;
   font: 16px system-ui;
   color: rgb(255, 255, 255);
@@ -153,7 +160,7 @@ input[type=search] {
 }
 
 h3 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
 }
 
 .button:hover {
@@ -173,17 +180,17 @@ h3 {
 }
 
 .logoImg {
-  position:absolute;
+  position: absolute;
   justify-items: end;
-  padding-left: .2em;
+  padding-left: 0.2em;
   padding-right: 5em;
   top: 1.2em;
   width: 8%;
   left: 0vw;
- }
+}
 
- .logoText {
-  position:absolute;
+.logoText {
+  position: absolute;
   height: 10em;
   width: 10em;
   justify-items: begin;
@@ -191,12 +198,12 @@ h3 {
   padding-right: 8em;
   top: 0em;
   margin-top: 0%;
-  padding-top: .2%;
-  left: 0vw ;
+  padding-top: 0.2%;
+  left: 0vw;
   font-style: oblique;
 }
-h4{
-  font-family: 'Abril Fatface', cursive;
+h4 {
+  font-family: "Abril Fatface", cursive;
   font-size: 5vh;
   text-decoration: wavy;
   color: black;
@@ -219,12 +226,15 @@ h4{
 
 .user-portal {
   position: absolute;
-  justify-self: left;
+  justify-self: end;
   margin-right: 0vw;
-  margin-left: calc(88.5vw);
-  padding-left: calc(3vw);
+  margin-left: 88.5vw;
   top: 1em;
   background-color: none;
+}
+
+#user {
+  padding-left: 2vw;
 }
 
 .user-portal:hover {
@@ -276,17 +286,17 @@ recipes {
   background-color: white; /* white background */
 }
 
-
 .recipe-box {
   background-color: white;
 }
 
-.recipe-box > h2 {
+.recipe-box h2 {
   align-items: center;
   padding-bottom: 2vh;
+  margin-right: 1em;
 }
 
-input[type='file'] {
+input[type="file"] {
   color: transparent;
 }
 
@@ -295,20 +305,28 @@ div > h4 {
 }
 
 div > h2 {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
   font-size: 4vh;
   text-decoration: wavy;
   margin: 0;
   margin-top: calc(1vh);
 }
-@media only screen and (max-width: 656px)  {
-  h4{
+
+.cookbook {
+  font-size: 100%;
+}
+
+@media only screen and (max-width: 656px) {
+  h4 {
     margin-top: 5%;
     font-size: 3vh;
   }
+  p {
+    display: none;
+  }
 }
-@media only screen and (max-width: 473px)  {
-  h4{
+@media only screen and (max-width: 473px) {
+  h4 {
     display: none;
   }
 }

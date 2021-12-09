@@ -185,24 +185,25 @@ input {
   display:flex; 
   flex-direction: row;
 }
-.shuffle{
+.shuffle {
   position: absolute;
   margin-top: 3.7vh;
-  margin-right: 0vw;
-  margin-left: 143vw;
-  padding-left: 3vw;
+  padding-left: 32vw;
+  padding-right: 0;
   top: .2em;
   background-color:none;
 }
-.user-portal{
-  right:0;
+.user-portal {
   position: absolute;
-  margin-right: 0vw;
-  margin-left: 148vw;
-  padding-left: 3em;
+  padding-left: 37.5vw;
+  padding-right: 0;
   top: 1em;
   background-color:none;
 }
+#user {
+  padding-left: 2vw;
+}
+
 .logoImg {
  position:absolute;
  justify-items: end;
@@ -395,6 +396,9 @@ h3{
   h2{
     font-size: 7vh;
   }
+  #user {
+    padding-left: 3vw;
+  }
 }
 @media only screen and (max-width: 821px)  {
   .button10, .button30, .button60 {
@@ -402,6 +406,9 @@ h3{
   }
   h2{
     font-size: 6vh;
+  }
+  #user {
+    padding-left: 5vw;
   }
 }
 @media only screen and (max-width: 705px)  {
@@ -414,6 +421,9 @@ h3{
   h4{
     margin-top: 13%;
     font-size: 4vh;
+  }
+  .user-portal {
+    right: 1vw;
   }
 }
 @media only screen and (max-width: 611px)  {
@@ -439,6 +449,12 @@ h3{
   h4{
     margin-top: 13%;
     font-size: 3vh;
+  }
+  .user-portal {
+    right: 8vw;
+  }
+  .cookbook {
+    display: none;
   }
 }
 @media only screen and (max-width: 473px)  {
@@ -573,6 +589,7 @@ h3{
 .main{
   margin-left: 0%;
   margin-right: 0%;
+  padding-bottom: 15vh;
 }
 body{
   display: grid;
@@ -580,8 +597,8 @@ body{
 .container{
   display:flex;
   flex-direction: row;
-  padding-right: 10vh;
-  padding-left: 25vh;
+  padding-right: 5vh;
+  padding-left: 5vh;
   text-align: center;
 }
 .slide {
@@ -595,7 +612,12 @@ body{
  }
 
 .copyright {
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
+  background-color: #b90c0c;
+}
+
+.cookbook {
+  font-size: 100%;
 }

@@ -57,22 +57,29 @@ let images = {
      $('#hold_images').append("<img class='my_img' width=200 height=400 src=" + images[path] + ">"); 
  });
  */
-
+ function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+  }
+}
 
 /**
  * Make thumbnails on home page
  * @param {string} request -type of cuisine
  */
 async function makeThumbnails(request){
-  let vals = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?${request}&maxReadyTime=30&addRecipeInformation=True`
+  let vals = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?${request}&maxReadyTime=30&addRecipeInformation=True&number=20`
   ,{ "method": "GET",
     "headers": {
     "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
 		"x-rapidapi-key": "b99bc80573mshf2530a05219b844p140ef0jsn891357db5296"
     }
   }).then((response) => response.json());
+  shuffleArray(vals.results)
   for (let i = 0; i<4; i++ ) {
-      let recipe = vals.results[i];
       let ele = document.createElement("search-recipe");
       ele.data = vals.results[i];
       let place = 0

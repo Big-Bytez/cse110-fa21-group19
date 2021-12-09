@@ -63,7 +63,8 @@
     <div class = user-portal>
       <!--JS TO DO: Fill in href for user-portal, should navigate to user page-->
       <a href="../user-portal/index.html">
-        <img src="images\user-image.png" alt="user" width=60vw height =60vh title= "User-Portal"></img>
+        <img src="images\user-image.png" id="user" alt="user" width=60vw height =60vh title= "User-Portal"></img>
+        <p class="cookbook">Favorited Recipes!</p>
     </a>
     </div>
     </div>
@@ -199,13 +200,21 @@
     <button class="filter-button" onclick="removeFilterButton()">
       Remove Filters
     </button>
+
     </sideBar>
     <br><br><br><br>
     <!--<h2><center>Showing # recipes of #</center></h2>-->
     <main class="search-recipes">
-      <!-- Recipes  -->
+      <div id="loading" class="loading">
+        <h1 id = "text", style="text-align: center; color: #b90c0c; font-weight: bolder">Searching for your recipes...</h1>
+        <img id="loading-image" src="images/waiting_burger.png" alt="Loading..." />
     </main>
     <br>
+    <button class="filter-button" style= "position: absolute;
+    right: 3em; margin-top: -2em; border-radius: 5em; width: 8em; 
+    font-size: medium ;"  onclick="showMore()">
+      Load More Recipes
+    </button>
     <!--<h2><center>Page{1...}</h2>-->
 
 </body>
