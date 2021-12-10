@@ -127,7 +127,7 @@ function showMore(){
     }  
   }
   else{
-    alert("Sadly we cannot find more recipies; Try searching for something else instead!");
+    alert("Sadly we cannot find more recipes; Try searching for something else instead!");
   }
   }
 
