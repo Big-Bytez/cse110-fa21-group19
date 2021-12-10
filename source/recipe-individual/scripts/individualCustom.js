@@ -151,6 +151,7 @@
         .timerCircle {
             width: 3.5em;
             height: 3.5em;
+            font-size: 1.25vmax;
             background: #b90c0c;
             border-radius: 100%;
             visibility: visible;
@@ -170,15 +171,25 @@
             border-color: #b90c0c;
             height: 50%;
             border-radius: 1em;
+            font-size: 1.25vmax;
         }
-<<<<<<< HEAD
 
         .timerButton:hover {
             box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
         }
 
-=======
->>>>>>> main
+        .tags {
+            background: #b90c0c;
+            border-style: solid;
+            border-width: 0.1em;
+            border-color: black;
+            color: white;
+            height: 50%;
+            border-radius: 1em;
+            padding: 3px;
+            font-size: 1.25vmax;
+        }
+
         .timerDiv {
             display: flex;
             align-items: center;
@@ -251,10 +262,11 @@
           }
           p {
             font-family: 'Varela Round', sans-serif;
-            font-size: 7%;
+            font-size: 1.5vmax;
           }
           li {
             font-family: 'Varela Round', sans-serif;
+            font-size: 1.5vmax;
           }
           h2 {
             font-size: calc(1.5vmax);
@@ -313,8 +325,27 @@
             const recipeTitle = document.createElement("h1");
             recipeTitle.innerHTML = data.title;
             // show the overall time
+            const cookDiv = document.createElement("div");
+            cookDiv.setAttribute("class", "timerDiv");
             const cookTime = document.createElement("h2");
             cookTime.innerHTML = data.readyInMinutes + " min";
+            cookDiv.appendChild(cookTime);
+            if(data.cuisine) {
+                for(let i = 0; i < data.cuisine.length; i++) {
+                    const tag = document.createElement("div");
+                    tag.setAttribute("class", "tags");
+                    tag.textContent = data.cuisine[i];
+                    cookDiv.appendChild(tag);
+                }
+            }
+            if(data.diets) {
+                for(let i = 0; i < data.diets.length; i++) {
+                    const tag = document.createElement("div");
+                    tag.setAttribute("class", "tags");
+                    tag.textContent = data.diets[i];
+                    cookDiv.appendChild(tag);
+                }
+            }
             // cookTime.setAttribute("font-size", "7%");
             // creating a div for our timer
             const timerDiv = document.createElement("div");
@@ -429,7 +460,7 @@
                 const favoriteDiv = document.createElement("div");
                 favoriteDiv.appendChild(favorite);
         topMiddleContainer.appendChild(recipeTitle);
-        topMiddleContainer.appendChild(cookTime);
+        topMiddleContainer.appendChild(cookDiv);
         timerDiv.appendChild(timer);
         timerDiv.appendChild(startButton);
         timerDiv.appendChild(pauseButton);
