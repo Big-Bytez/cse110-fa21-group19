@@ -32,7 +32,11 @@ window.onload = async function(){
     return response.results;
   });
   document.getElementById("loading").style.display = "none";
-  
+  if (resultArray.length == 0) {
+    let ele = document.createElement('h1')
+    ele.innerText = "Saldy there are no recipes that meet this search criteria. Try clicking remove filters or search for something new."
+    document.querySelector('main').append(ele);
+  }
   if(reverse){
     for(let i=resultArray.length-1; i>=0; i--){
       let ele = document.createElement('search-recipe');
@@ -123,9 +127,7 @@ function showMore(){
     }  
   }
   else{
-    /*
-      if no more recipies do nothing;
-    */
+    alert("Sadly we cannot find more recipies; Try searching for something else instead!");
   }
   }
 
