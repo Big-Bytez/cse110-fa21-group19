@@ -29,11 +29,13 @@
     </div>  
   </div>
 </div>
-  <div class = shuffle>
+  <div class = "shuffle" id="shuffle" onclick="
+     window.location.href = `../recipe-individual/index.html?random`;
+  " >
     <!--JS TO DO: Fill in href for shuffle, should navigate to random recipe page-->
-    <a href="" style="text-decoration: none;">
-      <img src="images\shuffle.png" alt="shuffle-button" style= "width:45px; height:auto" title="Random-Recipe">
-      <figcaption style ="font-family: 'Abril Fatface', cursive;width: 45px; text-align: center; margin-top:5px; color:black; text-decoration: none; font-size: 60%;">SHUFFLE RECIPE</figcaption>
+    <a href = "../recipe-individual/index.html?random" style="text-decoration: none;" class="behind">
+      <img class="behind" src="images\shuffle.png" alt="shuffle-button" style= "width:45px; height:auto" title="Random-Recipe">
+      <figcaption class="behind" style ="font-family: 'Abril Fatface', cursive;width: 45px; text-align: center; margin-top:5px; color:black; text-decoration: none; font-size: 60%;">SHUFFLE RECIPE</figcaption>
     </a>
   </div>
 
