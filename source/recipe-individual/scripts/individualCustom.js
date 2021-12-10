@@ -176,6 +176,10 @@ class IndividualCustom extends HTMLElement {
             border-radius: 1em;
         }
 
+        .timerButton:hover {
+            box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+        }
+
         .timerDiv {
             display: flex;
             align-items: center;
@@ -248,6 +252,7 @@ class IndividualCustom extends HTMLElement {
           }
           p {
             font-family: 'Varela Round', sans-serif;
+            font-size: 7%;
           }
 
           li {
@@ -306,116 +311,125 @@ class IndividualCustom extends HTMLElement {
 
         const topMiddleContainer = document.createElement("div");
         topMiddleContainer.setAttribute("class", "top-container");
-        const recipeTitle = document.createElement("h1");
-        recipeTitle.innerHTML = data.title;
-        const cookTime = document.createElement("h2");
-        cookTime.innerHTML = data.readyInMinutes + " min";
-        const timerDiv = document.createElement("div");
-        timerDiv.setAttribute("class", "timerDiv");
-        let timer = document.createElement("div");
-        timer.setAttribute("class", "timerCircle");
-        // timer.setAttribute("id", "safeTimerDisplay");
-        timer.textContent = data.readyInMinutes + ":00";
-        let start = false;
-        let startTime = data.readyInMinutes*60;
-        const startButton = document.createElement("button");
-        startButton.setAttribute("class", "timerButton")
-        const pauseButton = document.createElement("button");
-        pauseButton.setAttribute("class", "timerButton");
-        startButton.textContent = 'Start';
-        pauseButton.textContent = 'Pause';
-        let timed = startTime, minutes, seconds;
-        setInterval(function () {
-            if(start) {
-                minutes = parseInt(timed / 60, 10)
-                seconds = parseInt(timed % 60, 10);
-        
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-        
-                timer.textContent = minutes + ":" + seconds;
-        
-                if (--timed < 0) {
-                    timed = 0;
-                    let alarm = new Audio('./sounds/alarm.mp3');
-                    alarm.play();
-                    timed = startTime; // uncomment this line to reset timer automatically after reaching 0
+            // recipe title
+            const recipeTitle = document.createElement("h1");
+            recipeTitle.innerHTML = data.title;
+            // show the overall time
+            const cookTime = document.createElement("h2");
+            cookTime.innerHTML = data.readyInMinutes + " min";
+            // cookTime.setAttribute("font-size", "7%");
+            // creating a div for our timer
+            const timerDiv = document.createElement("div");
+            timerDiv.setAttribute("class", "timerDiv");
+                let timer = document.createElement("div");
+                // initialize our circle for timer and it's corresponding buttons
+                timer.setAttribute("class", "timerCircle");
+                timer.textContent = data.readyInMinutes + ":00";
+                const startButton = document.createElement("button");
+                startButton.setAttribute("class", "timerButton")
+                const pauseButton = document.createElement("button");
+                pauseButton.setAttribute("class", "timerButton");
+                startButton.textContent = 'Start';
+                pauseButton.textContent = 'Pause';
+                // create our countdown function with pause and start for our timer
+                let start = false;
+                let startTime = data.readyInMinutes*60;
+                let timed = startTime, minutes, seconds;
+                setInterval(function () {
+                    if(start) {
+                        minutes = parseInt(timed / 60, 10)
+                        seconds = parseInt(timed % 60, 10);
+                
+                        minutes = minutes < 10 ? "0" + minutes : minutes;
+                        seconds = seconds < 10 ? "0" + seconds : seconds;
+                
+                        timer.textContent = minutes + ":" + seconds;
+                
+                        if (--timed < 0) {
+                            timed = 0;
+                            let alarm = new Audio('./sounds/alarm.mp3');
+                            alarm.play();
+                            timed = startTime;
+                            start = false;
+                            showSnackbar("timesUp");
+                        }
+                    }
+                }, 1000);
+                startButton.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    start = true;
+                });
+                pauseButton.addEventListener("click", function(e) {
+                    e.preventDefault();
                     start = false;
-                    showSnackbar("timesUp");
-                }
-            }
-        }, 1000);
-        startButton.addEventListener("click", function(e) {
-            e.preventDefault();
-            start = true;
-        });
-        pauseButton.addEventListener("click", function(e) {
-            e.preventDefault();
-            start = false;
-        });
-        cookTime.setAttribute("font-size", "7%");
-        const description = document.createElement("p");
-        description.innerHTML = data.summary;
-        const summaryLinks = description.querySelectorAll("a");
-        summaryLinks.forEach(
-            element => {
-                const curr = element.href;
-                console.log(curr);
-                const lastDash = curr.lastIndexOf("-");
-                element.href = `index.html?${curr.substring(lastDash+1)}`;
-        });
-        const ratingBox = document.createElement("div");
-        ratingBox.setAttribute("class", "ratings-box");
-        const starsDiv = document.createElement("div");
-        const stars = document.createElement("img");
-        const starScore = Math.round(data.spoonacularScore/20);
-        stars.setAttribute("src", `./images/${starScore}-star.svg`);
-        stars.setAttribute("class", "stars");
-        starsDiv.appendChild(stars);
-        const ratingsDiv = document.createElement("div");
-        const ratings = document.createElement("p");
-        ratings.innerHTML = data.aggregateLikes + " Likes";
-        ratingsDiv.appendChild(ratings);
-        const favorite = document.createElement("a");
-        favorite.setAttribute("class", 'favorite');
-        favorite.setAttribute("id", 'favorite');
-        const favImage = document.createElement("img");
-        const snackbarFav = document.createElement("div");
-        document.body.appendChild(snackbarFav);
-        snackbarFav.setAttribute("id", "favNotif");
-        snackbarFav.innerHTML = "Recipe Favorited!";
-        const snackbarUnfav = document.createElement("div");
-        snackbarUnfav.setAttribute("id", "unfavNotif");
-        snackbarUnfav.innerHTML = "Recipe Unfavorited!";
-        const snackbarTimer= document.createElement("div");
-        snackbarTimer.setAttribute("id", "timesUp");
-        snackbarTimer.innerHTML = "Time is Up!";
-        document.body.appendChild(snackbarTimer);
-        document.body.appendChild(snackbarUnfav);
-        if(localStorage.getItem(data.title) == null){
-            favImage.setAttribute("src", "images/favorite.png");
-        }else{
-            favImage.setAttribute("src", "images/unfavorite.png");
-        }
-        favImage.setAttribute("height", "7%");
-        favImage.setAttribute("width", "10%");
-        favorite.appendChild(favImage);
-        favorite.addEventListener("click", function() {
-            if(localStorage.getItem(data.title) == null){
-                var thumbnail = {"totalTime" : data.readyInMinutes, 
-                "title" : data.title, "id": data.id, "thumbnailUrl": data.image}
-                localStorage.setItem(data.title, JSON.stringify(thumbnail))
-                console.log(localStorage);
-                favImage.setAttribute("src", "images/unfavorite.png");
-                showSnackbar("favNotif");
-            }else {
-                favImage.setAttribute("src", "images/favorite.png");
-                removeRecipe(data.title);
-                showSnackbar("unfavNotif");
-            }
-        });
-        const favoriteDiv = document.createElement("div");
-        favoriteDiv.appendChild(favorite);
+                });
+                const snackbarTimer= document.createElement("div");
+                snackbarTimer.setAttribute("id", "timesUp");
+                snackbarTimer.innerHTML = "Time is Up!";
+                document.body.appendChild(snackbarTimer);
+            // create our description element which is simply just a paragraph
+            const description = document.createElement("p");
+            description.innerHTML = data.summary;
+                // ensure that the links properly work for our description
+                const summaryLinks = description.querySelectorAll("a");
+                summaryLinks.forEach(
+                    element => {
+                        const curr = element.href;
+                        console.log(curr);
+                        const lastDash = curr.lastIndexOf("-");
+                        element.href = `index.html?${curr.substring(lastDash+1)}`;
+                });
+            const ratingBox = document.createElement("div");
+            ratingBox.setAttribute("class", "ratings-box");
+                // create a div to hold our stars img
+                const starsDiv = document.createElement("div");
+                    const stars = document.createElement("img");
+                    const starScore = Math.round(data.spoonacularScore/20);
+                    stars.setAttribute("src", `./images/${starScore}-star.svg`);
+                    stars.setAttribute("class", "stars");
+                    starsDiv.appendChild(stars);
+                // create a div to hold our total likes count
+                const ratingsDiv = document.createElement("div");
+                    const ratings = document.createElement("p");
+                    ratings.innerHTML = data.aggregateLikes + " Likes";
+                    ratingsDiv.appendChild(ratings);
+                // create our fav button which will let us favorite the recipe
+                const favorite = document.createElement("a");
+                    favorite.setAttribute("class", 'favorite');
+                    favorite.setAttribute("id", 'favorite');
+                    const favImage = document.createElement("img");
+                    const snackbarFav = document.createElement("div");
+                    document.body.appendChild(snackbarFav);
+                    snackbarFav.setAttribute("id", "favNotif");
+                    snackbarFav.innerHTML = "Recipe Favorited!";
+                    const snackbarUnfav = document.createElement("div");
+                    snackbarUnfav.setAttribute("id", "unfavNotif");
+                    snackbarUnfav.innerHTML = "Recipe Unfavorited!";
+                    document.body.appendChild(snackbarUnfav);
+                    if(localStorage.getItem(data.title) == null){
+                        favImage.setAttribute("src", "images/favorite.png");
+                    }else{
+                        favImage.setAttribute("src", "images/unfavorite.png");
+                    }
+                    favImage.setAttribute("height", "7%");
+                    favImage.setAttribute("width", "10%");
+                    favorite.appendChild(favImage);
+                    favorite.addEventListener("click", function() {
+                        if(localStorage.getItem(data.title) == null){
+                            var thumbnail = {"totalTime" : data.readyInMinutes, 
+                            "title" : data.title, "id": data.id, "thumbnailUrl": data.image}
+                            localStorage.setItem(data.title, JSON.stringify(thumbnail))
+                            console.log(localStorage);
+                            favImage.setAttribute("src", "images/unfavorite.png");
+                            showSnackbar("favNotif");
+                        }else {
+                            favImage.setAttribute("src", "images/favorite.png");
+                            removeRecipe(data.title);
+                            showSnackbar("unfavNotif");
+                        }
+                    });
+                const favoriteDiv = document.createElement("div");
+                favoriteDiv.appendChild(favorite);
         topMiddleContainer.appendChild(recipeTitle);
         topMiddleContainer.appendChild(cookTime);
         timerDiv.appendChild(timer);
@@ -430,73 +444,74 @@ class IndividualCustom extends HTMLElement {
 
         const bottomMidContainer = document.createElement("div");
         bottomMidContainer.setAttribute("class", "directions-text");
-        const instructionsHeader = document.createElement("h2");
-        instructionsHeader.innerHTML = "Instructions";
-        const instructions = document.createElement("ul");
-        let instructionsArray = [];
-        if(data.analyzedInstructions[0]) {
-            instructionsArray = data.analyzedInstructions[0].steps;
-            for(var i = 0; i < instructionsArray.length; i++) {
-                console.log(instructionsArray[i]);
-                const single = document.createElement("li");
-                single.innerHTML = instructionsArray[i].step;
-                if(instructionsArray[i].length) {
-                    const timerDiv1 = document.createElement("div");
-                    timerDiv1.setAttribute("class", "timerDiv");
-                    let timer1 = document.createElement("div");
-                    timer1.setAttribute("class", "timerCircle");
-                    timer1.textContent = instructionsArray[i].length.number + ":00";
-                    let start1 = false;
-                    let startTime1 = instructionsArray[i].length.number*60;
-                    // timer.setAttribute("id", "safeTimerDisplay");
-                    const startButton1 = document.createElement("button");
-                    const pauseButton1 = document.createElement("button");
-                    startButton1.textContent = 'Start';
-                    startButton1.setAttribute('class', 'timerButton');
-                    pauseButton1.textContent = 'Pause';
-                    pauseButton1.setAttribute('class', 'timerButton');
-                    let timed1 = startTime1, minutes1, seconds1;
-                    setInterval(function () {
-                        if(start1) {
-                            minutes1 = parseInt(timed1 / 60, 10)
-                            seconds1 = parseInt(timed1 % 60, 10);
-                    
-                            minutes1 = minutes1 < 10 ? "0" + minutes1 : minutes1;
-                            seconds1 = seconds1 < 10 ? "0" + seconds1 : seconds1;
-                    
-                            timer1.textContent = minutes1 + ":" + seconds1;
-                    
-                            if (--timed1 < 0) {
-                                timed1 = 0;
-                                let alarm = new Audio('./sounds/alarm.mp3');
-                                alarm.play();
-                                timed1 = startTime1; // uncomment this line to reset timer automatically after reaching 0
-                                start1 = false;
-                                showSnackbar("timesUp");
+            // create our instructions header
+            const instructionsHeader = document.createElement("h2");
+            instructionsHeader.innerHTML = "Instructions";
+            // create our list of instructions, while also ensuring we do a check to know that those instructions are valid
+            const instructions = document.createElement("ol");
+            let instructionsArray = [];
+            if(data.analyzedInstructions[0]) {
+                instructionsArray = data.analyzedInstructions[0].steps;
+                for(var i = 0; i < instructionsArray.length; i++) {
+                    console.log(instructionsArray[i]);
+                    const single = document.createElement("li");
+                    single.innerHTML = instructionsArray[i].step;
+                    if(instructionsArray[i].length) {
+                        const timerDiv1 = document.createElement("div");
+                        timerDiv1.setAttribute("class", "timerDiv");
+                        let timer1 = document.createElement("div");
+                        timer1.setAttribute("class", "timerCircle");
+                        timer1.textContent = instructionsArray[i].length.number + ":00";
+                        const startButton1 = document.createElement("button");
+                        const pauseButton1 = document.createElement("button");
+                        startButton1.textContent = 'Start';
+                        startButton1.setAttribute('class', 'timerButton');
+                        pauseButton1.textContent = 'Pause';
+                        pauseButton1.setAttribute('class', 'timerButton');
+                        let start1 = false;
+                        let startTime1 = instructionsArray[i].length.number*60;
+                        let timed1 = startTime1, minutes1, seconds1;
+                        setInterval(function () {
+                            if(start1) {
+                                minutes1 = parseInt(timed1 / 60, 10)
+                                seconds1 = parseInt(timed1 % 60, 10);
+                        
+                                minutes1 = minutes1 < 10 ? "0" + minutes1 : minutes1;
+                                seconds1 = seconds1 < 10 ? "0" + seconds1 : seconds1;
+                        
+                                timer1.textContent = minutes1 + ":" + seconds1;
+                        
+                                if (--timed1 < 0) {
+                                    timed1 = 0;
+                                    let alarm = new Audio('./sounds/alarm.mp3');
+                                    alarm.play();
+                                    timed1 = startTime1; // uncomment this line to reset timer automatically after reaching 0
+                                    start1 = false;
+                                    showSnackbar("timesUp");
+                                }
                             }
-                        }
-                    }, 1000);
-                    startButton1.addEventListener("click", function(e) {
-                        e.preventDefault();
-                        start1 = true;
-                    });
-                    pauseButton1.addEventListener("click", function(e) {
-                        e.preventDefault();
-                        start1 = false;
-                    });
-                    instructions.appendChild(single);
-                    timerDiv1.appendChild(timer1);  
-                    timerDiv1.appendChild(startButton1);
-                    timerDiv1.appendChild(pauseButton1);
-                    instructions.appendChild(timerDiv1);    
+                        }, 1000);
+                        startButton1.addEventListener("click", function(e) {
+                            e.preventDefault();
+                            start1 = true;
+                        });
+                        pauseButton1.addEventListener("click", function(e) {
+                            e.preventDefault();
+                            start1 = false;
+                        });
+                        instructions.appendChild(single);
+                        timerDiv1.appendChild(timer1);  
+                        timerDiv1.appendChild(startButton1);
+                        timerDiv1.appendChild(pauseButton1);
+                        instructions.appendChild(timerDiv1);    
+                    }
+                    else {
+                        instructions.appendChild(single);
+                    }
                 }
-                else {
-                    instructions.appendChild(single);
-                }
+                bottomMidContainer.appendChild(instructionsHeader);
+                bottomMidContainer.appendChild(instructions);
             }
-            bottomMidContainer.appendChild(instructionsHeader);
-            bottomMidContainer.appendChild(instructions);
-        }
 
         container.appendChild(rightContainer);
         container.appendChild(topMiddleContainer);
