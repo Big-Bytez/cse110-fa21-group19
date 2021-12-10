@@ -136,7 +136,7 @@ h2{
   position: absolute;
   right: 12vw;
   top: 1.4em;
-  z-index: 9999;
+  z-index: 1;
   background-color:none;
 }
 .user-portal {
