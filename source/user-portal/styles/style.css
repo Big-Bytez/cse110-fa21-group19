@@ -226,17 +226,10 @@ h4 {
 
 .user-portal {
   position: absolute;
-  justify-self: end;
-  margin-right: 0vw;
-  margin-left: 88.5vw;
+  right: 4vw;
   top: 1em;
-  background-color: none;
+  background-color:none;
 }
-
-#user {
-  padding-left: 2vw;
-}
-
 .user-portal:hover {
   opacity: 0.8;
 }
