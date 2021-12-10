@@ -44,24 +44,3 @@ window.onload = async function(){
   page.data = result;
   document.querySelector("main").append(page);
 }
-
-//document.getElementsByClassName("shuffle")[0].addEventListener('click', getRandom());
-
-
-
-async function getRandom(){
-  window.location.href = `../recipe-individual/index.html?random`;
-  /*let randomRecipe = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=1&maxReadyTime=60&addRecipeInformation=True`
-  ,{ "method": "GET",
-    "headers": {
-    "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-		"x-rapidapi-key": "b99bc80573mshf2530a05219b844p140ef0jsn891357db5296"
-    }
-  }).then((response) =>{
-    console.log(response)
-  });
-  console.log(randomRecipe.recipes[0]);
-  if(document.getElementsByClassName("shuffle").id == "clicked"){
-    window.location.href = `../recipe-individual/index.html?${randomRecipe.recipes[0].id}`;*/
- }
-  
