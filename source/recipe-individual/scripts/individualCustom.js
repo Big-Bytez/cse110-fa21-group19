@@ -1,9 +1,8 @@
-
 /**
  * custom element used to display individual page
  * @extends HTMLElement 
  */
-class IndividualCustom extends HTMLElement {
+ class IndividualCustom extends HTMLElement {
     constructor() {
         super();
         let shadow = this.attachShadow({mode: "open"});
@@ -39,11 +38,10 @@ class IndividualCustom extends HTMLElement {
         }
         
         .top-container h1 {
-            font-size: calc(4vmax);
+            font-size: calc(2.5vmax);
             font-family: 'Varela Round', sans-serif;
             color: #b90c0c;
         }
-
         .top-container h2 {
             font-family: "'Varela Round', sans-serif;
             color:rgb(92, 4, 4);
@@ -90,7 +88,7 @@ class IndividualCustom extends HTMLElement {
             left: calc(79vw); */
             font-size: calc(1.25vw);
             width: calc(20vw);
-            /* margin-top: calc(4rem); */
+            margin-top: 6vh;
             /* height: 15vw; */
         }
         
@@ -150,7 +148,6 @@ class IndividualCustom extends HTMLElement {
         .stars {
             width: 20%;
         }
-
         .timerCircle {
             width: 3.5em;
             height: 3.5em;
@@ -166,7 +163,6 @@ class IndividualCustom extends HTMLElement {
             text-decoration: none !important;
             color: white;
         }
-
         .timerButton {
             background: white;
             border-style: solid;
@@ -175,11 +171,14 @@ class IndividualCustom extends HTMLElement {
             height: 50%;
             border-radius: 1em;
         }
+<<<<<<< HEAD
 
         .timerButton:hover {
             box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
         }
 
+=======
+>>>>>>> main
         .timerDiv {
             display: flex;
             align-items: center;
@@ -233,7 +232,7 @@ class IndividualCustom extends HTMLElement {
           }
           h4{
             font-family: 'Varela Round', sans-serif;
-            font-size: 5vh;
+            font-size: calc(2vmax);
             text-decoration: wavy;
             color: black;
             margin-left: 8%;
@@ -247,22 +246,21 @@ class IndividualCustom extends HTMLElement {
             justify-self: left;
           }
           .timer{
-            font-size: 5vh;
+            font-size: calc(2vmax);
             font-family: 'Varela Round', sans-serif;
           }
           p {
             font-family: 'Varela Round', sans-serif;
             font-size: 7%;
           }
-
           li {
             font-family: 'Varela Round', sans-serif;
           }
-
           h2 {
+            font-size: calc(1.5vmax);
+
             font-family: 'Varela Round', sans-serif;
           }
-
           a, 
           a label {
             cursor: pointer;
