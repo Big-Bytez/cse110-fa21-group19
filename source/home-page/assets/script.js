@@ -58,7 +58,7 @@ async function makeThumbnails(request){
   ,{ "method": "GET",
     "headers": {
     "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-		"x-rapidapi-key": "b99bc80573mshf2530a05219b844p140ef0jsn891357db5296"
+		"x-rapidapi-key": "1a75396eadf347a5ad84f4c37723d29f"
     }
   }).then((response) => response.json());
   shuffleArray(vals.results)
